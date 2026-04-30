@@ -50,7 +50,7 @@ const LogoSlider = () => {
     <div className="w-full">
       <div
         ref={containerRef}
-        className="relative flex h-[123px] w-full items-center overflow-hidden"
+        className="relative flex h-[88px] w-full items-center overflow-hidden sm:h-[104px] md:h-[123px]"
       >
         <div
           className="flex w-max items-center gap-8 will-change-transform"
@@ -71,14 +71,14 @@ const LogoSlider = () => {
               {logos.map((logo, logoIndex) => (
                 <div
                   key={`${groupIndex}-${logoIndex}`}
-                  className="flex h-[150px] w-[100px] shrink-0 items-center justify-center transition-transform duration-300 hover:scale-95 sm:h-14 sm:w-[120px] md:h-126 md:w-[250px]"
+                  className="flex h-[72px] w-[96px] shrink-0 items-center justify-center transition-transform duration-300 hover:scale-95 sm:h-[88px] sm:w-[132px] md:h-[110px] md:w-[190px] lg:h-[126px] lg:w-[250px]"
                 >
                   <Image
                     src={logo}
                     alt="Client logo"
                     width={150}
                     height={164}
-                    className=" w-auto max-w-full object-contain filter brightness-350"
+                    className="h-auto w-auto max-h-full max-w-full object-contain filter brightness-150 sm:brightness-200 md:brightness-300"
                   />
                 </div>
               ))}

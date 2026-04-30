@@ -6,7 +6,7 @@ import { FaArrowRight } from "react-icons/fa";
 const HomeHero = () => {
   return (
     <section
-      className="relative w-full h-full overflow-hidden bg-cover bg-center bg-no-repeat text-white"
+      className="relative h-full w-full overflow-hidden bg-cover bg-center bg-no-repeat text-white"
       style={{
         backgroundImage: 'url("/home/Mask group.png")',
         backgroundColor: "#018752",
@@ -16,18 +16,31 @@ const HomeHero = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/10 to-black/45" />
 
       {/* Outer wrapper — matches original mx-15 and vertical padding */}
-      <div className="relative flex flex-col justify-center px-5 pb-4 pt-20 sm:px-8 sm:pb-6 sm:pt-24 md:px-12 lg:mx-15 lg:px-0 lg:pb-8 lg:pt-28">
+      <div className="relative flex flex-col justify-center px-5 pb-8 pt-24 sm:px-8 sm:pb-10 sm:pt-28 md:px-12 md:pb-12 lg:mx-15 lg:px-0 lg:pb-8 lg:pt-28">
 
         {/* Two-column grid on lg+, single column below */}
-        <div className="grid w-full items-center gap-4 sm:gap-6 lg:grid-cols-2 lg:gap-10 xl:gap-14 2xl:gap-16">
+        <div className="grid w-full items-center gap-8 sm:gap-10 lg:grid-cols-2 lg:gap-10 xl:gap-14 2xl:gap-16">
 
           {/* ── Left column: heading + body + buttons ── */}
           <div className="flex flex-col gap-4 text-center sm:gap-5 lg:text-left">
-            <h1 className="goneva text-4xl leading-[1.05] sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl 2xl:text-7xl">
+            <h1 className="goneva text-[3rem] leading-[1.02] sm:text-5xl md:text-[4.4rem] lg:text-5xl xl:text-6xl 2xl:text-7xl">
               Professional Book Publishing Services in Australia
             </h1>
 
-            <div className="montserrat space-y-4 text-sm leading-7 text-white/90 sm:text-base lg:text-sm xl:text-base 2xl:text-lg 2xl:leading-8">
+            <div className="mx-auto w-full max-w-[250px] sm:max-w-[340px] md:max-w-[420px] lg:hidden">
+              <div className="relative h-[220px] w-full sm:h-[300px] md:h-[420px]">
+                <Image
+                  src="/home/Hero Image 1.png"
+                  fill
+                  alt="Illustration for Southern Cross Publishing"
+                  className="object-contain object-center drop-shadow-[0_20px_50px_rgba(0,0,0,0.35)]"
+                  sizes="(max-width: 639px) 85vw, (max-width: 1023px) 60vw"
+                  priority
+                />
+              </div>
+            </div>
+
+            <div className="montserrat mx-auto max-w-[42rem] space-y-4 text-base leading-8 text-white/90 sm:text-lg sm:leading-9 lg:mx-0 lg:max-w-none lg:text-sm lg:leading-7 xl:text-base 2xl:text-lg 2xl:leading-8">
               <p>
                 Australia's trusted self publishing company: ghostwriting,
                 editing, design, distribution and marketing, all in one place.
@@ -65,14 +78,14 @@ const HomeHero = () => {
           </div>
 
           {/* ── Right column: book image ── */}
-          <div className="order-first mx-auto w-full max-w-[260px] sm:max-w-[320px] md:max-w-[420px] lg:order-none lg:mx-0 lg:max-w-none">
-            <div className="relative h-[260px] w-full sm:h-[320px] md:h-[420px] lg:h-[750px] xl:h-[720px] 2xl:h-[800px]">
+          <div className="hidden lg:mx-0 lg:block lg:w-full lg:max-w-none">
+            <div className="relative lg:h-[750px] xl:h-[720px] 2xl:h-[800px]">
               <Image
                 src="/home/Hero Image 1.png"
                 fill
                 alt="Illustration for Southern Cross Publishing"
                 className="object-contain object-center drop-shadow-[0_20px_50px_rgba(0,0,0,0.35)]"
-                sizes="(max-width: 639px) 85vw, (max-width: 1023px) 60vw, (max-width: 1279px) 45vw, (max-width: 1535px) 500px, 620px"
+                sizes="(max-width: 1279px) 45vw, (max-width: 1535px) 500px, 620px"
                 priority
               />
             </div>
