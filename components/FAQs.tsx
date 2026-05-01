@@ -34,10 +34,12 @@ const faqItems = [
 ];
 
 const cardBaseClass =
-  "w-full bg-[#fbf4dd] shadow-[0_16px_34px_rgba(199,182,129,0.20)] transition-all duration-200";
+  "w-full self-start rounded-[8px] bg-transparent shadow-[0_14px_34px_rgba(205,190,143,0.22)] transition-all duration-200";
 
 const FAQs = () => {
   const [openIndex, setOpenIndex] = useState(0);
+  const leftColumnItems = [0, 2];
+  const rightColumnItems = [1, 3, 4];
 
   const renderFaqCard = (index: number) => {
     const item = faqItems[index];
@@ -48,32 +50,36 @@ const FAQs = () => {
         key={item.question}
         className={`${cardBaseClass} ${
           isOpen
-            ? "min-h-[246px] px-5 py-6 sm:px-7 sm:py-7"
-            : "min-h-[104px] px-5 py-6 sm:px-7 sm:py-[1.7rem]"
+            ? "min-h-[220px] px-5 py-6 sm:px-7 sm:py-7"
+            : "min-h-[88px] px-5 py-5 sm:px-7 sm:py-6"
         }`}
       >
         <button
           type="button"
           onClick={() => setOpenIndex(isOpen ? -1 : index)}
-          className="flex w-full items-start gap-[18px] text-left"
+          className="flex w-full items-start gap-[16px] text-left"
           aria-expanded={isOpen}
         >
           <span
             aria-hidden="true"
-            className={`mt-[1px] inline-flex h-7 w-7 shrink-0 items-center justify-center text-[2rem] leading-none ${
+            className={`mt-[1px] inline-flex h-7 w-7 shrink-0 items-center justify-center text-[1.95rem] leading-none ${
               isOpen ? "text-[#15a56a]" : "text-[#44413b]"
             }`}
           >
             {isOpen ? "−" : "+"}
           </span>
 
-          <span className="montserrat max-w-[418px] text-[1.12rem] font-semibold leading-[1.18] tracking-[-0.01em] text-[#47433d] sm:text-[1.18rem]">
+          <span
+            className={`montserrat flex-1 text-[1.06rem] font-semibold leading-[1.18] tracking-[-0.01em] sm:text-[1.1rem] ${
+              isOpen ? "text-[#12985f]" : "text-[#494641]"
+            }`}
+          >
             {item.question}
           </span>
         </button>
 
         {isOpen ? (
-          <p className="montserrat ml-[45px] mt-5 max-w-[390px] text-[0.97rem] leading-[1.58] text-[#8d8579] sm:text-[0.99rem]">
+          <p className="montserrat ml-[43px] mt-4 pr-1 text-[0.88rem] leading-[1.55] text-[#8e877c] sm:text-[0.91rem]">
             {item.answer}
           </p>
         ) : null}
@@ -83,26 +89,23 @@ const FAQs = () => {
 
   return (
     <section className="bg-[#f7f1d7] px-4 pb-20 pt-14 sm:px-6 sm:pb-24 sm:pt-16 lg:px-8 lg:pb-28 lg:pt-20">
-      <div className="mx-auto max-w-[1140px]">
+      <div className="mx-auto max-w-[1340px]">
         <div className="text-center">
-          <p className="montserrat text-[1.28rem] font-medium italic text-[#2d2d2d] sm:text-[1.45rem]">
+          <p className="montserrat text-xl font-semibold italic text-[#2d2d2d] sm:text-2xl">
             FAQs
           </p>
-          <h2 className="goneva mt-4 text-[2rem] leading-none text-[#0a9d63] sm:text-[2.55rem] lg:text-[3rem]">
+          <h2 className="goneva mt-3 text-[2rem] leading-none text-[#0d9b68] sm:text-[2.35rem] lg:text-[2.65rem]">
             Frequently Asked Questions
           </h2>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-6 lg:mt-[68px] lg:grid-cols-2 lg:gap-x-[56px]">
-          <div className="flex flex-col gap-6 lg:gap-[42px]">
-            {renderFaqCard(0)}
-            {renderFaqCard(2)}
+        <div className="mt-14 grid grid-cols-1 gap-6 lg:mt-[58px] lg:grid-cols-2 lg:items-start lg:gap-x-[56px]">
+          <div className="flex flex-col gap-6 lg:gap-[24px]">
+            {leftColumnItems.map(renderFaqCard)}
           </div>
 
-          <div className="flex flex-col gap-6 lg:pt-[14px] lg:gap-[42px]">
-            {renderFaqCard(1)}
-            {renderFaqCard(3)}
-            {renderFaqCard(4)}
+          <div className="flex flex-col gap-6 lg:gap-[24px]">
+            {rightColumnItems.map(renderFaqCard)}
           </div>
         </div>
       </div>
