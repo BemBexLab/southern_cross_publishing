@@ -1,9 +1,15 @@
+import AtSouthernCross, {
+  defaultAtSouthernCrossCards,
+} from "@/components/AtSouthernCross";
 import ComprehensivePublishing from "@/components/ComprehensivePublishing";
+import FAQs from "@/components/FAQs";
+import GetInTouch from "@/components/GetInTouch";
 import HomeHero from "@/components/HomeHero";
 import HowItWorks from "@/components/HowItWorks";
 import LogoSlider from "@/components/LogoSlider";
 import LookingForSelfPublishing from "@/components/LookingForSelfPublishing";
 import OurBook from "@/components/OurBook";
+import Testimonials from "@/components/Testimonials";
 import WitnessOurUniqueness, {
   defaultWitnessServices,
 } from "@/components/WitnessOurUniqueness";
@@ -84,11 +90,14 @@ export default function Home() {
       <HowItWorks />
       <YourStory />
       <OurBook />
-      <WitnessOurUniqueness
+      <AtSouthernCross
         eyebrow="At Southern Cross, we do it right"
         title="Everything Your Book Needs, Handled by People Who Know Books"
-        services={defaultWitnessServices}
+        cards={defaultAtSouthernCrossCards}
       />
+      <Testimonials />
+      <GetInTouch />
+      <FAQs />
     </section>
   );
 }
