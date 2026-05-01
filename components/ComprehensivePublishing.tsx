@@ -80,7 +80,7 @@ const ComprehensivePublishing = () => {
         </div>
       </div>
 
-      <p className="mx-auto w-full max-w-8xl px-2 pb-8 text-center text-lg montserrat sm:px-6 sm:text-xl md:pb-12 md:text-2xl">
+      <p className="mx-auto w-full max-w-8xl px-2 pb-8 text-center text-lg montserrat sm:px-6 sm:text-xl md:pb-12 md:text-xl">
         We know that the moment you decide to write a book, something shifts;
         suddenly, the idea that once felt private has now become something you
         want the world to know. That excitement is a real one, and it, of

@@ -1,8 +1,13 @@
 import ComprehensivePublishing from "@/components/ComprehensivePublishing";
 import HomeHero from "@/components/HomeHero";
+import HowItWorks from "@/components/HowItWorks";
 import LogoSlider from "@/components/LogoSlider";
 import LookingForSelfPublishing from "@/components/LookingForSelfPublishing";
-import WitnessOurUniqueness from "@/components/WitnessOurUniqueness";
+import OurBook from "@/components/OurBook";
+import WitnessOurUniqueness, {
+  defaultWitnessServices,
+} from "@/components/WitnessOurUniqueness";
+import YourStory from "@/components/YourStory";
 import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa";
 
@@ -64,14 +69,26 @@ export default function Home() {
         </div>
       </div>
 
-      <WitnessOurUniqueness />
+      <WitnessOurUniqueness
+        eyebrow="Witness our Uniqueness"
+        title="Complete Self Publishing Services in Australia: Editing, Design, Distribution and Marketing Under One Roof."
+        services={defaultWitnessServices}
+      />
 
       {/* Seperator */}
       <div className="px-4 bg-[#EBE5CC] py-6 sm:px-6 sm:py-8 lg:px-8 lg:py-10">
-        <div className="mx-auto h-px w-full max-w-[1220px] bg-[#d8d0b2]" />
+        <div className="mx-auto h-px w-full max-w-[1700px] bg-[#d8d0b2]" />
       </div>
 
       <LookingForSelfPublishing />
+      <HowItWorks />
+      <YourStory />
+      <OurBook />
+      <WitnessOurUniqueness
+        eyebrow="At Southern Cross, we do it right"
+        title="Everything Your Book Needs, Handled by People Who Know Books"
+        services={defaultWitnessServices}
+      />
     </section>
   );
 }
