@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 const logos = [
   "/home/OmegaMillion.png",
@@ -11,92 +11,58 @@ const logos = [
   "/home/InfinityParker.png",
 ];
 
+const logoItems = [...logos, ...logos];
+
 const LogoSlider = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const setRef = useRef<HTMLDivElement>(null);
-  const [copies, setCopies] = useState(2);
-  const [distance, setDistance] = useState(0);
+  const trackRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const updateSlider = () => {
-      const containerWidth = containerRef.current?.offsetWidth ?? 0;
-      const setWidth = setRef.current?.scrollWidth ?? 0;
+    if (!trackRef.current) {
+      return;
+    }
 
-      if (!containerWidth || !setWidth) return;
-
-      setDistance(setWidth);
-      setCopies(Math.max(2, Math.ceil(containerWidth / setWidth) + 1));
-    };
-
-    updateSlider();
-
-    const resizeObserver =
-      typeof ResizeObserver !== "undefined"
-        ? new ResizeObserver(updateSlider)
-        : null;
-
-    if (containerRef.current) resizeObserver?.observe(containerRef.current);
-    if (setRef.current) resizeObserver?.observe(setRef.current);
-
-    window.addEventListener("resize", updateSlider);
+    const animation = trackRef.current.animate(
+      [
+        { transform: "translate3d(0, 0, 0)" },
+        { transform: "translate3d(-50%, 0, 0)" },
+      ],
+      {
+        duration: 22000,
+        iterations: Infinity,
+        easing: "linear",
+      }
+    );
 
     return () => {
-      resizeObserver?.disconnect();
-      window.removeEventListener("resize", updateSlider);
+      animation.cancel();
     };
   }, []);
 
   return (
-    <div className="w-full bg-[#F7F1D7]">
-      <div
-        ref={containerRef}
-        className="relative flex h-[88px] w-full items-center overflow-hidden sm:h-[104px] md:h-[123px]"
-      >
+    <div className="w-full overflow-hidden bg-[#F7F1D7]">
+      <div className="relative flex h-24 items-center overflow-hidden sm:h-28 md:h-32">
         <div
-          className="flex w-max items-center gap-8 will-change-transform"
-          style={{
-            animation: distance
-              ? "logo-slider-marquee 22s linear infinite"
-              : undefined,
-            ["--logo-slider-distance" as string]: `-${distance}px`,
-          }}
+          ref={trackRef}
+          data-logo-slider-track
+          className="flex min-w-max items-center gap-8 pr-8 will-change-transform sm:gap-10 sm:pr-10 md:gap-12 md:pr-12"
         >
-          {Array.from({ length: copies }).map((_, groupIndex) => (
+          {logoItems.map((logo, index) => (
             <div
-              key={groupIndex}
-              ref={groupIndex === 0 ? setRef : undefined}
-              className="flex shrink-0 items-center gap-8"
-              aria-hidden={groupIndex > 0}
+              key={`${logo}-${index}`}
+              className="flex h-[72px] w-24 shrink-0 items-center justify-center transition-transform duration-300 hover:scale-95 sm:h-[88px] sm:w-32 md:h-[110px] md:w-48 lg:h-[126px] lg:w-60"
+              aria-hidden={index >= logos.length}
             >
-              {logos.map((logo, logoIndex) => (
-                <div
-                  key={`${groupIndex}-${logoIndex}`}
-                  className="flex h-[72px] w-[96px] shrink-0 items-center justify-center transition-transform duration-300 hover:scale-95 sm:h-[88px] sm:w-[132px] md:h-[110px] md:w-[190px] lg:h-[126px] lg:w-[250px]"
-                >
-                  <Image
-                    src={logo}
-                    alt="Client logo"
-                    width={150}
-                    height={164}
-                    className="h-auto w-auto max-h-full max-w-full object-contain filter brightness-150 sm:brightness-200 md:brightness-300"
-                  />
-                </div>
-              ))}
+              <Image
+                src={logo}
+                alt={index < logos.length ? "Client logo" : ""}
+                width={150}
+                height={164}
+                className="h-auto w-auto max-h-full max-w-full object-contain filter brightness-150 sm:brightness-200 md:brightness-300"
+              />
             </div>
           ))}
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes logo-slider-marquee {
-          from {
-            transform: translateX(0);
-          }
-          to {
-            transform: translateX(var(--logo-slider-distance));
-          }
-        }
-      `}</style>
     </div>
   );
 };

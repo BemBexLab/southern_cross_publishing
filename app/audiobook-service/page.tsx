@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <div className="relative isolate bg-[#F7F1D7]">
       <HeroSection
-        bgImage="/publishing-services/Rectangle.webp"
+        bgImage="/audiobook-service/Service Section Hero Image 2 1.png"
         title="Professional Audiobook Production Services in Australia"
         description="Human narration, background scoring, and expert audio editing, everything your audiobook needs to compete on Audible, Apple Books, Spotify and beyond Audiobooks are one of the fastest growing formats in publishing today. Readers are listening on commutes, during workouts, before bed, and if your book is not available in audio, you are leaving a significant audience behind. Southern Cross Publishing handles the complete audiobook production process, from matching you with the right narrator to delivering a fully mastered, platform-ready audio file. You focus on your story. We handle everything that makes it listenable."
         ctaText=" Get a Free Audiobook Quote"

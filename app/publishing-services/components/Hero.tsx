@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { FiPhoneCall } from "react-icons/fi";
 
 interface HeroSectionProps {
@@ -20,14 +20,64 @@ const HeroSection: React.FC<HeroSectionProps> = ({
     ctaHref,
     onCtaClick,
 }) => {
+    const sectionRef = useRef<HTMLElement | null>(null);
+    const [offsetY, setOffsetY] = useState(0);
+
+    useEffect(() => {
+        let frame = 0;
+
+        const updateParallax = () => {
+            frame = 0;
+
+            if (!sectionRef.current) {
+                return;
+            }
+
+            const rect = sectionRef.current.getBoundingClientRect();
+            const viewportHeight = window.innerHeight;
+            const sectionCenter = rect.top + rect.height / 2;
+            const viewportCenter = viewportHeight / 2;
+            const distanceFromCenter = sectionCenter - viewportCenter;
+
+            setOffsetY(distanceFromCenter * -0.12);
+        };
+
+        const onScroll = () => {
+            if (frame) {
+                return;
+            }
+
+            frame = window.requestAnimationFrame(updateParallax);
+        };
+
+        updateParallax();
+        window.addEventListener("scroll", onScroll, { passive: true });
+        window.addEventListener("resize", onScroll);
+
+        return () => {
+            window.removeEventListener("scroll", onScroll);
+            window.removeEventListener("resize", onScroll);
+
+            if (frame) {
+                window.cancelAnimationFrame(frame);
+            }
+        };
+    }, []);
+
     const handleCtaAction = () => {
         if (onCtaClick) onCtaClick();
     };
 
     return (
-        <section className="relative flex min-h-[720px] w-full items-center overflow-hidden sm:min-h-[820px] lg:min-h-screen">
+        <section
+            ref={sectionRef}
+            className="relative flex min-h-[720px] w-full items-center overflow-hidden sm:min-h-[820px] lg:min-h-screen"
+        >
             {/* Background Image */}
-            <div className="absolute inset-0 z-0">
+            <div
+                className="absolute inset-0 z-0 scale-[1.12] will-change-transform"
+                style={{ transform: `translate3d(0, ${offsetY}px, 0) scale(1.12)` }}
+            >
                 <img
                     src={bgImage}
                     alt="Hero background"
@@ -39,13 +89,13 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             </div>
 
             {/* Content Layer */}
-            <div className="container relative z-10 mx-auto w-full px-4 pt-24 sm:px-6 sm:pt-28 lg:px-8 lg:pt-20">
-                <div className="max-w-[980px]">
+            <div className="container relative z-10 mx-auto w-full px-4 pt-24 sm:px-6 sm:pt-28 lg:px-8 lg:pt-30">
+                <div className="max-w-[1180px]">
                     <h1 className="goneva text-[2.4rem] leading-[0.98] text-[#F7F1D7] sm:text-5xl md:text-6xl xl:text-7xl 2xl:text-[5.25rem]">
                         {title}
                     </h1>
 
-                    <div className="montserrat mt-4 max-w-[720px] space-y-6 text-base font-medium leading-relaxed text-gray-100 sm:mt-6 sm:text-lg lg:mt-8 lg:text-xl">
+                    <div className="montserrat mt-4 max-w-[1100px] space-y-6 text-base font-medium leading-relaxed text-gray-100 sm:mt-6 sm:text-lg lg:mt-8 lg:text-xl">
                         <p>{description}</p>
                     </div>
 
