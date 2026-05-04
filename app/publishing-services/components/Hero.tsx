@@ -39,20 +39,20 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             </div>
 
             {/* Content Layer */}
-            <div className="container mx-auto relative z-10 mt-10">
+            <div className="container mx-25 relative z-10 mt-10">
                 <div className="max-w-4xl px-2">
                     <h1 className="goneva leading-[1.02] text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl text-[#F7F1D7]">
                         {title}
                     </h1>
 
-                    <div className="space-y-6 text-md sm:text-lg text-gray-100 leading-tight sm:leading-relaxed max-w-2xl font-light mb-5 mt-2 sm:mt-8">
+                    <div className="space-y-6 text-md montserrat sm:text-lg text-gray-100 leading-tight sm:leading-relaxed max-w-2xl font-medium mb-5 mt-2 sm:mt-8">
                         <p>{description}</p>
                     </div>
 
                     {ctaHref ? (
                         <a
                             href={ctaHref}
-                            className="inline-flex items-center gap-3 bg-[#f5ce47] hover:bg-[#eac030] text-[#018752] font-bold py-3 px-5 rounded-lg shadow-xl transition-transform active:scale-95"
+                            className="inline-flex items-center gap-3 bg-[#FDD118] text-[#018752] font-bold py-3 px-5 rounded-lg shadow-xl transition-transform active:scale-95"
                         >
                             <FiPhoneCall className="text-2xl" />
                             <span className="text-lg">{ctaText}</span>
@@ -60,7 +60,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                     ) : (
                         <button
                             onClick={handleCtaAction}
-                            className="flex items-center gap-3 bg-[#f5ce47] hover:bg-[#eac030] text-[#018752] font-bold py-3 px-5 rounded-lg shadow-xl transition-transform active:scale-95"
+                            className="flex items-center gap-3 bg-[#FDD118] text-[#018752] font-bold py-3 px-5 rounded-lg shadow-xl transition-transform active:scale-95"
                         >
                             <FiPhoneCall className="text-2xl" />
                             <span className="text-lg">{ctaText}</span>
