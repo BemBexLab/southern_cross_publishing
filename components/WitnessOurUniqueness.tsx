@@ -16,7 +16,7 @@ export interface WitnessOurUniquenessProps {
   gridClassName?: string
 }
 
-const ServiceCard: React.FC<WitnessServiceCard> = ({ iconSrc, title, description, variant }) => {
+export const ServiceCard: React.FC<WitnessServiceCard> = ({ iconSrc, title, description, variant }) => {
   const isDark = variant === 'dark'
 
   return (
