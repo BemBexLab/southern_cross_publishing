@@ -1,7 +1,8 @@
 import LogoSlider from "@/components/LogoSlider";
 import HeroSection from "../publishing-services/components/Hero";
 import Section3 from "./component/Section3";
-
+import Section4 from "./component/Section4";
+import Section5 from "./component/Section5";
 
 export default function Home() {
     return (
@@ -15,6 +16,8 @@ export default function Home() {
             />
             <LogoSlider />
             <Section3 />
+            <Section4 />
+            <Section5 />
         </div>
     );
 }

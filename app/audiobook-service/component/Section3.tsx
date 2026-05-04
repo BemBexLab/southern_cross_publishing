@@ -2,8 +2,8 @@ import React from 'react';
 
 const Section3 = () => {
   return (
-    <section className="bg-[#2d7a44] py-16 lg:py-24 overflow-hidden">
-      <div className="container mx-auto max-w-7xl px-6 lg:px-20">
+    <section className="bg-[#2d7a44]  overflow-hidden">
+      <div className="container mx-auto max-w-[1400px] px-2 sm:px-6 py-10">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
           
           {/* Left Side: 3D Audiobook Illustration */}
