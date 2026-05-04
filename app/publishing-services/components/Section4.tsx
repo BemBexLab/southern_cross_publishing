@@ -1,9 +1,9 @@
 import React from 'react';
-import { HiOutlineArrowNarrowRight } from 'react-icons/hi';
+import { FaArrowRight } from 'react-icons/fa6';
 
 const Section4 = () => {
   return (
-    <section className="relative bg-[#242424] overflow-hidden border-t border-green-800">
+    <section className="relative border-t border-green-800 bg-[#242424] overflow-visible">
       {/* City Silhouette Background Layer */}
       <div 
         className="absolute inset-0 opacity-100 z-0 pointer-events-none"
@@ -15,35 +15,35 @@ const Section4 = () => {
         }}
       />
 
-      <div className="container mx-auto max-w-7xl px-2 relative z-10">
-        <div className="flex flex-col lg:flex-row items-end pt-10 lg:pt-20">
+      <div className="container relative z-10 mx-auto max-w-8xl px-2">
+        <div className="flex flex-col items-end pt-10 lg:flex-row lg:pt-20">
           
           {/* Left Content Side */}
           <div className="w-full lg:w-1/2 text-left mb-12 lg:mb-0 lg:pb-20">
-            <h3 className="text-[#FDD118] font-medium text-lg mb-2">
+            <h3 className="text-[#FDD118] montserrat font-medium text-lg mb-2">
               Expert Non-Fiction Book Writing Services
             </h3>
             
-            <h2 className="text-4xl md:text-3xl font-serif text-[#F7F1D7] leading-tight mb-2 max-w-md">
+            <h2 className="text-4xl md:text-3xl font-serif text-[#F7F1D7] leading-tight mb-2 max-w-2xl">
               Ready to Publish? Let's Start With a Conversation.
             </h2>
             
-            <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-10 max-w-xl">
+            <p className="text-[#F7F1D7] montserrat text-md md:text-lg leading-relaxed mb-10 max-w-2xl">
               You do not need a finished manuscript, a publishing background, or any prior 
               experience to reach out. Just bring your idea, your draft, or your story, and 
               we will tell you honestly what it needs and how we can help. No sales pressure, 
               no automated replies. Just a real conversation about your book.
             </p>
 
-            <button className="flex items-center gap-3 bg-[#f5ce47] hover:bg-[#eac030] text-[#1a1a1a] font-bold py-3 px-2 sm:py-4 sm:px-8 rounded-md transition-all group mx-auto sm:mx-0">
+            <button className="flex items-center montserrat gap-3 bg-[#FDD118] text-[#018752] font-bold py-3 px-2 sm:py-4 sm:px-8 rounded-md transition-all group mx-auto sm:mx-0">
               <span>Book Your Free Consultation Today</span>
-              <HiOutlineArrowNarrowRight className="text-xl transition-transform group-hover:translate-x-1" />
+              <FaArrowRight className="text-xl transition-transform group-hover:translate-x-1" />
             </button>
           </div>
 
           {/* Right Illustration Side */}
-          <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-[800px]">
+          <div className="flex w-full justify-center lg:w-1/2 lg:justify-end">
+            <div className="relative z-30 w-full max-w-[800px] lg:translate-y-[72px]">
               <img 
                 src="/publishing-services/Group (1).webp" 
                 alt="Creative thinking illustration"
@@ -56,7 +56,7 @@ const Section4 = () => {
       </div>
       
       {/* Bottom Cream Decorative Bar */}
-      <div className="h-6 bg-[#fdf8e1] w-full relative z-20" />
+      <div className="relative z-20 h-6 w-full bg-[#fdf8e1]" />
     </section>
   );
 };

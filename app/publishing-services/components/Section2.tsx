@@ -1,10 +1,10 @@
 import React from 'react';
-import { HiOutlineArrowNarrowRight } from 'react-icons/hi';
+import { FaArrowRight } from 'react-icons/fa6';
 
 const Section2 = () => {
   return (
-    <section className="bg-[#fdf8e1] py-16 md:py-24">
-      <div className="container max-w-7xl mx-auto px-2">
+    <section className="bg-[#F7F1D7] py-6 md:py-10">
+      <div className="container max-w-8xl mx-auto px-2">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-10">
           
           {/* Left Side: Illustration Container */}
@@ -23,11 +23,11 @@ const Section2 = () => {
 
           {/* Right Side: Content */}
           <div className="w-full lg:w-1/2">
-            <h2 className="text-3xl md:text-4xl lg:text-3xl font-serif  text-[#018752] leading-tight mb-8">
+            <h2 className="text-xl md:text-3xl goneva lg:text-4xl font-serif text-[#018752] leading-tight">
               Professional Book Publishing Services in Australia
             </h2>
             
-            <div className="space-y-6 text-[#143d2c]/80 text-[15px] md:text-base leading-relaxed font-normal">
+            <div className="montserrat py-5 text-[#1F1F1F] text-[15px] md:text-lg font-normal">
               <p>
                 If you have been searching for reliable book publishing services in Australia, 
                 Southern Cross Publishing brings everything your book needs under one roof. 
@@ -47,9 +47,9 @@ const Section2 = () => {
               </p>
             </div>
 
-            <button className="mt-10 flex items-center gap-3 bg-[#f5ce47] hover:bg-[#eac030] text-[#018752] font-bold py-3.5 px-8 rounded-md transition-all group">
+            <button className="flex montserrat items-center gap-3 bg-[#FDD118] text-[#018752] font-bold py-3.5 px-8 rounded-md transition-all group">
               <span>Get a Free Publishing Quote</span>
-              <HiOutlineArrowNarrowRight className="text-xl transition-transform group-hover:translate-x-1" />
+              <FaArrowRight className="text-xl transition-transform group-hover:translate-x-1" />
             </button>
           </div>
 
