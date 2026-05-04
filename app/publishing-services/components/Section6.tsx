@@ -14,7 +14,7 @@ const Section6 = () => {
 
   return (
     <section className="bg-[#fdf8e1] py-16 lg:py-24 overflow-hidden">
-      <div className="container mx-auto max-w-7xl px-2 lg:px-20">
+      <div className="container mx-auto max-w-[1400px] px-2 lg:px-20">
         
         {/* Header */}
         <div className="text-center mb-20">

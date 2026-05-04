@@ -4,7 +4,7 @@ import { HiOutlineArrowNarrowRight } from 'react-icons/hi';
 const Section5 = () => {
   return (
     <section className="bg-[#fdf8e1] overflow-hidden py-16 lg:py-24">
-      <div className="container mx-auto max-w-7xl ">
+      <div className="container mx-auto max-w-[1400px] ">
         <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
           
           {/* Left Content Side */}

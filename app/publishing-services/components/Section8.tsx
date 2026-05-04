@@ -26,7 +26,7 @@ const WhyChooseUs = () => {
 
   return (
     <section className="bg-[#fdf8e1] overflow-hidden">
-      <div className="container mx-auto max-w-7xl px-2">
+      <div className="container mx-auto max-w-[1400px] px-2">
         {/* Changed items-center to items-start to align image to the top */}
         <div className="flex flex-col lg:flex-row items-start">
           

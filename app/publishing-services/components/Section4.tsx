@@ -15,7 +15,7 @@ const Section4 = () => {
         }}
       />
 
-      <div className="container mx-auto max-w-7xl px-2 relative z-10">
+      <div className="container mx-auto max-w-[1400px] px-2 relative z-10">
         <div className="flex flex-col lg:flex-row items-end pt-10 lg:pt-20">
           
           {/* Left Content Side */}
