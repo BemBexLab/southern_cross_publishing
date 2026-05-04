@@ -32,7 +32,7 @@ export default function Navbar() {
         <Link href="/" className="flex flex-shrink-0 items-center">
           <div className="relative mt-1 h-[55px] w-[180px] sm:h-[65px] sm:w-[220px] lg:h-[75px] lg:w-[290px]">
             <Image
-              src="/navbar/Frame 1000001530.png"
+              src="/navbar/Frame 1000001530.svg"
               alt="Southern Cross Publishing Logo"
               fill
               className="object-contain object-left"

@@ -47,7 +47,7 @@ const LogoSlider = () => {
   }, []);
 
   return (
-    <div className="w-full">
+    <div className="w-full bg-[#F7F1D7]">
       <div
         ref={containerRef}
         className="relative flex h-[88px] w-full items-center overflow-hidden sm:h-[104px] md:h-[123px]"

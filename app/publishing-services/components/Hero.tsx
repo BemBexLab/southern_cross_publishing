@@ -25,7 +25,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
     };
 
     return (
-        <section className="relative min-h-screen w-full flex items-center overflow-hidden">
+        <section className="relative flex min-h-[720px] w-full items-center overflow-hidden sm:min-h-[820px] lg:min-h-screen">
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <img
@@ -35,35 +35,35 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                     loading="eager"
                 />
                 {/* Optional overlay for better text contrast */}
-                <div className="absolute inset-0 bg-black/30" />
+                <div className="absolute inset-0 bg-black/45 sm:bg-black/40" />
             </div>
 
             {/* Content Layer */}
-            <div className="container mx-25 relative z-10 mt-10">
-                <div className="max-w-4xl px-2">
-                    <h1 className="goneva leading-[1.02] text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl text-[#F7F1D7]">
+            <div className="container relative z-10 mx-auto w-full px-4 pt-24 sm:px-6 sm:pt-28 lg:px-8 lg:pt-20">
+                <div className="max-w-[980px]">
+                    <h1 className="goneva text-[2.4rem] leading-[0.98] text-[#F7F1D7] sm:text-5xl md:text-6xl xl:text-7xl 2xl:text-[5.25rem]">
                         {title}
                     </h1>
 
-                    <div className="space-y-6 text-md montserrat sm:text-lg text-gray-100 leading-tight sm:leading-relaxed max-w-2xl font-medium mb-5 mt-2 sm:mt-8">
+                    <div className="montserrat mt-4 max-w-[720px] space-y-6 text-base font-medium leading-relaxed text-gray-100 sm:mt-6 sm:text-lg lg:mt-8 lg:text-xl">
                         <p>{description}</p>
                     </div>
 
                     {ctaHref ? (
                         <a
                             href={ctaHref}
-                            className="inline-flex items-center gap-3 bg-[#FDD118] text-[#018752] font-bold py-3 px-5 rounded-lg shadow-xl transition-transform active:scale-95"
+                            className="mt-8 inline-flex min-h-12 items-center justify-center gap-3 rounded-lg bg-[#FDD118] px-5 py-3 text-base font-bold text-[#018752] shadow-xl transition-transform active:scale-95 sm:mt-10 sm:px-6 sm:text-lg"
                         >
-                            <FiPhoneCall className="text-2xl" />
-                            <span className="text-lg">{ctaText}</span>
+                            <FiPhoneCall className="text-xl sm:text-2xl" />
+                            <span>{ctaText}</span>
                         </a>
                     ) : (
                         <button
                             onClick={handleCtaAction}
-                            className="flex items-center gap-3 bg-[#FDD118] text-[#018752] font-bold py-3 px-5 rounded-lg shadow-xl transition-transform active:scale-95"
+                            className="mt-8 inline-flex min-h-12 items-center justify-center gap-3 rounded-lg bg-[#FDD118] px-5 py-3 text-base font-bold text-[#018752] shadow-xl transition-transform active:scale-95 sm:mt-10 sm:px-6 sm:text-lg"
                         >
-                            <FiPhoneCall className="text-2xl" />
-                            <span className="text-lg">{ctaText}</span>
+                            <FiPhoneCall className="text-xl sm:text-2xl" />
+                            <span>{ctaText}</span>
                         </button>
                     )}
                 </div>

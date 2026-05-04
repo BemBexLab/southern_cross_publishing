@@ -3,31 +3,31 @@ import { FaArrowRight } from 'react-icons/fa6';
 
 const Section2 = () => {
   return (
-    <section className="bg-[#F7F1D7] py-6 md:py-10">
-      <div className="container max-w-8xl mx-auto px-2">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-10">
+    <section className="bg-[#F7F1D7] py-10 sm:py-12 lg:py-16">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col items-center gap-10 md:gap-12 lg:flex-row lg:items-center lg:gap-14 xl:gap-20">
+          <div className="w-full max-w-[760px] lg:hidden">
+            <h2 className="goneva text-3xl leading-tight text-[#018752] sm:text-4xl">
+              Professional Book Publishing Services in Australia
+            </h2>
+          </div>
           
           {/* Left Side: Illustration Container */}
-          <div className="w-full lg:w-1/2 flex justify-center items-center">
-            {/* 
-               Place your exported illustration here. 
-               The illustration in the screenshot has a yellow circular 
-               blob background and a green-themed character.
-            */}
+          <div className="flex w-full justify-center items-center lg:w-1/2">
             <img 
               src="/publishing-services/Group.webp" 
               alt="Person working at desk illustration"
-              className="w-full max-w-[500px] h-auto object-contain"
+              className="h-auto w-full max-w-[340px] object-contain sm:max-w-[420px] md:max-w-[500px] lg:max-w-[560px]"
             />
           </div>
 
           {/* Right Side: Content */}
-          <div className="w-full lg:w-1/2">
-            <h2 className="text-xl md:text-3xl goneva lg:text-4xl font-serif text-[#018752] leading-tight">
+          <div className="w-full max-w-[760px] lg:w-1/2 lg:max-w-none">
+            <h2 className="goneva hidden text-3xl leading-tight text-[#018752] lg:block lg:text-[2.75rem]">
               Professional Book Publishing Services in Australia
             </h2>
             
-            <div className="montserrat py-5 text-[#1F1F1F] text-[15px] md:text-lg font-normal">
+            <div className="montserrat py-5 text-[15px] font-normal leading-7 text-[#1F1F1F] sm:text-base md:py-6 md:text-lg md:leading-8">
               <p>
                 If you have been searching for reliable book publishing services in Australia, 
                 Southern Cross Publishing brings everything your book needs under one roof. 
@@ -47,7 +47,7 @@ const Section2 = () => {
               </p>
             </div>
 
-            <button className="flex montserrat items-center gap-3 bg-[#FDD118] text-[#018752] font-bold py-3.5 px-8 rounded-md transition-all group">
+            <button className="group inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-md bg-[#FDD118] px-6 py-3.5 font-bold text-[#018752] transition-all sm:w-auto sm:px-8">
               <span>Get a Free Publishing Quote</span>
               <FaArrowRight className="text-xl transition-transform group-hover:translate-x-1" />
             </button>

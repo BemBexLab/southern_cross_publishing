@@ -124,16 +124,17 @@ const Testimonials = () => {
         </div>
 
         <div
-          className={`mt-14 grid grid-cols-1 justify-items-center transition-all duration-200 ease-out md:mt-16 md:grid-cols-2 lg:grid-cols-3 ${motionClass}`}
+          className={`mt-12 flex flex-wrap justify-center gap-5 transition-all duration-200 ease-out sm:mt-14 sm:gap-6 lg:mt-16 lg:gap-8 ${motionClass}`}
         >
           {orderedTestimonials.map((testimonial, index) => {
             const offsetClass =
-              index === 1 ? "lg:translate-y-[34px]" : "lg:translate-y-0";
+              index === 1 ? "xl:translate-y-[34px]" : "xl:translate-y-0";
 
             return (
               <article
                 key={testimonial.name}
-                className={`w-full max-w-[325px] rounded-[10px] bg-white px-[20px] py-[22px] shadow-[0_14px_45px_rgba(217,196,119,0.18)] transition-transform duration-300 ${offsetClass} sm:max-w-[370px] sm:px-6 sm:py-6 lg:min-h-[206px] lg:max-w-[325px]`}
+                data-testimonial-card
+                className={`w-full rounded-[10px] bg-white px-5 py-[22px] shadow-[0_14px_45px_rgba(217,196,119,0.18)] transition-transform duration-300 sm:max-w-[370px] sm:px-6 sm:py-6 md:w-[calc(50%-12px)] md:max-w-[360px] xl:min-h-[206px] xl:w-[325px] xl:max-w-[325px] ${offsetClass}`}
               >
                 <StarRow />
 
@@ -154,7 +155,7 @@ const Testimonials = () => {
           })}
         </div>
 
-        <div className="mt-14 flex items-center justify-between sm:mt-16 lg:mt-[108px]">
+        <div className="mt-12 flex items-center justify-between gap-4 sm:mt-16 lg:mt-[108px]">
           <button
             type="button"
             aria-label="Previous testimonial"
