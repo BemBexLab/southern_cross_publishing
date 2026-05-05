@@ -6,6 +6,7 @@ type ReadyToPublishProps = {
   title?: string;
   description?: string;
   ctaText?: string;
+  ctaHref?: string;
   backgroundImageSrc?: string;
   illustrationSrc?: string;
   illustrationAlt?: string;
@@ -32,6 +33,7 @@ const ReadyToPublish = ({
   title = "Ready to Publish? Let's Start With a Conversation.",
   description = "You do not need a finished manuscript, a publishing background, or any prior experience to reach out. Just bring your idea, your draft, or your story, and we will tell you honestly what it needs and how we can help. No sales pressure, no automated replies. Just a real conversation about your book.",
   ctaText = "Book Your Free Consultation Today",
+  ctaHref = "/contact",
   backgroundImageSrc = "/publishing-services/dc171d58-b99f-4f30-8bee-5f356e9d63f9_removalai_preview.webp",
   illustrationSrc = "/publishing-services/Group (1).webp",
   illustrationAlt = "Creative thinking illustration",
@@ -73,10 +75,10 @@ const ReadyToPublish = ({
 
             <p className={descriptionClassName}>{description}</p>
 
-            <button className={ctaButtonClassName}>
+            <a href={ctaHref} className={ctaButtonClassName}>
               <span>{ctaText}</span>
               {ctaIcon}
-            </button>
+            </a>
           </div>
 
           <div className={illustrationOuterClassName}>

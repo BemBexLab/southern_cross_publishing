@@ -24,6 +24,7 @@ export default function Home() {
         title="Let Southern Cross take the hassle out of publishing, so you can focus on your story"
         description="You wrote it. You lived it. Now, let us handle everything that comes after that. From the first edit to the final listing on Amazon, our team quietly takes care of the process while you stay focused on what matters: your words."
         ctaText="Get Your Free Publishing Quote Today"
+        ctaHref="/contact"
       />
     </div>
   );

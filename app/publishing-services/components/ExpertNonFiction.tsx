@@ -8,6 +8,7 @@ export interface ExpertNonFictionProps {
   title: string;
   description: string;
   ctaText?: string;
+  ctaHref?: string;
   backgroundImage?: string;
   overlayClassName?: string;
   sectionClassName?: string;
@@ -23,6 +24,7 @@ const ExpertNonFiction: React.FC<ExpertNonFictionProps> = ({
   title,
   description,
   ctaText = "Get a Quote",
+  ctaHref = "/contact",
   backgroundImage = "/publishing-services/aab22737c0c341637148fb92adb4cfc2ad672097.webp",
   overlayClassName = "absolute inset-0 bg-black/80",
   sectionClassName = "relative flex h-screen w-full items-center justify-center overflow-hidden py-20 lg:py-10",
@@ -103,10 +105,10 @@ const ExpertNonFiction: React.FC<ExpertNonFictionProps> = ({
         <p className={descriptionClassName}>{description}</p>
 
         <div className="flex justify-center">
-          <button className={ctaClassName}>
+          <a href={ctaHref} className={ctaClassName}>
             <span className="text-lg">{ctaText}</span>
             <FaArrowRight className="text-2xl transition-transform group-hover:translate-x-1" />
-          </button>
+          </a>
         </div>
       </div>
     </section>

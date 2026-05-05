@@ -74,7 +74,7 @@ const Section2 = () => {
       </div>
 
       <Link
-        href="/ourbook"
+        href="/contact"
         className="flex items-center gap-2 rounded-md bg-[#FFD22F] px-10 py-3 text-sm font-bold text-[#1A3C34] transition-colors hover:bg-[#f5c820]"
       >
         View All

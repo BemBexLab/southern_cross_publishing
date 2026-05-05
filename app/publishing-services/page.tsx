@@ -28,6 +28,7 @@ export default function Home() {
                 title="Complete Book Publishing Services in Australia"
                 description="From manuscript evaluation to global distribution, everything your book needs, handled by one dedicated team. Southern Cross Publishing brings together every skill your book needs under one roof, from the very first editorial pass to the day your book goes live on 40+ global platforms."
                 ctaText="Request a Call"
+                ctaHref="/contact"
             />
             <LogoSlider />
             <Section2 />
@@ -60,6 +61,7 @@ export default function Home() {
                 title="The Only Thing Standing Between You and a Published Book Is the First Step"
                 description="We have helped hundreds of Australian authors go from a rough idea to a professionally published book available worldwide. Your story is next."
                 ctaText="Get a Quote"
+                ctaHref="/contact"
             />
             <Section8 />
             <AtSouthernCross eyebrow="What We Publish" title="We Work Across Every Genre: Fiction, Non-Fiction, Memoirs, Children's Books and More" description="When you work with Southern Cross Publishing, you are matched with people who actually understand your type of book, not generalists applying the same approach to every manuscript." cards={[

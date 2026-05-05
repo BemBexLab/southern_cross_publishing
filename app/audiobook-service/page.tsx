@@ -20,6 +20,7 @@ export default function Home() {
         title="Professional Audiobook Production Services in Australia"
         description="Human narration, background scoring, and expert audio editing, everything your audiobook needs to compete on Audible, Apple Books, Spotify and beyond Audiobooks are one of the fastest growing formats in publishing today. Readers are listening on commutes, during workouts, before bed, and if your book is not available in audio, you are leaving a significant audience behind. Southern Cross Publishing handles the complete audiobook production process, from matching you with the right narrator to delivering a fully mastered, platform-ready audio file. You focus on your story. We handle everything that makes it listenable."
         ctaText=" Get a Free Audiobook Quote"
+        ctaHref="/contact"
       />
       <LogoSlider />
       <AtSouthernCross
@@ -222,6 +223,7 @@ export default function Home() {
         title="Ready to Turn Your Book Into an Audiobook? Let's Talk."
         description="You do not need to know anything about audio production to get started. You just need your manuscript and the decision to reach listeners as well as readers. Our team handles everything else, narration, scoring, editing, mastering, and global distribution, so your audiobook sounds exactly the way your book deserves to sound."
         ctaText="Get a Quote"
+        ctaHref="/contact"
       />
       <FAQs />
     </div>

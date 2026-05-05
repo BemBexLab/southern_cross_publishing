@@ -110,10 +110,13 @@ const BookConsultation = () => {
         </div>
 
         <div className="mt-10 flex justify-center">
-          <button className="montserrat inline-flex min-h-12 items-center justify-center gap-3 rounded-md bg-[#f8c81d] px-6 py-3 text-base font-semibold text-[#078c52] transition hover:bg-[#ffd541] sm:px-8">
+          <a
+            href="/contact"
+            className="montserrat inline-flex min-h-12 items-center justify-center gap-3 rounded-md bg-[#f8c81d] px-6 py-3 text-base font-semibold text-[#078c52] transition hover:bg-[#ffd541] sm:px-8"
+          >
             <span>Book a Consultation</span>
             <FaArrowRight className="text-sm" />
-          </button>
+          </a>
         </div>
       </div>
     </section>

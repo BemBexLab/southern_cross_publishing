@@ -47,10 +47,13 @@ const Section2 = () => {
               </p>
             </div>
 
-            <button className="group inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-md bg-[#FDD118] px-6 py-3.5 font-bold text-[#018752] transition-all sm:w-auto sm:px-8">
+            <a
+              href="/contact"
+              className="group inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-md bg-[#FDD118] px-6 py-3.5 font-bold text-[#018752] transition-all sm:w-auto sm:px-8"
+            >
               <span>Get a Free Publishing Quote</span>
               <FaArrowRight className="text-xl transition-transform group-hover:translate-x-1" />
-            </button>
+            </a>
           </div>
 
         </div>

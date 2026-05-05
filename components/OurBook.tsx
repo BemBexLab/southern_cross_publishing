@@ -144,7 +144,7 @@ const OurBook = () => {
 
         <div className="mt-12 flex justify-center">
           <Link
-            href="/ourbook"
+            href="/contact"
             className="rounded-md montserrat bg-[#DADD39] px-6 py-3 text-sm text-[#018752] font-semibold transition hover:opacity-90"
           >
             View All <FaArrowRight className="ml-2 inline-block" />

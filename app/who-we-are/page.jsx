@@ -24,6 +24,7 @@ export default function Home() {
         title="A Publishing House Built Around Your Story"
         description={`Southern Cross Publishing is an Australian self publishing company with over 1,000 authors published across fiction, non-fiction, memoirs, biographies, self help, children's books, and audiobooks. We treat every single manuscript we receive as if it were the only one on our desk, because to the person who wrote it, it is. \nWe're not a factory. We're a team of professional editors, writers, designers, marketers, and publishers who genuinely love books and who take real pride in helping people share their stories with the world.`}
         ctaText="Get a Free Audiobook Quote"
+        ctaHref="/contact"
       />
       <OurStory />
       <AtSouthernCross
@@ -102,6 +103,7 @@ export default function Home() {
         title="Ready to Become One of Our Authors"
         description="Southern Cross Publishing is here to bring your vision to life—one expertly crafted page at a time."
         ctaText="Start the Conversation "
+        ctaHref="/contact"
         backgroundImageSrc="/publishing-services/dc171d58-b99f-4f30-8bee-5f356e9d63f9_removalai_preview.webp"
         illustrationSrc="/publishing-services/Group (1).webp"
         illustrationAlt="Custom illustration"
