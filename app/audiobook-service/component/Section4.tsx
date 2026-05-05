@@ -24,17 +24,17 @@ const steps = [
 
 const Section4 = () => {
     return (
-        <section className='bg-[#E9E7C3]'>
-            <div className="max-w-[1400px] mx-auto min-h-screen py-16 px-2 sm:px-6 text-[#1A3C34]">
-            {/* Small Header */}
+        <section className='bg-[#EAE5CC]'>
+            <div className="max-w-[1800px] mx-auto min-h-screen py-16 px-2 sm:px-6 text-[#1A3C34]">
+            {/* Eyebrow */}
             <div className="mb-4">
-                <h3 className="font-serif text-xl text-[#018752]">How It Works</h3>
+                <p className=" text-2xl montserrat italic font-semibold text-black">How It Works</p>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
                 {/* Left Column: Text Content */}
                 <div className="flex flex-col">
-                    <h2 className="font-serif text-xl md:text-3xl leading-tight mb-5 max-w-lg text-[#018752]">
+                    <h2 className="text-3xl md:text-5xl goneva leading-tight mb-5 max-w-3xl text-[#018752]">
                         How We Produce Your Audiobook: Step by Step
                     </h2>
 
@@ -43,7 +43,7 @@ const Section4 = () => {
                             <div key={index} className="flex items-start">
                                 {/* Custom Bullet Point */}
                                 <span className="mt-2 mr-4 text-xs">•</span>
-                                <p className="text-[15px] leading-relaxed text-gray-800">
+                                <p className="text-xl leading-relaxed text-gray-800">
                                     {step.Point}
                                 </p>
                             </div>

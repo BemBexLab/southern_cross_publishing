@@ -7,7 +7,7 @@ const Section3 = () => {
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
           
           {/* Left Side: 3D Audiobook Illustration */}
-          <div className="w-full lg:w-1/2 flex justify-center">
+          <div className="w-full flex justify-center">
             <div className="relative w-full max-w-[550px]">
               {/* This asset should be the combined player and earphones image */}
               <img 
@@ -19,17 +19,17 @@ const Section3 = () => {
           </div>
 
           {/* Right Side: Text Content */}
-          <div className="w-full lg:w-1/2">
+          <div className="w-full">
             <div className="mb-8">
-              <h3 className="text-[#f5ce47] italic font-serif text-lg lg:text-xl mb-4">
+              <h3 className="text-black italic font-semibold montserrat text-lg lg:text-xl mb-4">
                 Why It Matters
               </h3>
-              <h2 className="text-[#f5ce47] text-3xl md:text-4xl lg:text-[44px] font-serif leading-[1.15] mb-8">
+              <h2 className="text-[#FDD118] text-xl md:text-2xl lg:text-5xl goneva leading-[1.15] mb-8">
                 Your Book Has Readers Who Prefer to Listen: Are You Reaching Them?
               </h2>
             </div>
 
-            <div className="space-y-6 text-white/90 text-[15px] md:text-[17px] leading-relaxed font-light">
+            <div className="space-y-6 text-white/90 montserrat text-lg md:text-lg leading-relaxed font-light">
               <p>
                 The global audiobook market is growing rapidly, and Australian listeners are 
                 part of that shift. Platforms like Audible, Apple Books, Spotify, and Google Play 

@@ -3,7 +3,7 @@ import React from 'react'
 export interface WitnessServiceCard {
   iconSrc: string | React.ReactNode
   title: string
-  description: string
+  description?: string
   variant: 'dark' | 'light'
 }
 
@@ -16,8 +16,33 @@ export interface WitnessOurUniquenessProps {
   gridClassName?: string
 }
 
+const renderServiceIcon = (iconSrc: WitnessServiceCard['iconSrc']) => {
+  if (typeof iconSrc === 'string') {
+    return iconSrc
+  }
+
+  if (!React.isValidElement(iconSrc)) {
+    return iconSrc
+  }
+
+  if (typeof iconSrc.type === 'string' && iconSrc.type === 'svg') {
+    return (
+      <div className='[&_path]:fill-current'>
+        {iconSrc}
+      </div>
+    )
+  }
+
+  const iconElement = iconSrc as React.ReactElement<{ className?: string }>
+
+  return React.cloneElement(iconElement, {
+    className: [iconElement.props.className, 'h-10 w-10 shrink-0'].filter(Boolean).join(' '),
+  })
+}
+
 export const ServiceCard: React.FC<WitnessServiceCard> = ({ iconSrc, title, description, variant }) => {
   const isDark = variant === 'dark'
+  const hasLongDescription = Boolean(description && description.length > 387)
 
   return (
     <div
@@ -29,24 +54,36 @@ export const ServiceCard: React.FC<WitnessServiceCard> = ({ iconSrc, title, desc
     >
       <div
         className={`
-          mb-8 flex h-20 w-20 items-center justify-center rounded-xl text-white
+          mb-8 flex h-20 w-20 items-center justify-center rounded-xl text-[40px] leading-none text-white
           transition-colors duration-300
           group-hover:text-black
-          [&_path]:fill-current
+          [&_svg]:block
+          [&_svg]:h-10
+          [&_svg]:w-10
+          [&_svg]:shrink-0
+          [&_svg]:fill-current
+          [&_svg]:stroke-current
           ${isDark ? 'bg-[#eae8df] group-hover:bg-[#eae8df]' : 'bg-[#2e6b4f] group-hover:bg-[#eae8df]'}
         `}
       >
-        {/* <Image src={iconSrc} alt={title} width={40} height={40} /> */}
-        {iconSrc}
+        {renderServiceIcon(iconSrc)}
       </div>
 
       <h3 className={`mb-5 text-lg montserrat font-bold leading-snug transition-colors duration-300 ${isDark ? 'text-[#e8e4d9] group-hover:text-[#e8e4d9]' : 'text-[#1e2620] group-hover:text-[#e8e4d9]'}`}>
         {title}
       </h3>
 
-      <p className={`mx-auto montserrat max-w-full text-sm leading-relaxed transition-colors duration-300 ${isDark ? 'text-[#b5b09f] group-hover:text-[#b5b09f]' : 'text-[#4a4a42] group-hover:text-[#b5b09f]'}`}>
-        {description}
-      </p>
+      {description ? (
+        <p
+          className={`mx-auto max-w-full montserrat text-sm leading-relaxed transition-colors duration-300 ${
+            hasLongDescription
+              ? 'max-h-[9.75rem] overflow-y-auto pr-2 [scrollbar-color:rgba(7,140,82,0.7)_transparent] [scrollbar-width:thin] [&::-webkit-scrollbar]:w-[4px] [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-[#078c52]/70 [&::-webkit-scrollbar-track]:bg-transparent'
+              : ''
+          } ${isDark ? 'text-[#b5b09f] group-hover:text-[#b5b09f]' : 'text-[#4a4a42] group-hover:text-[#b5b09f]'}`}
+        >
+          {description}
+        </p>
+      ) : null}
     </div>
   )
 }

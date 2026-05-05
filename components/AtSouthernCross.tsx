@@ -7,6 +7,7 @@ import {
 export interface AtSouthernCrossProps {
   eyebrow: string;
   title: string;
+  description?: string;
   cards: WitnessServiceCard[];
   sectionClassName?: string;
   containerClassName?: string;
@@ -153,6 +154,7 @@ export const defaultAtSouthernCrossCards: WitnessServiceCard[] = [
 const AtSouthernCross: React.FC<AtSouthernCrossProps> = ({
   eyebrow,
   title,
+  description,
   cards,
   sectionClassName = "bg-[#EBECD0] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20",
   containerClassName = "mx-auto max-w-[1460px]",
@@ -165,6 +167,10 @@ const AtSouthernCross: React.FC<AtSouthernCrossProps> = ({
         <h2 className="goneva mx-auto mt-4 max-w-[980px] text-center text-3xl font-medium leading-tight text-[#078c52] sm:text-4xl lg:text-5xl">
           {title}
         </h2>
+
+        {description ? (
+          <p className="mt-4 text-center montserrat text-lg text-black">{description}</p>
+        ) : null}
 
         <div className={gridClassName}>
           {cards.map((card, index) => (

@@ -3,7 +3,7 @@ import { FaArrowRight } from 'react-icons/fa6';
 
 const Section4 = () => {
   return (
-    <section className="relative border-t border-green-800 bg-[#242424] overflow-visible">
+    <section className="relative overflow-hidden border-t border-green-800 bg-[#242424]">
       {/* City Silhouette Background Layer */}
       <div 
         className="absolute inset-0 opacity-100 z-0 pointer-events-none"
@@ -15,27 +15,27 @@ const Section4 = () => {
         }}
       />
 
-      <div className="container relative z-10 mx-auto max-w-8xl px-2">
-        <div className="flex flex-col items-end pt-10 lg:flex-row lg:pt-20">
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col gap-10 pt-10 sm:gap-12 sm:pt-12 lg:flex-row lg:items-end lg:gap-12 lg:pt-20">
           
           {/* Left Content Side */}
-          <div className="w-full lg:w-1/2 text-left mb-12 lg:mb-0 lg:pb-20">
-            <h3 className="text-[#FDD118] montserrat font-medium text-lg mb-2">
+          <div className="w-full text-left lg:w-1/2 lg:pb-20">
+            <h3 className="montserrat mb-3 text-base font-medium text-[#FDD118] sm:text-lg">
               Expert Non-Fiction Book Writing Services
             </h3>
             
-            <h2 className="text-4xl md:text-3xl font-serif text-[#F7F1D7] leading-tight mb-2 max-w-2xl">
+            <h2 className="mb-4 max-w-2xl text-3xl leading-tight text-[#F7F1D7] sm:text-4xl lg:text-[2.75rem]">
               Ready to Publish? Let's Start With a Conversation.
             </h2>
             
-            <p className="text-[#F7F1D7] montserrat text-md md:text-lg leading-relaxed mb-10 max-w-2xl">
+            <p className="montserrat mb-8 max-w-2xl text-base leading-relaxed text-[#F7F1D7] sm:text-lg sm:leading-8 lg:mb-10">
               You do not need a finished manuscript, a publishing background, or any prior 
               experience to reach out. Just bring your idea, your draft, or your story, and 
               we will tell you honestly what it needs and how we can help. No sales pressure, 
               no automated replies. Just a real conversation about your book.
             </p>
 
-            <button className="flex items-center montserrat gap-3 bg-[#FDD118] text-[#018752] font-bold py-3 px-2 sm:py-4 sm:px-8 rounded-md transition-all group mx-auto sm:mx-0">
+            <button className="group inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-md bg-[#FDD118] px-5 py-3 font-bold text-[#018752] transition-all sm:w-auto sm:px-8 sm:py-4">
               <span>Book Your Free Consultation Today</span>
               <FaArrowRight className="text-xl transition-transform group-hover:translate-x-1" />
             </button>
@@ -43,20 +43,17 @@ const Section4 = () => {
 
           {/* Right Illustration Side */}
           <div className="flex w-full justify-center lg:w-1/2 lg:justify-end">
-            <div className="relative z-30 w-full max-w-[800px] lg:translate-y-[72px]">
+            <div className="relative z-30 -mb-8 -mt-4 w-full max-w-[420px] sm:-mb-10 sm:-mt-10 sm:max-w-[560px] lg:mb-0 lg:mt-0 lg:max-w-[800px] lg:translate-y-[15px]">
               <img 
                 src="/publishing-services/Group (1).webp" 
                 alt="Creative thinking illustration"
-                className="w-full h-auto object-contain block translate-y-[1px]"
+                className="block h-auto w-full object-contain"
               />
             </div>
           </div>
 
         </div>
       </div>
-      
-      {/* Bottom Cream Decorative Bar */}
-      <div className="relative z-20 h-6 w-full bg-[#fdf8e1]" />
     </section>
   );
 };

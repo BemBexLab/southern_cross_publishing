@@ -1,11 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
 import { HiOutlineArrowNarrowRight } from 'react-icons/hi';
+import { FaArrowRight } from 'react-icons/fa';
 
 const Section5 = () => {
   return (
     <section className="bg-[#E9E7C3] py-20 px-6 md:px-12 lg:px-24">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="max-w-8xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         
         {/* Left Column: Image Container */}
         <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
@@ -21,15 +22,15 @@ const Section5 = () => {
 
         {/* Right Column: Content */}
         <div className="flex flex-col space-y-6">
-          <h3 className="font-serif text-[#018752] text-2xl font-medium">
+          <h3 className="goneva text-[#018752] text-5xl font-medium">
             Global Distribution
           </h3>
           
-          <h2 className="font-serif text-[#018752] text-xl md:text-3xl leading-tight">
+          <h2 className="goneva text-[#018752] text-3xl md:text-5xl leading-tight">
             Your Audiobook. Available Everywhere Listeners Are Already Searching
           </h2>
 
-          <div className="space-y-4 text-[#1A3C34]/90 text-md leading-relaxed max-w-xl">
+          <div className="space-y-4 text-[#1F1F1F] text-lg leading-relaxed max-w-4xl">
             <p>
               A great audiobook needs to be where your listeners are, and today, 
               listeners are spread across multiple platforms. Southern Cross 
@@ -47,7 +48,7 @@ const Section5 = () => {
           <div className="pt-4">
             <button className="bg-[#FFD22F] text-[#018752] font-bold py-4 px-8 rounded-lg flex items-center gap-2 hover:bg-[#f5c820] transition-colors">
               Browse the Collection
-              <HiOutlineArrowNarrowRight className="w-5 h-5" />
+              <FaArrowRight className="w-5 h-5" />
             </button>
           </div>
         </div>

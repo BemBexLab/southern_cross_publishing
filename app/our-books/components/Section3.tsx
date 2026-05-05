@@ -36,13 +36,13 @@ const partners = [
 
 const Section3 = () => {
   return (
-    <section className="bg-[#E9E7C3] py-20 px-6 md:px-12 lg:px-24 flex flex-col items-center">
+    <section className="bg-[#F7F1D7] py-20 px-6 md:px-12 lg:px-24 flex flex-col items-center">
       {/* Header */}
-      <div className="max-w-4xl text-center mb-16">
-        <h2 className="font-serif text-[#1A3C34] text-3xl md:text-4xl mb-6">
+      <div className="max-w-5xl text-center mb-16">
+        <h2 className="goneva text-[#018752] text-3xl md:text-5xl mb-6">
           Meet Our Publishing Partners
         </h2>
-        <p className="text-[#1A3C34]/80 text-sm md:text-base leading-relaxed">
+        <p className="text montserrat-black text-lg md:text-lg leading-relaxed">
           Lorem ipsum dolor sit amet consectetur. A turpis urna augue volutpat posuere neque magna. 
           Cras adipiscing purus dignissim in ipsum nibh risus non. Pharetra neque quis non eget et risus. 
           Libero suspendisse praesent sed duis ipsum vitae sed ipsum ut.
