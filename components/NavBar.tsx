@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { FaArrowRight } from "react-icons/fa";
 
@@ -20,22 +20,20 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
   const useDarkNavLinks =
-    pathname === "/our-books" || pathname === "/e-book-writing-service";
+    pathname === "/our-books" || pathname === "/e-book-writing-service" || pathname === "/contact";
   const logoSrc = useDarkNavLinks
     ? "/navbar/Frame 1000001530 (1).svg"
     : "/navbar/Frame 1000001530.svg";
 
-  return (
-    <nav
-      className="absolute inset-x-0 top-0 z-50 w-full montserrat bg-transparent"
-      style={{ paddingLeft: "25px", paddingRight: "25px" }}
-    >
-      {/* ── Main row ── */}
-      <div className="flex h-25 w-full items-center justify-between gap-4">
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [pathname]);
 
-        {/* Logo */}
+  return (
+    <nav className="absolute inset-x-0 top-0 z-50 w-full bg-transparent px-4 montserrat sm:px-6 lg:px-8">
+      <div className="flex h-20 w-full items-center justify-between gap-3 sm:h-24 lg:h-28">
         <Link href="/" className="flex flex-shrink-0 items-center">
-          <div className="relative mt-1 h-[55px] w-[180px] sm:h-[65px] sm:w-[220px] lg:h-[75px] lg:w-[290px]">
+          <div className="relative mt-1 h-12 w-40 sm:h-14 sm:w-52 lg:h-16 lg:w-64 xl:h-[75px] xl:w-[290px]">
             <Image
               src={logoSrc}
               alt="Southern Cross Publishing Logo"
@@ -46,7 +44,6 @@ export default function Navbar() {
           </div>
         </Link>
 
-        {/* Desktop nav links — hidden below xl */}
         <ul className="hidden xl:flex items-center gap-6 2xl:gap-10">
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
@@ -54,7 +51,7 @@ export default function Navbar() {
               <li key={link.href} className="group relative">
                 <Link
                   href={link.href}
-                  className={`montserrat relative py-2 text-sm 2xl:text-base font-light tracking-wide transition-colors duration-200 whitespace-nowrap ${
+                  className={`relative py-2 text-sm font-light tracking-wide whitespace-nowrap transition-colors duration-200 2xl:text-base ${
                     isActive
                       ? useDarkNavLinks
                         ? "text-black"
@@ -78,47 +75,50 @@ export default function Navbar() {
           })}
         </ul>
 
-        {/* CTA button — hidden below xl */}
         <Link
           href="/request-quote"
-          className="hidden xl:flex flex-shrink-0 items-center gap-2 rounded-[10px] bg-[#f5c842] px-4 py-3 2xl:px-6 2xl:py-3.5 text-sm 2xl:text-base font-bold text-[#1a5c35] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#ffd44f] hover:shadow-[0_6px_20px_rgba(0,0,0,0.2)] whitespace-nowrap"
+          className="hidden flex-shrink-0 items-center gap-2 whitespace-nowrap rounded-[10px] bg-[#f5c842] px-4 py-3 text-sm font-bold text-[#1a5c35] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#ffd44f] hover:shadow-[0_6px_20px_rgba(0,0,0,0.2)] xl:flex 2xl:px-6 2xl:py-3.5 2xl:text-base"
         >
           Request a Quote
-          <span><FaArrowRight /></span>
+          <FaArrowRight />
         </Link>
 
-        {/* Hamburger — visible below xl */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="flex xl:hidden flex-col justify-center gap-[5px] p-2"
+          className="flex flex-shrink-0 flex-col justify-center gap-[5px] rounded-full p-2.5 xl:hidden"
           aria-label="Toggle menu"
           aria-expanded={menuOpen}
         >
           <span
-            className={`block h-0.5 w-6 bg-white transition-all duration-300 origin-center ${
+            className={`block h-0.5 w-6 origin-center bg-black transition-all duration-300 ${
               menuOpen ? "translate-y-[7px] rotate-45" : ""
             }`}
           />
           <span
-            className={`block h-0.5 w-6 bg-white transition-opacity duration-300 ${
+            className={`block h-0.5 w-6 bg-black transition-opacity duration-300 ${
               menuOpen ? "opacity-0" : ""
             }`}
           />
           <span
-            className={`block h-0.5 w-6 bg-white transition-all duration-300 origin-center ${
+            className={`block h-0.5 w-6 origin-center bg-black transition-all duration-300 ${
               menuOpen ? "-translate-y-[7px] -rotate-45" : ""
             }`}
           />
         </button>
       </div>
 
-      {/* ── Mobile / Tablet drawer ── */}
       <div
-        className={`xl:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-          menuOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
+        className={`overflow-hidden transition-all duration-300 ease-in-out xl:hidden ${
+          menuOpen ? "max-h-[700px] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="border-t border-white/10 pb-5 pt-3">
+        <div
+          className={`mt-2 rounded-[22px] border pb-5 pt-3 shadow-[0_20px_50px_rgba(0,0,0,0.16)] backdrop-blur-xl ${
+            useDarkNavLinks
+              ? "border-black/10 bg-white/55"
+              : "border-white/20 bg-white/12"
+          }`}
+        >
           <ul className="flex flex-col gap-1">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
@@ -127,9 +127,9 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     onClick={() => setMenuOpen(false)}
-                    className={`block rounded-md px-4 py-3 text-sm sm:text-base font-light transition-all ${
+                    className={`block rounded-md px-4 py-3 text-sm font-light transition-all sm:text-base ${
                       useDarkNavLinks
-                        ? "hover:bg-black/5 hover:text-black"
+                        ? "hover:bg-white/55 hover:text-black"
                         : "hover:bg-white/10 hover:text-white"
                     } ${
                       isActive
@@ -138,7 +138,7 @@ export default function Navbar() {
                           : "text-[#f5c842]"
                         : useDarkNavLinks
                           ? "text-black/75"
-                          : "text-white/80"
+                          : "text-white/85"
                     }`}
                   >
                     {link.label}
@@ -148,14 +148,14 @@ export default function Navbar() {
             })}
           </ul>
 
-          {/* CTA inside mobile menu */}
           <div className="mt-4 px-4">
             <Link
               href="/request-quote"
               onClick={() => setMenuOpen(false)}
-              className="flex items-center justify-center gap-2 rounded-[10px] bg-[#f5c842] px-6 py-3 text-sm sm:text-base font-bold text-[#1a5c35] transition-all hover:bg-[#ffd44f]"
+              className="flex items-center justify-center gap-2 rounded-[10px] bg-[#f5c842] px-6 py-3 text-sm font-bold text-[#1a5c35] transition-all hover:bg-[#ffd44f] sm:text-base"
             >
-              Request a Quote →
+              Request a Quote
+              <FaArrowRight />
             </Link>
           </div>
         </div>

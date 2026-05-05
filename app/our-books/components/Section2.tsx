@@ -17,7 +17,7 @@ const Section2 = () => {
       : BOOKS.filter((book) => book.tags.includes(activeTab));
 
   return (
-    <section className="flex flex-col items-center bg-[#EAE5CC] px-6 py-20 md:px-12 lg:px-24">
+    <section className="flex flex-col items-center bg-[#EAE5CC] px-6 pt-10 pb-20 md:px-12 lg:px-24">
       <div className="mb-12 text-center">
         <h2 className="mb-6 font-serif text-3xl text-[#018752] md:text-5xl">Our Books</h2>
         <p className="montserrat text-lg leading-relaxed text-black">
