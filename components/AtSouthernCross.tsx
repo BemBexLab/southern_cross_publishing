@@ -156,7 +156,7 @@ const AtSouthernCross: React.FC<AtSouthernCrossProps> = ({
   title,
   description,
   cards,
-  sectionClassName = "bg-[#EBECD0] px-4 pb-12 sm:px-6 sm:pb-16 lg:px-8 lg:pb-20",
+  sectionClassName = "bg-[#EBECD0] px-4 pb-12 pt-10 sm:px-6 sm:pb-16 lg:px-8 lg:pb-20",
   containerClassName = "mx-auto max-w-[1460px]",
   gridClassName = "mt-10 grid grid-cols-1 gap-6 sm:mt-12 md:grid-cols-2 lg:grid-cols-3 lg:gap-10",
 }) => {

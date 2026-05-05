@@ -2,25 +2,38 @@ import React from "react";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 
 const quickLinks = [
-  "Home",
-  "Publishing Services",
-  "Our Books",
-  "Our Publishing",
-  "Who we are",
-  "Blog",
+  { label: "Home", href: "#" },
+  { label: "Publishing Services", href: "#" },
+  { label: "Our Books", href: "#" },
+  { label: "Our Publishing", href: "#" },
+  { label: "Who we are", href: "#" },
+  { label: "Blog", href: "#" },
+  { label: "E-Book Writing Service", href: "/e-book-writing-service" },
 ];
 
 const services = [
-  "Book Publishing",
-  "Ebook Formatting",
-  "Children Book",
-  "Book Marketing",
+  { label: "Book Publishing", href: "#" },
+  { label: "Ebook Formatting", href: "#" },
+  { label: "Children Book", href: "#" },
+  { label: "Book Marketing", href: "#" },
 ];
 
 const socials = [
-  { label: "Facebook", icon: <FaFacebookF className="h-[14px] w-[14px]" /> },
-  { label: "Twitter", icon: <FaTwitter className="h-[14px] w-[14px]" /> },
-  { label: "Instagram", icon: <FaInstagram className="h-[14px] w-[14px]" /> },
+  {
+    label: "Facebook",
+    href: "#",
+    icon: <FaFacebookF className="h-[14px] w-[14px]" />,
+  },
+  {
+    label: "Twitter",
+    href: "#",
+    icon: <FaTwitter className="h-[14px] w-[14px]" />,
+  },
+  {
+    label: "Instagram",
+    href: "#",
+    icon: <FaInstagram className="h-[14px] w-[14px]" />,
+  },
 ];
 
 const Footer = () => {
@@ -64,8 +77,12 @@ const Footer = () => {
                 style={{ color: "#eee5d3" }}
               >
                 {quickLinks.map((link) => (
-                  <a key={link} href="#" className="transition-opacity hover:opacity-80">
-                    {link}
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    className="transition-opacity hover:opacity-80"
+                  >
+                    {link.label}
                   </a>
                 ))}
               </div>
@@ -83,8 +100,12 @@ const Footer = () => {
                 style={{ color: "#eee5d3" }}
               >
                 {services.map((link) => (
-                  <a key={link} href="#" className="transition-opacity hover:opacity-80">
-                    {link}
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    className="transition-opacity hover:opacity-80"
+                  >
+                    {link.label}
                   </a>
                 ))}
               </div>
@@ -104,7 +125,7 @@ const Footer = () => {
                 {socials.map((link) => (
                   <a
                     key={link.label}
-                    href="#"
+                    href={link.href}
                     className="flex items-center gap-3 transition-opacity hover:opacity-80"
                 >
                   <span
