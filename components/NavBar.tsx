@@ -19,6 +19,11 @@ const navLinks = [
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
+  const useDarkNavLinks =
+    pathname === "/our-books" || pathname === "/e-book-writing-service";
+  const logoSrc = useDarkNavLinks
+    ? "/navbar/Frame 1000001530 (1).svg"
+    : "/navbar/Frame 1000001530.svg";
 
   return (
     <nav
@@ -32,7 +37,7 @@ export default function Navbar() {
         <Link href="/" className="flex flex-shrink-0 items-center">
           <div className="relative mt-1 h-[55px] w-[180px] sm:h-[65px] sm:w-[220px] lg:h-[75px] lg:w-[290px]">
             <Image
-              src="/navbar/Frame 1000001530.svg"
+              src={logoSrc}
               alt="Southern Cross Publishing Logo"
               fill
               className="object-contain object-left"
@@ -51,13 +56,21 @@ export default function Navbar() {
                   href={link.href}
                   className={`montserrat relative py-2 text-sm 2xl:text-base font-light tracking-wide transition-colors duration-200 whitespace-nowrap ${
                     isActive
-                      ? "text-[#f5c842]"
-                      : "text-white/80 hover:text-white"
+                      ? useDarkNavLinks
+                        ? "text-black"
+                        : "text-[#f5c842]"
+                      : useDarkNavLinks
+                        ? "text-black/75 hover:text-black"
+                        : "text-white/80 hover:text-white"
                   }`}
                 >
                   {link.label}
                   {!isActive && (
-                    <span className="absolute bottom-0 left-0 h-[1.5px] w-0 bg-white transition-all duration-300 ease-out group-hover:w-full" />
+                    <span
+                      className={`absolute bottom-0 left-0 h-[1.5px] w-0 transition-all duration-300 ease-out group-hover:w-full ${
+                        useDarkNavLinks ? "bg-black" : "bg-white"
+                      }`}
+                    />
                   )}
                 </Link>
               </li>
@@ -114,8 +127,18 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     onClick={() => setMenuOpen(false)}
-                    className={`block rounded-md px-4 py-3 text-sm sm:text-base font-light transition-all hover:bg-white/10 hover:text-white ${
-                      isActive ? "text-[#f5c842]" : "text-white/80"
+                    className={`block rounded-md px-4 py-3 text-sm sm:text-base font-light transition-all ${
+                      useDarkNavLinks
+                        ? "hover:bg-black/5 hover:text-black"
+                        : "hover:bg-white/10 hover:text-white"
+                    } ${
+                      isActive
+                        ? useDarkNavLinks
+                          ? "text-black"
+                          : "text-[#f5c842]"
+                        : useDarkNavLinks
+                          ? "text-black/75"
+                          : "text-white/80"
                     }`}
                   >
                     {link.label}
