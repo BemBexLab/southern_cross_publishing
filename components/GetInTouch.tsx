@@ -6,6 +6,12 @@ import {
 import { FiPhone } from "react-icons/fi";
 import { IoLocationOutline } from "react-icons/io5";
 
+type GetInTouchProps = {
+  title?: string;
+  subtitle?: string;
+  paragraphs?: string[];
+};
+
 const ContactItem = ({
   icon,
   text,
@@ -40,7 +46,16 @@ const ContactItem = ({
   return content;
 };
 
-const GetInTouch = () => {
+const defaultParagraphs = [
+  "You don't need a finished manuscript, a polished pitch, or any publishing experience to reach out to us. All you need is the story you've been sitting on and the decision to finally do something about it. We've heard every kind of idea, rough, half-formed, fully written, completely stuck, and we know exactly how to move it forward.",
+  "Drop us a message, and one of our publishing specialists will get back to you personally, no automated replies, no sales scripts. Just a real conversation about your book, your timeline, and what working together would actually look like.",
+];
+
+const GetInTouch = ({
+  title = "Your book is closer than you think. Let's talk about it.",
+  subtitle = "Start with a simple conversation",
+  paragraphs = defaultParagraphs,
+}: GetInTouchProps) => {
   return (
     <section
       className="relative overflow-hidden bg-[#078c52] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-14"
@@ -53,28 +68,17 @@ const GetInTouch = () => {
       <div className="relative mx-auto grid max-w-[1520px] gap-10 lg:grid-cols-[1.02fr_0.98fr] lg:items-start lg:gap-10">
         <div className="max-w-[680px] pt-2 text-[#f6ecd1] lg:pt-10">
           <h2 className="goneva max-w-[600px] text-[1.65rem] leading-[1.08] sm:text-[2rem] md:text-[2.3rem] lg:text-4xl">
-            Your book is closer than you think. Let's talk about it.
+            {title}
           </h2>
 
           <p className="montserrat my-3 text-[1.02rem] font-medium italic leading-tight text-[#f7c51d] sm:my-2 sm:text-[1.18rem] md:text-[1.35rem] lg:text-2xl">
-            Start with a simple conversation
+            {subtitle}
           </p>
 
           <div className="montserrat max-w-[560px] space-y-3 text-[0.98rem] leading-[1.5] text-[#e8eddc] sm:text-[1.02rem] md:text-[1.06rem]">
-            <p>
-              You don't need a finished manuscript, a polished pitch, or any
-              publishing experience to reach out to us. All you need is the
-              story you've been sitting on and the decision to finally do
-              something about it. We've heard every kind of idea, rough,
-              half-formed, fully written, completely stuck, and we know exactly
-              how to move it forward.
-            </p>
-            <p>
-              Drop us a message, and one of our publishing specialists will get
-              back to you personally, no automated replies, no sales scripts.
-              Just a real conversation about your book, your timeline, and what
-              working together would actually look like.
-            </p>
+            {paragraphs.map((paragraph, index) => (
+              <p key={`${index}-${paragraph.slice(0, 24)}`}>{paragraph}</p>
+            ))}
           </div>
 
           <div className="mt-6 grid gap-4 sm:grid-cols-2 sm:gap-4 lg:mt-5">

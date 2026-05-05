@@ -64,12 +64,12 @@ const Hero: React.FC<HeroProps> = ({
   }, []);
 
   const ctaClassName =
-    "mt-7 inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-[#FDD118] px-5 py-3 text-sm font-bold text-[#018752] shadow-[0_14px_30px_rgba(210,176,49,0.28)] transition-transform active:scale-95 sm:mt-8 sm:px-6 sm:text-base";
+    "mt-7 inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-[#FDD118] font-medium px-5 py-3 text-sm text-[#018752] shadow-[0_14px_30px_rgba(210,176,49,0.28)] transition-transform active:scale-95 sm:mt-8 sm:px-6 sm:text-base";
 
   return (
     <section
       ref={sectionRef}
-      className="relative flex min-h-[680px] w-full items-center overflow-hidden sm:min-h-[760px] lg:min-h-[820px]"
+      className="relative flex min-h-screen w-full items-center overflow-hidden"
     >
       <div
         className="absolute inset-0 z-0 scale-[1.12] will-change-transform"
@@ -83,14 +83,27 @@ const Hero: React.FC<HeroProps> = ({
         />
       </div>
 
-      <div className="relative z-10 mx-auto w-full max-w-[1510px] px-4 pt-24 sm:px-6 sm:pt-28 lg:px-[70px] lg:pt-24">
-        <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,0.92fr)_minmax(420px,0.95fr)] lg:gap-8 xl:grid-cols-[minmax(0,0.94fr)_minmax(500px,1fr)]">
-          <div className="max-w-[620px] xl:max-w-[7a50px]">
-            <h1 className="goneva text-[2.35rem] leading-[1.02] text-[#018752] sm:text-5xl lg:text-[3.85rem] xl:text-[4.1rem]">
+      <div className="relative z-10 mx-auto w-full max-w-8xl px-4 pt-24 sm:px-6 sm:pt-28 lg:px-8 lg:pt-24 xl:px-10">
+        <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-6 xl:gap-8">
+          <div className="w-full max-w-none">
+            <h1 className="goneva max-w-none text-4xl leading-tight text-[#018752] sm:text-5xl lg:text-6xl xl:text-7xl">
               {title}
             </h1>
 
-            <div className="montserrat mt-5 max-w-[510px] space-y-6 text-[0.96rem] font-medium leading-[1.32] text-[#5d5d55] sm:mt-6 sm:text-base lg:mt-7 lg:max-w-[470px] lg:text-[1.02rem]">
+            <div className="relative mx-auto mt-6 w-full max-w-xl lg:hidden">
+              <div className="relative aspect-[1.02/0.88] w-full">
+                <Image
+                  src="/ebook-services/Ebook Hero Page-01 1.svg"
+                  alt="E-book writing service illustration"
+                  fill
+                  sizes="100vw"
+                  className="object-contain object-center"
+                  priority
+                />
+              </div>
+            </div>
+
+            <div className="montserrat mt-6 max-w-none space-y-6 text-lg font-medium leading-relaxed text-[#5d5d55] lg:mt-7">
               <p>{description}</p>
             </div>
 
@@ -107,14 +120,14 @@ const Hero: React.FC<HeroProps> = ({
             )}
           </div>
 
-          <div className="relative mx-auto hidden w-full max-w-[610px] justify-self-end lg:block xl:max-w-[700px]">
+          <div className="relative hidden w-full max-w-none lg:block">
             <div className="relative aspect-[1.02/0.88] w-full">
               <Image
                 src="/ebook-services/Ebook Hero Page-01 1.svg"
                 alt="E-book writing service illustration"
                 fill
                 sizes="(max-width: 1024px) 0px, 44vw"
-                className="object-contain object-right"
+                className="object-contain object-center"
                 priority
               />
             </div>
