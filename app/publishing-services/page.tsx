@@ -2,7 +2,7 @@ import LogoSlider from "@/components/LogoSlider";
 import HeroSection from "./components/Hero";
 import Section2 from "./components/Section2";
 import Section3 from "./components/Section3";
-import Section4 from "./components/Section4";
+import ReadyToPublish from "./components/ReadyToPublish";
 import Section5 from "./components/Section5";
 import Section6 from "./components/Section6";
 import Section8 from "./components/Section8";
@@ -32,7 +32,7 @@ export default function Home() {
             <LogoSlider />
             <Section2 />
             <Section3 />
-            <Section4 />
+            <ReadyToPublish />
             <AtSouthernCross eyebrow="Our Approach" title="Three Things We Never Compromise On, No Matter the Book" cards={[
                 {
                     title: "Personalised Publishing Services",

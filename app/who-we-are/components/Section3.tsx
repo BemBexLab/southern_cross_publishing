@@ -10,11 +10,11 @@ const stats = [
 
 const Section3 = () => {
   return (
-    <section className="bg-[#E9E7C3] py-16 px-6 md:px-12 lg:px-24">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <section className="bg-[#F7F1D7] py-16 px-6 md:px-12 lg:px-24">
+      <div className="max-w-8xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         
         {/* Left Column: Image Container */}
-        <div className="relative w-full aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-sm">
+        <div className="relative w-full aspect-[5/4] rounded-[2.5rem] overflow-hidden shadow-sm">
           {/* 
             Note: Referencing image_642003.png (the book composite image).
             Ensure this image is in your /public folder.
@@ -30,27 +30,25 @@ const Section3 = () => {
 
         {/* Right Column: Content */}
         <div className="flex flex-col">
-          <h2 className="font-serif text-[#018752] text-4xl mb-2">
+          <h2 className="goneva text-[#018752] text-6xl mb-2">
             Our Mission
           </h2>
 
-          <p className="text-[#1A3C34]/80 text-[16px] leading-relaxed mb-6 max-w-xl">
-            To give every author, regardless of experience or background, access to the 
-            professional publishing process that their story deserves, from first word to 
-            final reader.
+          <p className="text-[#1F1F1F] montserrat text-lg leading-relaxed mb-6 max-w-4xl">
+            To give every author, regardless of experience or background, access to the professional publishing process that their story deserves, from first word to final reader.
           </p>
 
           {/* Stats Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {stats.map((stat, index) => (
               <div 
                 key={index} 
-                className="bg-[#1F1F1F1A]/80 rounded-3xl p-8 flex flex-col items-center justify-center text-center space-y-2"
+                className="bg-[#1F1F1F1A] rounded-3xl p-14 flex flex-col items-center justify-center text-center space-y-2"
               >
-                <span className="font-serif text-[#018752] text-4xl font-semibold">
+                <span className="montserrat text-[#018752] text-5xl font-black">
                   {stat.value}
                 </span>
-                <span className="text-[#1A3C34]/70 text-sm font-medium uppercase tracking-wide">
+                <span className="text-[#1F1F1F] montserrat text-sm font-semibold uppercase tracking-wide">
                   {stat.label}
                 </span>
               </div>
