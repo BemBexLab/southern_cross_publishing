@@ -2,7 +2,14 @@ const heroImageSrc = "/contact/Contact Us_Mesa de trabajo 1 1.svg";
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden bg-[#f6efd6] px-4 pt-10 sm:px-6 sm:pt-12 lg:px-8 lg:pt-14 xl:overflow-visible">
+    <section
+      className="relative overflow-hidden bg-[#f6efd6] px-4 pt-30 sm:px-6 sm:pt-22 lg:px-8 lg:pt-24 xl:overflow-visible"
+      style={{
+        backgroundImage: `url("/ebook-services/Mask group.png")`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+      }}
+    >
       <div className="mx-auto grid max-w-7xl items-center gap-8 md:gap-10 xl:grid-cols-[0.9fr_1.1fr] xl:gap-2">
         <div className="max-w-2xl pb-2 text-center sm:pb-4 xl:pb-16 xl:text-left xl:translate-y-20">
           <h1 className="goneva mx-auto max-w-[11ch] text-4xl leading-[0.96] text-[#078c52] sm:text-5xl lg:text-6xl xl:mx-0 xl:max-w-2xl xl:text-7xl">

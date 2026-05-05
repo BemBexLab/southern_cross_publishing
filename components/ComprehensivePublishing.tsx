@@ -31,7 +31,7 @@ const bookImages = [
 const ComprehensivePublishing = () => {
   return (
     <section className="px-4">
-      <h2 className="mx-auto w-full max-w-4xl py-10 text-center text-3xl font-medium text-[#018752] goneva sm:text-4xl md:max-w-3xl md:text-5xl lg:max-w-1/2">
+      <h2 className="mx-auto w-full max-w-4xl pb-10 text-center text-3xl font-medium text-[#018752] goneva sm:text-4xl md:max-w-3xl md:text-5xl lg:max-w-1/2">
         Comprehensive Publishing Services From Rough Manuscript To The
         Professional Book.
       </h2>

@@ -3,7 +3,7 @@ import { FaArrowRight } from 'react-icons/fa6';
 
 const Section2 = () => {
   return (
-    <section className="bg-[#F7F1D7] py-10 sm:py-12 lg:py-16">
+    <section className="bg-[#F7F1D7] pb-10 sm:pb-12 lg:pb-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center gap-10 md:gap-12 lg:flex-row lg:items-center lg:gap-14 xl:gap-20">
           <div className="w-full max-w-[760px] lg:hidden">
