@@ -46,10 +46,13 @@ const WhyChoose = () => {
             ))}
           </ul>
 
-          <button className="montserrat mt-9 inline-flex min-h-12 items-center justify-center gap-3 rounded-md bg-[#ffd01f] px-6 py-3 text-base text-[#018752] transition hover:bg-[#ffd73a] sm:px-7">
+          <a
+            href="/contact"
+            className="montserrat mt-9 inline-flex min-h-12 items-center justify-center gap-3 rounded-md bg-[#ffd01f] px-6 py-3 text-base text-[#018752] transition hover:bg-[#ffd73a] sm:px-7"
+          >
             <FiPhoneCall className="text-2xl" />
             <span className="font-black">Request a Call</span>
-          </button>
+          </a>
         </div>
       </div>
     </section>

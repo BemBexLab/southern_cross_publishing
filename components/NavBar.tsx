@@ -20,7 +20,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
   const useDarkNavLinks =
-    pathname === "/our-books" || pathname === "/e-book-writing-service" || pathname === "/contact";
+    pathname === "/our-books" || pathname === "/e-book-writing-service" || pathname === "/contact" || pathname === "/blog";
   const logoSrc = useDarkNavLinks
     ? "/navbar/Frame 1000001530 (1).svg"
     : "/navbar/Frame 1000001530.svg";
@@ -76,7 +76,7 @@ export default function Navbar() {
         </ul>
 
         <Link
-          href="/request-quote"
+          href="/contact"
           className="hidden flex-shrink-0 items-center gap-2 whitespace-nowrap rounded-[10px] bg-[#f5c842] px-4 py-3 text-sm font-bold text-[#1a5c35] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#ffd44f] hover:shadow-[0_6px_20px_rgba(0,0,0,0.2)] xl:flex 2xl:px-6 2xl:py-3.5 2xl:text-base"
         >
           Request a Quote
@@ -150,7 +150,7 @@ export default function Navbar() {
 
           <div className="mt-4 px-4">
             <Link
-              href="/request-quote"
+              href="/contact"
               onClick={() => setMenuOpen(false)}
               className="flex items-center justify-center gap-2 rounded-[10px] bg-[#f5c842] px-6 py-3 text-sm font-bold text-[#1a5c35] transition-all hover:bg-[#ffd44f] sm:text-base"
             >

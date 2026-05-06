@@ -46,10 +46,13 @@ const Section5 = () => {
 
           {/* CTA Button */}
           <div className="pt-4">
-            <button className="bg-[#FFD22F] text-[#018752] font-bold py-4 px-8 rounded-lg flex items-center gap-2 hover:bg-[#f5c820] transition-colors">
+            <a
+              href="/contact"
+              className="bg-[#FFD22F] text-[#018752] font-bold py-4 px-8 rounded-lg flex items-center gap-2 hover:bg-[#f5c820] transition-colors"
+            >
               Browse the Collection
               <FaArrowRight className="w-5 h-5" />
-            </button>
+            </a>
           </div>
         </div>
 

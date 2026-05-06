@@ -56,10 +56,13 @@ export default function Home() {
               focused on what matters: your words.
             </p>
 
-            <button className="montserrat mt-7 inline-flex w-fit items-center gap-3 rounded-[10px] bg-[#f6c72f] px-6 py-4 text-lg font-semibold text-[#067446] transition-transform duration-200 hover:-translate-y-0.5 sm:mt-8 sm:px-7 sm:text-[1.05rem] md:mt-7 md:px-7 md:py-4 md:text-base lg:mt-9 lg:px-7 lg:py-4">
+            <a
+              href="/contact"
+              className="montserrat mt-7 inline-flex w-fit items-center gap-3 rounded-[10px] bg-[#f6c72f] px-6 py-4 text-lg font-semibold text-[#067446] transition-transform duration-200 hover:-translate-y-0.5 sm:mt-8 sm:px-7 sm:text-[1.05rem] md:mt-7 md:px-7 md:py-4 md:text-base lg:mt-9 lg:px-7 lg:py-4"
+            >
               Get a Quote
               <FaArrowRight />
-            </button>
+            </a>
           </div>
 
           <div className="relative hidden min-h-[100%] items-center justify-center px-4 pb-0 pt-0 lg:flex">

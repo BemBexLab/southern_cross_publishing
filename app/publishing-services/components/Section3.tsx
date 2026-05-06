@@ -124,9 +124,12 @@ const Section3 = () => {
                 <p className="montserrat my-6 text-base text-[#1F1F1F] sm:my-8 sm:text-lg">
                   {plan.description}
                 </p>
-                <button className="montserrat inline-flex min-h-11 items-center gap-2 rounded-lg bg-[#428a5a] px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#356e48] sm:px-6 sm:text-base">
+                <a
+                  href="/contact"
+                  className="montserrat inline-flex min-h-11 items-center gap-2 rounded-lg bg-[#428a5a] px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#356e48] sm:px-6 sm:text-base"
+                >
                   Custom Quote <FaArrowRight size={12} />
-                </button>
+                </a>
               </div>
 
               {/* Right Column (Features) */}

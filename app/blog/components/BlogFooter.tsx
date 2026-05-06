@@ -1,7 +1,4 @@
-"use client";
-
 import React from "react";
-import { usePathname } from "next/navigation";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 
 const quickLinks = [
@@ -39,15 +36,10 @@ const socials = [
   },
 ];
 
-const Footer = () => {
-  const pathname = usePathname();
-
-  if (pathname === "/blog") {
-    return null;
-  }
+const BlogFooter = () => {
   return (
     <footer
-      className="w-full px-4 pb-10 pt-12 sm:px-6 lg:px-20 lg:pb-12 lg:pt-12"
+      className="w-full px-4 pb-10 pt-44 sm:px-6 sm:pt-52 lg:px-20 lg:pb-10 lg:pt-64"
       style={{ backgroundColor: "#252525" }}
     >
       <div className="w-full">
@@ -172,4 +164,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default BlogFooter;

@@ -25,13 +25,13 @@ const OurAudioBook = () => {
               ))}
             </div>
 
-            <button
-              type="button"
+            <a
+              href="/contact"
               className="montserrat mt-8 inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-md bg-[#f7c51d] px-6 text-sm font-bold text-[#018752] transition hover:bg-[#efbf17] sm:mt-10 sm:w-auto sm:px-8 sm:text-base"
             >
               Get a Free Publishing Quote
               <FaArrowRight className="h-4 w-4 shrink-0" />
-            </button>
+            </a>
           </div>
 
           <div className="relative mx-auto flex w-full max-w-xl justify-center sm:max-w-2xl md:max-w-3xl lg:mx-0 lg:max-w-4xl lg:justify-end">

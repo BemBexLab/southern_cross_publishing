@@ -61,14 +61,14 @@ const HomeHero = () => {
 
             <div className="montserrat flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-4 lg:justify-start">
               <Link
-                href="/start"
+                href="/contact"
                 className="flex min-h-12 items-center justify-center gap-3 rounded-[8px] bg-[#f5c842] px-6 py-3 text-sm font-bold text-[#1a5c35] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#ffd44f] hover:shadow-lg sm:px-7 sm:py-4 sm:text-[15px]"
               >
                 Start Your Publishing Journey
                 <FaArrowRight />
               </Link>
               <Link
-                href="/services"
+                href="/contact"
                 className="flex min-h-12 items-center justify-center gap-3 rounded-[8px] border-2 border-[#f5c842] px-6 py-3 text-sm font-bold text-[#f5c842] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#f5c842] hover:text-[#1a5c35] hover:shadow-lg sm:px-7 sm:py-4 sm:text-[15px]"
               >
                 Explore our services
