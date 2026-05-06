@@ -46,7 +46,7 @@ const Section6 = () => {
 
               {/* CONTENT - Added pl-2 (on mobile) and lg:pl-0 to move text away from the vertical line */}
               <div className="flex flex-col relative z-10 pl-6 lg:pl-0">
-                <span className="text-[#f5ce47] text-4xl sm:text-6xl font-bold leading-none mb-3 select-none">
+                <span className="text-[#FDD118] text-4xl sm:text-6xl font-bold leading-none mb-3 select-none">
                   {step.num}
                 </span>
                 <span className="text-[#2d7a44] font-bold text-sm uppercase tracking-widest mb-4">

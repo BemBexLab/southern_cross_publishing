@@ -68,7 +68,7 @@ const BlogFooter = () => {
             <nav className="montserrat min-w-0">
               <h3
                 className="text-[1.12rem] font-medium"
-                style={{ color: "#d6af21" }}
+                style={{ color: "#FDD118" }}
               >
                 Quick Links
               </h3>
@@ -91,7 +91,7 @@ const BlogFooter = () => {
             <nav className="montserrat min-w-0">
               <h3
                 className="text-[1.12rem] font-medium"
-                style={{ color: "#d6af21" }}
+                style={{ color: "#FDD118" }}
               >
                 Our Services
               </h3>
@@ -114,7 +114,7 @@ const BlogFooter = () => {
             <nav className="montserrat min-w-0 sm:col-span-2 lg:col-span-2 xl:col-span-1">
               <h3
                 className="text-[1.12rem] font-medium"
-                style={{ color: "#d6af21" }}
+                style={{ color: "#FDD118" }}
               >
                 Follow Us
               </h3>

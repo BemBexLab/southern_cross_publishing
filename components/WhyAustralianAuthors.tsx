@@ -50,7 +50,7 @@ const WhyAustralianAuthors = () => {
     <section className="bg-[#078c52] px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-24">
       <div className="mx-auto flex max-w-8xl flex-col items-center text-center">
         <div className="mx-auto w-full max-w-8xl text-center">
-          <h2 className="goneva text-[1.9rem] leading-[1.08] text-[#f4c521] sm:text-[2.4rem] lg:text-[3.05rem]">
+          <h2 className="goneva text-[1.9rem] leading-[1.08] text-[#FDD118] sm:text-[2.4rem] lg:text-[3.05rem]">
             Why Australian Authors Choose Southern Cross Publishing for Their
             Book
           </h2>

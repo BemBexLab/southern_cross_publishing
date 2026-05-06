@@ -102,7 +102,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                     {ctaHref ? (
                         <a
                             href={ctaHref}
-                            className="inline-flex items-center gap-3 bg-[#f5ce47] hover:bg-[#eac030] text-[#018752] font-bold py-3 px-5 rounded-lg shadow-xl transition-transform active:scale-95"
+                            className="inline-flex items-center gap-3 bg-[#FDD118] hover:bg-[#eac030] text-[#018752] font-bold py-3 px-5 rounded-lg shadow-xl transition-transform active:scale-95"
                         >
                             <FiPhoneCall className="text-2xl" />
                             <span className="text-lg">{ctaText}</span>
@@ -110,7 +110,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                     ) : (
                         <button
                             onClick={handleCtaAction}
-                            className="flex items-center gap-3 bg-[#f5ce47] hover:bg-[#eac030] text-[#018752] font-bold py-3 px-5 rounded-lg shadow-xl transition-transform active:scale-95"
+                            className="flex items-center gap-3 bg-[#FDD118] hover:bg-[#eac030] text-[#018752] font-bold py-3 px-5 rounded-lg shadow-xl transition-transform active:scale-95"
                         >
                             <FiPhoneCall className="text-2xl" />
                             <span className="text-lg">{ctaText}</span>
