@@ -19,7 +19,7 @@ const BlogOverlay = () => {
 
             <Link
               href="/contact"
-              className="montserrat mt-8 inline-flex min-h-12 items-center justify-center gap-3 rounded-md bg-[#f7c51d] px-6 text-base font-semibold text-[#018752] transition hover:bg-[#ffd23c] sm:px-7"
+              className="montserrat mt-8 inline-flex min-h-12 items-center justify-center gap-3 rounded-md bg-[#FDD118] px-6 text-base font-semibold text-[#018752] transition hover:bg-[#ffd23c] sm:px-7"
             >
               Get started today
               <FaArrowRight className="h-4 w-4 shrink-0" />

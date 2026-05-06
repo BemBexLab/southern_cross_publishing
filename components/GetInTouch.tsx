@@ -23,7 +23,7 @@ const ContactItem = ({
 }) => {
   const content = (
     <div className="flex items-start gap-3 sm:gap-4">
-      <div className="flex h-[44px] w-[44px] shrink-0 items-center justify-center rounded-[8px] bg-[#f7c51d] text-[#078c52] sm:h-[48px] sm:w-[48px]">
+      <div className="flex h-[44px] w-[44px] shrink-0 items-center justify-center rounded-[8px] bg-[#FDD118] text-[#078c52] sm:h-[48px] sm:w-[48px]">
         {icon}
       </div>
       <p className="montserrat pt-1 text-sm font-medium leading-[1.4] text-[#f6ecd1] sm:text-[1.02rem]">
@@ -71,7 +71,7 @@ const GetInTouch = ({
             {title}
           </h2>
 
-          <p className="montserrat my-3 text-[1.02rem] font-medium italic leading-tight text-[#f7c51d] sm:my-2 sm:text-[1.18rem] md:text-[1.35rem] lg:text-2xl">
+          <p className="montserrat my-3 text-[1.02rem] font-medium italic leading-tight text-[#FDD118] sm:my-2 sm:text-[1.18rem] md:text-[1.35rem] lg:text-2xl">
             {subtitle}
           </p>
 

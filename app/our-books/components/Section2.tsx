@@ -41,7 +41,7 @@ const Section2 = () => {
             >
               {cat}
               {activeTab === cat && (
-                <div className="absolute bottom-0 left-0 h-[3px] w-full bg-gradient-to-r from-[#FFD22F] to-[#1A3C34]" />
+                <div className="absolute bottom-0 left-0 h-[3px] w-full bg-gradient-to-r from-[#FDD118] to-[#1A3C34]" />
               )}
             </button>
           ))}
@@ -75,7 +75,7 @@ const Section2 = () => {
 
       <Link
         href="/contact"
-        className="flex items-center gap-2 rounded-md bg-[#FFD22F] px-10 py-3 text-sm font-bold text-[#1A3C34] transition-colors hover:bg-[#f5c820]"
+        className="flex items-center gap-2 rounded-md bg-[#FDD118] px-10 py-3 text-sm font-bold text-[#1A3C34] transition-colors hover:bg-[#f5c820]"
       >
         View All
         <FaArrowRight className="text-base" />

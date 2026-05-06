@@ -56,7 +56,7 @@ const BlogHero = () => {
             <div className="px-5 pb-6 pt-5 sm:px-6 sm:pb-7 md:px-8 md:pb-8 xl:col-start-1 xl:row-start-3 xl:px-10 xl:pt-5">
               <Link
                 href="/blog"
-                className="montserrat inline-flex min-h-10 w-full items-center justify-center gap-2 rounded bg-[#f7c51d] px-4 text-sm font-bold text-[#018752] transition hover:bg-[#ffd23c] sm:w-fit sm:px-5"
+                className="montserrat inline-flex min-h-10 w-full items-center justify-center gap-2 rounded bg-[#FDD118] px-4 text-sm font-bold text-[#018752] transition hover:bg-[#ffd23c] sm:w-fit sm:px-5"
               >
                 Read More
                 <FaArrowRight className="h-3.5 w-3.5 shrink-0" />

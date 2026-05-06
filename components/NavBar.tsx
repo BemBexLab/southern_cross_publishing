@@ -55,7 +55,7 @@ export default function Navbar() {
                     isActive
                       ? useDarkNavLinks
                         ? "text-black"
-                        : "text-[#f5c842]"
+                        : "text-[#FDD118]"
                       : useDarkNavLinks
                         ? "text-black/75 hover:text-black"
                         : "text-white/80 hover:text-white"
@@ -152,7 +152,7 @@ export default function Navbar() {
             <Link
               href="/contact"
               onClick={() => setMenuOpen(false)}
-              className="flex items-center justify-center gap-2 rounded-[10px] bg-[#f5c842] px-6 py-3 text-sm font-bold text-[#1a5c35] transition-all hover:bg-[#ffd44f] sm:text-base"
+              className="flex items-center justify-center gap-2 rounded-[10px] bg-[#FDD118] px-6 py-3 text-sm font-bold text-[#1a5c35] transition-all hover:bg-[#ffd44f] sm:text-base"
             >
               Request a Quote
               <FaArrowRight />

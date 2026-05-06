@@ -44,7 +44,7 @@ const Section5 = () => {
 
             <a
               href="/contact"
-              className="group mt-8 inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-md bg-[#f5ce47] px-6 py-4 font-bold text-[#018752] shadow-sm transition-all hover:bg-[#eac030] sm:mt-10 sm:w-auto sm:px-10"
+              className="group mt-8 inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-md bg-[#FDD118] px-6 py-4 font-bold text-[#018752] shadow-sm transition-all hover:bg-[#eac030] sm:mt-10 sm:w-auto sm:px-10"
             >
               <span className="text-base sm:text-lg">Browse the Collection</span>
               <FaArrowRight className="text-xl transition-transform group-hover:translate-x-1 sm:text-2xl" />
@@ -83,7 +83,7 @@ const Section5 = () => {
 
             <a
               href="/contact"
-              className="group inline-flex items-center gap-3 rounded-md bg-[#f5ce47] px-10 py-4 font-bold text-[#018752] shadow-sm transition-all hover:bg-[#eac030]"
+              className="group inline-flex items-center gap-3 rounded-md bg-[#FDD118] px-10 py-4 font-bold text-[#018752] shadow-sm transition-all hover:bg-[#eac030]"
             >
               <span className="text-lg">Browse the Collection</span>
               <FaArrowRight className="text-2xl transition-transform group-hover:translate-x-1" />

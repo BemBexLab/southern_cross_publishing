@@ -27,7 +27,7 @@ const OurAudioBook = () => {
 
             <a
               href="/contact"
-              className="montserrat mt-8 inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-md bg-[#f7c51d] px-6 text-sm font-bold text-[#018752] transition hover:bg-[#efbf17] sm:mt-10 sm:w-auto sm:px-8 sm:text-base"
+              className="montserrat mt-8 inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-md bg-[#FDD118] px-6 text-sm font-bold text-[#018752] transition hover:bg-[#efbf17] sm:mt-10 sm:w-auto sm:px-8 sm:text-base"
             >
               Get a Free Publishing Quote
               <FaArrowRight className="h-4 w-4 shrink-0" />
