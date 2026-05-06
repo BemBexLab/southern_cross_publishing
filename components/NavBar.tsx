@@ -20,7 +20,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
   const useDarkNavLinks =
-    pathname === "/our-books" || pathname === "/e-book-writing-service" || pathname === "/contact";
+    pathname === "/our-books" || pathname === "/e-book-writing-service" || pathname === "/contact" || pathname === "/blog";
   const logoSrc = useDarkNavLinks
     ? "/navbar/Frame 1000001530 (1).svg"
     : "/navbar/Frame 1000001530.svg";
