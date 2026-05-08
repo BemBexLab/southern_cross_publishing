@@ -12,24 +12,24 @@ const faqItems = [
   {
     question: "How long does the full publishing process take?",
     answer:
-      "Timelines depend on the stage of your manuscript and the services you need, but we map out the process with you clearly before we begin so you know what to expect at every step.",
+      "Timelines vary depending on where your manuscript is when we start and how much work it needs. A book going through ghostwriting, editing, design, and full distribution typically takes between three and six months. We give you a realistic timeline at the start of our process, with no surprise delays. You'll always know exactly where your book stands.",
   },
   {
-    question: "Do I keep ownership of my book after you publish it?",
+    question: "Will my self published book be available on Amazon and global bookstores?",
     answer:
-      "Yes. You retain ownership of your work while we support you through editing, design, production, and distribution.",
+      "Yes. We distribute across 40+platforms globally, including Amazon, Barnes & Noble, Apple Books, Kobo, and more. Your book will be available in both print and eBook formats, fully listed with proper metadata and Amazon A+ content so it shows up when readers search for books like yours.",
   },
   {
     question:
-      "Will my self published book be available on Amazon and global bookstores?",
+      "Do I keep ownership of my book after you publish it?",
     answer:
-      "Yes. We help make your book available through major online platforms and broad distribution channels.",
+      "Completely. You retain 100% ownership of your manuscript, your cover design, and all rights to your work. Publishing with Southern Cross Publishing is a service, not a rights agreement. Every royalty your book earns belongs to you, and every creative decision stays yours from start to finish.",
   },
   {
     question:
       "What genres and book types do you publish: fiction, non-fiction, memoirs, and audiobooks?",
     answer:
-      "We work across a wide range of categories, including fiction, non-fiction, memoirs, children's books, and audiobook-ready projects.",
+      "We work across every major genre; fiction, non-fiction, memoirs, biographies, self help, health and wellness, children's books, business guides, and more. We match you with writers and editors who have genuine experience in your specific genre, so the people working on your book actually understand what makes it work.",
   },
 ];
 
