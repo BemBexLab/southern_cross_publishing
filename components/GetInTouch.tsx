@@ -49,6 +49,7 @@ const ContactItem = ({
 const defaultParagraphs = [
   "You don't need a finished manuscript, a polished pitch, or any publishing experience to reach out to us. All you need is the story you've been sitting on and the decision to finally do something about it. We've heard every kind of idea, rough, half-formed, fully written, completely stuck, and we know exactly how to move it forward.",
   "Drop us a message, and one of our publishing specialists will get back to you personally, no automated replies, no sales scripts. Just a real conversation about your book, your timeline, and what working together would actually look like.",
+  "Send Us a Message"
 ];
 
 const GetInTouch = ({
@@ -144,9 +145,7 @@ const GetInTouch = ({
                 <FaCheck className="h-4 w-4" />
               </span>
               <span className="montserrat max-w-[510px] text-[0.82rem] leading-[1.35] sm:text-[0.92rem] md:text-[0.96rem]">
-                By submitting this form, you agree to be contacted via phone or
-                email regarding your publishing inquiry. We respect your privacy
-                and will never share your details with third parties.
+                By submitting this form, you agree to be contacted via phone or email regarding your publishing inquiry. We respect your privacy and will never share your details with third parties.
               </span>
             </label>
 
@@ -154,7 +153,7 @@ const GetInTouch = ({
               type="submit"
               className="montserrat inline-flex h-[50px] w-full items-center justify-center rounded-[5px] bg-[#078c52] px-6 text-[1.12rem] font-medium text-[#f6efd7] transition hover:opacity-95 sm:w-auto sm:min-w-[175px] sm:text-[1.3rem] lg:text-[1.5rem]"
             >
-              Let's Get Started
+              Let's Build Your Book
             </button>
           </form>
         </div>

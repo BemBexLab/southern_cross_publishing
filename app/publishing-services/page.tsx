@@ -26,8 +26,8 @@ export default function Home() {
             <HeroSection
                 bgImage="/publishing-services/Rectangle.webp"
                 title="Complete Book Publishing Services in Australia"
-                description="From manuscript evaluation to global distribution, everything your book needs, handled by one dedicated team. Southern Cross Publishing brings together every skill your book needs under one roof, from the very first editorial pass to the day your book goes live on 40+ global platforms."
-                ctaText="Request a Call"
+                description="From manuscript evaluation to global distribution, everything your book needs, handled by one dedicated team. Southern Cross Publishing brings together every skill your book needs under one roof, from the very first editorial pass to the day your book goes live on 40+ global platforms. No matter if you have a finished manuscript ready to publish or you are still working out what you want to say, our publishing specialists step in at exactly the right stage and carry the process forward with you. Our dedicated team treats your book like it matters, because it does."
+                ctaText="Book a Free Consultation"
                 ctaHref="/contact"
             />
             <LogoSlider />
@@ -43,13 +43,13 @@ export default function Home() {
                 },
                 {
                     title: "We Protect and Maintain Your Voice",
-                    description: " Our editors sharpen the structure, smooth the pacing, and clean the grammar, but the personality, the rhythm, and the way you tell your story stay exactly as they should. When your book is done, it still sounds unmistakably like you.",
+                    description: "Our editors sharpen the structure, smooth the pacing, and clean the grammar, but the personality, the rhythm, and the way you tell your story stay exactly as they should. When your book is done, it still sounds unmistakably like you.",
                     variant: "light",
                     iconSrc: <FaShieldAlt />
                 },
                 {
                     title: "40+ Platforms and Full Post-Launch Support",
-                    description: " Southern Cross Publishing distributes your work across 40-plus global platforms, Amazon, Apple Books, Kobo, Barnes & Noble, and beyond, and then stays with you after launch day with marketing support, author branding, and growth strategy.",
+                    description: "Southern Cross Publishing distributes your work across 40-plus global platforms, Amazon, Apple Books, Kobo, Barnes & Noble, and beyond, and then stays with you after launch day with marketing support, author branding, and growth strategy.",
                     variant: "light",
                     iconSrc: <FaGlobe />
                 }
@@ -60,7 +60,7 @@ export default function Home() {
                 eyebrow="Expert Non-Fiction Book Writing Services"
                 title="The Only Thing Standing Between You and a Published Book Is the First Step"
                 description="We have helped hundreds of Australian authors go from a rough idea to a professionally published book available worldwide. Your story is next."
-                ctaText="Get a Quote"
+                ctaText="Let's Get Started"
                 ctaHref="/contact"
             />
             <Section8 />
@@ -135,7 +135,9 @@ export default function Home() {
                 },
             ]} />
             <Testimonials />
-            <GetInTouch />
+            <GetInTouch title="Ready to Publish?" subtitle="Let's Start With a Conversation." paragraphs={[
+                "You do not need a finished manuscript, a publishing background, or any prior experience to reach out. Just bring your idea, your draft, or your story, and we will tell you honestly what it needs and how we can help. No sales pressure, no automated replies. Just a real conversation about your book.",
+            ]} />
             <FAQs />
         </div>
     );

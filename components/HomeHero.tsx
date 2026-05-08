@@ -42,20 +42,13 @@ const HomeHero = () => {
 
             <div className="montserrat mx-auto max-w-[42rem] space-y-4 text-base leading-8 text-white/90 sm:text-lg sm:leading-9 lg:mx-0 lg:max-w-none lg:text-sm lg:leading-7 xl:text-base 2xl:text-lg 2xl:leading-8">
               <p>
-                Australia's trusted self publishing company: ghostwriting,
-                editing, design, distribution and marketing, all in one place.
+                Australia's trusted self publishing company: ghostwriting, editing, design, distribution and marketing, all in one place
               </p>
               <p>
-                At Southern Cross Publishing, we assist you from writing to the
-                final printed page. Are you holding a half finished manuscript,
-                a voice note full of ideas, or a story you've carried for
-                years? We are here to shape it into something the world will
-                remember.
+                At Southern Cross Publishing, we assist you from writing to the final printed page. Are you holding a half finished manuscript, a voice note full of ideas, or a story you've carried for years? We are here to shape it into something the world will remember.
               </p>
               <p>
-                We are an Australian based company, and work with authors
-                across every genre, every background, and every stage of the
-                writing journey.
+                We are an Australian based company, and work with authors across every genre, every background, and every stage of the writing journey.
               </p>
             </div>
 

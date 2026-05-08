@@ -48,40 +48,39 @@ const WhyChooseUs = () => {
                 Why Choose Us
               </h3>
               <h2 className="text-[#018752] text-xl md:text-xl lg:text-4xl goneva leading-[1.1]">
-                Why Australian Authors Choose Southern Cross Publishing Over
-                Every Other Option
+                Why Australian Authors Choose Southern Cross Publishing Over Every Other Option
               </h2>
             </div>
 
             <div className="space-y-1 montserrat text-[#1F1F1F] text-md">
               <p>
-                One team from start to finish You are never handed off to a
+                <b>One team from start to finish: </b> You are never handed off to a
                 different company at each stage. The same team that evaluates
                 your manuscript oversees editing, design, publishing, and post
                 launch support. Everyone working on your book knows your story
                 from the beginning.
               </p>
               <p>
-                No hidden fees, no surprises We are transparent about what is
+                <b>No hidden fees, no surprises: </b> We are transparent about what is
                 included in every package before any work begins. No confusing
                 contracts, no add-ons you did not agree to, no unexpected
                 charges when your book is ready to publish.
               </p>
               <p>
-                You keep 100% of your rights and royalties Publishing with
+                <b>You keep 100% of your rights and royalties: </b> Publishing with
                 Southern Cross is a service agreement, not a rights agreement.
                 Your manuscript, your cover, your content, and every royalty
                 your book earns belong entirely to you, from the first draft to
                 the final sale.
               </p>
               <p>
-                Realistic timelines, honest communication We give you a clear
+                <b>Realistic timelines, honest communication:</b> We give you a clear
                 production timeline at the start and keep you updated at every
                 stage. If something changes, you hear it from us first, not when
                 you chase for an update.
               </p>
               <p>
-                Marketing is not an afterthought Most publishing services stop
+                <b>Marketing is not an afterthought: </b> Most publishing services stop
                 at publication. We build your author presence and marketing
                 strategy alongside your book, Amazon A+ content, platform
                 optimisation, social positioning, and promotional planning, so

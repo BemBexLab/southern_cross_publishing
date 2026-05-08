@@ -5,19 +5,24 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 
 const testimonials = [
   {
-    name: "Elizabeth",
+    name: "Margaret Ronald",
     location: "Chicago",
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+    body: "I came to Southern Cross with nothing but a Word document full of an incomplete manuscript. They made a published book from a half-finished book, which I am genuinely proud of. The editing team was thorough without stripping away my voice, which meant everything to me.",
   },
   {
-    name: "Catherine",
+    name: "James Tucker",
     location: "New York",
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+    body: "The Southern Cross Publishing team handled all the technicalities of my book from cover design to Amazon listing. My book is now on 40 platforms, and I didn't have to figure any of it out myself. If you are serious about publishing, this is the team you want.",
   },
   {
-    name: "Victoria",
+    name: "Sandra Chandler",
     location: "Washington, DC",
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+    body: "I was quite nervous about handing my story to someone else. Obviously, it's personal. But the ghostwriting process felt like a real collaboration. They listened, asked the right questions, and got it. They send me a draft for every chapter and incorporate my edits properly with every draft. I couldn't be happier with the result.",
+  },
+  {
+    name: "David Ken",
+    location: "Washington, DC",
+    body: "The audiobook production blew me away. Professional narration, proper sound quality, it sounds like something you'd find on Audible next to the big publishers. I must say I got what I really wanted.",
   },
 ];
 
@@ -46,9 +51,11 @@ const Testimonials = () => {
   const exitTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const enterTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const orderedTestimonials = testimonials.map(
-    (_, index) => testimonials[(activeIndex + index) % totalTestimonials]
-  );
+  const visibleTestimonials = [
+    testimonials[(activeIndex - 1 + totalTestimonials) % totalTestimonials],
+    testimonials[activeIndex],
+    testimonials[(activeIndex + 1) % totalTestimonials],
+  ];
 
   useEffect(() => {
     if (phase !== "exiting" || pendingIndex === null) return;
@@ -110,31 +117,32 @@ const Testimonials = () => {
       <div className="mx-auto max-w-[1180px]">
         <div className="mx-auto max-w-[900px] text-center">
           <p className="montserrat text-[1.35rem] font-semibold italic text-[#2d2d2d] sm:text-[1.55rem]">
-            Read Testimonials
+            What our authors say
           </p>
           <h2 className="goneva mt-3 text-[2rem] leading-none text-[#078c52] sm:text-[2.55rem] lg:text-[3rem]">
-            From Our Happy Customers
+            Real stories from real Australian authors
           </h2>
           <p className="montserrat mx-auto mt-4 max-w-[880px] text-[0.95rem] leading-[1.25] text-[#4e4b43] sm:text-[1.02rem]">
-            Lorem ipsum dolor sit amet consectetur. Congue eget auctor turpis
-            pharetra. Odio consectetur eget scelerisque sodales. Aliquam
-            ullamcorper elementum donec mi semper justo. Enim cursus pulvinar
-            elementum id mauris.
           </p>
         </div>
 
         <div
           className={`mt-12 flex flex-wrap justify-center gap-5 transition-all duration-200 ease-out sm:mt-14 sm:gap-6 lg:mt-16 lg:gap-8 ${motionClass}`}
         >
-          {orderedTestimonials.map((testimonial, index) => {
-            const offsetClass =
-              index === 1 ? "xl:translate-y-[34px]" : "xl:translate-y-0";
+          {visibleTestimonials.map((testimonial, index) => {
+            const isActiveCard = index === 1;
+            const offsetClass = isActiveCard
+              ? "lg:translate-y-[28px] xl:translate-y-[34px]"
+              : "translate-y-0";
+            const cardClass = isActiveCard
+              ? "border-[#f5c842] shadow-[0_20px_55px_rgba(217,196,119,0.3)]"
+              : "border-transparent shadow-[0_14px_45px_rgba(217,196,119,0.18)]";
 
             return (
               <article
-                key={testimonial.name}
+                key={`${testimonial.name}-${index}`}
                 data-testimonial-card
-                className={`w-full rounded-[10px] bg-white px-5 py-[22px] shadow-[0_14px_45px_rgba(217,196,119,0.18)] transition-transform duration-300 sm:max-w-[370px] sm:px-6 sm:py-6 md:w-[calc(50%-12px)] md:max-w-[360px] xl:min-h-[206px] xl:w-[325px] xl:max-w-[325px] ${offsetClass}`}
+                className={`flex w-full flex-col rounded-[10px] border bg-white px-5 py-[22px] transition-all duration-300 sm:max-w-[370px] sm:px-6 sm:py-6 md:w-[calc(50%-12px)] md:max-w-[360px] xl:min-h-[206px] xl:w-[325px] xl:max-w-[325px] ${offsetClass} ${cardClass}`}
               >
                 <StarRow />
 
@@ -142,7 +150,7 @@ const Testimonials = () => {
                   {testimonial.body}
                 </p>
 
-                <div className="mt-8">
+                <div className="mt-auto pt-8">
                   <h3 className="montserrat text-[0.95rem] font-bold text-[#111111]">
                     {testimonial.name}
                   </h3>

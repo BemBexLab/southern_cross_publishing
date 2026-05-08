@@ -14,7 +14,7 @@ const steps: StepCard[] = [
   {
     id: 1,
     title: "We sit down together, virtually or otherwise",
-    body: "Before anything else, we listen. This first conversation is about you, your background, your vision, the kind of book you want to put into the world, and what it can reach. No forms and pressure. Just an honest talk so we understand exactly what we're building together.",
+    body: "Before anything else, we listen. This first conversation is about you, your background, your vision, the kind of book you want to put into the world, and the readers you want to reach. No forms and pressure. Just an honest chat so we understand exactly what we're building together.",
     left: "9.5%",
     top: 68,
     rotate: -4,
@@ -32,7 +32,7 @@ const steps: StepCard[] = [
   {
     id: 3,
     title: "Our writers and editors get to work",
-    body: "This is where your idea becomes a manuscript. Whether we are ghostwriting from scratch, editing what you have already written, or somewhere in between, our subject matter experts shape your content into clean, compelling, reader-ready prose that sounds authentically like you.",
+    body: "This is where your idea becomes a manuscript. Whether we are ghostwriting from scratch, editing what you have already written, or somewhere in between, our subject matter experts shape your content into clean, compelling, reader ready prose that sounds authentically like you.",
     left: "58%",
     top: 112,
     rotate: 4,
@@ -40,8 +40,8 @@ const steps: StepCard[] = [
   },
   {
     id: 4,
-    title: "Your book gets dressed: cover, layout, and everything in between",
-    body: "Readers absolutely judge a book by its cover, so we make sure yours sets a second look. Our designers work on a compelling visual package, interior formatting, typography, and a cover that tells the heart of your story and stands out in any marketplace.",
+    title: "Your book gets dressed; cover, layout, and everything in between",
+    body: "Readers absolutely judge a book by its cover, so we make sure yours earns a second look. Our designers work on a complete visual package, interior formatting, typography, and a cover that reflects the heart of your story and stands out in any marketplace.",
     left: "82%",
     top: 118,
     rotate: -6,
@@ -59,7 +59,7 @@ const steps: StepCard[] = [
   {
     id: 6,
     title: "Your book goes live across every platform that matters",
-    body: "We handle the submission, listings, metadata, and Amazon A+ content. Your book lands on 40+ global platforms, fully optimised so the right readers find it. You do not need to navigate a single publishing portal.",
+    body: "We handle the submission, listings, metadata, and Amazon A+ content. Your book lands on 40+ global platforms, fully optimised so the right readers find it. You don't need to navigate a single publishing portal.",
     left: "50%",
     top: 150,
     rotate: -3,
@@ -107,8 +107,7 @@ const HowItWorks = () => {
           How It Works
         </p>
         <h2 className="goneva mx-auto max-w-[17ch] text-center text-[2.2rem] leading-[1.02] text-[#018752] sm:max-w-[18ch] sm:text-[2.75rem] md:max-w-[20ch] md:text-[3rem] lg:max-w-[27ch] lg:text-[3.2rem]">
-          A clear, honest road from your very first conversation to the day you
-          hold your published book
+          A clear, honest road from your very first conversation to the day you hold your published book
         </h2>
 
         <div className="mt-12 grid gap-5 md:grid-cols-2 lg:hidden">

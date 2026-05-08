@@ -11,7 +11,7 @@ const authorReasons = [
   {
     title: "Complete Self Publishing Services Under One Roof: Writing to Global Distribution",
     description:
-      "Writing, editing, design, publishing, marketing, audiobooks, distribution, all handled by one team who know each other and work together. No gaps. No, \"that's not our department.\" One partner for everything.",
+      "Writing, editing, design, publishing, marketing, audiobooks, distribution, all handled by one team that knows each other and works together. No gaps. No, \"that's not our department.\" One partner for everything.",
     iconSrc: "/who-we-are/leadership_12773480 1.svg",
     iconAlt: "icon",
   },
@@ -51,14 +51,13 @@ const WhyAustralianAuthors = () => {
       <div className="mx-auto flex max-w-8xl flex-col items-center text-center">
         <div className="mx-auto w-full max-w-8xl text-center">
           <h2 className="goneva text-[1.9rem] leading-[1.08] text-[#FDD118] sm:text-[2.4rem] lg:text-[3.05rem]">
-            Why Australian Authors Choose Southern Cross Publishing for Their
-            Book
+            Why Australian Authors Choose Southern Cross Publishing for Their Book
           </h2>
-          <p className="montserrat mx-auto mt-5 w-full text-lg italic leading-[1.55] text-[#d8e8d6]">
+          {/* <p className="montserrat mx-auto mt-5 w-full text-lg italic leading-[1.55] text-[#d8e8d6]">
             Whether you have a completed manuscript, a rough draft, or just an
             idea, we can work with it. You don&apos;t need to have it all figured
             out before coming to us. That&apos;s exactly what we&apos;re here for.
-          </p>
+          </p> */}
         </div>
 
         <div className="mt-14 max-w-8xl grid grid-cols-1 gap-y-12 md:grid-cols-2 md:gap-x-10 lg:mt-20 lg:grid-cols-3 lg:gap-x-0 lg:gap-y-16">

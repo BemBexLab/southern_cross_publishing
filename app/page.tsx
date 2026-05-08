@@ -29,13 +29,11 @@ export default function Home() {
         <div className="mx-auto grid max-w-[1200px] overflow-hidden rounded-[30px] bg-[#078c52] text-white lg:min-h-[380px] lg:grid-cols-[1.32fr_0.68fr]">
           <div className="flex w-full flex-col justify-center px-6 py-8 sm:px-8 sm:py-9 md:px-10 md:py-10 lg:w-[100%] lg:pl-[40px] lg:pr-0 lg:py-9">
             <p className="montserrat max-w-full text-sm font-medium tracking-[0.01em] text-[#f6c72f] sm:text-[15px] md:text-base lg:max-w-[44rem] lg:text-[15px]">
-              Publish Your Book in Australia With a Team That Handles the
-              Complete Process."
+              Publish Your Book in Australia With a Team That Handles the Complete Process."
             </p>
 
             <h2 className="goneva mt-4 max-w-full text-[2rem] leading-[0.96] text-[#f7f1d7] sm:text-[2.45rem] md:mt-5 md:text-[2.95rem] lg:max-w-full lg:text-[3.1rem]">
-              Let Southern Cross take the hassle out of publishing, so you can
-              focus on your story
+              Let Southern Cross take the hassle out of publishing, so you can focus on your story
             </h2>
 
             <div className="relative mt-6 flex min-h-[220px] items-end justify-center lg:hidden">
@@ -50,17 +48,14 @@ export default function Home() {
             </div>
 
             <p className="montserrat mt-6 max-w-full text-[0.98rem] leading-7 text-white/92 sm:text-base sm:leading-[1.6] md:text-[1.02rem] md:leading-[1.6] lg:mt-7 lg:max-w-full lg:text-md lg:leading-[1.45]">
-              You wrote it. You lived it. Now, let us handle everything that
-              comes after that. From the first edit to the final listing on
-              Amazon, our team quietly takes care of the process while you stay
-              focused on what matters: your words.
+              You wrote it. You lived it. Now, let us handle everything that comes after that. From the first edit to the final listing on Amazon, our team quietly takes care of the process while you stay focused on what matters: your words.
             </p>
 
             <a
               href="/contact"
               className="montserrat mt-7 inline-flex w-fit items-center gap-3 rounded-[10px] bg-[#FDD118] px-6 py-4 text-lg font-semibold text-[#067446] transition-transform duration-200 hover:-translate-y-0.5 sm:mt-8 sm:px-7 sm:text-[1.05rem] md:mt-7 md:px-7 md:py-4 md:text-base lg:mt-9 lg:px-7 lg:py-4"
             >
-              Get a Quote
+              Get Your Free Publishing Quote Today
               <FaArrowRight />
             </a>
           </div>

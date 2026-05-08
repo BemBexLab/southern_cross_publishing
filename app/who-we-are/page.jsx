@@ -22,7 +22,7 @@ export default function Home() {
       <HeroSection
         bgImage="/who-we-are/Service.webp"
         title="A Publishing House Built Around Your Story"
-        description={`Southern Cross Publishing is an Australian self publishing company with over 1,000 authors published across fiction, non-fiction, memoirs, biographies, self help, children's books, and audiobooks. We treat every single manuscript we receive as if it were the only one on our desk, because to the person who wrote it, it is. \nWe're not a factory. We're a team of professional editors, writers, designers, marketers, and publishers who genuinely love books and who take real pride in helping people share their stories with the world.`}
+        description={`Southern Cross Publishing is an Australian self publishing company with over 1,000 authors published across fiction, non-fiction, memoirs, biographies, self help, children's books, and audiobooks. We treat every single manuscript we receive as if it were the only one on our desk, because to the person who wrote it, it is. We're not a factory. We're a team of professional editors, writers, designers, marketers, and publishers who genuinely love books and who take real pride in helping people share their stories with the world.`}
         ctaText="Get a Free Audiobook Quote"
         ctaHref="/contact"
       />
@@ -78,14 +78,7 @@ export default function Home() {
         ]}
       />
       <Section3 />
-      <GetInTouch
-        title="Let us know if anything needed. Searching of any guidance from an expert?"
-        subtitle="Have a conversation"
-        paragraphs={[
-          "You have taken a step towards the journey of success in self-publishing but still have a lot to ask? And searching for an expert's guidance who can help you in bring your ideas, and voice to reality, but haven't found anyone, then you are at the right place. Ink Founders is for you.",
-          "Ink Founders provide a free discussion opportunity where you can clear your doubts, share your story ideas or concepts, and get the exploration trip to examine our services clearly and can find out how we can provide you with the best by turning your words into book form. So, let's take a step and join us today.",
-        ]}
-      />
+      <GetInTouch />
       <FAQs />
       <WhyAustralianAuthors />
       <OurStory

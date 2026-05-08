@@ -68,7 +68,7 @@ const Footer = () => {
               className="montserrat mt-7 w-full max-w-[650px] text-base leading-[1.2] sm:text-lg sm:leading-[1.16]"
               style={{ color: "#a8a196" }}
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Australia's reliable self-publishing partner. We help Australians authors convert their stories into professionally published books, from the first idea to global distribution. Your story deserves to be read, and we help you in that.
             </p>
           </div>
 

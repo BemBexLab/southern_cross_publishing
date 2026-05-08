@@ -7,7 +7,7 @@ const Section3 = () => {
     {
       title: "Silver",
       description:
-        "Lorem ipsum dolor sit amet consectetur. Quis sit facilisis neque habitant. Bibendum sed faucibus eget lacus etiam. Proin eget rutrum sed tortor parturient nisl.",
+        "Everything a new author needs to go from manuscript to published, without difficulties. Professional editing, a custom cover, interior formatting, ISBN registration, and distribution to the platforms that matter most. ",
       features: [
         [
           "Amazon Author Central setup",
@@ -32,7 +32,7 @@ const Section3 = () => {
     {
       title: "Gold",
       description:
-        "Lorem ipsum dolor sit amet consectetur. Quis sit facilisis neque habitant. Bibendum sed faucibus eget lacus etiam. Proin eget rutrum sed tortor parturient nisl.",
+        "Chosen by most of our authors for good reason, Gold gives you everything in Silver plus ghostwriting support, Amazon A+ content optimisation, and a marketing foundation that means your book has a real chance of being discovered.",
       features: [
         [
           "Author profile setup on major platforms",
@@ -57,7 +57,7 @@ const Section3 = () => {
     {
       title: "Platinum",
       description:
-        "Lorem ipsum dolor sit amet consectetur. Quis sit facilisis neque habitant. Bibendum sed faucibus eget lacus etiam. Proin eget rutrum sed tortor parturient nisl.",
+        "Our most comprehensive service, from imagination to global release, we take care of every step. Complete ghostwriting, professional audiobook production, global distribution across 40+ platforms, priority support, and a dedicated publishing consultant who stays with your project from start to end. For authors who want the best.",
       features: [
         [
           "One-on-one interviews & story development",
@@ -99,13 +99,10 @@ const Section3 = () => {
             Pricing & Packages
           </p>
           <h2 className="goneva py-2 text-4xl font-medium text-[#F7F1D7] sm:text-5xl lg:text-6xl">
-            Flexible Plans Tailored To Your Needs
+            We Priced These Packages Around Real Authors, Not Ideal Ones
           </h2>
           <p className="mx-auto max-w-5xl text-base leading-relaxed text-[#F7F1D7] sm:text-lg lg:text-xl">
-            "Pricing may vary depending on the genre, page and word count, and
-            your specific needs for publishing, marketing, or ghostwriting. For
-            a personalized estimate and detailed consultation, click on 'Custom
-            Quote' to speak with a publishing expert."
+            Some people come to us with a finished draft. Some come with a voice note and a dream. Either way, there is a plan here that meets you where you actually are, not where publishing expects you to be. 
           </p>
         </div>
 
