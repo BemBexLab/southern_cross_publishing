@@ -11,7 +11,6 @@ const quickLinks = [
   { label: "Our Publishing", href: "#" },
   { label: "Who we are", href: "#" },
   { label: "Blog", href: "#" },
-  { label: "E-Book Writing Service", href: "/e-book-writing-service" },
 ];
 
 const services = [
@@ -19,6 +18,7 @@ const services = [
   { label: "Ebook Formatting", href: "#" },
   { label: "Children Book", href: "#" },
   { label: "Book Marketing", href: "#" },
+  { label: "E-Book Writing Service", href: "/e-book-writing-service" },
 ];
 
 const socials = [
