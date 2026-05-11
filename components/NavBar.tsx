@@ -12,7 +12,15 @@ const navLinks = [
     label: "Publishing Services",
     href: "/publishing-services",
     children: [
-      { label: "E-Book Writing Service", href: "/e-book-writing-service" },    ],
+      {
+        label: "E-Book Writing Service",
+        href: "/publishing-services/e-book-writing-service",
+      },
+      {
+        label: "Ebook Formatting",
+        href: "/publishing-services/ebook-formatting",
+      },
+    ],
   },
   { label: "Audiobook Service", href: "/audiobook-service" },
   { label: "Our Books", href: "/our-books" },
@@ -26,7 +34,7 @@ export default function Navbar() {
   const [servicesOpen, setServicesOpen] = useState(false);
   const pathname = usePathname();
   const useDarkNavLinks =
-    pathname === "/our-books" || pathname === "/e-book-writing-service" || pathname === "/contact" || pathname === "/blog";
+    pathname === "/our-books" || pathname === "/publishing-services/e-book-writing-service" || pathname === "/publishing-services/ebook-formatting" || pathname === "/contact" || pathname === "/blog";
   const logoSrc = useDarkNavLinks
     ? "/navbar/Frame 1000001530 (1).svg"
     : "/navbar/Frame 1000001530.svg";

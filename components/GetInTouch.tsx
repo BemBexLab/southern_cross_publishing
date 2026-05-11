@@ -10,6 +10,8 @@ type GetInTouchProps = {
   title?: string;
   subtitle?: string;
   paragraphs?: string[];
+  formHeadline?: string;
+  ctaText?: string;
 };
 
 const ContactItem = ({
@@ -56,6 +58,8 @@ const GetInTouch = ({
   title = "Your book is closer than you think. Let's talk about it.",
   subtitle = "Start with a simple conversation",
   paragraphs = defaultParagraphs,
+  formHeadline = "Send Us a Message",
+  ctaText,
 }: GetInTouchProps) => {
   return (
     <section
@@ -104,7 +108,7 @@ const GetInTouch = ({
 
         <div className="rounded-[18px] bg-[linear-gradient(135deg,rgba(223,236,214,0.72),rgba(179,212,190,0.82))] p-5 shadow-[0_22px_65px_rgba(4,76,47,0.18)] backdrop-blur-[4px] sm:p-8 lg:rounded-[18px] lg:px-[34px] lg:py-[30px]">
           <h3 className="montserrat text-[1.7rem] font-semibold leading-[1.02] tracking-[-0.03em] text-[#078c52] sm:text-[2.15rem] lg:text-[2.55rem]">
-            Get In Touch Now!
+            {formHeadline}
           </h3>
 
           <form className="mt-6 space-y-4 sm:mt-8 sm:space-y-5 lg:mt-7">
@@ -153,7 +157,7 @@ const GetInTouch = ({
               type="submit"
               className="montserrat inline-flex h-[50px] w-full items-center justify-center rounded-[5px] bg-[#078c52] px-6 text-[1.12rem] font-medium text-[#f6efd7] transition hover:opacity-95 sm:w-auto sm:min-w-[175px] sm:text-[1.3rem] lg:text-[1.5rem]"
             >
-              Let's Build Your Book
+              {ctaText ?? "Let's Build Your Book"}
             </button>
           </form>
         </div>
