@@ -90,8 +90,8 @@ const GetInTouch = ({
             />
             <ContactItem
               icon={<BiEnvelope className="h-7 w-7" />}
-              text="info@inkfounders.com"
-              href="mailto:info@inkfounders.com"
+              text="info@southerncrosspublishing.com.au"
+              href="mailto:info@southerncrosspublishing.com.au"
             />
             <div className="sm:col-span-2">
               <ContactItem

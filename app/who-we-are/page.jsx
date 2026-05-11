@@ -79,7 +79,18 @@ export default function Home() {
       />
       <Section3 />
       <GetInTouch />
-      <FAQs />
+      <FAQs
+        eyebrow="Need Help?"
+        title="Publishing Questions"
+        items={[
+          { question: "What is Southern Cross Publishing?", answer: "Southern Cross Publishing is an Australian-based self-publishing company that assists authors in converting their book from idea to published reality. We are not a traditional publisher; we work for you, according to your timeline, with your vision guiding every decision we make." },
+          { question: "Where are you based, and who do you work with?", answer: "We are located in Australia and work with authors right across the country, from fresh writers who have never published anything before, to business owners, coaches, and professionals who want a book that comes up properly." },
+          { question: "What makes you different from other publishing services?", answer: "We take care of the complete publishing process under one company, including ghostwriting, editing, cover design, formatting, ISBN registration, audiobook production, and global distribution. Now, you do not have to stitch together five different providers. Southern Cross Publishing: one team, one process, one finished book." },
+          { question: "Do you only work with finished manuscripts?", answer: "No. Many of our authors come to us with just an idea or a rough set of notes, or sometimes a voice note describing the book's purpose, genre, and all the information. Our ghostwriting team can complete a manuscript from a concept; you just need to know what story or message you want to share." },
+          { question: "Will I own my book once it is published?", answer: "Always. The rights, the royalties, and the creative ownership stay with you from day one. Southern Cross Publishing is here to produce and publish your work, not to claim any part of it." },
+          { question: "How do I know if Southern Cross Publishing is the right fit for me?", answer: "If you have a book inside you and want it published properly, professionally edited, beautifully designed, and available to readers worldwide, our company is here for exactly that. The best way to find out is a free consultation call with our team." },
+        ]}
+      />
       <WhyAustralianAuthors />
       <OurStory
         title="Southern Cross Publishing: Where Vision Becomes Legacy"
