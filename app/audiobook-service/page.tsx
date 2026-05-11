@@ -222,7 +222,7 @@ export default function Home() {
       />
       <OurAudioBook />
       <ExpertNonFiction
-        eyebrow="Expert Non-Fiction Book Writing Services"
+        eyebrow=""
         title="Ready to Turn Your Book Into an Audiobook? Let's Talk."
         description="You do not need to know anything about audio production to get started. You just need your manuscript and the decision to reach listeners as well as readers. Our team handles everything else, narration, scoring, editing, mastering, and global distribution, so your audiobook sounds exactly the way your book deserves to sound."
         ctaText="Get a Quote"
