@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 
 const stats = [
-  { value: "7+", label: "Authors Published" },
+  { value: "1000+", label: "Authors Published" },
   { value: "15+", label: "Genres Covered" },
   { value: "50+", label: "Global Platforms" },
   { value: "100%", label: "Author Owned Right" },

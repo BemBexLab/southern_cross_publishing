@@ -80,26 +80,32 @@ const ComprehensivePublishing = () => {
         </div>
       </div>
 
-      <p className="mx-auto w-full max-w-8xl px-2 pb-8 text-center text-lg montserrat sm:px-6 sm:text-xl md:pb-12 md:text-xl">
-        We know that the moment you decide to write a book, something shifts;
-        suddenly, the idea that once felt private has now become something you
-        want the world to know. That excitement is a real one, and it, of
-        course, deserves to be protected. 
-        <br />
-        At Southern Cross Publishing, we have created our complete process
-        around keeping that feeling alive, from your very first conversation
-        with us to the day your book lands in a reader's hands. <br /> We do a lot more
-        than just publishing books. We make them with proper care. Our network
-        of experienced writers, editors, illustrators, and publishing
-        specialists works closely with every author we work with, because no two
-        stories are the same and no two authors need the same kind of support.
-        No matter if you come to us with a completed manuscript or a single
-        sentence of an idea, we meet you exactly where you are and help you
-        complete the rest of the book with you.
-      </p>
+      <div className="montserrat text-center mx-auto max-w-7xl text-xl space-y-3 mb-5">
+        <p className="">
+          We know that the moment you decide to write a book, something shifts;
+          suddenly, the idea that once felt private has now become something you
+          want the world to know. That excitement is a real one, and it, of
+          course, deserves to be protected.
+        </p>
+        <p className="">
+          At Southern Cross Publishing, we have created our complete process
+          around keeping that feeling alive, from your very first conversation
+          with us to the day your book lands in a reader's hands.
+        </p>
+        <p className="">
+          We do a lot more than just publishing books. We make them with proper
+          care. Our network of experienced writers, editors, illustrators, and
+          publishing specialists works closely with every author we work with,
+          because no two stories are the same and no two authors need the same
+          kind of support. No matter if you come to us with a completed
+          manuscript or a single sentence of an idea, we meet you exactly where
+          you are and help you complete the rest of the book with you.
+        </p>
+      </div>
 
-      <h3 className="mx-auto italic w-full max-w-8xl px-2 pb-8 text-center text-lg font-medium montserrat sm:px-6 sm:text-xl md:pb-12 md:text-4xl">
-        Your words were always worth reading. We are just here to make sure the right people find them.
+      <h3 className="mx-auto italic w-full max-w-8xl px-2 pb-8 text-center text-lg font-semibold montserrat sm:px-6 sm:text-xl md:pb-12 md:text-2xl">
+        Your words were always worth reading. We are just here to make sure the
+        right people find them.
       </h3>
     </section>
   );

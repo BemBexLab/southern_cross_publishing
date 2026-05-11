@@ -105,7 +105,7 @@ export const defaultWitnessServices: WitnessServiceCard[] = [
 </svg></>),
     title: 'Integrated, complete self publishing service',
     description:
-      "Most authors don't need more information about publishing. They need someone to actually do it with them. Our team covers every stage, including editing, formatting, cover design, distribution, and marketing. Every step of the publishing journey, we do that. You get a single point of contact, a clear timeline, and none of the guesswork that usually makes self publishing so stressful.",
+      "Most authors don't need more information about publishing. They need someone to actually do it with them. Our team covers every stage, including editing, formatting, cover design, distribution, and marketing. Every step of the publishing journey, we do that.  You get a single point of contact, a clear timeline, and none of the guesswork that usually makes self publishing so stressful.",
     variant: 'light',
   },
   {

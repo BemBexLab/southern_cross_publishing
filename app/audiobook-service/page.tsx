@@ -215,7 +215,10 @@ export default function Home() {
       <GetInTouch
         title="Let us know if anything needed. Searching of any guidance from an expert?"
         subtitle="Have a conversation"
-        paragraphs={["You have taken a step towards the journey of success in self-publishing but still have a lot to ask? And searching for an expert's guidance who can help you in bring your ideas, and voice to reality, but haven't found anyone, then you are at the right place. Ink Founders is for you.", "Ink Founders provide a free discussion opportunity where you can clear your doubts, share your story ideas or concepts, and get the exploration trip to examine our services clearly and can find out how we can provide you with the best by turning your words into book form. So, let's take a step and join us today."]}
+        paragraphs={[
+          "You have taken a step towards the journey of success in self-publishing but still have a lot to ask? And searching for an expert's guidance who can help you in bring your ideas, and voice to reality, but haven't found anyone, then you are at the right place. Southern Cross Publishing is for you.",
+          "Southern Cross Publishing provide a free discussion opportunity where you can clear your doubts, share your story ideas or concepts, and get the exploration trip to examine our services clearly and can find out how we can provide you with the best by turning your words into book form. So, let's take a step and join us today.",
+        ]}
       />
       <OurAudioBook />
       <ExpertNonFiction
@@ -225,7 +228,20 @@ export default function Home() {
         ctaText="Get a Quote"
         ctaHref="/contact"
       />
-      <FAQs />
+      <FAQs
+        eyebrow=""
+        title=""
+        items={[
+          { question: "Do I have to get involved in the recording process?", answer: "No. After the approval of the narrator and the completion of the recording review, you don’t have to deal with any technical aspects until the last stage, where you sign off on the project for distribution. Everything will happen the way you wanted and planned from the beginning." },
+          { question: "Can I pick my own narrator?", answer: "Absolutely. The narrator we select will fit your book’s genre, and after the sampling phase, we will proceed only after getting your approval on the voice choice." },
+          { question: "I have already recorded my own audio version. What should I do next?", answer: "Nothing special. We will help you edit, refine, and master it. There’s no need to re-record everything; just provide us with the necessary material, and we will take care of everything." },
+          { question: "On which platforms will my audiobook be distributed?", answer: "We are distributing our audiobooks through all major channels, like Audible, Amazon, Apple Books, Spotify, Google Play, so your audiobook will be easily available on whatever platform people use." },
+          { question: "Do I keep the royalties my audiobook earns?", answer: "Every cent. You hold complete rights to your audiobook, including all revenue that it produces. We handle distribution for you, but we never take any percentage from your sales." },
+          { question: "How long does audiobook production take?", answer: "The production process lasts four to six weeks after you approve the narrator based on your manuscript length, which determines the total time needed. We provide you with an exact schedule that prevents any unexpected events and keeps everything on schedule." },
+        ]}
+        initialOpenIndex={0}
+        // columnGroups={[[0], [1]]}
+      />
     </div>
   );
 }
