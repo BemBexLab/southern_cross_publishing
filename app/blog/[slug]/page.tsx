@@ -215,7 +215,6 @@ const page = async (props: PageProps<"/blog/[slug]">) => {
         </div>
       </article>
 
-      <BlogFooter />
     </section>
   );
 };
