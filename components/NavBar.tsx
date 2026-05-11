@@ -33,8 +33,15 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const pathname = usePathname();
+  const isPublishingServicesRoute =
+    pathname === "/publishing-services" ||
+    pathname.startsWith("/publishing-services/");
+  const isBlogRoute = pathname === "/blog" || pathname.startsWith("/blog/");
   const useDarkNavLinks =
-    pathname === "/our-books" || pathname === "/publishing-services/e-book-writing-service" || pathname === "/publishing-services/ebook-formatting" || pathname === "/contact" || pathname === "/blog";
+    pathname === "/our-books" ||
+    isPublishingServicesRoute ||
+    pathname === "/contact" ||
+    isBlogRoute;
   const logoSrc = useDarkNavLinks
     ? "/navbar/Frame 1000001530 (1).svg"
     : "/navbar/Frame 1000001530.svg";
@@ -64,6 +71,7 @@ export default function Navbar() {
             const hasChildren = Boolean(link.children?.length);
             const isActive =
               pathname === link.href ||
+              (link.href !== "/" && pathname.startsWith(`${link.href}/`)) ||
               link.children?.some((child) => child.href === pathname);
             return (
               <li key={link.href} className="group relative">
@@ -176,6 +184,7 @@ export default function Navbar() {
               const hasChildren = Boolean(link.children?.length);
               const isActive =
                 pathname === link.href ||
+                (link.href !== "/" && pathname.startsWith(`${link.href}/`)) ||
                 link.children?.some((child) => child.href === pathname);
               return (
                 <li key={link.href}>

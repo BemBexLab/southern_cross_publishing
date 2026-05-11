@@ -5,7 +5,6 @@ import { FaArrowLeft, FaArrowRight, FaRegCalendar } from "react-icons/fa6";
 import { LuClock3 } from "react-icons/lu";
 import BlogFooter from "../components/BlogFooter";
 import {
-  BLOG_REVALIDATE_SECONDS,
   decodeHtml,
   estimateReadTime,
   fetchWpPost,
@@ -14,7 +13,7 @@ import {
   stripHtml,
 } from "../wp";
 
-export const revalidate = BLOG_REVALIDATE_SECONDS;
+export const revalidate = 300;
 
 export async function generateMetadata(
   props: PageProps<"/blog/[slug]">
@@ -73,13 +72,13 @@ const page = async (props: PageProps<"/blog/[slug]">) => {
         <div className="mx-auto max-w-[1180px]">
           <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_290px] lg:gap-12">
             <div>
-          <Link
-            href="/blog"
-            className="montserrat inline-flex items-center gap-2 rounded-md bg-[#8fd387] px-3 py-2 text-sm font-medium text-[#14522f] transition hover:bg-[#7dca74]"
-          >
-            <FaArrowLeft className="h-3 w-3" />
-            Back to blog
-          </Link>
+              <Link
+                href="/blog"
+                className="montserrat inline-flex items-center gap-2 rounded-md bg-[#8fd387] px-3 py-2 text-sm font-medium text-[#14522f] transition hover:bg-[#7dca74]"
+              >
+                <FaArrowLeft className="h-3 w-3" />
+                Back to blog
+              </Link>
 
               <header className="mt-7">
                 <h1 className="goneva max-w-[760px] text-[2.15rem] leading-[0.98] text-[#018752] sm:text-[2.7rem] lg:text-[3.2rem]">
@@ -214,8 +213,6 @@ const page = async (props: PageProps<"/blog/[slug]">) => {
           </div>
         </div>
       </article>
-
-      <BlogFooter />
     </section>
   );
 };
