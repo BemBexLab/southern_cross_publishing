@@ -114,7 +114,7 @@ const FAQs = ({
 
           <span
             className={`montserrat flex-1 text-[1.06rem] font-semibold leading-[1.18] tracking-[-0.01em] sm:text-[1.1rem] ${
-              isOpen ? "text-[#12985f]" : "text-[#494641]"
+              isOpen ? "text-[#018752]" : "text-[#242424]"
             }`}
           >
             {item.question}
@@ -122,7 +122,7 @@ const FAQs = ({
         </button>
 
         {isOpen ? (
-          <p className="montserrat ml-[43px] mt-4 pr-1 text-[0.88rem] leading-[1.55] text-[#8e877c] sm:text-[0.91rem]">
+          <p className="montserrat ml-[43px] mt-4 pr-1 text-[0.88rem] leading-[1.55] text-[#242424] sm:text-[0.91rem]">
             {item.answer}
           </p>
         ) : null}

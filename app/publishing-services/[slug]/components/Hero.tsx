@@ -6,7 +6,7 @@ import { FiPhoneCall } from "react-icons/fi";
 
 interface HeroProps {
   title: string;
-  description: string;
+  description: string | React.ReactNode;
   ctaText: string;
   ctaHref?: string;
   onCtaClick?: () => void;
@@ -104,7 +104,11 @@ const Hero: React.FC<HeroProps> = ({
             </div>
 
             <div className="montserrat mt-6 max-w-none space-y-6 text-lg font-medium leading-relaxed text-[#5d5d55] lg:mt-7">
-              <p>{description}</p>
+              {typeof description === "string" ? (
+                <p>{description}</p>
+              ) : (
+                description
+              )}
             </div>
 
             {ctaHref ? (

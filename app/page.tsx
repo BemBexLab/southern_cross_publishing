@@ -29,7 +29,7 @@ export default function Home() {
         <div className="mx-auto grid max-w-[1200px] overflow-hidden rounded-[30px] bg-[#078c52] text-white lg:min-h-[380px] lg:grid-cols-[1.32fr_0.68fr]">
           <div className="flex w-full flex-col justify-center px-6 py-8 sm:px-8 sm:py-9 md:px-10 md:py-10 lg:w-[100%] lg:pl-[40px] lg:pr-0 lg:py-9">
             <p className="montserrat max-w-full text-sm font-medium tracking-[0.01em] text-[#f6c72f] sm:text-[15px] md:text-base lg:max-w-[44rem] lg:text-[15px]">
-              Publish Your Book in Australia With a Team That Handles the Complete Process."
+              Publish Your Book in Australia With a Team That Handles the Complete Process.
             </p>
 
             <h2 className="goneva mt-4 max-w-full text-[2rem] leading-[0.96] text-[#f7f1d7] sm:text-[2.45rem] md:mt-5 md:text-[2.95rem] lg:max-w-full lg:text-[3.1rem]">
