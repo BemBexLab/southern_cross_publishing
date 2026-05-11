@@ -88,14 +88,14 @@ const HeroSection: React.FC<HeroSectionProps> = ({
 
             <div className="container mx-auto relative z-10 mt-10">
                 <div className="max-w-5xl px-2">
-                    <p className='goneva leading-[1.02] text-xl md:text-2xl xl:text-3xl 2xl:text-4xl text-[#F7F1D7] max-w-3xl'>
+                    <p className='montserrat leading-[1.02] text-xl md:text-2xl xl:text-3xl 2xl:text-4xl text-[#F7F1D7] max-w-4xl'>
                         About Southern Cross Publishing: Australia's Trusted Self Publishing Company
                     </p>
                     <h1 className="goneva leading-[1.02] text-4xl md:text-6xl text-[#F7F1D7] mt-8">
                         {title}
                     </h1>
 
-                    <div className="space-y-6 text-md sm:text-lg text-gray-100 leading-tight sm:leading-relaxed max-w-4xl font-light mb-5 mt-2 sm:mt-8">
+                    <div className="montserrat space-y-6 text-md sm:text-lg text-gray-100 leading-tight sm:leading-relaxed max-w-4xl font-light mb-5 mt-2 sm:mt-8">
                         <p>{description}</p>
                     </div>
 
