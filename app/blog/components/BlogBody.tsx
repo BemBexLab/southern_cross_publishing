@@ -21,71 +21,29 @@ const popularTags = [
   "Ghostwriting",
 ];
 
-const recentPosts = [
-  "Pricing for Professional Book Editing Services (2026 Guide)",
-  "How Much Does It Cost to Self Publish a Book? Real Costs Explained",
-];
-
-const blogPosts = [
-  {
-    id: 1,
-    title: "Pricing for Professional Book Editing Services (2026 Guide)",
-    excerpt:
-      "When you're planning to publish a book, one of the first questions you'll face is:",
-    highlight: '"How much will editing cost?"',
-    image: "https://picsum.photos/seed/blog-editing-1/720/460",
-  },
-  {
-    id: 2,
-    title: "Pricing for Professional Book Editing Services (2026 Guide)",
-    excerpt:
-      "When you're planning to publish a book, one of the first questions you'll face is:",
-    highlight: '"How much will editing cost?"',
-    image: "https://picsum.photos/seed/blog-editing-2/720/460",
-  },
-  {
-    id: 3,
-    title: "Pricing for Professional Book Editing Services (2026 Guide)",
-    excerpt:
-      "When you're planning to publish a book, one of the first questions you'll face is:",
-    highlight: '"How much will editing cost?"',
-    image: "https://picsum.photos/seed/blog-editing-3/720/460",
-  },
-  {
-    id: 4,
-    title: "Pricing for Professional Book Editing Services (2026 Guide)",
-    excerpt:
-      "When you're planning to publish a book, one of the first questions you'll face is:",
-    highlight: '"How much will editing cost?"',
-    image: "https://picsum.photos/seed/blog-editing-1/720/460",
-  },
-  {
-    id: 5,
-    title: "Pricing for Professional Book Editing Services (2026 Guide)",
-    excerpt:
-      "When you're planning to publish a book, one of the first questions you'll face is:",
-    highlight: '"How much will editing cost?"',
-    image: "https://picsum.photos/seed/blog-editing-2/720/460",
-  },
-  {
-    id: 6,
-    title: "Pricing for Professional Book Editing Services (2026 Guide)",
-    excerpt:
-      "When you're planning to publish a book, one of the first questions you'll face is:",
-    highlight: '"How much will editing cost?"',
-    image: "https://picsum.photos/seed/blog-editing-3/720/460",
-  },
-];
-
 const POSTS_PER_PAGE = 3;
 
-const BlogBody = () => {
+type BlogBodyProps = {
+  posts: Array<{
+    id: number;
+    slug: string;
+    title: string;
+    excerpt: string;
+    date: string;
+    image?: string;
+    imageAlt?: string;
+    readTime: number;
+  }>;
+};
+
+const BlogBody = ({ posts }: BlogBodyProps) => {
   const [currentPage, setCurrentPage] = useState(0);
-  const totalPages = Math.ceil(blogPosts.length / POSTS_PER_PAGE);
-  const visiblePosts = blogPosts.slice(
+  const totalPages = Math.max(1, Math.ceil(posts.length / POSTS_PER_PAGE));
+  const visiblePosts = posts.slice(
     currentPage * POSTS_PER_PAGE,
     currentPage * POSTS_PER_PAGE + POSTS_PER_PAGE
   );
+  const recentPosts = posts.slice(0, 2);
 
   return (
     <section className="bg-[#F7F1D7] px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8 lg:py-14">
@@ -160,11 +118,11 @@ const BlogBody = () => {
                 <div className="mt-5 space-y-4">
                   {recentPosts.map((post) => (
                     <Link
-                      key={post}
-                      href="/blog"
+                      key={post.slug}
+                      href={`/blog/${post.slug}`}
                       className="montserrat block max-w-sm text-sm leading-5 text-stone-500 transition hover:text-emerald-700"
                     >
-                      {post}
+                      {post.title}
                     </Link>
                   ))}
                 </div>
@@ -173,7 +131,8 @@ const BlogBody = () => {
           </aside>
 
           <div className="min-w-0">
-            <div className="space-y-5">
+            {visiblePosts.length ? (
+              <div className="space-y-5">
               {visiblePosts.map((post) => (
                 <article
                   key={post.id}
@@ -181,13 +140,21 @@ const BlogBody = () => {
                 >
                   <div className="grid items-start gap-5 p-4 sm:p-5 lg:grid-cols-[16rem_minmax(0,1fr)] lg:gap-5 xl:grid-cols-[18rem_minmax(0,1fr)] xl:gap-6">
                     <div className="relative aspect-[1.44/0.92] w-full overflow-hidden rounded-xl bg-amber-100 lg:max-w-64 xl:max-w-72">
-                      <Image
-                        src={post.image}
-                        alt={post.title}
-                        fill
-                        sizes="(max-width: 1023px) 100vw, (max-width: 1279px) 256px, 288px"
-                        className="object-cover object-center"
-                      />
+                      {post.image ? (
+                        <Image
+                          src={post.image}
+                          alt={post.imageAlt || post.title}
+                          fill
+                          sizes="(max-width: 1023px) 100vw, (max-width: 1279px) 256px, 288px"
+                          className="object-cover object-center"
+                        />
+                      ) : (
+                        <div className="flex h-full w-full items-center justify-center bg-[radial-gradient(circle_at_top,#e7f8cc,transparent_60%),linear-gradient(135deg,#e6efc5,#d8d0a4)] p-6 text-center">
+                          <p className="goneva text-2xl leading-tight text-[#018752]">
+                            Southern Cross Publishing Blog
+                          </p>
+                        </div>
+                      )}
                     </div>
 
                     <div className="flex min-w-0 flex-col justify-between overflow-hidden">
@@ -198,25 +165,22 @@ const BlogBody = () => {
                         <p className="montserrat mt-4 max-w-2xl text-sm leading-6 text-stone-600">
                           {post.excerpt}
                         </p>
-                        <p className="montserrat mt-3 text-base font-semibold leading-6 text-stone-700">
-                          {post.highlight}
-                        </p>
                       </div>
 
                       <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                         <div className="montserrat flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-stone-400">
                           <span className="inline-flex items-center gap-2">
                             <FaRegCalendar className="h-3 w-3" />
-                            March 4, 2025
+                            {post.date}
                           </span>
                           <span className="inline-flex items-center gap-2">
                             <LuClock3 className="h-3 w-3" />
-                            10 Min Read
+                            {post.readTime} Min Read
                           </span>
                         </div>
 
                         <Link
-                          href="/blog"
+                          href={`/blog/${post.slug}`}
                           className="montserrat inline-flex items-center gap-3 text-sm font-medium text-emerald-700 transition hover:text-emerald-800"
                         >
                           Read More
@@ -227,7 +191,18 @@ const BlogBody = () => {
                   </div>
                 </article>
               ))}
-            </div>
+              </div>
+            ) : (
+              <div className="rounded-3xl border border-stone-200 bg-white px-6 py-12 text-center shadow-sm">
+                <h2 className="goneva text-3xl text-[#018752]">
+                  No blog posts available right now
+                </h2>
+                <p className="montserrat mx-auto mt-4 max-w-2xl text-sm leading-6 text-stone-600">
+                  We could not find any published posts from the WordPress feed yet.
+                  Please check back soon.
+                </p>
+              </div>
+            )}
 
             <div className="mt-10 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
               <div className="flex items-center gap-3">
