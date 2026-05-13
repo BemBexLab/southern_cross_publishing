@@ -1,4 +1,5 @@
 import HeroSection from "./components/Hero";
+import MotionSection from "@/components/MotionSection";
 import OurStory from "./components/OurStory";
 import Section3 from "./components/Section3";
 import AtSouthernCross, {
@@ -19,15 +20,20 @@ import { AiOutlineGlobal } from "react-icons/ai";
 export default function Home() {
   return (
     <div className="relative isolate bg-[#F7F1D7]">
-      <HeroSection
+      <MotionSection delay={0.02} distance={18}>
+        <HeroSection
         bgImage="/who-we-are/Service.webp"
         title="A Publishing House Built Around Your Story"
         description={`Southern Cross Publishing is an Australian self publishing company with over 1,000 authors published across fiction, non-fiction, memoirs, biographies, self help, children's books, and audiobooks. We treat every single manuscript we receive as if it were the only one on our desk, because to the person who wrote it, it is. We're not a factory. We're a team of professional editors, writers, designers, marketers, and publishers who genuinely love books and who take real pride in helping people share their stories with the world.`}
         ctaText="Get a Free Audiobook Quote"
         ctaHref="/contact"
-      />
-      <OurStory />
-      <AtSouthernCross
+        />
+      </MotionSection>
+      <MotionSection delay={0.04}>
+        <OurStory />
+      </MotionSection>
+      <MotionSection delay={0.05}>
+        <AtSouthernCross
         eyebrow=""
         title="What We Stand For The Values Behind Everything We Do"
         description=""
@@ -76,10 +82,16 @@ export default function Home() {
             iconSrc: <IoMdPerson size={40} />,
           },
         ]}
-      />
-      <Section3 />
-      <GetInTouch />
-      <FAQs
+        />
+      </MotionSection>
+      <MotionSection delay={0.04}>
+        <Section3 />
+      </MotionSection>
+      <MotionSection delay={0.03}>
+        <GetInTouch />
+      </MotionSection>
+      <MotionSection delay={0.04}>
+        <FAQs
         eyebrow="Need Help?"
         title="Publishing Questions"
         items={[
@@ -90,9 +102,13 @@ export default function Home() {
           { question: "Will I own my book once it is published?", answer: "Always. The rights, the royalties, and the creative ownership stay with you from day one. Southern Cross Publishing is here to produce and publish your work, not to claim any part of it." },
           { question: "How do I know if Southern Cross Publishing is the right fit for me?", answer: "If you have a book inside you and want it published properly, professionally edited, beautifully designed, and available to readers worldwide, our company is here for exactly that. The best way to find out is a free consultation call with our team." },
         ]}
-      />
-      <WhyAustralianAuthors />
-      <OurStory
+        />
+      </MotionSection>
+      <MotionSection delay={0.04}>
+        <WhyAustralianAuthors />
+      </MotionSection>
+      <MotionSection delay={0.04}>
+        <OurStory
         title="Southern Cross Publishing: Where Vision Becomes Legacy"
         imageSrc="/who-we-are/VIsion.webp"
         imageAlt="Book With an Eyeglasses"
@@ -101,8 +117,10 @@ export default function Home() {
           "We're proudly Australian. We understand the Australian reader, the Australian market, and what it takes to make a book succeed locally and globally. But we've always had our eyes on the wider world, because great stories don't stop at borders.",
           "Our work spans ghostwriting, professional book editing, cover design, ISBN registration, Amazon A+ content optimisation, global distribution across 40+ platforms, and full audiobook production.",
         ]}
-      />
-      <ReadyToPublish
+        />
+      </MotionSection>
+      <MotionSection delay={0.04}>
+        <ReadyToPublish
         eyebrow="Let’s Collaborate"
         title="Ready to Become One of Our Authors"
         description="Southern Cross Publishing is here to bring your vision to life—one expertly crafted page at a time."
@@ -111,7 +129,8 @@ export default function Home() {
         backgroundImageSrc="/publishing-services/dc171d58-b99f-4f30-8bee-5f356e9d63f9_removalai_preview.webp"
         illustrationSrc="/publishing-services/Group (1).webp"
         illustrationAlt="Custom illustration"
-      />
+        />
+      </MotionSection>
     </div>
   );
 }

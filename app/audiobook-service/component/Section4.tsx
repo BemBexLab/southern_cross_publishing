@@ -55,7 +55,7 @@ const Section4 = () => {
                 <div className="relative flex flex-col  w-full h-full min-h-[450px] lg:min-h-[600px]">
                     <div className="relative w-full flex-grow">
                         {/* 
-      Note: Ensure 'image_64a383.png' is placed in your /public folder.
+      Note: Ensure the referenced image asset is placed in your /public folder.
       If you have a cropped version of just the girl/phone, use that path here.
     */}
                         <Image
@@ -64,7 +64,6 @@ const Section4 = () => {
                             fill
                             sizes="(max-width: 1024px) 100vw, 50vw"
                             className="object-contain object-top"
-                            priority
                         />
                     </div>
                 </div>

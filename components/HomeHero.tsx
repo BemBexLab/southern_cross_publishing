@@ -8,7 +8,7 @@ const HomeHero = () => {
     <section
       className="relative h-full w-full overflow-hidden bg-cover bg-center bg-no-repeat text-white"
       style={{
-        backgroundImage: 'url("/home/Mask group.png")',
+        backgroundImage: 'url("/home/Mask group.webp")',
         backgroundColor: "#018752",
       }}
     >
@@ -30,7 +30,7 @@ const HomeHero = () => {
             <div className="mx-auto w-full max-w-[250px] sm:max-w-[340px] md:max-w-[420px] lg:hidden">
               <div className="relative h-[220px] w-full sm:h-[300px] md:h-[420px]">
                 <Image
-                  src="/home/Hero Image 1.png"
+                  src="/home/Hero Image 1.webp"
                   fill
                   alt="Illustration for Southern Cross Publishing"
                   className="object-contain object-center drop-shadow-[0_20px_50px_rgba(0,0,0,0.35)]"
@@ -74,7 +74,7 @@ const HomeHero = () => {
           <div className="hidden lg:mx-0 lg:block lg:w-full lg:max-w-none">
             <div className="relative lg:h-[750px] xl:h-[720px] 2xl:h-[800px]">
               <Image
-                src="/home/Hero Image 1.png"
+                src="/home/Hero Image 1.webp"
                 fill
                 alt="Illustration for Southern Cross Publishing"
                 className="object-contain object-center drop-shadow-[0_20px_50px_rgba(0,0,0,0.35)]"

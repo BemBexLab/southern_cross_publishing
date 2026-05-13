@@ -26,7 +26,7 @@ export interface BookConsultationSectionData {
 export interface WhyChooseSectionData {
   illustrationSrc: string;
   title: string;
-  description: string;
+  description: ReactNode;
   items: ReactNode[];
   ctaText: string;
   ctaHref: string;
@@ -72,7 +72,7 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
           Professional eBook Writing Services for Australian Authors &
           Businesses. From your first idea to a fully formatted, globally
           distributed eBook: Southern Cross Publishing handles every word,
-          every page, every platform. Whether you have a fully written
+          every page, every platform. <br /> Whether you have a fully written
           manuscript sitting in a drawer or nothing more than a rough idea
           scribbled on a notepad, our professional eBook writing services
           write content that meets you exactly where you are.
@@ -345,6 +345,275 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
           question: "Will my eBook actually be visible and searchable on Amazon and Apple Books?",
           answer:
             "Yes, it will. We optimise your metadata, write your book description for search, select the right categories and keywords for greater visibility, and set up Amazon A+ content where applicable, which makes your book easily discoverable by true readers who are actually searching for it.",
+        },
+      ],
+    },
+  },
+
+  "childrenbook-publishing": {
+    slug: "childrenbook-publishing",
+     hero: {
+      title: "Children's Book Publishing Services Australia",
+      description: (
+        <>
+          <b>Professional Children's Book Writing, Illustration & Publishing:</b><br />
+          Publishing a children's book is not the same as publishing any other book. The fine thing we have to see carefully is that the words and pictures have to work together. The age range matters. The page count, the trim size, the illustration style, every decision affects whether a child picks it up and whether a parent buys it.<br />At Southern Cross Publishing Australia, our team has done this before, and we will walk you through it properly from the very first conversation.
+        </>
+      ),
+      ctaText: "Request a call",
+      ctaHref: "/contact",
+    },
+    bookConsultation: {
+      eyebrow: "What we handle for you",
+      title: "From Manuscript to Published Children's Book, Every Step, Done Properly",
+      description:
+        "Children's books fail for very specific reasons: inconsistent illustration style, word counts that don't suit the age group, covers that don't stand out on Amazon, or text that reads beautifully aloud but doesn't land on the page. We have seen every one of these problems. Here is how we prevent them.",
+      cards: [
+        {
+          title: "Children's book writing & ghostwriting",
+          description:
+            "Writing for children takes a specific skill. The words have to be short, the rhythm has to pull a child through the page, and every sentence has to earn its place. Our writers work across picture books, early readers, middle grade, and junior fiction, and they understand the difference between them.",
+          items: [
+            "Vocabulary and reading level should be according to the age.",
+            "Rhythm and read-aloud pacing built in",
+            "Story arc suited to the format & page count",
+          ],
+        },
+        {
+          title: "Professional illustration & cover design",
+          description: "In a children's book, the illustration is not decoration; it is half the story. The pictures demonstrate the story and help the child to understand it clearly. We work with illustrators who understand how to carry the narrative between pages, how to show what the text does not say, and how to make a cover that stops a child in a bookshop aisle.",
+          items: [
+            "Style matched to your story and age group",
+            "Full spread illustrations or spot art",
+            "Print-ready files & digital formats",
+            "Cover designed for Amazon, Booktopia & print",
+          ],
+        },
+        {
+          title: "All production services under one roof",
+          items: [
+            "Developmental editing",
+            "Proofreading & copy editing",
+            "Interior layout & typesetting",
+            "ISBN Registration",
+            "Print & eBook distribution",
+            "Amazon A+ content setup",
+          ],
+          twoColumnItems: true,
+        },
+        {
+          title: "Who this is right for",
+          items: [
+            "Parents who want to convert a family story into a real book",
+            "Teachers and educators building classroom resources",
+            "Grandparents with a story that deserves to be kept",
+            "Authors with a manuscript that needs illustration",
+            "Anyone with a story idea and no idea where to start",
+          ],
+        },
+      ],
+      ctaText: "Book a free consultation",
+      ctaHref: "/contact",
+    },
+    whyChoose: {
+      illustrationSrc: "/ebook-services/Frame.svg",
+      title: "Why Australian Authors Trust Southern Cross Publishing With Their Children's Books",
+      description:
+        <>Children's books are personal. Most of our clients approach us with a story that means something to them, a character their own child loves, a lesson they want to pass on, or a memory they do not want to lose. That is not a small thing, and we do not treat it like one. <br /> We have worked with grandparents, primary school teachers, speech pathologists, parents of children with additional needs, and first-time authors who had never published anything before. What everyone of them had in common was a story worth telling,  and a need for people who actually knew how to tell it properly on the page.</>,
+      items: [
+        <>Australian owned and operated: not a contact centre overseas</>,
+        <>Illustrators matched to your book's age group, tone, and visual style</>,
+        <>Word counts and structure suited to the right reading level from the start</>,
+        <>You own 100% of all rights, text, and illustrations, on completion</>,
+        <>Print and digital publishing available, including hardback and paperback</>,
+        <>Distribution to Amazon, Booktopia, Book Depository, and 40+ platforms</>,
+      ],
+      ctaText: "Request a call",
+      ctaHref: "/contact",
+    },
+    getInTouch: {
+      title: "Let's talk about your book.",
+      subtitle: "Have a conversation",
+      paragraphs: [
+        "Most people who contact us do not have a complete manuscript. They approach us on the basis of an idea and a story they have been meaning to write down, or a draft that has been sitting in a folder for two years. And that is completely fine; and i wouldny wrong if I say that it is actually where most of our best projects begin.",
+        "We do have questions about your story, your audience, and what you want to do with the book once it is published. Then we will tell you, straight up, regarding time and cost.",
+      ],
+      formHeadline: "Send Us a Message",
+      ctaText: "Let's Build Your Book",
+    },
+    faqs: {
+      eyebrow: "Frequently Asked Questions",
+      title: "Your Questions, Answered",
+      initialOpenIndex: 0,
+      items: [
+        {
+          question: "Do I need to manage the illustrator, or will it be handled by you?",
+          answer:
+            "No, we take care of everything from writing, editing, formatting, to illustrations, and publishing. We match you with illustrators from our network based on what your book needs, particularly. You review examples and give your input before anything gets finalised, as you are always part of the decision, of course.",
+        },
+        {
+          question: "How much time does it take to publish a children's book from start?",
+          answer:
+            "If it's a picture book, it will take around thirty to forty-five business days in writing, illustration, formatting, and distribution. That timeline depends on how many illustration rounds are required and how quickly feedback comes back at every stage. If you already have a completed manuscript and only need illustration and production, it is typically completed between twenty to thirsty business days. We give you a specific schedule at the start, with milestones, so you always know what is happening and what comes next.",
+        },
+        {
+          question: "Will my children's book be available in print and as an eBook?",
+          answer:
+            "Yes, and for children's books specifically, print is often the more important format. We produce both a print edition in paperback or hardback and a digital edition for Kindle Kids, Apple Books, and Google Play. We can also organise print-on-demand, which means copies are printed as they are ordered, without you needing to hold stock. If you want a print run of physical books for school visits, launches, or gifts, we can arrange that too.",
+        },
+        {
+          question: "Will I own the book and the illustrations once it's finished?",
+          answer:
+            "Yes, you do, all of it. The text, the illustrations, the cover, the ISBN. Everything is transferred to you in full upon project completion. We do not retain any rights, take any royalties, or require any ongoing involvement once the book is live. It is your book, your name on the cover, and your income from sales. It is also written into the agreement from the start.",
+        },
+      ],
+    },
+  },
+
+  "book-marketing": {
+    slug: "book-marketing",
+     hero: {
+      title: "Your Book Is Written; Now Let's Make Sure People Find It.",
+      description: (
+        <>
+          Most self published books sell fewer than 100 copies, not because they weren't good enough, but because readers never found them. The publishing market in Australia and globally is noisier than it's ever been. Without a clear marketing strategy, even a brilliant book gets buried. That's where we come in.
+          <br />
+          At Southern Cross Publishing, our book marketing team makes sure the right readers find your work, wherever they are searching.
+        </>
+      ),
+      ctaText: "Get Your Free Marketing Quote",
+      ctaHref: "/contact",
+    },
+    bookConsultation: {
+      eyebrow: "What We Do For Your Book",
+      title: "Complete Book Marketing Services, Built Around Your Goals",
+      description:
+        "We don't hand you a template and wish you luck. Every author we work with gets a marketing approach that fits their book, their genre, and the readers they're actually trying to reach.",
+      cards: [
+        {
+          title: "Amazon A+ Content & Platform Optimisation",
+          description:
+            "Your Amazon listing is often the very first impression a reader gets of your book. Most authors leave it bare. We build it properly, rich A+ content, targeted keywords, and a description that genuinely sells without sounding like a sales pitch.",
+          items: [
+            "Amazon A+ content design and copy",
+            "Keyword-optimised book description",
+            "Category and BISAC selection for discoverability",
+            "Author Central profile setup and optimisation",
+            "Metadata for Apple Books, Kobo, and Barnes & Noble"
+          ],
+        },
+        {
+          title: "Author Branding & Online Presence",
+          description: "We help you build a presence that makes your name as memorable as your title, because readers who trust you will follow you to your next book and the one after that.",
+          items: [
+            "Author brand identity and messaging",
+            "Social media profile setup and bio copy",
+            "Profile banners for Facebook, Instagram, and LinkedIn",
+            "Australian Authors Marketplace profile listing",
+          ],
+        },
+        {
+          title: "Social Media Marketing & Content Strategy",
+          description: "Instagram, Facebook, LinkedIn, or all three, develop a strategy on the platform that makes sense for your book",
+          items: [
+            "Platform selection based on your genre and audience",
+            "Content calendar and post strategy",
+            "Launch campaign planning and execution",
+            "Promotional graphics and branded assets",
+            "Reader engagement and community building guidance",
+          ],
+          twoColumnItems: true,
+        },
+        {
+          title: "Global Distribution Across 40+ Platforms",
+          description: "What's the point of a beautifully marketed book if it isn't actually available when someone goes looking for it? We get your book listed everywhere.",
+          items: [
+            "Distribution to Amazon, Apple Books, Kobo, and more",
+            "Print-on-demand setup for physical copies",
+            "eBook formatting and multi-platform submission",
+            "Bookstore eligibility in Australia, US, and UK",
+            "Ongoing listing management and updates",
+          ],
+        },
+        {
+          title: "Book Launch Strategy & Campaign Planning",
+          description: "We do our best possible thing of gaining traction when it first hits the market.",
+          items: [
+            "Pre-launch reader list and ARC strategy",
+            "Launch week content and activity plan",
+            "Review strategy and early reader outreach",
+            "Email announcement copy and templates",
+            "Post-launch momentum and second-wind planning",
+          ],
+        },
+        {
+          title: "Ongoing Marketing Support After Launch",
+          description: "Whether you're planning a second edition, a speaking event, or you just want to keep building your audience, our team is available to help you keep moving forward.",
+          items: [
+            "Quarterly marketing check-ins and strategy reviews",
+            "Second edition and updated listing support",
+            "New content and promotional campaigns",
+            "Speaking and media opportunity preparation",
+            "Long-term author platform growth planning",
+          ],
+        },
+      ],
+      ctaText: "Book a free consultation",
+      ctaHref: "/contact",
+    },
+    whyChoose: {
+      illustrationSrc: "/ebook-services/Frame.svg",
+      title: "Why Southern Cross Publishing",
+      description:
+        <><b>What Makes Our Approach Different</b></>,
+      items: [
+        <>Australian-Based Team, Global Reach</>,
+        <>One Team, Every Stage</>,
+        <>You Keep 100% of Your Rights and Royalties</>,
+        <>No Automated Replies. No Sales Scripts.</>,
+        <>Transparent Process, Clear Timeline</>,
+      ],
+      ctaText: "Request a call",
+      ctaHref: "/contact",
+    },
+    getInTouch: {
+      title: "Have a Conversation",
+      subtitle: "Ready to Give Your Book the Audience It Deserves?",
+      paragraphs: [
+        "You don't need a finished marketing plan to reach out, just the book and the decision to do something about it. Drop us a message and one of our publishing specialists will get back to you personally. No automated replies, no generic follow-up sequence. Just a real conversation about your book, your timeline, and what working together would actually look like.",
+      ],
+      formHeadline: "Send Us a Message",
+      ctaText: "Let's Build Your Book",
+    },
+    faqs: {
+      eyebrow: "Frequently Asked Questions",
+      title: "Your Questions, Answered",
+      initialOpenIndex: 0,
+      items: [
+        {
+          question: "What does \"40+ platform distribution\" actually mean for my book?",
+          answer:
+            "It means your book is properly listed and available for purchase on over 40 of the major online bookselling platforms around the world, including Amazon, Apple Books, Kobo, Barnes & Noble, Google Play Books, and Booktopia in Australia, among others. With that we also handle the metadata, categories, keywords, and product descriptions for each platform so your book actually comes up when readers search for books like yours.",
+        },
+        {
+          question: "How much time it will take in book marketing?",
+          answer:
+            "It completely depends on where your book.  If you have a completed, edited manuscript ready to go, we can typically have the full marketing setup, platforms, listings, author profile, A+ content, and launch plan, ready within four to eight weeks. If we are building the marketing strategy alongside the writing or editing process, then obviousy the timeline will be longer. We will discuss everything in our initial consultation.",
+        },
+        {
+          question: "Will my book be listed on Australian bookstores, not just Amazon?",
+          answer:
+            "Yes. Australian distribution is very much part of what we do. That includes Booktopia, which is the largest Australian online bookstore, as well as physical bookstore eligibility through distribution networks. We also list your book on the Australian Authors Marketplace as part of the author profile setup. Your book reaches readers in Australia, the UK, the US, and across Europe, wherever people are buying books online.",
+        },
+        {
+          question: "Do I have to manage any of the platforms myself after launch?",
+          answer:
+            "No. That's the whole point of working with us. You don't need to learn how Amazon's KDP dashboard works, figure out Kobo's submission process, or understand what BISAC codes are. We are here to manage these things. You get access to your royalty reports directly from each platform, so you can see how your book is selling, but the technical side of managing your listings is our job, not yours.",
+        },
+        {
+          question: "What genres and book types do your marketing services cover?",
+          answer:
+            "We work across every major genre, fiction, non-fiction, memoir, biography, self-help, health and wellness, business, children's books, audiobook, and more. The marketing strategy we created is always particular to your genre and your target readership, because the way you reach readers of literary fiction is very different from the way you reach people looking for a business book or a parenting guide. We match your book with people on our team who genuinely understand your genre.",
         },
       ],
     },

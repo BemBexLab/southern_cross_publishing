@@ -13,7 +13,7 @@ const YourStory = () => {
     <section
       className="relative overflow-hidden bg-[#06684b] px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20"
       style={{
-        backgroundImage: 'url("/home/Rectangle 20.png")',
+        backgroundImage: 'url("/home/Rectangle 20.webp")',
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",

@@ -16,7 +16,6 @@ const Section5 = () => {
             alt="Audiobook mockups shown over a landscape"
             fill
             className="object-cover"
-            priority
           />
         </div>
 

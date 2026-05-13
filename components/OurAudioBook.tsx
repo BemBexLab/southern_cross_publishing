@@ -40,7 +40,6 @@ const OurAudioBook = () => {
                 src="/audiobook-service/Frame%201000001662.svg"
                 alt="Illustration of an audiobook author working at a desk"
                 fill
-                priority
                 sizes="(max-width: 1024px) 92vw, 48vw"
                 className="object-contain object-center"
               />

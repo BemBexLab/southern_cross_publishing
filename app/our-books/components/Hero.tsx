@@ -2,32 +2,51 @@
 
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
+import {
+  LazyMotion,
+  domAnimation,
+  m,
+  useReducedMotion,
+} from "motion/react";
 
 const Hero = () => {
+  const prefersReducedMotion = useReducedMotion();
   const books = [
     {
       src: "/our-books/book1.webp", // Replace with your actual file path
       rotate: "-rotate-[15deg]",
       translateY: "translate-y-8",
       zIndex: "z-10",
+      fanOffsetX: 140,
+      fanOffsetY: 32,
+      fanDelay: 0.04,
     },
     {
       src: "/our-books/book2.webp",
       rotate: "-rotate-[6deg]",
       translateY: "translate-y-2",
       zIndex: "z-20",
+      fanOffsetX: 64,
+      fanOffsetY: 10,
+      fanDelay: 0.11,
     },
     {
       src: "/our-books/book3.webp",
       rotate: "rotate-[2deg]",
       translateY: "translate-y-0",
       zIndex: "z-30",
+      fanOffsetX: -48,
+      fanOffsetY: 8,
+      fanDelay: 0.18,
     },
     {
       src: "/our-books/book4.webp",
       rotate: "rotate-[12deg]",
       translateY: "translate-y-8",
       zIndex: "z-40",
+      fanOffsetX: -132,
+      fanOffsetY: 32,
+      fanDelay: 0.25,
     },
   ];
   const [activeIndex, setActiveIndex] = useState(0);
@@ -43,89 +62,129 @@ const Hero = () => {
   }, [books.length]);
 
   return (
-    <section className="relative flex flex-col items-center overflow-hidden bg-[#F7F1D7] px-4 pb-4 pt-24 sm:px-6 sm:pb-4 sm:pt-26 lg:px-8 lg:pb-4 lg:pt-20">
-      <BackgroundStars />
+    <LazyMotion features={domAnimation}>
+      <section className="relative flex flex-col items-center overflow-hidden bg-[#F7F1D7] px-4 pb-4 pt-24 sm:px-6 sm:pb-4 sm:pt-26 lg:px-8 lg:pb-4 lg:pt-20">
+        <BackgroundStars />
 
-      <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center">
-        <h2 className="goneva mt-4 max-w-5xl text-center text-[2rem] leading-tight text-[#018752] sm:mt-6 sm:text-4xl md:text-5xl lg:mt-10 lg:text-6xl">
-          Publish Your Book in Australia With a <br className="hidden md:block" /> 
-          Team That Handles the Complete Process
-        </h2>
+        <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center">
+          <h2 className="goneva mt-4 max-w-5xl text-center text-[2rem] leading-tight text-[#018752] sm:mt-6 sm:text-4xl md:text-5xl lg:mt-10 lg:text-6xl">
+            Publish Your Book in Australia With a <br className="hidden md:block" />
+            Team That Handles the Complete Process
+          </h2>
 
-        <div className="mt-10 w-full lg:hidden">
-          <div className="relative mx-auto h-[320px] max-w-sm overflow-hidden sm:h-[380px] sm:max-w-xl">
-            {books.map((book, index) => {
-              const isActive = index === activeIndex;
-              const isPrevious = index === (activeIndex - 1 + books.length) % books.length;
-              const isNext = index === (activeIndex + 1) % books.length;
+          <div className="mt-10 w-full lg:hidden">
+            <div className="relative mx-auto h-[320px] max-w-sm overflow-hidden sm:h-[380px] sm:max-w-xl">
+              {books.map((book, index) => {
+                const isActive = index === activeIndex;
+                const isPrevious = index === (activeIndex - 1 + books.length) % books.length;
+                const isNext = index === (activeIndex + 1) % books.length;
 
-              return (
-                <div
-                  key={`mobile-${index}`}
-                  className={`absolute left-1/2 top-1/2 w-[190px] -translate-y-1/2 rounded-sm shadow-2xl transition-all duration-500 sm:w-[220px] ${
-                    isActive
-                      ? "z-30 -translate-x-1/2 scale-100 opacity-100"
-                      : isPrevious
-                        ? "z-20 -translate-x-[95%] scale-90 opacity-70 sm:-translate-x-[100%]"
-                        : isNext
-                          ? "z-20 translate-x-[-5%] scale-90 opacity-70 sm:translate-x-0"
-                          : "z-10 -translate-x-1/2 scale-75 opacity-0"
+                return (
+                  <m.div
+                    key={`mobile-${index}`}
+                    initial={
+                      prefersReducedMotion
+                        ? { opacity: 0 }
+                        : { opacity: 0, y: 24, scale: 0.9 }
+                    }
+                    animate={{
+                      opacity: isActive ? 1 : isPrevious || isNext ? 0.7 : 0,
+                      scale: isActive ? 1 : isPrevious || isNext ? 0.9 : 0.75,
+                      x: isActive ? "-50%" : isPrevious ? "-95%" : isNext ? "-5%" : "-50%",
+                      y: "-50%",
+                    }}
+                    transition={{
+                      duration: prefersReducedMotion ? 0.2 : 0.55,
+                      delay: prefersReducedMotion ? 0 : index * 0.08,
+                      ease: [0.22, 1, 0.36, 1],
+                    }}
+                    className={`absolute left-1/2 top-1/2 w-[190px] rounded-sm shadow-2xl sm:w-[220px] ${
+                      isActive
+                        ? "z-30"
+                        : isPrevious || isNext
+                          ? "z-20"
+                          : "z-10"
+                    }`}
+                  >
+                    <div className="relative h-[260px] w-full sm:h-[320px]">
+                      <Image
+                        src={book.src}
+                        alt={`Book cover ${index + 1}`}
+                        fill
+                        className="rounded-sm object-cover"
+                      />
+                    </div>
+                  </m.div>
+                );
+              })}
+            </div>
+
+            <div className="mt-6 flex justify-center gap-2">
+              {books.map((_, index) => (
+                <button
+                  key={`dot-${index}`}
+                  type="button"
+                  aria-label={`Show book ${index + 1}`}
+                  onClick={() => setActiveIndex(index)}
+                  className={`h-2.5 rounded-full transition-all ${
+                    activeIndex === index ? "w-8 bg-[#018752]" : "w-2.5 bg-[#018752]/30"
                   }`}
-                >
-                  <div className="relative h-[260px] w-full sm:h-[320px]">
-                    <Image
-                      src={book.src}
-                      alt={`Book cover ${index + 1}`}
-                      fill
-                      className="rounded-sm object-cover"
-                    />
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-
-          <div className="mt-6 flex justify-center gap-2">
-            {books.map((_, index) => (
-              <button
-                key={`dot-${index}`}
-                type="button"
-                aria-label={`Show book ${index + 1}`}
-                onClick={() => setActiveIndex(index)}
-                className={`h-2.5 rounded-full transition-all ${
-                  activeIndex === index ? "w-8 bg-[#018752]" : "w-2.5 bg-[#018752]/30"
-                }`}
-              />
-            ))}
-          </div>
-        </div>
-
-        <div className="mb-16 hidden w-full items-center justify-center px-4 lg:flex lg:h-[520px] xl:h-[560px]">
-          <div className="flex -space-x-12 xl:-space-x-20">
-            {books.map((book, index) => (
-              <div
-                key={index}
-                className={`relative h-[360px] w-[240px] shadow-2xl transition-transform duration-300 hover:scale-105 xl:h-[420px] xl:w-[290px] ${book.rotate} ${book.translateY} ${book.zIndex}`}
-              >
-                <Image
-                  src={book.src}
-                  alt={`Book cover ${index + 1}`}
-                  fill
-                  className="object-cover rounded-sm"
                 />
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
 
-        <p className="max-w-6xl text-center text-base leading-relaxed text-[#1A3C34] opacity-90 sm:text-lg md:text-xl">
-          Our self publishing services cover ghostwriting, professional book editing and proofreading, 
-          custom book cover design, interior formatting, ISBN registration, Amazon A+ content optimisation, 
-          global distribution across 40+ platforms, and complete audiobook production. 
-          Now, let Southern Cross take the hassle out of publishing
-        </p>
-      </div>
-    </section>
+          <div className="mb-16 hidden w-full items-center justify-center px-4 lg:flex lg:h-[520px] xl:h-[560px]">
+            <div className="flex -space-x-12 xl:-space-x-20">
+              {books.map((book, index) => (
+                <m.div
+                  key={index}
+                  initial={
+                    prefersReducedMotion
+                      ? { opacity: 0 }
+                      : {
+                          opacity: 0,
+                          x: book.fanOffsetX,
+                          y: book.fanOffsetY,
+                          scale: 0.82,
+                          rotate: 0,
+                        }
+                  }
+                  whileInView={{
+                    opacity: 1,
+                    x: 0,
+                    y: 0,
+                    scale: 1,
+                    rotate: 0,
+                  }}
+                  viewport={{ once: true, amount: 0.55 }}
+                  transition={{
+                    duration: prefersReducedMotion ? 0.24 : 0.85,
+                    delay: prefersReducedMotion ? 0 : book.fanDelay,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
+                  className={`relative h-[360px] w-[240px] shadow-2xl transition-transform duration-300 hover:scale-105 xl:h-[420px] xl:w-[290px] ${book.rotate} ${book.translateY} ${book.zIndex}`}
+                >
+                  <Image
+                    src={book.src}
+                    alt={`Book cover ${index + 1}`}
+                    fill
+                    className="rounded-sm object-cover"
+                  />
+                </m.div>
+              ))}
+            </div>
+          </div>
+
+          <p className="max-w-6xl text-center text-base leading-relaxed text-[#1A3C34] opacity-90 sm:text-lg md:text-xl">
+            Our self publishing services cover ghostwriting, professional book editing and proofreading,
+            custom book cover design, interior formatting, ISBN registration, Amazon A+ content optimisation,
+            global distribution across 40+ platforms, and complete audiobook production.
+            Now, let Southern Cross take the hassle out of publishing
+          </p>
+        </div>
+      </section>
+    </LazyMotion>
   );
 };
 

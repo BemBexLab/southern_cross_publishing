@@ -1,4 +1,5 @@
 import LogoSlider from "@/components/LogoSlider";
+import MotionSection from "@/components/MotionSection";
 import HeroSection from "../publishing-services/components/Hero";
 import Section3 from "./component/Section3";
 import Section4 from "./component/Section4";
@@ -15,14 +16,19 @@ import FAQs from "@/components/FAQs";
 export default function Home() {
   return (
     <div className="relative isolate bg-[#F7F1D7]">
+      <MotionSection delay={0.02} distance={18}>
       <HeroSection
-        bgImage="/audiobook-service/Service Section Hero Image 2 1.png"
+        bgImage="/audiobook-service/Service Section Hero Image 2 1.webp"
         title="Professional Audiobook Production Services in Australia"
         description="Human narration, background scoring, and expert audio editing, everything your audiobook needs to compete on Audible, Apple Books, Spotify and beyond Audiobooks are one of the fastest growing formats in publishing today. Readers are listening on commutes, during workouts, before bed, and if your book is not available in audio, you are leaving a significant audience behind. Southern Cross Publishing handles the complete audiobook production process, from matching you with the right narrator to delivering a fully mastered, platform-ready audio file. You focus on your story. We handle everything that makes it listenable."
         ctaText=" Get a Free Audiobook Quote"
         ctaHref="/contact"
       />
+      </MotionSection>
+      <MotionSection delay={0.06} distance={18}>
       <LogoSlider />
+      </MotionSection>
+      <MotionSection delay={0.05}>
       <AtSouthernCross
         eyebrow=""
         title="Three Core Services That Make Your Audiobook Sound Professional"
@@ -208,10 +214,20 @@ export default function Home() {
           },
         ]}
       />
+      </MotionSection>
+      <MotionSection delay={0.04}>
       <Section3 />
+      </MotionSection>
+      <MotionSection delay={0.04}>
       <Section4 />
+      </MotionSection>
+      <MotionSection delay={0.04}>
       <Section5 />
+      </MotionSection>
+      <MotionSection delay={0.04}>
       <Testimonials />
+      </MotionSection>
+      <MotionSection delay={0.03}>
       <GetInTouch
         title="Let us know if anything needed. Searching of any guidance from an expert?"
         subtitle="Have a conversation"
@@ -220,7 +236,11 @@ export default function Home() {
           "Southern Cross Publishing provide a free discussion opportunity where you can clear your doubts, share your story ideas or concepts, and get the exploration trip to examine our services clearly and can find out how we can provide you with the best by turning your words into book form. So, let's take a step and join us today.",
         ]}
       />
+      </MotionSection>
+      <MotionSection delay={0.04}>
       <OurAudioBook />
+      </MotionSection>
+      <MotionSection delay={0.04}>
       <ExpertNonFiction
         eyebrow=""
         title="Ready to Turn Your Book Into an Audiobook? Let's Talk."
@@ -228,6 +248,8 @@ export default function Home() {
         ctaText="Get a Quote"
         ctaHref="/contact"
       />
+      </MotionSection>
+      <MotionSection delay={0.04}>
       <FAQs
         eyebrow=""
         title=""
@@ -242,6 +264,7 @@ export default function Home() {
         initialOpenIndex={0}
         // columnGroups={[[0], [1]]}
       />
+      </MotionSection>
     </div>
   );
 }
