@@ -34,7 +34,6 @@ const BlogOverlay = () => {
                 fill
                 sizes="(max-width: 639px) 88vw, (max-width: 1023px) 70vw, 32vw"
                 className="object-contain object-center lg:object-right"
-                priority
               />
             </div>
           </div>

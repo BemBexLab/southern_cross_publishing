@@ -64,7 +64,6 @@ const Section4 = () => {
                             fill
                             sizes="(max-width: 1024px) 100vw, 50vw"
                             className="object-contain object-top"
-                            priority
                         />
                     </div>
                 </div>

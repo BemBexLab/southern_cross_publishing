@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 
 const logos = [
@@ -34,6 +32,7 @@ export default function LogoSlider() {
                 alt={index < logos.length ? "Client logo" : ""}
                 width={240}
                 height={80}
+                sizes="(max-width: 640px) 96px, (max-width: 768px) 128px, (max-width: 1024px) 192px, 240px"
                 className="h-auto w-auto max-h-full max-w-full object-contain"
               />
             </div>

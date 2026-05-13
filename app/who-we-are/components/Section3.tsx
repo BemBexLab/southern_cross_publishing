@@ -86,7 +86,6 @@ export default function Section3() {
             alt="Audiobook mockups on landscape"
             fill
             className="object-cover"
-            priority
           />
         </div>
 

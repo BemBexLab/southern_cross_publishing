@@ -35,7 +35,7 @@ const OurStory = ({
   titleClassName = "goneva text-[#018752] text-3xl md:text-6xl",
   paragraphsWrapperClassName = "space-y-2 montserrat text-[#1F1F1F] text-lg leading-relaxed max-w-4xl",
   paragraphClassName = "",
-  imagePriority = true,
+  imagePriority = false,
 }: OurStoryProps) => {
   return (
     <section className={sectionClassName}>
