@@ -3,38 +3,45 @@
 import React from "react";
 import { usePathname } from "next/navigation";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import Link from "next/link";
 
 const quickLinks = [
-  { label: "Home", href: "#" },
-  { label: "Publishing Services", href: "#" },
-  { label: "Our Books", href: "#" },
-  { label: "Our Publishing", href: "#" },
-  { label: "Who we are", href: "#" },
-  { label: "Blog", href: "#" },
+  { label: "Home", href: "/" },
+  { label: "Publishing Services", href: "/publishing-services" },
+  { label: "Our Books", href: "/our-books" },
+  { label: "AudioBook Services", href: "/audiobook-service" },
+  { label: "Who we are", href: "/who-we-are" },
+  { label: "Blog", href: "/blog" },
 ];
 
 const services = [
-  { label: "Book Publishing", href: "#" },
+  { label: "Book Publishing", href: "/publishing-services" },
   { label: "Ebook Formatting", href: "/publishing-services/ebook-formatting" },
-  { label: "Children Book", href: "#" },
-  { label: "Book Marketing", href: "#" },
-  { label: "E-Book Writing Service", href: "/e-book-writing-service" },
+  {
+    label: "Children Book",
+    href: "/publishing-services/childrenbook-publishing",
+  },
+  { label: "Book Marketing", href: "/publishing-services/book-marketing" },
+  {
+    label: "E-Book Writing Service",
+    href: "/publishing-services/e-book-writing-service",
+  },
 ];
 
 const socials = [
   {
     label: "Facebook",
-    href: "#",
+    href: "https://www.facebook.com/",
     icon: <FaFacebookF className="h-[14px] w-[14px]" />,
   },
   {
     label: "Twitter",
-    href: "#",
+    href: "https://x.com/",
     icon: <FaTwitter className="h-[14px] w-[14px]" />,
   },
   {
     label: "Instagram",
-    href: "#",
+    href: "https://www.instagram.com/",
     icon: <FaInstagram className="h-[14px] w-[14px]" />,
   },
 ];
@@ -53,22 +60,27 @@ const Footer = () => {
       <div className="w-full">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,490px)_minmax(0,1fr)] lg:gap-[48px]">
           <div className="w-full">
-            <div
-              aria-label="Southern Cross Publishing"
-              className="h-[72px] w-full max-w-[745px] bg-left bg-no-repeat sm:h-[84px] lg:h-[100px]"
-              style={{
-                backgroundImage: "url('/navbar/Logos options-08 2.svg')",
-                backgroundSize: "contain",
-              }}
-            >
-              <span className="sr-only">Southern Cross Publishing</span>
-            </div>
+            <Link href="/">
+              <div
+                aria-label="Southern Cross Publishing"
+                className="h-[72px] w-full max-w-[745px] bg-left bg-no-repeat sm:h-[84px] lg:h-[100px]"
+                style={{
+                  backgroundImage: "url('/navbar/Logos options-08 2.svg')",
+                  backgroundSize: "contain",
+                }}
+              >
+                <span className="sr-only">Southern Cross Publishing</span>
+              </div>
+            </Link>
 
             <p
               className="montserrat mt-7 w-full max-w-[650px] text-base leading-[1.2] sm:text-lg sm:leading-[1.16]"
               style={{ color: "#a8a196" }}
             >
-              Australia's reliable self-publishing partner. We help Australians authors convert their stories into professionally published books, from the first idea to global distribution. Your story deserves to be read, and we help you in that.
+              Australia's reliable self-publishing partner. We help Australians
+              authors convert their stories into professionally published books,
+              from the first idea to global distribution. Your story deserves to
+              be read, and we help you in that.
             </p>
           </div>
 
@@ -135,14 +147,14 @@ const Footer = () => {
                     key={link.label}
                     href={link.href}
                     className="flex items-center gap-3 transition-opacity hover:opacity-80"
-                >
-                  <span
-                    className="inline-flex h-4 w-4 items-center justify-center"
-                    style={{ color: "#f4eedc" }}
                   >
-                    {link.icon}
-                  </span>
-                  <span className="leading-none">{link.label}</span>
+                    <span
+                      className="inline-flex h-4 w-4 items-center justify-center"
+                      style={{ color: "#f4eedc" }}
+                    >
+                      {link.icon}
+                    </span>
+                    <span className="leading-none">{link.label}</span>
                   </a>
                 ))}
               </div>
@@ -150,7 +162,10 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-10 h-px w-full" style={{ backgroundColor: "#4a4a4a" }} />
+        <div
+          className="mt-10 h-px w-full"
+          style={{ backgroundColor: "#4a4a4a" }}
+        />
 
         <div
           className="montserrat mt-8 flex flex-col gap-4 text-[0.97rem] sm:gap-5 lg:flex-row lg:items-center lg:justify-between"
@@ -158,11 +173,20 @@ const Footer = () => {
         >
           <p>Copyright © 2026. Logolpsum. All rights reserved.</p>
 
-          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-6 lg:justify-end lg:text-right" style={{ color: "#efe6d4" }}>
-            <a href="/terms" className="transition-opacity hover:opacity-80">
+          <div
+            className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-6 lg:justify-end lg:text-right"
+            style={{ color: "#efe6d4" }}
+          >
+            <a
+              href="/terms-condition"
+              className="transition-opacity hover:opacity-80"
+            >
               Terms &amp; Conditions
             </a>
-            <a href="/privacy" className="transition-opacity hover:opacity-80">
+            <a
+              href="/privacy-policy"
+              className="transition-opacity hover:opacity-80"
+            >
               Privacy Policy
             </a>
           </div>

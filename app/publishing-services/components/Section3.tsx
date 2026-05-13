@@ -86,7 +86,7 @@ const Section3 = () => {
     <section
       className="relative overflow-hidden py-10 sm:py-14 lg:py-16"
       style={{
-        backgroundImage: "url('/publishing-service/Group 1000001754.png')",
+        backgroundImage: "url('/publishing-service/Group 1000001754.webp')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

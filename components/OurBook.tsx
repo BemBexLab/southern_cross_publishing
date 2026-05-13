@@ -14,7 +14,7 @@ export const BOOKS = [
   {
     title: "DON'T CUT the GRASS on Sunday",
     author: "K.Stephen Jumper",
-    cover: "/home/Rectangle 21.png",
+    cover: "/home/Rectangle 21.webp",
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Non Fiction"],
@@ -23,7 +23,7 @@ export const BOOKS = [
   {
     title: "The Bee's Colony, The Rise of the New Queen",
     author: "Joel B.Gindo",
-    cover: "/home/Rectangle 47.png",
+    cover: "/home/Rectangle 47.webp",
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Children Book"],
@@ -32,7 +32,7 @@ export const BOOKS = [
   {
     title: "Growing together",
     author: "Allison Sullins",
-    cover: "/home/Rectangle 48.png",
+    cover: "/home/Rectangle 48.webp",
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Children Book"],
@@ -41,7 +41,7 @@ export const BOOKS = [
   {
     title: "Tales of the Hippie Dippie Gardener",
     author: "Jim Fritz",
-    cover: "/home/Rectangle 49.png",
+    cover: "/home/Rectangle 49.webp",
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Fiction"],
@@ -50,7 +50,7 @@ export const BOOKS = [
   {
     title: "God carried me",
     author: "Bertha Stumon",
-    cover: "/home/Rectangle 50.png",
+    cover: "/home/Rectangle 50.webp",
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Biography"],
@@ -59,7 +59,7 @@ export const BOOKS = [
   {
     title: "THE LABYRINTH",
     author: "Keith Cuvo",
-    cover: "/home/Rectangle 52.png",
+    cover: "/home/Rectangle 52.webp",
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Non Fiction"],
@@ -68,7 +68,7 @@ export const BOOKS = [
   {
     title: "El Color del Renacer",
     author: "Luz Diaz",
-    cover: "/home/Rectangle 51.png",
+    cover: "/home/Rectangle 51.webp",
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Biography"],
@@ -77,7 +77,7 @@ export const BOOKS = [
   {
     title: "THE TIME CAPSULE MYSTERY",
     author: "Jenny Lynn",
-    cover: "/home/Rectangle 53.png",
+    cover: "/home/Rectangle 53.webp",
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Children Book"],

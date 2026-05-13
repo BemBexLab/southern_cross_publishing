@@ -15,7 +15,7 @@ const Section5 = () => {
 
             <div className="relative mb-6 h-[190px] overflow-visible sm:mb-8 sm:h-[320px]">
               <img
-                src="/publishing-services/Book_Cover_Mockups_03 1.png"
+                src="/publishing-services/Book_Cover_Mockups_03 1.webp"
                 alt="Books displayed on a wooden shelf"
                 className="absolute bottom-0 right-[-0.75rem] h-full w-auto max-w-none object-contain sm:right-[-1.5rem]"
               />
@@ -94,7 +94,7 @@ const Section5 = () => {
 
       <div className="pointer-events-none absolute inset-y-0 right-0 hidden lg:flex lg:w-[48vw] lg:max-w-[860px] lg:items-center lg:justify-end">
         <img
-          src="/publishing-services/Book_Cover_Mockups_03 1.png"
+          src="/publishing-services/Book_Cover_Mockups_03 1.webp"
           alt="Books displayed on a wooden shelf"
           className="block h-auto w-full object-contain object-right"
         />

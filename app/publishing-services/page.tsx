@@ -1,4 +1,5 @@
 import LogoSlider from "@/components/LogoSlider";
+import MotionSection from "@/components/MotionSection";
 import HeroSection from "./components/Hero";
 import Section2 from "./components/Section2";
 import Section3 from "./components/Section3";
@@ -20,65 +21,85 @@ import FAQs from "@/components/FAQs";
 import ExpertNonFiction from "./components/ExpertNonFiction";
 
 export default function Home() {
-    return (
-        <div className="relative isolate bg-[#F7F1D7]">
-
-            <HeroSection
-                bgImage="/publishing-services/Rectangle.webp"
-                title="Complete Book Publishing Services in Australia"
-                description="From manuscript evaluation to global distribution, everything your book needs, handled by one dedicated team. Southern Cross Publishing brings together every skill your book needs under one roof, from the very first editorial pass to the day your book goes live on 40+ global platforms. No matter if you have a finished manuscript ready to publish or you are still working out what you want to say, our publishing specialists step in at exactly the right stage and carry the process forward with you. Our dedicated team treats your book like it matters, because it does."
-                ctaText="Book a Free Consultation"
-                ctaHref="/contact"
-            />
-            <LogoSlider />
-            <Section2 />
-            <Section3 />
-            <ReadyToPublish />
-            <AtSouthernCross eyebrow="Our Approach" title="Three Things We Never Compromise On, No Matter the Book" cards={[
-                {
-                    title: "Personalised Publishing Services",
-                    description: "No two authors come to us with the same story, the same timeline, or the same goal. We build a complete publishing plan around your genre, your audience, and where you actually are in the process, so nothing is rushed and nothing is missed.",
-                    variant: "light",
-                    iconSrc: <MdOutlineFlagCircle />
-                },
-                {
-                    title: "We Protect and Maintain Your Voice",
-                    description: "Our editors sharpen the structure, smooth the pacing, and clean the grammar, but the personality, the rhythm, and the way you tell your story stay exactly as they should. When your book is done, it still sounds unmistakably like you.",
-                    variant: "light",
-                    iconSrc: <FaShieldAlt />
-                },
-                {
-                    title: "40+ Platforms and Full Post-Launch Support",
-                    description: "Southern Cross Publishing distributes your work across 40-plus global platforms, Amazon, Apple Books, Kobo, Barnes & Noble, and beyond, and then stays with you after launch day with marketing support, author branding, and growth strategy.",
-                    variant: "light",
-                    iconSrc: <FaGlobe />
-                }
-            ]} />
-            <Section5 />
-            <Section6 />
-            <ExpertNonFiction
-                eyebrow="Expert Non-Fiction Book Writing Services"
-                title="The Only Thing Standing Between You and a Published Book Is the First Step"
-                description="We have helped hundreds of Australian authors go from a rough idea to a professionally published book available worldwide. Your story is next."
-                ctaText="Let's Get Started"
-                ctaHref="/contact"
-            />
-            <Section8 />
-            <AtSouthernCross eyebrow="What We Publish" title="We Work Across Every Genre: Fiction, Non-Fiction, Memoirs, Children's Books and More" description="When you work with Southern Cross Publishing, you are matched with people who actually understand your type of book, not generalists applying the same approach to every manuscript." cards={[
-                {
-                    title: "Fiction",
-                    description: "From literary novels to thrillers, romance, fantasy, science fiction, and historical fiction, our fiction team understands what makes a story work at the structural level and how to make it hit harder on every page.",
-                    variant: "light",
-                    iconSrc: (<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+  return (
+    <div className="relative isolate bg-[#F7F1D7]">
+      <MotionSection delay={0.02} distance={18}>
+        <HeroSection
+          bgImage="/publishing-services/Rectangle.webp"
+          title="Complete Book Publishing Services in Australia"
+          description="From manuscript evaluation to global distribution, everything your book needs, handled by one dedicated team. Southern Cross Publishing brings together every skill your book needs under one roof, from the very first editorial pass to the day your book goes live on 40+ global platforms. No matter if you have a finished manuscript ready to publish or you are still working out what you want to say, our publishing specialists step in at exactly the right stage and carry the process forward with you. Our dedicated team treats your book like it matters, because it does."
+          ctaText="Book a Free Consultation"
+          ctaHref="/contact"
+        />
+      </MotionSection>
+      <MotionSection delay={0.06} distance={18}>
+        <LogoSlider />
+      </MotionSection>
+      <MotionSection delay={0.08}>
+        <Section2 />
+      </MotionSection>
+      <MotionSection delay={0.08}>
+        <Section3 />
+      </MotionSection>
+      <MotionSection delay={0.08}>
+        <ReadyToPublish />
+      </MotionSection>
+      <MotionSection delay={0.05}>
+        <AtSouthernCross eyebrow="Our Approach" title="Three Things We Never Compromise On, No Matter the Book" cards={[
+          {
+            title: "Personalised Publishing Services",
+            description: "No two authors come to us with the same story, the same timeline, or the same goal. We build a complete publishing plan around your genre, your audience, and where you actually are in the process, so nothing is rushed and nothing is missed.",
+            variant: "light",
+            iconSrc: <MdOutlineFlagCircle />
+          },
+          {
+            title: "We Protect and Maintain Your Voice",
+            description: "Our editors sharpen the structure, smooth the pacing, and clean the grammar, but the personality, the rhythm, and the way you tell your story stay exactly as they should. When your book is done, it still sounds unmistakably like you.",
+            variant: "light",
+            iconSrc: <FaShieldAlt />
+          },
+          {
+            title: "40+ Platforms and Full Post-Launch Support",
+            description: "Southern Cross Publishing distributes your work across 40-plus global platforms, Amazon, Apple Books, Kobo, Barnes & Noble, and beyond, and then stays with you after launch day with marketing support, author branding, and growth strategy.",
+            variant: "light",
+            iconSrc: <FaGlobe />
+          }
+        ]} />
+      </MotionSection>
+      <MotionSection delay={0.04}>
+        <Section5 />
+      </MotionSection>
+      <MotionSection delay={0.04}>
+        <Section6 />
+      </MotionSection>
+      <MotionSection delay={0.04}>
+        <ExpertNonFiction
+          eyebrow="Expert Non-Fiction Book Writing Services"
+          title="The Only Thing Standing Between You and a Published Book Is the First Step"
+          description="We have helped hundreds of Australian authors go from a rough idea to a professionally published book available worldwide. Your story is next."
+          ctaText="Let's Get Started"
+          ctaHref="/contact"
+        />
+      </MotionSection>
+      <MotionSection delay={0.04}>
+        <Section8 />
+      </MotionSection>
+      <MotionSection delay={0.05}>
+        <AtSouthernCross eyebrow="What We Publish" title="We Work Across Every Genre: Fiction, Non-Fiction, Memoirs, Children's Books and More" description="When you work with Southern Cross Publishing, you are matched with people who actually understand your type of book, not generalists applying the same approach to every manuscript." cards={[
+          {
+            title: "Fiction",
+            description: "From literary novels to thrillers, romance, fantasy, science fiction, and historical fiction, our fiction team understands what makes a story work at the structural level and how to make it hit harder on every page.",
+            variant: "light",
+            iconSrc: (<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
   <path d="M2.03688 25.4181L4.58438 24.7356C4.94133 24.6479 5.31814 24.6961 5.64156 24.8708C5.96499 25.0454 6.21192 25.3341 6.33438 25.6806C6.48395 26.0107 6.50679 26.3842 6.39855 26.7301C6.29031 27.0759 6.05856 27.3698 5.7475 27.5556L3.46688 28.87C3.38376 28.9179 3.3128 28.9843 3.25948 29.0641C3.20616 29.1439 3.17192 29.2348 3.15941 29.3299C3.1469 29.4251 3.15646 29.5218 3.18734 29.6126C3.21823 29.7035 3.26961 29.786 3.3375 29.8538L10.1463 36.6663C10.2141 36.7341 10.2966 36.7855 10.3875 36.8163C10.4783 36.8471 10.5751 36.8566 10.6702 36.8441C10.7653 36.8315 10.8563 36.7972 10.936 36.7438C11.0158 36.6904 11.0821 36.6194 11.13 36.5363L12.4469 34.25C12.6378 33.9353 12.9387 33.7027 13.2914 33.5972C13.644 33.4916 14.0232 33.5207 14.3556 33.6788C14.6942 33.806 14.9741 34.0535 15.1418 34.374C15.3096 34.6945 15.3534 35.0655 15.265 35.4163L14.5813 37.9631C14.5564 38.0559 14.5532 38.1532 14.572 38.2475C14.5909 38.3417 14.6312 38.4303 14.6898 38.5065C14.7485 38.5826 14.8239 38.6442 14.9102 38.6864C14.9965 38.7286 15.0914 38.7504 15.1875 38.75H24.8125C24.9084 38.75 25.003 38.728 25.089 38.6856C25.175 38.6432 25.2501 38.5815 25.3084 38.5055C25.3668 38.4294 25.4069 38.3409 25.4256 38.2469C25.4443 38.1528 25.4411 38.0557 25.4163 37.9631L24.7325 35.4169C24.6585 35.0625 24.7106 34.6935 24.8798 34.3735C25.049 34.0534 25.3246 33.8026 25.6591 33.6642C25.9936 33.5258 26.3659 33.5086 26.7117 33.6156C27.0576 33.7225 27.3552 33.9469 27.5531 34.25L28.87 36.5331C28.9179 36.6163 28.9844 36.6872 29.0641 36.7406C29.1439 36.7939 29.2349 36.8281 29.33 36.8406C29.4251 36.854 29.522 36.8449 29.613 36.8141C29.7039 36.7832 29.7864 36.7315 29.8538 36.6631L36.6625 29.8506C36.7304 29.7828 36.7818 29.7003 36.8127 29.6095C36.8435 29.5187 36.8531 29.4219 36.8406 29.3268C36.8281 29.2317 36.7938 29.1407 36.7405 29.061C36.6872 28.9812 36.6162 28.9148 36.5331 28.8669L34.25 27.5531C33.9353 27.3622 33.7027 27.0613 33.5972 26.7086C33.4916 26.356 33.5207 25.9768 33.6788 25.6444C33.8057 25.3056 34.0531 25.0255 34.3738 24.8578C34.6944 24.6901 35.0656 24.6466 35.4163 24.7356L37.9631 25.4181C38.0559 25.443 38.1531 25.4462 38.2473 25.4274C38.3415 25.4086 38.4301 25.3683 38.5062 25.3097C38.5823 25.2512 38.6439 25.1758 38.6862 25.0896C38.7285 25.0034 38.7503 24.9085 38.75 24.8125V15.1875C38.7499 15.0917 38.7278 14.9971 38.6854 14.9112C38.6429 14.8253 38.5813 14.7503 38.5052 14.692C38.4292 14.6337 38.3407 14.5937 38.2467 14.575C38.1527 14.5564 38.0557 14.5596 37.9631 14.5844L35.4163 15.2675C35.0622 15.3409 34.6936 15.2884 34.374 15.1192C34.0545 14.9499 33.804 14.6744 33.6658 14.3403C33.5276 14.0061 33.5104 13.6342 33.617 13.2887C33.7236 12.9431 33.9475 12.6457 34.25 12.4475L36.5331 11.13C36.6162 11.0821 36.6872 11.0157 36.7405 10.9359C36.7938 10.8561 36.8281 10.7652 36.8406 10.6701C36.8531 10.5749 36.8435 10.4782 36.8127 10.3874C36.7818 10.2965 36.7304 10.214 36.6625 10.1463L29.8538 3.33751C29.7862 3.26928 29.7037 3.21773 29.6128 3.18692C29.5219 3.15611 29.4251 3.14689 29.33 3.16001C29.2349 3.17244 29.144 3.20659 29.0642 3.2598C28.9845 3.31302 28.918 3.38387 28.87 3.46688L27.5531 5.75C27.3622 6.06467 27.0613 6.29729 26.7086 6.40283C26.356 6.50836 25.9768 6.47929 25.6444 6.32126C25.3058 6.19399 25.0259 5.94649 24.8582 5.62601C24.6904 5.30553 24.6466 4.93451 24.735 4.58376L25.4188 2.03688C25.4436 1.94406 25.4468 1.84676 25.428 1.75253C25.4091 1.65829 25.3688 1.56967 25.3102 1.49355C25.2515 1.41743 25.1761 1.35585 25.0898 1.31362C25.0035 1.27138 24.9086 1.24961 24.8125 1.25001H15.1875C15.0916 1.24999 14.997 1.27204 14.911 1.31445C14.825 1.35685 14.7499 1.41847 14.6916 1.49455C14.6332 1.57062 14.5931 1.6591 14.5744 1.75314C14.5557 1.84718 14.5589 1.94427 14.5838 2.03688L15.2675 4.58313C15.3553 4.94058 15.3071 5.3179 15.1324 5.64186C14.9577 5.96581 14.6688 6.21329 14.3219 6.33625C13.9919 6.48602 13.6184 6.50904 13.2725 6.4009C12.9267 6.29277 12.6328 6.06106 12.4469 5.75L11.13 3.46688C11.0821 3.38377 11.0157 3.3128 10.9359 3.25948C10.8561 3.20616 10.7652 3.17192 10.6701 3.15941C10.5749 3.1469 10.4782 3.15646 10.3874 3.18734C10.2965 3.21823 10.214 3.26961 10.1463 3.33751L3.3375 10.1463C3.26961 10.214 3.21823 10.2965 3.18734 10.3874C3.15646 10.4782 3.1469 10.5749 3.15941 10.6701C3.17192 10.7652 3.20616 10.8561 3.25948 10.9359C3.3128 11.0157 3.38376 11.0821 3.46688 11.13L5.75 12.4469C6.06467 12.6378 6.29729 12.9387 6.40282 13.2914C6.50836 13.644 6.47929 14.0232 6.32125 14.3556C6.19468 14.6947 5.94726 14.975 5.62655 15.1428C5.30584 15.3105 4.93445 15.3538 4.58375 15.2644L2.03688 14.5819C1.94411 14.557 1.84686 14.5538 1.75268 14.5726C1.65849 14.5914 1.56991 14.6317 1.4938 14.6903C1.41769 14.7488 1.3561 14.8242 1.31382 14.9104C1.27154 14.9966 1.2497 15.0915 1.25 15.1875V24.8125C1.25009 24.9083 1.27221 25.0029 1.31465 25.0888C1.3571 25.1747 1.41873 25.2497 1.49479 25.308C1.57085 25.3663 1.6593 25.4063 1.75329 25.425C1.84729 25.4436 1.94432 25.4404 2.03688 25.4156V25.4181ZM2.5 16L4.25938 16.4719C4.90968 16.6414 5.59974 16.5642 6.1965 16.2552C6.79327 15.9461 7.25449 15.4271 7.49125 14.7981C7.75919 14.1886 7.79351 13.5017 7.58765 12.8685C7.3818 12.2352 6.95017 11.6999 6.375 11.3644L4.7975 10.4544L10.4544 4.79751L11.3644 6.375C11.7046 6.95398 12.2467 7.38681 12.8866 7.59032C13.5266 7.79382 14.2191 7.75365 14.8313 7.4775C15.4527 7.23685 15.9636 6.77555 16.2663 6.18184C16.569 5.58812 16.6422 4.90367 16.4719 4.25938L16 2.50001H24L23.5281 4.26C23.3585 4.91023 23.4356 5.60025 23.7447 6.19695C24.0538 6.79365 24.5729 7.25473 25.2019 7.49125C25.8114 7.75919 26.4983 7.79351 27.1315 7.58765C27.7648 7.3818 28.3001 6.95017 28.6356 6.375L29.5456 4.79813L35.2025 10.455L33.625 11.3644C33.0459 11.7046 32.6129 12.2468 32.4094 12.8869C32.2059 13.527 32.2462 14.2197 32.5225 14.8319C32.7634 15.453 33.2246 15.9636 33.8182 16.2661C34.4117 16.5686 35.0959 16.6419 35.74 16.4719L37.5 16V24L35.7406 23.5281C35.0939 23.3768 34.4145 23.4603 33.8236 23.7635C33.2326 24.0668 32.7687 24.5701 32.5145 25.1837C32.2604 25.7974 32.2325 26.4813 32.4359 27.1136C32.6393 27.7459 33.0607 28.2853 33.625 28.6356L35.2025 29.5456L29.5456 35.2031L28.6356 33.625C28.2853 33.0607 27.7459 32.6393 27.1136 32.4359C26.4813 32.2325 25.7974 32.2604 25.1837 32.5145C24.5701 32.7687 24.0668 33.2326 23.7635 33.8236C23.4603 34.4145 23.3768 35.0939 23.5281 35.7406L24 37.5H16L16.4719 35.74C16.6229 35.0933 16.5393 34.4141 16.236 33.8233C15.9326 33.2326 15.4293 32.7689 14.8158 32.5148C14.2022 32.2607 13.5184 32.2329 12.8862 32.4362C12.2541 32.6396 11.7147 33.0609 11.3644 33.625L10.4544 35.2025L4.7975 29.5456L6.375 28.6356C6.93912 28.2853 7.36043 27.7459 7.56377 27.1138C7.76712 26.4816 7.73928 25.7978 7.48521 25.1842C7.23115 24.5707 6.76739 24.0674 6.17666 23.764C5.58594 23.4607 4.90666 23.3771 4.26 23.5281L2.5 24V16Z" fill="#018752"/>
   <path d="M20.0001 32.2172C22.4165 32.2171 24.7785 31.5005 26.7876 30.1579C28.7967 28.8154 30.3625 26.9072 31.2872 24.6747C32.2118 22.4423 32.4536 19.9858 31.9822 17.6158C31.5107 15.2459 30.347 13.069 28.6383 11.3604C26.9297 9.65185 24.7527 8.48831 22.3828 8.01694C20.0128 7.54558 17.5563 7.78756 15.3239 8.71229C13.0915 9.63703 11.1834 11.203 9.84096 13.2121C8.49851 15.2213 7.78198 17.5834 7.78198 19.9997C7.78579 23.239 9.07429 26.3444 11.3648 28.6348C13.6554 30.9252 16.7609 32.2136 20.0001 32.2172ZM9.37511 22.6716C11.0845 23.8422 13.0377 24.6086 15.087 24.9129C15.3912 26.9622 16.1576 28.9154 17.3282 30.6247C15.409 30.1386 13.6568 29.1429 12.2569 27.743C10.8569 26.343 9.86125 24.5908 9.37511 22.6716ZM20.0001 9.03223C21.3695 9.03223 22.8457 11.2822 23.5976 14.8779C21.209 14.5729 18.7912 14.5729 16.4026 14.8779C17.1545 11.2835 18.6307 9.03223 20.0001 9.03223ZM20.0001 15.8991C21.2805 15.8975 22.5593 15.9894 23.8264 16.1741C24.0111 17.4409 24.103 18.7195 24.1014 19.9997C24.103 21.2799 24.0111 22.5585 23.8264 23.8254C22.5593 24.01 21.2805 24.1019 20.0001 24.1004C18.7197 24.1019 17.4409 24.01 16.1739 23.8254C15.8072 21.2881 15.8072 18.7113 16.1739 16.1741C17.4409 15.9894 18.7197 15.8975 20.0001 15.8991ZM25.1251 16.4029C28.7195 17.1529 30.9707 18.6304 30.9707 19.9997C30.9707 21.3691 28.7207 22.8447 25.1251 23.5966C25.2779 22.4038 25.3535 21.2023 25.3514 19.9997C25.3535 18.7972 25.2779 17.5957 25.1251 16.4029ZM20.0001 30.9672C18.6307 30.9672 17.1545 28.7172 16.4026 25.1216C17.5956 25.2755 18.7973 25.3519 20.0001 25.3504C21.203 25.3519 22.4046 25.2755 23.5976 25.1216C22.8457 28.716 21.3695 30.9672 20.0001 30.9672ZM14.8751 23.5966C11.2807 22.8466 9.02948 21.3691 9.02948 19.9997C9.02948 18.6304 11.2795 17.1547 14.8751 16.4029C14.5701 18.7911 14.5701 21.2084 14.8751 23.5966ZM22.672 30.6247C23.8426 28.9154 24.609 26.9622 24.9132 24.9129C26.9625 24.6086 28.9158 23.8422 30.6251 22.6716C30.139 24.5908 29.1433 26.343 27.7433 27.743C26.3434 29.1429 24.5912 30.1386 22.672 30.6247ZM30.6251 17.3279C28.9158 16.1573 26.9625 15.3909 24.9132 15.0866C24.609 13.0373 23.8426 11.0841 22.672 9.37473C24.5912 9.86088 26.3434 10.8566 27.7433 12.2565C29.1433 13.6564 30.139 15.4086 30.6251 17.3279ZM17.3282 9.37473C16.1576 11.0841 15.3912 13.0373 15.087 15.0866C13.0377 15.3909 11.0845 16.1573 9.37511 17.3279C9.86125 15.4086 10.8569 13.6564 12.2569 12.2565C13.6568 10.8566 15.409 9.86088 17.3282 9.37473Z" fill="#018752"/>
 </svg>)
-                },
-                {
-                    title: "Non-Fiction",
-                    description: "Business books, how to guide, self help, health and wellness, and educational titles. We research alongside you, structure your argument clearly, and make sure your expertise comes through on every page.",
-                    variant: "light",
-                    iconSrc: (<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+          },
+          {
+            title: "Non-Fiction",
+            description: "Business books, how to guide, self help, health and wellness, and educational titles. We research alongside you, structure your argument clearly, and make sure your expertise comes through on every page.",
+            variant: "light",
+            iconSrc: (<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
   <g clipPath="url(#clip0_170_29)">
     <path d="M36.25 6.875H31.25V4.375H35.625C35.7908 4.375 35.9497 4.30915 36.0669 4.19194C36.1842 4.07473 36.25 3.91576 36.25 3.75C36.249 2.9215 35.9194 2.12722 35.3336 1.54139C34.7478 0.955551 33.9535 0.625992 33.125 0.625H11.875C11.0465 0.625992 10.2522 0.955551 9.66639 1.54139C9.08055 2.12722 8.75099 2.9215 8.75 3.75V6.875H3.75C2.9215 6.87599 2.12722 7.20555 1.54139 7.79139C0.955551 8.37722 0.625992 9.1715 0.625 10V30C0.625992 30.8285 0.955551 31.6228 1.54139 32.2086C2.12722 32.7944 2.9215 33.124 3.75 33.125H16.25V35.625H14.375C13.8777 35.625 13.4008 35.8225 13.0492 36.1742C12.6975 36.5258 12.5 37.0027 12.5 37.5C12.5 37.9973 12.6975 38.4742 13.0492 38.8258C13.4008 39.1775 13.8777 39.375 14.375 39.375H25.625C26.1223 39.375 26.5992 39.1775 26.9508 38.8258C27.3025 38.4742 27.5 37.9973 27.5 37.5C27.5 37.0027 27.3025 36.5258 26.9508 36.1742C26.5992 35.8225 26.1223 35.625 25.625 35.625H23.75V33.125H36.25C37.0785 33.124 37.8728 32.7944 38.4586 32.2086C39.0444 31.6228 39.374 30.8285 39.375 30V10C39.374 9.1715 39.0444 8.37722 38.4586 7.79139C37.8728 7.20555 37.0785 6.87599 36.25 6.875ZM36.25 8.125C36.6364 8.1266 37.0129 8.24755 37.3279 8.4713C37.643 8.69506 37.8812 9.01068 38.01 9.375H31.25V8.125H36.25ZM34.8931 3.125H31.3569C31.486 2.75919 31.7254 2.44242 32.042 2.21837C32.3587 1.99431 32.7371 1.87399 33.125 1.87399C33.5129 1.87399 33.8913 1.99431 34.208 2.21837C34.5246 2.44242 34.764 2.75919 34.8931 3.125ZM11.875 1.875H30.6413C30.2276 2.41274 30.0023 3.07158 30 3.75V25C30 25.4973 29.8025 25.9742 29.4508 26.3258C29.0992 26.6775 28.6223 26.875 28.125 26.875C27.6277 26.875 27.1508 26.6775 26.7992 26.3258C26.4475 25.9742 26.25 25.4973 26.25 25C26.25 24.8342 26.1842 24.6753 26.0669 24.5581C25.9497 24.4408 25.7908 24.375 25.625 24.375H10V3.75C10 3.25272 10.1975 2.77581 10.5492 2.42417C10.9008 2.07254 11.3777 1.875 11.875 1.875ZM25.0625 25.625C25.1546 26.0783 25.3468 26.5054 25.625 26.875H9.375C8.98733 26.8745 8.6093 26.7541 8.29274 26.5303C7.97619 26.3066 7.73661 25.9903 7.60687 25.625H25.0625ZM3.75 8.125H8.75V9.375H1.99C2.1188 9.01068 2.35702 8.69506 2.67206 8.4713C2.98711 8.24755 3.36359 8.1266 3.75 8.125ZM26.25 37.5C26.25 37.6658 26.1842 37.8247 26.0669 37.9419C25.9497 38.0592 25.7908 38.125 25.625 38.125H14.375C14.2092 38.125 14.0503 38.0592 13.9331 37.9419C13.8158 37.8247 13.75 37.6658 13.75 37.5C13.75 37.3342 13.8158 37.1753 13.9331 37.0581C14.0503 36.9408 14.2092 36.875 14.375 36.875H25.625C25.7908 36.875 25.9497 36.9408 26.0669 37.0581C26.1842 37.1753 26.25 37.3342 26.25 37.5ZM22.5 35.625H17.5V33.125H22.5V35.625ZM36.25 31.875H3.75C3.25272 31.875 2.77581 31.6775 2.42417 31.3258C2.07254 30.9742 1.875 30.4973 1.875 30V29.375H7.5V28.125H1.875V10.625H8.75V24.375H6.875C6.70924 24.375 6.55027 24.4408 6.43306 24.5581C6.31585 24.6753 6.25 24.8342 6.25 25C6.25099 25.8285 6.58055 26.6228 7.16639 27.2086C7.75222 27.7944 8.5465 28.124 9.375 28.125H28.125C28.9535 28.124 29.7478 27.7944 30.3336 27.2086C30.9194 26.6228 31.249 25.8285 31.25 25V10.625H38.125V28.125H30.625V29.375H38.125V30C38.125 30.4973 37.9275 30.9742 37.5758 31.3258C37.2242 31.6775 36.7473 31.875 36.25 31.875Z" fill="#F7F1D7"/>
     <path d="M11.875 8.125H28.125C28.2908 8.125 28.4497 8.05915 28.5669 7.94194C28.6842 7.82473 28.75 7.66576 28.75 7.5V3.75C28.75 3.58424 28.6842 3.42527 28.5669 3.30806C28.4497 3.19085 28.2908 3.125 28.125 3.125H11.875C11.7092 3.125 11.5503 3.19085 11.4331 3.30806C11.3158 3.42527 11.25 3.58424 11.25 3.75V7.5C11.25 7.66576 11.3158 7.82473 11.4331 7.94194C11.5503 8.05915 11.7092 8.125 11.875 8.125ZM12.5 4.375H27.5V6.875H12.5V4.375Z" fill="#F7F1D7"/>
@@ -91,12 +112,12 @@ export default function Home() {
     </clipPath>
   </defs>
 </svg>)
-                },
-                {
-                    title: "Memoirs and Biographies",
-                    description: "Your life story deserves to be told with honesty, clarity, and emotional depth. Our memoir specialists know how to shape personal experiences into narratives that connect with readers who have never lived them.",
-                    variant: "light",
-                    iconSrc: (<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+          },
+          {
+            title: "Memoirs and Biographies",
+            description: "Your life story deserves to be told with honesty, clarity, and emotional depth. Our memoir specialists know how to shape personal experiences into narratives that connect with readers who have never lived them.",
+            variant: "light",
+            iconSrc: (<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
   <g clipPath="url(#clip0_170_35)">
     <path d="M5.33325 36H18.6666V37.3333H5.33325V36Z" fill="#F7F1D7"/>
     <path d="M20 36H21.3333V37.3333H20V36Z" fill="#F7F1D7"/>
@@ -114,31 +135,38 @@ export default function Home() {
     </clipPath>
   </defs>
 </svg>)
-                },
-                {
-                    title: "Children's Books",
-                    description: "From picture books to middle grade fiction, we handle writing, editing, illustration, and formatting for children's books that engage young readers and meet the expectations of parents and educators.",
-                    variant: "light",
-                    iconSrc: <GiWhiteBook  />
-                },
-                {
-                    title: "Self Help and Personal Development",
-                    description: "We help coaches, therapists, motivational speakers, and industry experts convert their frameworks and insights into professionally published books that build credibility and expand their reach.",
-                    variant: "light",
-                    iconSrc: <GoPerson />
-                },
-                {
-                    title: "Audiobooks",
-                    description: "We produce complete audiobooks with professional narration, original background scoring, and high quality audio editing, so your book reaches listeners wherever they prefer to read.",
-                    variant: "light",
-                    iconSrc: <LuAudioLines />
-                },
-            ]} />
-            <Testimonials />
-            <GetInTouch title="Ready to Publish?" subtitle="Let's Start With a Conversation." paragraphs={[
-                "You do not need a finished manuscript, a publishing background, or any prior experience to reach out. Just bring your idea, your draft, or your story, and we will tell you honestly what it needs and how we can help. No sales pressure, no automated replies. Just a real conversation about your book.",
-            ]} />
-            <FAQs />
-        </div>
-    );
+          },
+          {
+            title: "Children's Books",
+            description: "From picture books to middle grade fiction, we handle writing, editing, illustration, and formatting for children's books that engage young readers and meet the expectations of parents and educators.",
+            variant: "light",
+            iconSrc: <GiWhiteBook />
+          },
+          {
+            title: "Self Help and Personal Development",
+            description: "We help coaches, therapists, motivational speakers, and industry experts convert their frameworks and insights into professionally published books that build credibility and expand their reach.",
+            variant: "light",
+            iconSrc: <GoPerson />
+          },
+          {
+            title: "Audiobooks",
+            description: "We produce complete audiobooks with professional narration, original background scoring, and high quality audio editing, so your book reaches listeners wherever they prefer to read.",
+            variant: "light",
+            iconSrc: <LuAudioLines />
+          },
+        ]} />
+      </MotionSection>
+      <MotionSection delay={0.04}>
+        <Testimonials />
+      </MotionSection>
+      <MotionSection delay={0.03}>
+        <GetInTouch title="Ready to Publish?" subtitle="Let's Start With a Conversation." paragraphs={[
+          "You do not need a finished manuscript, a publishing background, or any prior experience to reach out. Just bring your idea, your draft, or your story, and we will tell you honestly what it needs and how we can help. No sales pressure, no automated replies. Just a real conversation about your book.",
+        ]} />
+      </MotionSection>
+      <MotionSection delay={0.04}>
+        <FAQs />
+      </MotionSection>
+    </div>
+  );
 }

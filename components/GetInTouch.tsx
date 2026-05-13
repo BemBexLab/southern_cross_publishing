@@ -65,7 +65,7 @@ const GetInTouch = ({
     <section
       className="relative overflow-hidden bg-[#078c52] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-14"
       style={{
-        backgroundImage: "url('/home/Rectangle 42.png')",
+        backgroundImage: "url('/home/Rectangle 42.webp')",
         backgroundPosition: "center",
         backgroundSize: "cover",
       }}

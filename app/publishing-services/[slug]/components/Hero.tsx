@@ -76,7 +76,7 @@ const Hero: React.FC<HeroProps> = ({
         style={{ transform: `translate3d(0, ${offsetY}px, 0) scale(1.12)` }}
       >
         <img
-          src="/ebook-services/Mask group.png"
+          src="/ebook-services/Mask group.webp"
           alt="E-book writing service background"
           className="h-full w-full object-cover"
           loading="eager"
@@ -103,7 +103,7 @@ const Hero: React.FC<HeroProps> = ({
               </div>
             </div>
 
-            <div className="montserrat mt-6 max-w-none space-y-6 text-lg font-medium leading-relaxed text-[#5d5d55] lg:mt-7">
+            <div className="montserrat mt-6 max-w-none space-y-6 text-lg font-medium leading-relaxed text-[#1F1F1F] lg:mt-7">
               {typeof description === "string" ? (
                 <p>{description}</p>
               ) : (

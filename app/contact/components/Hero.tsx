@@ -5,7 +5,7 @@ const Hero = () => {
     <section
       className="relative overflow-hidden bg-[#f6efd6] px-4 pt-30 sm:px-6 sm:pt-22 lg:px-8 lg:pt-24 xl:overflow-visible"
       style={{
-        backgroundImage: `url("/ebook-services/Mask group.png")`,
+        backgroundImage: `url("/ebook-services/Mask group.webp")`,
         backgroundPosition: "center",
         backgroundSize: "cover",
       }}

@@ -34,7 +34,7 @@ const WhyChooseUs = () => {
             <div className="relative w-full max-w-[500px]">
               {/* lg:pt-2 helps align the top of the hand with the first line of text */}
               <img
-                src="/publishing-services/Stand (1).webp" // Ref: Screenshot 2026-05-01 at 11.24.45 PM.png
+                src="/publishing-services/Stand (1).webp"
                 alt="Flashlight highlighting a green book"
                 className="w-full h-auto object-contain"
               />

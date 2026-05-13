@@ -20,6 +20,14 @@ const navLinks = [
         label: "Ebook Formatting",
         href: "/publishing-services/ebook-formatting",
       },
+      {
+        label: "Children's Book Publishing",
+        href: "/publishing-services/childrenbook-publishing",
+      },
+      {
+        label: "Book Marketing",
+        href: "/publishing-services/book-marketing",
+      },
     ],
   },
   { label: "Audiobook Service", href: "/audiobook-service" },
@@ -34,7 +42,6 @@ export default function Navbar() {
   const [servicesOpen, setServicesOpen] = useState(false);
   const pathname = usePathname();
   const isPublishingServicesRoute =
-    pathname === "/publishing-services" ||
     pathname.startsWith("/publishing-services/");
   const isBlogRoute = pathname === "/blog" || pathname.startsWith("/blog/");
   const useDarkNavLinks =
