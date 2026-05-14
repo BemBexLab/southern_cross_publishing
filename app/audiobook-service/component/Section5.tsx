@@ -46,7 +46,7 @@ const Section5 = () => {
           {/* CTA Button */}
           <div className="pt-4">
             <a
-              href="/contact"
+              href="/our-books"
               className="bg-[#FDD118] w-65 text-[#018752] font-bold py-4 px-8 rounded-lg flex items-center gap-2 hover:bg-[#f5c820] transition-colors"
             >
               Browse the Collection
