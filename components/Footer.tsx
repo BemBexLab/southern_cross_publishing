@@ -171,7 +171,7 @@ const Footer = () => {
           className="montserrat mt-8 flex flex-col gap-4 text-[0.97rem] sm:gap-5 lg:flex-row lg:items-center lg:justify-between"
           style={{ color: "#a8a196" }}
         >
-          <p>Copyright © 2026. Logolpsum. All rights reserved.</p>
+          <p>Copyright © 2026. Southern Cross Publishing. All rights reserved.</p>
 
           <div
             className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-6 lg:justify-end lg:text-right"
