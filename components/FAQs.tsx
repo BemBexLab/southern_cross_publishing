@@ -100,12 +100,12 @@ const FAQs = ({
         <button
           type="button"
           onClick={() => setOpenIndex(isOpen ? -1 : index)}
-          className="flex w-full items-start gap-[16px] text-left"
+          className="grid w-full grid-cols-[28px_minmax(0,1fr)] items-center gap-[16px] text-left"
           aria-expanded={isOpen}
         >
           <span
             aria-hidden="true"
-            className={`mt-[1px] inline-flex h-7 w-7 shrink-0 items-center justify-center text-[1.95rem] leading-none ${
+            className={`inline-flex h-7 w-7 shrink-0 items-center justify-center self-center text-[1.8rem] leading-none ${
               isOpen ? "text-[#15a56a]" : "text-[#44413b]"
             }`}
           >
@@ -113,7 +113,7 @@ const FAQs = ({
           </span>
 
           <span
-            className={`montserrat flex-1 text-[1.06rem] font-semibold leading-[1.18] tracking-[-0.01em] sm:text-[1.1rem] ${
+            className={`montserrat block text-[1.06rem] font-semibold leading-[1.2] tracking-[-0.01em] sm:text-[1.1rem] ${
               isOpen ? "text-[#018752]" : "text-[#242424]"
             }`}
           >
