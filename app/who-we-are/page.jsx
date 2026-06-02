@@ -1,3 +1,28 @@
+/** @type {import("next").Metadata} */
+export const metadata = {
+  title: "Who We Are",
+  description:
+    "Learn about Southern Cross Publishing, our values, and how our Australian publishing team supports authors from idea to published book.",
+  alternates: {
+    canonical: "/who-we-are",
+  },
+  openGraph: {
+    title: "Who We Are",
+    description:
+      "Learn about Southern Cross Publishing, our values, and how our Australian publishing team supports authors from idea to published book.",
+    url: "/who-we-are",
+    siteName: "Southern Cross Publishing",
+    locale: "en_AU",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Who We Are",
+    description:
+      "Learn about Southern Cross Publishing, our values, and how our Australian publishing team supports authors from idea to published book.",
+  },
+};
+
 import HeroSection from "./components/Hero";
 import MotionSection from "@/components/MotionSection";
 import OurStory from "./components/OurStory";

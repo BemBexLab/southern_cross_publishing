@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import LogoSlider from "@/components/LogoSlider";
 import MotionSection from "@/components/MotionSection";
 import HeroSection from "../publishing-services/components/Hero";
@@ -12,6 +13,14 @@ import GetInTouch from "@/components/GetInTouch";
 import OurAudioBook from "@/components/OurAudioBook";
 import ExpertNonFiction from "../publishing-services/components/ExpertNonFiction";
 import FAQs from "@/components/FAQs";
+import { createPageMetadata } from "../seo";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "Audiobook Production Services Australia",
+  description:
+    "Professional audiobook production services in Australia with human narration, editing, mastering, scoring, and distribution.",
+  path: "/audiobook-service",
+});
 
 export default function Home() {
   return (

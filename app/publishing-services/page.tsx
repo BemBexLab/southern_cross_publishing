@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import LogoSlider from "@/components/LogoSlider";
 import MotionSection from "@/components/MotionSection";
 import HeroSection from "./components/Hero";
@@ -19,6 +20,14 @@ import Testimonials from "@/components/Testimonials";
 import GetInTouch from "@/components/GetInTouch";
 import FAQs from "@/components/FAQs";
 import ExpertNonFiction from "./components/ExpertNonFiction";
+import { createPageMetadata } from "../seo";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "Publishing Services",
+  description:
+    "Explore Southern Cross Publishing services including ghostwriting, editing, cover design, formatting, distribution, and book marketing.",
+  path: "/publishing-services",
+});
 
 export default function Home() {
   return (

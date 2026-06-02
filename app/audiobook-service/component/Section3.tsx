@@ -3,12 +3,12 @@ import React from 'react';
 const Section3 = () => {
   return (
     <section className="bg-[#2d7a44]  overflow-hidden">
-      <div className="container mx-auto max-w-[1400px] px-2 sm:px-6 py-10">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+      <div className="container mx-auto max-w-[1640px] px-2 py-10 sm:px-6 lg:px-8">
+        <div className="flex flex-col items-center gap-12 lg:flex-row lg:items-center lg:gap-16 xl:gap-20">
           
           {/* Left Side: 3D Audiobook Illustration */}
-          <div className="w-full flex justify-center">
-            <div className="relative w-full max-w-[550px]">
+          <div className="flex w-full justify-center lg:flex-[1.05]">
+            <div className="relative w-full max-w-[700px]">
               {/* This asset should be the combined player and earphones image */}
               <img 
                 src="/publishing-services/Audiobook.webp" 
@@ -19,9 +19,9 @@ const Section3 = () => {
           </div>
 
           {/* Right Side: Text Content */}
-          <div className="w-full">
+          <div className="w-full lg:flex-[1.05]">
             <div className="mb-8">
-              <h3 className="text-black italic font-semibold montserrat text-lg lg:text-xl mb-4">
+              <h3 className="text-black italic font-semibold montserrat text-xl lg:text-2xl mb-4">
                 Why It Matters
               </h3>
               <h2 className="text-[#FDD118] text-xl md:text-2xl lg:text-5xl goneva leading-[1.15] mb-8">

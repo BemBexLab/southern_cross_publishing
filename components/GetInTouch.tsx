@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import { BiEnvelope } from "react-icons/bi";
 import {
   FaCheck,
@@ -12,6 +14,14 @@ type GetInTouchProps = {
   paragraphs?: string[];
   formHeadline?: string;
   ctaText?: string;
+};
+
+type FormState = {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  message: string;
 };
 
 const ContactItem = ({
@@ -61,6 +71,71 @@ const GetInTouch = ({
   formHeadline = "Send Us a Message",
   ctaText,
 }: GetInTouchProps) => {
+  const [formState, setFormState] = useState<FormState>({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: "success" | "error";
+    message: string;
+  } | null>(null);
+
+  const updateField = (field: keyof FormState, value: string) => {
+    setFormState((current) => ({
+      ...current,
+      [field]: value,
+    }));
+  };
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formState),
+      });
+
+      const result = (await response.json()) as { error?: string };
+
+      if (!response.ok) {
+        throw new Error(result.error || "Failed to submit message.");
+      }
+
+      setFormState({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+      setSubmitStatus({
+        type: "success",
+        message:
+          "Your message has been sent successfully. We'll get back to you soon.",
+      });
+    } catch (error) {
+      setSubmitStatus({
+        type: "error",
+        message:
+          error instanceof Error
+            ? error.message
+            : "Failed to submit message. Please try again.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section
       className="relative overflow-hidden bg-[#078c52] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20"
@@ -111,16 +186,27 @@ const GetInTouch = ({
             {formHeadline}
           </h3>
 
-          <form className="mt-6 space-y-4 sm:mt-7 sm:space-y-5">
+          <form
+            className="mt-6 space-y-4 sm:mt-7 sm:space-y-5"
+            onSubmit={handleSubmit}
+          >
             <div className="grid gap-4 sm:grid-cols-2">
               <input
                 type="text"
                 placeholder="First Name"
+                value={formState.firstName}
+                onChange={(event) => updateField("firstName", event.target.value)}
+                autoComplete="given-name"
+                required
                 className="montserrat h-12 w-full rounded-[17px] border-none bg-[#f6efd7] px-4 text-[0.96rem] text-[#4e5e52] placeholder:text-[#9aa299] focus:outline-none sm:h-[52px] sm:px-5 sm:text-[1rem] lg:px-6"
               />
               <input
                 type="text"
                 placeholder="Last Name"
+                value={formState.lastName}
+                onChange={(event) => updateField("lastName", event.target.value)}
+                autoComplete="family-name"
+                required
                 className="montserrat h-12 w-full rounded-[17px] border-none bg-[#f6efd7] px-4 text-[0.96rem] text-[#4e5e52] placeholder:text-[#9aa299] focus:outline-none sm:h-[52px] sm:px-5 sm:text-[1rem] lg:px-6"
               />
             </div>
@@ -129,11 +215,19 @@ const GetInTouch = ({
               <input
                 type="email"
                 placeholder="Email"
+                value={formState.email}
+                onChange={(event) => updateField("email", event.target.value)}
+                autoComplete="email"
+                required
                 className="montserrat h-12 w-full rounded-[17px] border-none bg-[#f6efd7] px-4 text-[0.96rem] text-[#4e5e52] placeholder:text-[#9aa299] focus:outline-none sm:h-[52px] sm:px-5 sm:text-[1rem] lg:px-6"
               />
               <input
                 type="tel"
                 placeholder="Phone number"
+                value={formState.phone}
+                onChange={(event) => updateField("phone", event.target.value)}
+                autoComplete="tel"
+                required
                 className="montserrat h-12 w-full rounded-[17px] border-none bg-[#f6efd7] px-4 text-[0.96rem] text-[#4e5e52] placeholder:text-[#9aa299] focus:outline-none sm:h-[52px] sm:px-5 sm:text-[1rem] lg:px-6"
               />
             </div>
@@ -141,6 +235,9 @@ const GetInTouch = ({
             <textarea
               placeholder="Message"
               rows={6}
+              value={formState.message}
+              onChange={(event) => updateField("message", event.target.value)}
+              required
               className="montserrat min-h-[140px] w-full resize-none rounded-[17px] border-none bg-[#f6efd7] px-4 py-4 text-[0.96rem] text-[#4e5e52] placeholder:text-[#9aa299] focus:outline-none sm:min-h-[150px] sm:px-5 sm:py-5 sm:text-[1rem] lg:px-6"
             />
 
@@ -155,10 +252,24 @@ const GetInTouch = ({
 
             <button
               type="submit"
+              disabled={isSubmitting}
               className="montserrat inline-flex h-12 w-full items-center justify-center rounded-[8px] bg-[#078c52] px-6 text-[1rem] font-medium text-[#f6efd7] transition hover:opacity-95 sm:w-auto sm:min-w-[190px] sm:text-[1.15rem] lg:h-[50px] lg:text-[1.3rem]"
             >
-              {ctaText ?? "Let's Build Your Book"}
+              {isSubmitting ? "Sending..." : ctaText ?? "Let's Build Your Book"}
             </button>
+
+            {submitStatus ? (
+              <p
+                aria-live="polite"
+                className={`montserrat text-sm ${
+                  submitStatus.type === "success"
+                    ? "text-[#0c6a3f]"
+                    : "text-[#a12a2a]"
+                }`}
+              >
+                {submitStatus.message}
+              </p>
+            ) : null}
           </form>
         </div>
       </div>

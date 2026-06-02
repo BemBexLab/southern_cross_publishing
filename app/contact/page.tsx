@@ -1,6 +1,15 @@
+import type { Metadata } from "next";
 import React from "react";
 import Hero from "./components/Hero";
 import GetInTouch from "@/components/GetInTouch";
+import { createPageMetadata } from "../seo";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "Contact Southern Cross Publishing",
+  description:
+    "Contact Southern Cross Publishing to discuss your manuscript, publishing goals, audiobook production, or a free consultation with our team.",
+  path: "/contact",
+});
 
 const page = () => {
   return (

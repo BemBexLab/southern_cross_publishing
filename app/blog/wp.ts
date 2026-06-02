@@ -1,6 +1,7 @@
 import "server-only";
 
 const WP_POSTS_API =
+  process.env.WP_POSTS_API ||
   "https://projectdemolink.com/projectdemo/index.php/wp-json/wp/v2/posts";
 
 export const BLOG_REVALIDATE_SECONDS = 300;
