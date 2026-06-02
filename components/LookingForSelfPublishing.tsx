@@ -4,7 +4,7 @@ import Image from "next/image";
 const LookingForSelfPublishing = () => {
   return (
     <section className="bg-[#EBE5CC] px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-10">
-      <div className="mx-auto max-w-[1240px] lg:hidden">
+      <div className="mx-auto max-w-[1520px] lg:hidden">
         <h2 className="goneva w-full text-[2rem] leading-[1.05] text-[#018752] sm:text-[2.45rem] md:text-[2.85rem]">
           Looking for a Self Publishing Company in Australia That Actually Delivers?
         </h2>
@@ -20,7 +20,7 @@ const LookingForSelfPublishing = () => {
           />
         </div>
 
-        <div className="montserrat mt-8 max-w-[720px] space-y-4 text-[1rem] leading-[1.35] text-[#2e2d28] sm:text-[1.02rem] sm:leading-[1.4] md:text-[1.05rem] md:leading-[1.45]">
+        <div className="montserrat mt-8 w-full max-w-none space-y-4 text-[1rem] leading-[1.35] text-[#2e2d28] sm:text-[1.02rem] sm:leading-[1.4] md:text-[1.05rem] md:leading-[1.45]">
           <p>
             Southern Cross Publishing was created around one simple belief: that good stories shouldn't stay locked inside the person who lived them. We've walked alongside hundreds of authors across Australia and around the world, helping them move from scattered notes and rough drafts to polished, professionally published books that genuinely connect with readers. Not because those authors were extraordinary. Because they showed up, and we did the rest.
           </p>
@@ -36,7 +36,7 @@ const LookingForSelfPublishing = () => {
         </div>
       </div>
 
-      <div className="mx-auto hidden max-w-[1240px] items-center gap-10 md:gap-12 lg:grid lg:items-stretch lg:grid-cols-[0.82fr_1.18fr] lg:gap-16">
+      <div className="mx-auto hidden max-w-[1520px] items-center gap-10 md:gap-12 lg:grid lg:items-stretch lg:grid-cols-[0.82fr_1.18fr] lg:gap-16">
         <div className="relative flex justify-center lg:justify-start lg:self-stretch">
           <Image
             src="/home/Illustration for Web-02-01 1.svg"
@@ -48,12 +48,12 @@ const LookingForSelfPublishing = () => {
           />
         </div>
 
-        <div className="flex flex-col justify-center">
+        <div className="flex w-full flex-col justify-center">
           <h2 className="goneva w-full max-w-none text-[3rem] leading-[1.05] text-[#018752]">
             Looking for a Self Publishing Company in Australia That Actually Delivers?
           </h2>
 
-          <div className="montserrat mt-7 max-w-[680px] space-y-4 text-[1.05rem] leading-[1.18] text-[#2e2d28]">
+          <div className="montserrat mt-7 w-full max-w-none space-y-4 text-[1.05rem] leading-[1.18] text-[#2e2d28]">
             <p>
             Southern Cross Publishing was created around one simple belief: that good stories shouldn't stay locked inside the person who lived them. We've walked alongside hundreds of authors across Australia and around the world, helping them move from scattered notes and rough drafts to polished, professionally published books that genuinely connect with readers. Not because those authors were extraordinary. Because they showed up, and we did the rest.
           </p>
