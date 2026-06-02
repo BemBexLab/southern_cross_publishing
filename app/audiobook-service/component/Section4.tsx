@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react';
 import Image from 'next/image';
 
@@ -31,14 +33,14 @@ const Section4 = () => {
                 <p className=" text-2xl montserrat italic font-semibold text-black">How It Works</p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <div className="grid grid-cols-1 gap-16 items-start lg:grid-cols-2 lg:items-stretch">
                 {/* Left Column: Text Content */}
-                <div className="flex flex-col">
+                <div className="flex flex-col lg:h-[530px]">
                     <h2 className="text-3xl md:text-5xl goneva leading-tight mb-5 max-w-3xl text-[#018752]">
                         How We Produce Your Audiobook: Step by Step
                     </h2>
 
-                    <div className="space-y-2">
+                    <div className="section4-scroll space-y-2 lg:min-h-0 lg:flex-1 lg:overflow-y-scroll lg:pr-4">
                         {steps.map((step, index) => (
                             <div key={index} className="flex items-start">
                                 {/* Custom Bullet Point */}
@@ -69,6 +71,35 @@ const Section4 = () => {
                 </div>
             </div>
         </div>
+        <style jsx>{`
+          .section4-scroll {
+            scrollbar-width: thin;
+            scrollbar-color: rgba(176, 190, 185, 0.45) transparent;
+          }
+
+          .section4-scroll:hover,
+          .section4-scroll:focus-within {
+            scrollbar-color: rgba(1, 135, 82, 0.9) transparent;
+          }
+
+          .section4-scroll::-webkit-scrollbar {
+            width: 6px;
+          }
+
+          .section4-scroll::-webkit-scrollbar-track {
+            background: transparent;
+          }
+
+          .section4-scroll::-webkit-scrollbar-thumb {
+            background: rgba(1, 135, 82, 0.45);
+            border-radius: 999px;
+          }
+
+          .section4-scroll:hover::-webkit-scrollbar-thumb,
+          .section4-scroll:focus-within::-webkit-scrollbar-thumb {
+            background: rgba(1, 135, 82, 0.9);
+          }
+        `}</style>
         </section>
     );
 };

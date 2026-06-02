@@ -4,8 +4,8 @@ import { FaArrowRight } from 'react-icons/fa6';
 const Section2 = () => {
   return (
     <section className="bg-[#F7F1D7] pb-10 sm:pb-12 lg:pb-16">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center gap-10 md:gap-12 lg:flex-row lg:items-center lg:gap-14 xl:gap-20">
+      <div className="container mx-auto max-w-[1840px] px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col items-center gap-10 md:gap-12 lg:flex-row lg:items-center lg:gap-10 xl:gap-14">
           <div className="w-full max-w-[760px] lg:hidden">
             <h2 className="goneva text-3xl leading-tight text-[#018752] sm:text-4xl">
               Professional Book Publishing Services in Australia
@@ -13,16 +13,16 @@ const Section2 = () => {
           </div>
           
           {/* Left Side: Illustration Container */}
-          <div className="flex w-full justify-center items-center lg:w-1/2">
+          <div className="flex w-full items-center justify-center lg:flex-[0.9]">
             <img 
               src="/publishing-services/Group.webp" 
               alt="Person working at desk illustration"
-              className="h-auto w-full max-w-[340px] object-contain sm:max-w-[420px] md:max-w-[500px] lg:max-w-[560px]"
+              className="h-auto w-full max-w-[340px] object-contain sm:max-w-[420px] md:max-w-[520px] lg:max-w-[620px]"
             />
           </div>
 
           {/* Right Side: Content */}
-          <div className="w-full max-w-[760px] lg:w-1/2 lg:max-w-none">
+          <div className="w-full max-w-[1080px] lg:flex-[1.25] lg:max-w-none">
             <h2 className="goneva hidden text-3xl leading-tight text-[#018752] lg:block lg:text-[2.75rem]">
               Professional Book Publishing Services in Australia
             </h2>
