@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
+import { defaultDescription, siteName, siteUrl } from "./seo";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,8 +27,28 @@ const goneva = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Southern Cross Publishing",
-  description: "Southern Cross Publishing",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: siteName,
+    template: `%s | ${siteName}`,
+  },
+  description: defaultDescription,
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: siteName,
+    description: defaultDescription,
+    url: "/",
+    siteName,
+    locale: "en_AU",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteName,
+    description: defaultDescription,
+  },
 };
 
 export default function RootLayout({

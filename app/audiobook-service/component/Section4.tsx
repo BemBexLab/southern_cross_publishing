@@ -27,7 +27,7 @@ const steps = [
 const Section4 = () => {
     return (
         <section className='bg-[#EAE5CC]'>
-            <div className="max-w-[1800px] mx-auto min-h-screen py-16 px-2 sm:px-6 text-[#1A3C34]">
+            <div className="max-w-[1800px] mx-auto py-16 px-2 sm:px-6 text-[#1A3C34]">
             {/* Eyebrow */}
             <div className="mb-4">
                 <p className=" text-2xl montserrat italic font-semibold text-black">How It Works</p>

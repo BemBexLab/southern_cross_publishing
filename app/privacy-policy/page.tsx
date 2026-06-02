@@ -1,6 +1,15 @@
+import type { Metadata } from "next";
 import LazyPrivacyContent from "./components/LazyPrivacyContent";
 import TermsHero from "@/components/TermsHero";
 import Link from "next/link";
+import { createPageMetadata } from "../seo";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "Privacy Policy",
+  description:
+    "Read the Southern Cross Publishing privacy policy covering how we collect, use, store, and protect personal information.",
+  path: "/privacy-policy",
+});
 
 const page = () => {
   return (

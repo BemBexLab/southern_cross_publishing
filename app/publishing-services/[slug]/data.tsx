@@ -55,6 +55,8 @@ export interface FAQSectionData {
 
 export interface PublishingServicePageData {
   slug: string;
+  seoTitle?: string;
+  seoDescription: string;
   hero: HeroSectionData;
   bookConsultation: BookConsultationSectionData;
   whyChoose: WhyChooseSectionData;
@@ -65,6 +67,9 @@ export interface PublishingServicePageData {
 export const publishingServicePages: Record<string, PublishingServicePageData> = {
   "e-book-writing-service": {
     slug: "e-book-writing-service",
+    seoTitle: "eBook Writing Services Australia",
+    seoDescription:
+      "Professional eBook writing, ghostwriting, editing, formatting, and distribution services for Australian authors and businesses.",
     hero: {
       title: "eBook Writing Services Australia",
       description: (
@@ -232,6 +237,9 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
 
   "ebook-formatting": {
     slug: "ebook-formatting",
+    seoTitle: "eBook Formatting Services Australia",
+    seoDescription:
+      "Professional eBook formatting, interior layout design, and multi-platform publishing support for Australian authors.",
     hero: {
       title: "eBook Formatting Services Australia",
       description: (
@@ -352,6 +360,9 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
 
   "childrenbook-publishing": {
     slug: "childrenbook-publishing",
+    seoTitle: "Children's Book Publishing Services Australia",
+    seoDescription:
+      "Children's book writing, illustration, editing, formatting, and publishing services for Australian authors and educators.",
      hero: {
       title: "Children's Book Publishing Services Australia",
       description: (
@@ -472,6 +483,9 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
 
   "book-marketing": {
     slug: "book-marketing",
+    seoTitle: "Book Marketing Services Australia",
+    seoDescription:
+      "Book marketing services for Australian authors, including Amazon optimisation, launch strategy, distribution, and author branding.",
      hero: {
       title: "Your Book Is Written; Now Let's Make Sure People Find It.",
       description: (

@@ -32,14 +32,23 @@ export async function generateMetadata(
   const image = post._embedded?.["wp:featuredmedia"]?.[0]?.source_url;
 
   return {
-    title: `${title} | Southern Cross Publishing`,
+    title,
     description,
+    alternates: {
+      canonical: `/blog/${post.slug}`,
+    },
     openGraph: {
       title,
       description,
       type: "article",
       url: `/blog/${post.slug}`,
       images: image ? [{ url: image }] : undefined,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: image ? [image] : undefined,
     },
   };
 }

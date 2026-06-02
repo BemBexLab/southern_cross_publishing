@@ -1,6 +1,15 @@
+import type { Metadata } from "next";
 import TermsHero from "@/components/TermsHero";
 import LazyTermsContent from "./components/LazyTermsContent";
 import Link from "next/link";
+import { createPageMetadata } from "../seo";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "Terms and Conditions",
+  description:
+    "Review the Southern Cross Publishing terms and conditions for using our website and publishing services.",
+  path: "/terms-condition",
+});
 
 const page = () => {
   return (

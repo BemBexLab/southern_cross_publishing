@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import LogoSlider from "@/components/LogoSlider";
 import MotionSection from "@/components/MotionSection";
 import Hero from "./components/Hero";
@@ -6,6 +7,14 @@ import Section3 from "./components/Section3";
 import GetInTouch from "@/components/GetInTouch";
 import FAQs from "@/components/FAQs";
 import ExpertNonFiction from "../publishing-services/components/ExpertNonFiction";
+import { createPageMetadata } from "../seo";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "Our Books",
+  description:
+    "Explore books published with Southern Cross Publishing, including author projects across fiction, non-fiction, memoirs, and more.",
+  path: "/our-books",
+});
 
 export default function Home() {
   return (

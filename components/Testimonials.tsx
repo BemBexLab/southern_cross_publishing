@@ -114,8 +114,8 @@ const Testimonials = () => {
 
   return (
     <section className="bg-[#f7f0d7] px-4 pb-14 pt-16 sm:px-6 sm:pb-16 sm:pt-20 lg:px-8 lg:pb-20 lg:pt-24">
-      <div className="mx-auto max-w-[1180px]">
-        <div className="mx-auto max-w-[900px] text-center">
+      <div className="mx-auto max-w-[1480px]">
+        <div className="mx-auto max-w-[1040px] text-center">
           <p className="montserrat text-[1.35rem] font-semibold italic text-[#2d2d2d] sm:text-[1.55rem]">
             What our authors say
           </p>
@@ -142,11 +142,11 @@ const Testimonials = () => {
               <article
                 key={`${testimonial.name}-${index}`}
                 data-testimonial-card
-                className={`flex w-full flex-col rounded-[10px] border bg-white px-5 py-[22px] transition-all duration-300 sm:max-w-[370px] sm:px-6 sm:py-6 md:w-[calc(50%-12px)] md:max-w-[360px] xl:min-h-[206px] xl:w-[325px] xl:max-w-[325px] ${offsetClass} ${cardClass}`}
+                className={`flex w-full flex-col rounded-[10px] border bg-white px-5 py-[22px] transition-all duration-300 sm:max-w-[420px] sm:px-6 sm:py-6 md:w-[calc(50%-12px)] md:max-w-[430px] xl:min-h-[206px] xl:w-[380px] xl:max-w-[380px] ${offsetClass} ${cardClass}`}
               >
                 <StarRow />
 
-                <p className="montserrat mt-8 max-w-[270px] text-[0.86rem] leading-[1.45] text-[#7b7a78] sm:text-[0.92rem]">
+                <p className="montserrat mt-8 max-w-[320px] text-[0.86rem] leading-[1.45] text-[#7b7a78] sm:max-w-[340px] sm:text-[0.92rem]">
                   {testimonial.body}
                 </p>
 

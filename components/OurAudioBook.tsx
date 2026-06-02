@@ -11,15 +11,15 @@ const descriptionParagraphs = [
 const OurAudioBook = () => {
   return (
     <section className="bg-[#f7f1d7]">
-      <div className="mx-4 flex items-center py-12 sm:mx-8 sm:py-16 lg:mx-20 lg:min-h-screen lg:py-0">
-        <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-10 md:gap-12 lg:grid-cols-2 lg:gap-8 xl:gap-12">
-          <div className="mx-auto w-full max-w-xl lg:mx-0 lg:max-w-2xl">
-            <h2 className="goneva max-w-xl text-2xl leading-tight text-[#018752] sm:text-4xl md:max-w-2xl md:text-5xl lg:max-w-2xl lg:text-5xl xl:text-6xl">
+      <div className="mx-4 flex items-center py-12 sm:mx-8 sm:py-16 lg:mx-12 lg:min-h-screen lg:py-0 xl:mx-16">
+        <div className="mx-auto grid w-full max-w-[1800px] grid-cols-1 items-center gap-10 md:gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:gap-8 xl:gap-12">
+          <div className="mx-auto w-full lg:mx-0">
+            <h2 className="goneva w-full max-w-none text-2xl leading-tight text-[#018752] sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl">
               Our Audiobook Production Service Is Built for Authors Who Want It
               Done Properly
             </h2>
 
-            <div className="mt-6 max-w-lg space-y-1 text-lg leading-relaxed text-[#66665d] sm:mt-7 md:max-w-2xl lg:mt-4 lg:max-w-2xl lg:text-lg lg:leading-snug">
+            <div className="mt-6 w-full max-w-none space-y-3 text-lg leading-relaxed text-[#66665d] sm:mt-7 lg:mt-4 lg:text-lg lg:leading-snug">
               {descriptionParagraphs.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}

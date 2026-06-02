@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import AtSouthernCross, {
   defaultAtSouthernCrossCards,
 } from "@/components/AtSouthernCross";
@@ -17,6 +18,14 @@ import WitnessOurUniqueness, {
 import YourStory from "@/components/YourStory";
 import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa";
+import { createPageMetadata } from "./seo";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "Book Publishing Services in Australia",
+  description:
+    "Southern Cross Publishing offers book writing, editing, design, publishing, marketing, and distribution services for Australian authors.",
+  path: "/",
+});
 
 export default function Home() {
   return (
