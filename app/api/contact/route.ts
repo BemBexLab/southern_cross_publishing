@@ -1,123 +1,121 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
-type ContactSubmissionPayload = {
+type ContactPayload = {
+  name?: string;
   firstName?: string;
   lastName?: string;
   email?: string;
   phone?: string;
+  subject?: string;
   message?: string;
+  service?: string;
 };
 
-function getRequiredText(value: unknown) {
+function getText(value: unknown) {
   return typeof value === "string" ? value.trim() : "";
 }
 
-function isValidEmail(value: string) {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
-}
-
-function escapeHtml(value: string) {
-  return value
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#39;");
-}
-
-function createTransporter() {
-  const host = process.env.SMTP_HOST;
-  const port = Number(process.env.SMTP_PORT || 465);
-  const secure = (process.env.SMTP_SECURE || "true").toLowerCase() === "true";
-  const user = process.env.SMTP_USER;
-  const pass = process.env.SMTP_PASS;
-
-  if (!host || !user || !pass) {
-    return null;
+function getBooleanEnv(value: string | undefined, fallback: boolean) {
+  if (!value) {
+    return fallback;
   }
 
-  return nodemailer.createTransport({
-    host,
-    port,
-    secure,
-    auth: {
-      user,
-      pass,
-    },
-  });
+  return value.toLowerCase() === "true";
 }
 
-export async function POST(req: NextRequest) {
+export async function POST(request: Request) {
+  const smtpHost =
+    process.env.SMTP_HOST ?? "mail.southerncrosspublishing.com";
+  const smtpPort = Number.parseInt(process.env.SMTP_PORT ?? "465", 10);
+  const smtpSecure = getBooleanEnv(process.env.SMTP_SECURE, smtpPort === 465);
+  const smtpUser =
+    process.env.SMTP_USER ?? "info@southerncrosspublishing.com";
+  const smtpPassword =
+    process.env.SMTP_PASS ??
+    process.env.SMTP_PASSWORD ??
+    process.env.CONTACT_SMTP_PASSWORD ??
+    "";
+  const contactToEmail =
+    process.env.EMAIL_TO ??
+    process.env.CONTACT_TO_EMAIL ??
+    "info@southerncrosspublishing.com";
+  const contactFromEmail =
+    process.env.EMAIL_FROM ?? smtpUser;
+
   try {
-    const body = (await req.json()) as ContactSubmissionPayload;
-    const firstName = getRequiredText(body.firstName);
-    const lastName = getRequiredText(body.lastName);
-    const email = getRequiredText(body.email);
-    const phone = getRequiredText(body.phone);
-    const message = getRequiredText(body.message);
+    const body = (await request.json()) as ContactPayload;
 
-    if (!firstName || !lastName || !email || !phone || !message) {
+    const firstName = getText(body.firstName);
+    const lastName = getText(body.lastName);
+    const combinedName = `${firstName} ${lastName}`.trim();
+    const name = getText(body.name) || combinedName;
+    const email = getText(body.email);
+    const phone = getText(body.phone);
+    const subject = getText(body.subject) || "New contact form submission";
+    const message = getText(body.message);
+    const service = getText(body.service);
+
+    if (!name || !email || !message) {
       return NextResponse.json(
-        { error: "All fields are required." },
-        { status: 400 }
+        { error: "Name, email, and message are required." },
+        { status: 400 },
       );
     }
 
-    if (!isValidEmail(email)) {
+    if (!smtpPassword) {
       return NextResponse.json(
-        { error: "Please enter a valid email address." },
-        { status: 400 }
+        { error: "SMTP credentials are not configured on the server." },
+        { status: 500 },
       );
     }
 
-    const transporter = createTransporter();
-    const emailTo = process.env.EMAIL_TO || "info@southerncrosspublishing.com";
-    const emailFrom =
-      process.env.EMAIL_FROM ||
-      process.env.SMTP_USER ||
-      "info@southerncrosspublishing.com";
+    const transporter = nodemailer.createTransport({
+      host: smtpHost,
+      port: smtpPort,
+      secure: smtpSecure,
+      auth: {
+        user: smtpUser,
+        pass: smtpPassword,
+      },
+    });
 
-    if (!transporter) {
-      console.error("Contact route: SMTP configuration is incomplete.");
-      return NextResponse.json(
-        { error: "Email service is not configured. Please try again later." },
-        { status: 500 }
-      );
-    }
+    const serviceLine = service ? `Service: ${service}\n` : "";
+    const phoneLine = phone ? `Phone: ${phone}\n` : "";
 
     await transporter.sendMail({
-      from: `"Southern Cross Publishing Website" <${emailFrom}>`,
-      to: emailTo,
+      from: `"Southern Cross Publishing Contact Form" <${contactFromEmail}>`,
+      to: contactToEmail,
       replyTo: email,
-      subject: "New Contact Form Submission",
-      text: [
-        "New message from Southern Cross Publishing contact form",
-        `Name: ${firstName} ${lastName}`,
-        `Email: ${email}`,
-        `Phone: ${phone}`,
-        "Message:",
-        message,
-      ].join("\n"),
+      subject,
+      text:
+        `New contact form submission\n\n` +
+        `Name: ${name}\n` +
+        `Email: ${email}\n` +
+        phoneLine +
+        serviceLine +
+        `\nMessage:\n${message}\n`,
       html: `
-        <h2>New Message from Southern Cross Publishing Contact Form</h2>
-        <p><strong>Name:</strong> ${escapeHtml(firstName)} ${escapeHtml(lastName)}</p>
-        <p><strong>Email:</strong> ${escapeHtml(email)}</p>
-        <p><strong>Phone:</strong> ${escapeHtml(phone)}</p>
-        <p><strong>Message:</strong><br>${escapeHtml(message).replace(/\n/g, "<br>")}</p>
-        <hr />
-        <p><strong>Submitted At:</strong> ${new Date().toISOString()}</p>
+        <h2>New contact form submission</h2>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        ${phone ? `<p><strong>Phone:</strong> ${phone}</p>` : ""}
+        ${service ? `<p><strong>Service:</strong> ${service}</p>` : ""}
+        <p><strong>Message:</strong></p>
+        <p>${message.replace(/\n/g, "<br />")}</p>
       `,
     });
 
-    return NextResponse.json({
-      success: true,
-    });
-  } catch (error) {
-    console.error("Contact route error:", error);
     return NextResponse.json(
-      { error: "Failed to submit message. Please try again." },
-      { status: 500 }
+      { message: "Message sent successfully." },
+      { status: 200 },
+    );
+  } catch (error) {
+    console.error("Contact API error:", error);
+
+    return NextResponse.json(
+      { error: "Unable to send message right now." },
+      { status: 500 },
     );
   }
 }
