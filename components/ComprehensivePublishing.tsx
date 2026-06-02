@@ -52,14 +52,14 @@ const ComprehensivePublishing = () => {
 
   return (
     <LazyMotion features={domAnimation}>
-      <section className="px-4">
-        <h2 className="mx-auto w-full max-w-4xl pb-10 text-center text-3xl font-medium text-[#018752] goneva sm:text-4xl md:max-w-3xl md:text-5xl lg:max-w-1/2">
+      <section className="px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
+        <h2 className="goneva mx-auto w-full max-w-[1200px] pb-8 text-center text-[2rem] leading-[1.02] font-medium text-[#018752] sm:pb-10 sm:text-[2.45rem] md:text-[3rem] lg:text-[3.4rem]">
           Comprehensive Publishing Services From Rough Manuscript To The
           Professional Book.
         </h2>
 
         <div className="mx-auto w-full lg:hidden">
-          <div className="flex snap-x snap-mandatory gap-5 overflow-x-auto px-2 pb-6">
+          <div className="flex snap-x snap-mandatory gap-4 overflow-x-auto px-1 pb-6 sm:gap-5 sm:px-2">
             {bookImages.map((book, index) => (
               <m.div
                 key={`${book.src}-slide`}
@@ -80,20 +80,20 @@ const ComprehensivePublishing = () => {
                   alt={book.alt}
                   priority={index === 0}
                   quality={100}
-                  sizes="(min-width: 640px) 260px, 72vw"
-                  className="h-auto w-[72vw] max-w-[260px] rounded-[20px] object-contain sm:w-[260px]"
+                  sizes="(min-width: 640px) 280px, 78vw"
+                  className="h-auto w-[78vw] max-w-[240px] rounded-[18px] object-contain sm:w-[260px] sm:max-w-[260px] md:w-[280px] md:max-w-[280px]"
                 />
               </m.div>
             ))}
           </div>
         </div>
 
-        <div className="mx-auto hidden h-[780px] w-full overflow-x-clip lg:block">
-          <div className="relative mx-auto h-full w-[360px] max-w-full sm:w-[620px] md:w-[860px] lg:w-[1280px]">
+        <div className="mx-auto hidden w-full overflow-x-clip lg:block">
+          <div className="relative mx-auto h-[560px] w-full max-w-[1280px] xl:h-[680px] 2xl:h-[760px]">
             {bookImages.map((book, index) => (
               <m.div
                 key={book.src}
-                className={`absolute w-[150px] origin-bottom transform sm:w-[220px] md:w-[290px] lg:w-[370px] ${book.className}`}
+                className={`absolute w-[260px] origin-bottom transform xl:w-[320px] 2xl:w-[370px] ${book.className}`}
                 initial={
                   prefersReducedMotion
                     ? { opacity: 0 }
@@ -119,7 +119,7 @@ const ComprehensivePublishing = () => {
                   alt={book.alt}
                   priority={index < 2}
                   quality={100}
-                  sizes="(min-width: 1024px) 370px, (min-width: 768px) 290px, (min-width: 640px) 220px, 150px"
+                  sizes="(min-width: 1536px) 370px, (min-width: 1280px) 320px, 260px"
                   className="h-auto w-full rounded-[20px]"
                 />
               </m.div>
@@ -127,20 +127,20 @@ const ComprehensivePublishing = () => {
           </div>
         </div>
 
-        <div className="montserrat mx-auto mb-5 max-w-7xl space-y-3 text-center text-xl">
-          <p className="">
+        <div className="montserrat mx-auto mb-6 max-w-[1600px] space-y-4 text-center text-[1rem] leading-[1.7] text-[#232323] sm:mb-8 sm:text-[1.05rem] md:text-[1.1rem] lg:space-y-5 lg:text-[1.18rem]">
+          <p>
             We know that the moment you decide to write a book, something
             shifts; suddenly, the idea that once felt private has now become
             something you want the world to know. That excitement is a real
             one, and it, of course, deserves to be protected.
           </p>
-          <p className="">
+          <p>
             At Southern Cross Publishing, we have created our complete process
             around keeping that feeling alive, from your very first
             conversation with us to the day your book lands in a reader&apos;s
             hands.
           </p>
-          <p className="">
+          <p>
             We do a lot more than just publishing books. We make them with
             proper care. Our network of experienced writers, editors,
             illustrators, and publishing specialists works closely with every
@@ -152,7 +152,7 @@ const ComprehensivePublishing = () => {
           </p>
         </div>
 
-        <h3 className="mx-auto w-full max-w-8xl px-2 pb-8 text-center text-lg font-semibold italic montserrat sm:px-6 sm:text-xl md:pb-12 md:text-2xl">
+        <h3 className="montserrat mx-auto w-full max-w-[1500px] px-2 pb-2 text-center text-[1.05rem] font-semibold italic leading-[1.45] text-[#222] sm:px-6 sm:text-[1.2rem] md:text-[1.45rem] lg:text-[1.7rem]">
           Your words were always worth reading. We are just here to make sure
           the right people find them.
         </h3>

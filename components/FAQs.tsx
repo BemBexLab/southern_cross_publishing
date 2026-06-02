@@ -132,7 +132,7 @@ const FAQs = ({
 
   return (
     <section className="bg-[#f7f1d7] px-4 pb-20 pt-14 sm:px-6 sm:pb-24 sm:pt-16 lg:px-8 lg:pb-28 lg:pt-20">
-      <div className="mx-auto max-w-[1340px]">
+      <div className="mx-auto max-w-[1560px]">
         <div className="text-center">
           <p className="montserrat text-xl font-semibold italic text-[#2d2d2d] sm:text-2xl">
             {eyebrow}
@@ -142,11 +142,11 @@ const FAQs = ({
           </h2>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-6 lg:mt-[58px] lg:grid-cols-2 lg:items-start lg:gap-x-[56px]">
+        <div className="mt-14 grid grid-cols-1 gap-6 lg:mt-[58px] lg:grid-cols-2 lg:items-start lg:gap-x-12 xl:gap-x-16">
           {groups.map((group, groupIndex) => (
             <div
               key={`faq-group-${groupIndex}`}
-              className="flex flex-col gap-6 lg:gap-[24px]"
+              className="flex w-full max-w-none flex-col gap-6 lg:gap-[24px]"
             >
               {group.map(renderFaqCard)}
             </div>
