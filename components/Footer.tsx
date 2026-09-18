@@ -65,7 +65,7 @@ const Footer = () => {
                 aria-label="Crux Publishing House"
                 className="h-[72px] w-full max-w-[745px] bg-left bg-no-repeat sm:h-[84px] lg:h-[100px]"
                 style={{
-                  backgroundImage: "url('/navbar/Logos options-08 2.svg')",
+                  backgroundImage: "url('/image (2).png')",
                   backgroundSize: "contain",
                 }}
               >

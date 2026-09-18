@@ -164,18 +164,18 @@ const GetInTouch = ({
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:mt-7 lg:gap-5">
             <ContactItem
               icon={<FiPhone className="h-6 w-6 sm:h-7 sm:w-7" />}
-              text="+1 (786) 496-1231"
-              href="tel:+17864961231"
+              text="(02) 6190 6580"
+              href="tel:+61261906580"
             />
             <ContactItem
               icon={<BiEnvelope className="h-6 w-6 sm:h-7 sm:w-7" />}
-              text="info@southerncrosspublishing.com.au"
-              href="mailto:info@southerncrosspublishing.com.au"
+              text="contact@cruxpublishinghouse.com.au"
+              href="mailto:contact@cruxpublishinghouse.com.au"
             />
             <div className="sm:col-span-2">
               <ContactItem
                 icon={<IoLocationOutline className="h-6 w-6 sm:h-7 sm:w-7" />}
-                text="1680 Michigan Ave 700 326 Miami Beach, FL 33139, USA"
+                text="368 Sussex St, Sydney NSW 2000"
               />
             </div>
           </div>
