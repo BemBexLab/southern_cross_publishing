@@ -239,13 +239,13 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
     slug: "ebook-formatting",
     seoTitle: "Crux Publishing: Book Formatting Services",
     seoDescription:
-      "Crux Publishing provides professional book formatting services for eBooks and print books, ensuring your manuscript meets industry standards for publishing.",
+      "Crux Publishing provides professional book formatting services for Books and print books, ensuring your manuscript meets industry standards for publishing.",
     hero: {
-      title: "eBook Formatting Services Australia",
+      title: "Book Formatting Services Australia",
       description: (
         <>
-          <b>eBook Formatting & Interior Design That Gets Your Book Published Right:</b><br />
-          A great manuscript deserves a professional finish. Our eBook formatting team in Australia transforms your raw draft into a flawlessly formatted, device ready file correctly structured for Amazon Kindle, Apple Books, Kobo, and every major platform, so your book looks exactly as it should, wherever it's read.
+          <b>Book Formatting & Interior Design That Gets Your Book Published Right:</b><br />
+          A great manuscript deserves a professional finish. Our Book formatting team in Australia transforms your raw draft into a flawlessly formatted, device ready file correctly structured for Amazon Kindle, Apple Books, Kobo, and every major platform, so your book looks exactly as it should, wherever it's read.
         </>
       ),
       ctaText: "Request a call",
@@ -255,12 +255,12 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
       eyebrow: "What we handle for you",
       title: "From Manuscript to Professional Book: Every Step Covered",
       description:
-        "Most authors only discover formatting problems after their book has been rejected by a platform, or worse, after readers leave reviews about layout errors. We fix that before it happens. Here is exactly what is included in every eBook formatting and production project.",
+        "Most authors only discover formatting problems after their book has been rejected by a platform, or worse, after readers leave reviews about layout errors. We fix that before it happens. Here is exactly what is included in every Book formatting and production project.",
       cards: [
         {
           title: "Interior formatting & layout design",
           description:
-            "This is where most self published books fall apart visually. We professionally format every page, chapter headers, body text, pull quotes, images, and spacing, so your eBook reads cleanly on any screen size, from a Kindle Paperwhite to a desktop browser.",
+            "This is where most self published books fall apart visually. We professionally format every page, chapter headers, body text, pull quotes, images, and spacing, so your Book reads cleanly on any screen size, from a Kindle Paperwhite to a desktop browser.",
           items: [
             "Kindle, EPUB & MOBI conversion",
             "Linked table of contents",
@@ -270,7 +270,7 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
         {
           title: "Original, high quality writing",
           description:
-            "Every eBook we write or ghostwrite is built from scratch, no templates, no recycled content. We match your knowledge and voice, structure the argument properly, and make sure every chapter earns its place.",
+            "Every Book we write or ghostwrite is built from scratch, no templates, no recycled content. We match your knowledge and voice, structure the argument properly, and make sure every chapter earns its place.",
           items: [
             "100% original, plagiarism-free content",
             "Clear chapter flow & structure",
@@ -282,7 +282,7 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
           title: "All production services in one place",
           items: [
             "Professional editing & proofreading",
-            "Custom eBook cover design",
+            "Custom Book cover design",
             "ISBN registration",
             "Global distribution (40+ platforms)",
             "Amazon A+ content setup",
@@ -335,7 +335,7 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
       initialOpenIndex: 0,
       items: [
         {
-          question: "What file formats do you produce, and will my eBook work on Kindle?",
+          question: "What file formats do you produce, and will my Book work on Kindle?",
           answer:
             "Yes, Kindle compatibility is something we test specifically. We produce EPUB, MOBI, and KPF files depending on the platform requirements. Every file is checked on actual devices (Kindle Paperwhite, iPad, and desktop reader) before delivery. We also make sure your table of contents is correctly linked, your chapter breaks are clean, and your images display properly across screen sizes.",
         },
@@ -345,12 +345,12 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
             "We treat your project as a publishing job, which means we also look at your cover, your metadata, your distribution setup, and how discoverable your book will actually be. We are an Australian team working with Australian authors, and we stay involved until your book is live and listed properly.",
         },
         {
-          question: "How long does eBook formatting and production take?",
+          question: "How long does Book formatting and production take?",
           answer:
             "For just formatting, if your manuscript is clean and complete, we typically complete it within two to three business days. If the project includes editing, cover design, and complete distribution setup, expect three to six weeks, depending on the manuscript's length and the number of revision rounds. We give you a clear project schedule at the start and stick to it.",
         },
         {
-          question: "Will my eBook actually be visible and searchable on Amazon and Apple Books?",
+          question: "Will my Book actually be visible and searchable on Amazon and Apple Books?",
           answer:
             "Yes, it will. We optimise your metadata, write your book description for search, select the right categories and keywords for greater visibility, and set up Amazon A+ content where applicable, which makes your book easily discoverable by true readers who are actually searching for it.",
         },
