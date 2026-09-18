@@ -235,8 +235,8 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
     },
   },
 
-  "ebook-formatting": {
-    slug: "ebook-formatting",
+  "book-formatting": {
+    slug: "book-formatting",
     seoTitle: "Crux Publishing: Book Formatting Services",
     seoDescription:
       "Crux Publishing provides professional book formatting services for Books and print books, ensuring your manuscript meets industry standards for publishing.",

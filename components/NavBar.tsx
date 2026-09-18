@@ -17,8 +17,8 @@ const navLinks = [
         href: "/publishing-services/book-writing-service",
       },
       {
-        label: "Ebook Formatting",
-        href: "/publishing-services/ebook-formatting",
+        label: "Book Formatting",
+        href: "/publishing-services/book-formatting",
       },
       {
         label: "Children's Book Publishing",
