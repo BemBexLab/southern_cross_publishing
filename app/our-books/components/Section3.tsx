@@ -38,15 +38,15 @@ const Section3 = () => {
   return (
     <section className="bg-[#F7F1D7] py-20 px-6 md:px-12 lg:px-24 flex flex-col items-center">
       {/* Header */}
-      <div className="max-w-5xl text-center mb-16">
-        <h2 className="goneva text-[#018752] text-3xl md:text-5xl mb-6">
+      <div className="max-w-5xl text-center mb-5">
+        <h2 className="goneva text-[#018752] text-3xl md:text-5xl mb-3">
           Meet Our Publishing Partners
         </h2>
-        <p className="text dm-sans-black text-lg md:text-lg leading-relaxed">
+        {/* <p className="text dm-sans-black text-lg md:text-lg leading-relaxed">
           Lorem ipsum dolor sit amet consectetur. A turpis urna augue volutpat posuere neque magna. 
           Cras adipiscing purus dignissim in ipsum nibh risus non. Pharetra neque quis non eget et risus. 
           Libero suspendisse praesent sed duis ipsum vitae sed ipsum ut.
-        </p>
+        </p> */}
       </div>
 
       {/* Partners Grid */}

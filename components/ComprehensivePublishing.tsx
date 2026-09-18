@@ -135,10 +135,7 @@ const ComprehensivePublishing = () => {
             one, and it, of course, deserves to be protected.
           </p>
           <p>
-            At Crux Publishing House, we have created our complete process
-            around keeping that feeling alive, from your very first
-            conversation with us to the day your book lands in a reader&apos;s
-            hands.
+            At Crux  Publishing, we have created our complete author publishing services process around keeping that feeling alive, from your very first conversation with us to the day your book lands in a reader's hands.
           </p>
           <p>
             We do a lot more than just publishing books. We make them with
@@ -153,8 +150,7 @@ const ComprehensivePublishing = () => {
         </div>
 
         <h3 className="dm-sans mx-auto w-full max-w-[1500px] px-2 pb-2 text-center text-[1.05rem] font-semibold italic leading-[1.45] text-[#222] sm:px-6 sm:text-[1.2rem] md:text-[1.45rem] lg:text-[1.7rem]">
-          Your words were always worth reading. We are just here to make sure
-          the right people find them.
+          Your words are always worth reading. We are just here to make sure the right people find them.
         </h3>
       </section>
     </LazyMotion>

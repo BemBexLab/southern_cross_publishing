@@ -257,7 +257,7 @@ const PrivacyContent = () => {
                   href="mailto:info@southerncrosspublishing.com.au"
                   className="break-all text-base text-gray-500 hover:underline sm:text-lg"
                 >
-                  info@southerncrosspublishing.com.au
+                  contact@cruxpublishinghouse.com.au
                 </a>
               </div>
 

@@ -45,10 +45,10 @@ const HomeHero = () => {
                 Australia's trusted self publishing company: ghostwriting, editing, design, distribution and marketing, all in one place
               </p>
               <p>
-                At Crux Publishing House, we assist you from writing to the final printed page. Are you holding a half finished manuscript, a voice note full of ideas, or a story you've carried for years? We are here to shape it into something the world will remember.
+                At Crux  Publishing, we assist you with book publishing services from writing to the final printed page. Are you holding a half-finished manuscript, a voice note full of ideas, or a story you've carried for years? We are here to shape it into something the world will remember.
               </p>
               <p>
-                We are an Australian based company, and work with authors across every genre, every background, and every stage of the writing journey.
+                We are an Australia-based book publishing company and work with authors across every genre, every background, and every stage of the writing journey.
               </p>
             </div>
 

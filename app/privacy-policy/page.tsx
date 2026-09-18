@@ -25,7 +25,7 @@ const page = () => {
                     who access our website or engage with our services. This Privacy
                     Policy explains how we collect, use, store, and disclose personal
                     information obtained through your interaction with{" "}
-                    <Link className="hover:underline" href="/">Crux Publishing House</Link>.<br />
+                    <Link className="hover:underline font-semibold" href="/">Crux Publishing House</Link>.<br />
                     By accessing our website or using our services, you acknowledge
                     that you have read and understood this Privacy Policy and agree to
                     its terms.
