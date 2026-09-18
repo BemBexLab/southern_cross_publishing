@@ -2,14 +2,14 @@
 export const metadata = {
   title: "Crux Publishing: Professional Book Publishing Team",
   description:
-    "Learn about Crux Publishing, a professional book publishing company helping authors bring their stories to life through expert publishing, editing, and marketing services.",
+    "Learn about Crux Publishing, a professional book publishing company helping authors publish their stories through expert self-publishing services.",
   alternates: {
     canonical: "/who-we-are",
   },
   openGraph: {
     title: "Crux Publishing: Professional Book Publishing Team",
     description:
-      "Learn about Crux Publishing, a professional book publishing company helping authors bring their stories to life through expert publishing, editing, and marketing services.",
+      "Learn about Crux Publishing, a professional book publishing company helping authors publish their stories through expert self-publishing services.",
     url: "/who-we-are",
       siteName: "Crux Publishing House",
     locale: "en_AU",

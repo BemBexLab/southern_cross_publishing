@@ -12,7 +12,7 @@ import { createPageMetadata } from "../seo";
 export const metadata: Metadata = createPageMetadata({
   title: "Crux Publishing: Explore Our Published Books",
   description:
-    "Explore books published by Crux Publishing across different genres. Discover inspiring stories, engaging reads, and professionally published books from our authors.",
+    "Explore books published by Crux Publishing across different genres. Discover inspiring stories, engaging reads, and professionally published books.",
   path: "/our-books",
 });
 
