@@ -125,13 +125,13 @@ export default function Navbar() {
         className={`fixed inset-x-0 top-0 z-50 w-full border-b backdrop-blur-xl transition-all duration-300 ${navBg} ${navBorder}`}
       >
         <div className="mx-auto flex h-16 w-full max-w-[1600px] items-center justify-between gap-4 px-4 sm:h-18 sm:px-6 lg:h-20 lg:px-8">
-          {/* Logo */}
+          {/* Logo (Bigger) */}
           <Link
             href="/"
             className="flex flex-shrink-0 items-center"
             aria-label="Crux Publishing House - Home"
           >
-            <div className="relative h-10 w-28 sm:h-11 sm:w-36 md:h-12 md:w-40 lg:h-14 lg:w-48 xl:h-[60px] xl:w-[220px]">
+            <div className="relative h-12 w-36 min-w-[9rem] sm:h-14 sm:w-44 md:h-16 md:w-52 lg:h-20 lg:w-60 xl:h-[96px] xl:w-[300px]">
               <Image
                 src={logoSrc}
                 alt="Crux Publishing House Logo"
@@ -258,7 +258,8 @@ export default function Navbar() {
         {/* Drawer Header */}
         <div className="flex items-center justify-between border-b border-black/10 px-5 py-4">
           <Link href="/" onClick={() => setDrawerOpen(false)} className="flex items-center">
-            <div className="relative h-9 w-24">
+            {/* Drawer Logo (Bigger) */}
+            <div className="relative h-12 w-36 min-w-[9rem]">
               <Image
                 src="/image (1).png"
                 alt="Crux Publishing House"
