@@ -66,15 +66,15 @@ export interface PublishingServicePageData {
 
 export const publishingServicePages: Record<string, PublishingServicePageData> = {
   "e-book-writing-service": {
-    slug: "e-book-writing-service",
-    seoTitle: "eBook Writing Services Australia",
+    slug: "book-writing-service",
+    seoTitle: "Book Writing Services Australia",
     seoDescription:
       "Professional eBook writing, ghostwriting, editing, formatting, and distribution services for Australian authors and businesses.",
     hero: {
-      title: "eBook Writing Services Australia",
+      title: "Book Writing Services Australia",
       description: (
         <>
-          Professional eBook Writing Services for Australian Authors &
+          Professional Book Writing Services for Australian Authors &
           Businesses. From your first idea to a fully formatted, globally
           distributed eBook: Crux Publishing House handles every word,
           every page, every platform. <br /> Whether you have a fully written

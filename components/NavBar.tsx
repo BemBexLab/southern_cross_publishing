@@ -62,6 +62,7 @@ export default function Navbar() {
   const mobilePanelTone = useDarkNavLinks
     ? "border-black/10 bg-white/55"
     : "border-white/20 bg-black/45";
+  const navBackgroundTone = useDarkNavLinks ? "bg-white/65" : "bg-black/20";
 
   useEffect(() => {
     setMenuOpen(false);
@@ -92,7 +93,11 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="absolute inset-x-0 top-0 z-50 w-full bg-transparent px-3 dm-sans sm:px-6 lg:px-8">
+    <nav
+      className={`fixed inset-x-0 top-0 z-50 w-full rounded-b-5xl border-b backdrop-blur-xl dm-sans px-3 sm:px-6 lg:px-8 ${
+        useDarkNavLinks ? "border-black/10" : "border-white/15"
+      } ${navBackgroundTone}`}
+    >
       <div className="w-full">
         <div className="flex h-18 w-full items-center justify-between gap-3 sm:h-22 lg:h-28">
           <Link href="/" className="flex min-w-0 flex-shrink items-center">
@@ -128,13 +133,12 @@ export default function Navbar() {
                       }`}
                     >
                       {link.label}
-                      {!isActive && (
-                        <span
-                          className={`absolute bottom-0 left-0 h-[1.5px] w-0 transition-all duration-300 ease-out group-hover:w-full ${
-                            useDarkNavLinks ? "bg-black" : "bg-white"
-                          }`}
-                        />
-                      )}
+                      <span
+                        aria-hidden="true"
+                        className={`absolute bottom-0 left-0 h-[1.5px] transition-all duration-300 ease-out ${
+                          isActive ? "w-full" : "w-0 group-hover:w-full"
+                        } ${useDarkNavLinks ? "bg-black" : "bg-white"}`}
+                      />
                     </Link>
 
                     {hasChildren && (
@@ -238,11 +242,11 @@ export default function Navbar() {
                           <Link
                             href={link.href}
                             onClick={() => setMenuOpen(false)}
-                            className={`flex-1 rounded-md px-4 py-3 text-sm font-light transition-all sm:text-base ${mobileLinkTone} ${
+                            className={`relative flex-1 rounded-md px-4 py-3 text-sm font-light transition-all sm:text-base ${mobileLinkTone} ${
                               isActive
                                 ? useDarkNavLinks
-                                  ? "text-black"
-                                  : "text-[#f5c842]"
+                                  ? "text-black after:absolute after:bottom-1 after:left-4 after:right-4 after:h-[1.5px] after:bg-black"
+                                  : "text-[#f5c842] after:absolute after:bottom-1 after:left-4 after:right-4 after:h-[1.5px] after:bg-[#f5c842]"
                                 : ""
                             }`}
                           >
@@ -312,11 +316,11 @@ export default function Navbar() {
                       <Link
                         href={link.href}
                         onClick={() => setMenuOpen(false)}
-                        className={`block rounded-md px-4 py-3 text-sm font-light transition-all sm:text-base ${mobileLinkTone} ${
+                        className={`relative block rounded-md px-4 py-3 text-sm font-light transition-all sm:text-base ${mobileLinkTone} ${
                           isActive
                             ? useDarkNavLinks
-                              ? "text-black"
-                              : "text-[#f5c842]"
+                              ? "text-black after:absolute after:bottom-1 after:left-4 after:right-4 after:h-[1.5px] after:bg-black"
+                              : "text-[#f5c842] after:absolute after:bottom-1 after:left-4 after:right-4 after:h-[1.5px] after:bg-[#f5c842]"
                             : ""
                         }`}
                       >

@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@theme {
+  --radius-5xl: 3rem;
+}
+
 .goneva {
   font-family: var(--font-goneva);
 }
