@@ -4,8 +4,6 @@ const WP_POSTS_API =
   process.env.WP_POSTS_API ||
   "https://projectdemolink.com/projectdemo/index.php/wp-json/wp/v2/posts";
 
-export const BLOG_REVALIDATE_SECONDS = 300;
-
 type WpRenderedField = {
   rendered: string;
 };
@@ -82,7 +80,7 @@ export const mapWpPostToSummary = (post: WpPost): BlogPostSummary => ({
 
 export async function fetchWpPosts(): Promise<WpPost[]> {
   const response = await fetch(`${WP_POSTS_API}?per_page=100&_embed`, {
-    next: { revalidate: BLOG_REVALIDATE_SECONDS },
+    cache: "force-cache",
   });
 
   if (!response.ok) {
@@ -96,7 +94,7 @@ export async function fetchWpPost(slug: string): Promise<WpPost | null> {
   const response = await fetch(
     `${WP_POSTS_API}?slug=${encodeURIComponent(slug)}&_embed`,
     {
-      next: { revalidate: BLOG_REVALIDATE_SECONDS },
+      cache: "force-cache",
     }
   );
 

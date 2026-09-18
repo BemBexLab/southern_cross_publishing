@@ -8,8 +8,6 @@ import MotionSection from "@/components/MotionSection";
 import { fetchWpPosts, mapWpPostToSummary } from "./wp";
 import { createPageMetadata } from "../seo";
 
-export const revalidate = 300;
-
 export const metadata: Metadata = createPageMetadata({
   title: "Publishing Blog",
   description:

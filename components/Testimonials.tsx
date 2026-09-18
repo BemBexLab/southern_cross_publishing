@@ -5,24 +5,44 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 
 const testimonials = [
   {
+    name: "Michael Thompson",
+    location: "Melbourne, VIC, Australia",
+    body: "The audiobook production absolutely exceeded my expectations. The narration was professional, the sound quality was outstanding, and it genuinely sounds like something you would hear on Audible alongside titles from major publishers. The team delivered exactly what I was hoping for, and I couldn’t be happier with the final result.",
+  },
+  {
+    name: "Sarah Williams",
+    location: "Sydney, NSW, Australia",
+    body: "I approached the team with nothing more than a half-finished manuscript saved in a Word document. They helped transform my ideas into a professionally published book that I’m incredibly proud of. The editing process was detailed and thoughtful while still preserving my personal writing style and voice, which was extremely important to me.",
+  },
+  {
+    name: "Daniel Harrison",
+    location: "Brisbane, QLD, Australia",
+    body: "The team managed every aspect of my publishing journey, from cover design and formatting to Amazon setup and global distribution. My book is now available across multiple platforms, and I never had to worry about the technical side of publishing. Their guidance made the entire process simple and stress-free.",
+  },
+  {
+    name: "Emma Collins",
+    location: "Perth, WA, Australia",
+    body: "As a first-time author, I had no idea where to begin. The publishing team walked me through every stage, from refining my manuscript to launching my book professionally. Their attention to detail and communication throughout the process gave me complete confidence.",
+  },
+  {
+    name: "Andrew Mitchell",
+    location: "Adelaide, SA, Australia",
+    body: "From the initial consultation to the final book launch, the experience was seamless. The design quality, publishing support, and marketing guidance helped bring my story to life in a way I never imagined possible.",
+  },
+  {
     name: "Margaret Ronald",
-    location: "Chicago",
-    body: "I came to Crux Publishing House with nothing but a Word document full of an incomplete manuscript. They made a published book from a half-finished book, which I am genuinely proud of. The editing team was thorough without stripping away my voice, which meant everything to me.",
+    location: "Melbourne, Australia",
+    body: "I came to Crux Publishing House with nothing more than an unfinished manuscript sitting in a Word document. The team helped transform my ideas into a professionally published book that I am genuinely proud of. Their editors were incredibly thorough while still preserving my unique voice, which was one of the most important things to me as an author.",
   },
   {
     name: "James Tucker",
-    location: "New York",
-    body: "The Crux Publishing House team handled all the technicalities of my book from cover design to Amazon listing. My book is now on 40 platforms, and I didn't have to figure any of it out myself. If you are serious about publishing, this is the team you want.",
+    location: "Sydney, Australia",
+    body: "The Crux Publishing House team made the entire publishing process simple and stress-free. From cover design and formatting to Amazon setup and global distribution, they handled every technical detail with professionalism. My book is now available across multiple platforms, and I never felt overwhelmed trying to figure everything out myself.",
   },
   {
     name: "Sandra Chandler",
-    location: "Washington, DC",
-    body: "I was quite nervous about handing my story to someone else. Obviously, it's personal. But the ghostwriting process felt like a real collaboration. They listened, asked the right questions, and got it. They send me a draft for every chapter and incorporate my edits properly with every draft. I couldn't be happier with the result.",
-  },
-  {
-    name: "David Ken",
-    location: "Washington, DC",
-    body: "The audiobook production blew me away. Professional narration, proper sound quality, it sounds like something you'd find on Audible next to the big publishers. I must say I got what I really wanted.",
+    location: "Brisbane, Australia",
+    body: "I was nervous about trusting someone else with my personal story, but the ghostwriting process with Crux Publishing House felt like a genuine collaboration from the beginning. They listened carefully, understood my vision, and kept me involved throughout every chapter. The drafts reflected my ideas beautifully, and the final result exceeded my expectations.",
   },
 ];
 

@@ -6,6 +6,11 @@ import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import { defaultDescription, siteName, siteUrl } from "./seo";
 
+// All public pages are generated at build time. The contact route handler is
+// intentionally separate from the page tree because it must remain dynamic
+// to receive form submissions and send email through SMTP.
+export const dynamic = "error";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
