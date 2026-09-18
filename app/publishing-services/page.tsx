@@ -23,9 +23,9 @@ import ExpertNonFiction from "./components/ExpertNonFiction";
 import { createPageMetadata } from "../seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Publishing Services",
+  title: "Crux Publishing: Book Publishing Services",
   description:
-    "Explore Crux Publishing House services including ghostwriting, editing, cover design, formatting, distribution, and book marketing.",
+    "Crux Publishing offers Book publishing services, self-publishing support, and complete book publishing solutions to help authors publish their books worldwide.",
   path: "/publishing-services",
 });
 

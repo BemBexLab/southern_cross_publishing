@@ -23,9 +23,17 @@ export default function TermsHero({
               {title}
             </h1>
 
-            <p className="dm-sans mt-6 max-w-2xl text-base leading-7 text-white sm:text-lg sm:leading-8">
-              {description}
-            </p>
+            {description ? (
+              typeof description === "string" ? (
+                <p className="dm-sans mt-6 max-w-2xl text-base leading-7 text-white sm:text-lg sm:leading-8">
+                  {description}
+                </p>
+              ) : (
+                <div className="dm-sans mt-6 max-w-2xl text-base leading-7 text-white sm:text-lg sm:leading-8">
+                  {description}
+                </div>
+              )
+            ) : null}
           </div>
         </div>
       </div>

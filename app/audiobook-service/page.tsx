@@ -16,9 +16,9 @@ import FAQs from "@/components/FAQs";
 import { createPageMetadata } from "../seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Audiobook Production Services Australia",
+  title: "Crux Publishing: Audiobook Production Services",
   description:
-    "Professional audiobook production services in Australia with human narration, editing, mastering, scoring, and distribution.",
+    "Crux Publishing offers audiobook production services. Our team publishes your story with engaging and high-quality voice performances.",
   path: "/audiobook-service",
 });
 

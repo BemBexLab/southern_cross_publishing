@@ -1,15 +1,15 @@
 /** @type {import("next").Metadata} */
 export const metadata = {
-  title: "Who We Are",
+  title: "Crux Publishing: Professional Book Publishing Team",
   description:
-    "Learn about Crux Publishing House, our values, and how our Australian publishing team supports authors from idea to published book.",
+    "Learn about Crux Publishing, a professional book publishing company helping authors bring their stories to life through expert publishing, editing, and marketing services.",
   alternates: {
     canonical: "/who-we-are",
   },
   openGraph: {
-    title: "Who We Are",
+    title: "Crux Publishing: Professional Book Publishing Team",
     description:
-      "Learn about Crux Publishing House, our values, and how our Australian publishing team supports authors from idea to published book.",
+      "Learn about Crux Publishing, a professional book publishing company helping authors bring their stories to life through expert publishing, editing, and marketing services.",
     url: "/who-we-are",
       siteName: "Crux Publishing House",
     locale: "en_AU",

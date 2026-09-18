@@ -67,9 +67,9 @@ export interface PublishingServicePageData {
 export const publishingServicePages: Record<string, PublishingServicePageData> = {
   "book-writing-service": {
     slug: "book-writing-service",
-    seoTitle: "Book Writing Services Australia",
+    seoTitle: "Crux Publishing: Book writing services",
     seoDescription:
-      "Professional Book writing, ghostwriting, editing, formatting, and distribution services for Australian authors and businesses.",
+      "Crux Publishing provides professional book writing services, including ghostwriting. Hire experienced book writers today.",
     hero: {
       title: "Book Writing Services Australia",
       description: (
@@ -237,9 +237,9 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
 
   "ebook-formatting": {
     slug: "ebook-formatting",
-    seoTitle: "eBook Formatting Services Australia",
+    seoTitle: "Crux Publishing: Book Formatting Services",
     seoDescription:
-      "Professional eBook formatting, interior layout design, and multi-platform publishing support for Australian authors.",
+      "Crux Publishing provides professional book formatting services for eBooks and print books, ensuring your manuscript meets industry standards for publishing.",
     hero: {
       title: "eBook Formatting Services Australia",
       description: (
@@ -360,9 +360,9 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
 
   "childrenbook-publishing": {
     slug: "childrenbook-publishing",
-    seoTitle: "Children's Book Publishing Services Australia",
+    seoTitle: "Crux Publishing: Children’s Book Publishing Services",
     seoDescription:
-      "Children's book writing, illustration, editing, formatting, and publishing services for Australian authors and educators.",
+      "Crux Publishing offers children’s book publishing services, helping authors create, design, and publish engaging books with professional illustrations and formatting.",
      hero: {
       title: "Children's Book Publishing Services Australia",
       description: (
@@ -483,9 +483,9 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
 
   "book-marketing": {
     slug: "book-marketing",
-    seoTitle: "Book Marketing Services Australia",
+    seoTitle: "Crux Publishing: Book Marketing Services",
     seoDescription:
-      "Book marketing services for Australian authors, including Amazon optimisation, launch strategy, distribution, and author branding.",
+      "Crux Publishing provides book marketing services to help authors increase visibility, reach readers, and promote their books through strategic marketing solutions.",
      hero: {
       title: "Your Book Is Written; Now Let's Make Sure People Find It.",
       description: (

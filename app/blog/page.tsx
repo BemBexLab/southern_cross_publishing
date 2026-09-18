@@ -9,9 +9,9 @@ import { fetchWpPosts, mapWpPostToSummary } from "./wp";
 import { createPageMetadata } from "../seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Publishing Blog",
+  title: "Crux Publishing Blog: Book Publishing Insights",
   description:
-    "Read publishing advice, author guidance, and book marketing insights from Crux Publishing House.",
+    "Read the Crux Publishing blog for expert tips on book writing, publishing, marketing, self-publishing, editing, and building a successful author journey.",
   path: "/blog",
 });
 
