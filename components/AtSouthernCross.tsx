@@ -163,13 +163,13 @@ const AtSouthernCross: React.FC<AtSouthernCrossProps> = ({
   return (
     <section className={sectionClassName}>
       <div className={containerClassName}>
-        <p className="text-center montserrat text-2xl font-semibold italic">{eyebrow}</p>
+        <p className="text-center dm-sans text-2xl font-semibold italic">{eyebrow}</p>
         <h2 className="goneva mx-auto mt-4 max-w-[980px] text-center text-3xl font-medium leading-tight text-[#078c52] sm:text-4xl lg:text-5xl">
           {title}
         </h2>
 
         {description ? (
-          <p className="mt-4 text-center montserrat text-lg text-black">{description}</p>
+          <p className="mt-4 text-center dm-sans text-lg text-black">{description}</p>
         ) : null}
 
         <div className={gridClassName}>

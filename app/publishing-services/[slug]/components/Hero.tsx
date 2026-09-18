@@ -103,7 +103,7 @@ const Hero: React.FC<HeroProps> = ({
               </div>
             </div>
 
-            <div className="montserrat mt-6 max-w-none space-y-6 text-lg font-medium leading-relaxed text-[#1F1F1F] lg:mt-7">
+            <div className="dm-sans mt-6 max-w-none space-y-6 text-lg font-medium leading-relaxed text-[#1F1F1F] lg:mt-7">
               {typeof description === "string" ? (
                 <p>{description}</p>
               ) : (

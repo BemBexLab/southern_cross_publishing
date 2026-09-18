@@ -53,7 +53,7 @@ const WhyAustralianAuthors = () => {
           <h2 className="goneva text-[1.9rem] leading-[1.08] text-[#FDD118] sm:text-[2.4rem] lg:text-[3.05rem]">
             Why Australian Authors Choose Crux Publishing House for Their Book
           </h2>
-          {/* <p className="montserrat mx-auto mt-5 w-full text-lg italic leading-[1.55] text-[#d8e8d6]">
+          {/* <p className="dm-sans mx-auto mt-5 w-full text-lg italic leading-[1.55] text-[#d8e8d6]">
             Whether you have a completed manuscript, a rough draft, or just an
             idea, we can work with it. You don&apos;t need to have it all figured
             out before coming to us. That&apos;s exactly what we&apos;re here for.
@@ -82,11 +82,11 @@ const WhyAustralianAuthors = () => {
                 )}
               </div>
 
-              <h3 className="montserrat mt-5 max-w-lg text-2xl font-semibold leading-[1.2] text-[#f8f2db]">
+              <h3 className="dm-sans mt-5 max-w-lg text-2xl font-semibold leading-[1.2] text-[#f8f2db]">
                 {reason.title}
               </h3>
 
-              <p className="montserrat mt-3 max-w-lg text-lg text-[#d7e6d4]">
+              <p className="dm-sans mt-3 max-w-lg text-lg text-[#d7e6d4]">
                 {reason.description}
               </p>
             </article>

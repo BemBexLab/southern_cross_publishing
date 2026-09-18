@@ -42,7 +42,7 @@ const Section3 = () => {
         <h2 className="goneva text-[#018752] text-3xl md:text-5xl mb-6">
           Meet Our Publishing Partners
         </h2>
-        <p className="text montserrat-black text-lg md:text-lg leading-relaxed">
+        <p className="text dm-sans-black text-lg md:text-lg leading-relaxed">
           Lorem ipsum dolor sit amet consectetur. A turpis urna augue volutpat posuere neque magna. 
           Cras adipiscing purus dignissim in ipsum nibh risus non. Pharetra neque quis non eget et risus. 
           Libero suspendisse praesent sed duis ipsum vitae sed ipsum ut.

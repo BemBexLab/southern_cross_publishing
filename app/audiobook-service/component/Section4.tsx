@@ -30,7 +30,7 @@ const Section4 = () => {
             <div className="max-w-[1800px] mx-auto py-16 px-2 sm:px-6 text-[#1A3C34]">
             {/* Eyebrow */}
             <div className="mb-4">
-                <p className=" text-2xl montserrat italic font-semibold text-black">How It Works</p>
+                <p className=" text-2xl dm-sans italic font-semibold text-black">How It Works</p>
             </div>
 
             <div className="grid grid-cols-1 gap-16 items-start lg:grid-cols-2 lg:items-stretch">

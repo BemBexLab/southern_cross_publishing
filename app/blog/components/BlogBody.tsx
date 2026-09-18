@@ -59,15 +59,15 @@ const BlogBody = ({ posts }: BlogBodyProps) => {
                   id="blog-search"
                   type="search"
                   placeholder="Search"
-                  className="montserrat h-11 w-full rounded-full border border-stone-200 bg-white px-5 text-sm text-stone-500 placeholder:text-stone-400 focus:outline-none"
+                  className="dm-sans h-11 w-full rounded-full border border-stone-200 bg-white px-5 text-sm text-stone-500 placeholder:text-stone-400 focus:outline-none"
                 />
               </div>
 
               <div className="rounded-2xl bg-neutral-900 px-6 py-6 text-amber-50 shadow-xl">
-                <h2 className="montserrat max-w-xs text-2xl font-semibold leading-tight text-yellow-300">
+                <h2 className="dm-sans max-w-xs text-2xl font-semibold leading-tight text-yellow-300">
                   Subscribe to Our Newsletter
                 </h2>
-                <p className="montserrat mt-4 text-sm leading-6 text-stone-200">
+                <p className="dm-sans mt-4 text-sm leading-6 text-stone-200">
                   Get the latest publishing tips and industry insights delivered
                   to your inbox.
                 </p>
@@ -75,11 +75,11 @@ const BlogBody = ({ posts }: BlogBodyProps) => {
                   <input
                     type="email"
                     placeholder="Your Email address"
-                    className="montserrat h-10 w-full rounded-full border-none bg-white px-5 text-sm text-stone-600 placeholder:text-stone-400 focus:outline-none"
+                    className="dm-sans h-10 w-full rounded-full border-none bg-white px-5 text-sm text-stone-600 placeholder:text-stone-400 focus:outline-none"
                   />
                   <button
                     type="button"
-                    className="montserrat flex h-11 w-full items-center justify-center rounded-md bg-yellow-300 px-4 text-sm font-semibold text-emerald-700 transition hover:bg-yellow-200"
+                    className="dm-sans flex h-11 w-full items-center justify-center rounded-md bg-yellow-300 px-4 text-sm font-semibold text-emerald-700 transition hover:bg-yellow-200"
                   >
                     Subscribe Now
                   </button>
@@ -87,7 +87,7 @@ const BlogBody = ({ posts }: BlogBodyProps) => {
               </div>
 
               <div>
-                <h3 className="montserrat text-3xl font-semibold leading-none text-emerald-700">
+                <h3 className="dm-sans text-3xl font-semibold leading-none text-emerald-700">
                   Popular Tags
                 </h3>
                 <div className="mt-5 flex flex-wrap gap-3">
@@ -98,7 +98,7 @@ const BlogBody = ({ posts }: BlogBodyProps) => {
                       <button
                         key={tag}
                         type="button"
-                        className={`montserrat rounded-full border px-4 py-2 text-xs leading-none transition ${
+                        className={`dm-sans rounded-full border px-4 py-2 text-xs leading-none transition ${
                           isFeatured
                             ? "border-lime-200 bg-lime-100 text-emerald-700"
                             : "border-stone-300 bg-amber-50 text-stone-500"
@@ -112,7 +112,7 @@ const BlogBody = ({ posts }: BlogBodyProps) => {
               </div>
 
               <div className="border-t border-stone-300 pt-7">
-                <h3 className="montserrat text-3xl font-semibold leading-none text-emerald-700">
+                <h3 className="dm-sans text-3xl font-semibold leading-none text-emerald-700">
                   Recent Posts
                 </h3>
                 <div className="mt-5 space-y-4">
@@ -120,7 +120,7 @@ const BlogBody = ({ posts }: BlogBodyProps) => {
                     <Link
                       key={post.slug}
                       href={`/blog/${post.slug}`}
-                      className="montserrat block max-w-sm text-sm leading-5 text-stone-500 transition hover:text-emerald-700"
+                      className="dm-sans block max-w-sm text-sm leading-5 text-stone-500 transition hover:text-emerald-700"
                     >
                       {post.title}
                     </Link>
@@ -159,16 +159,16 @@ const BlogBody = ({ posts }: BlogBodyProps) => {
 
                     <div className="flex min-w-0 flex-col justify-between overflow-hidden">
                       <div>
-                        <h2 className="montserrat max-w-xl text-2xl font-semibold leading-tight text-emerald-700 sm:text-[1.6rem] xl:text-3xl">
+                        <h2 className="dm-sans max-w-xl text-2xl font-semibold leading-tight text-emerald-700 sm:text-[1.6rem] xl:text-3xl">
                           {post.title}
                         </h2>
-                        <p className="montserrat mt-4 max-w-2xl text-sm leading-6 text-stone-600">
+                        <p className="dm-sans mt-4 max-w-2xl text-sm leading-6 text-stone-600">
                           {post.excerpt}
                         </p>
                       </div>
 
                       <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-                        <div className="montserrat flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-stone-400">
+                        <div className="dm-sans flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-stone-400">
                           <span className="inline-flex items-center gap-2">
                             <FaRegCalendar className="h-3 w-3" />
                             {post.date}
@@ -181,7 +181,7 @@ const BlogBody = ({ posts }: BlogBodyProps) => {
 
                         <Link
                           href={`/blog/${post.slug}`}
-                          className="montserrat inline-flex items-center gap-3 text-sm font-medium text-emerald-700 transition hover:text-emerald-800"
+                          className="dm-sans inline-flex items-center gap-3 text-sm font-medium text-emerald-700 transition hover:text-emerald-800"
                         >
                           Read More
                           <FaArrowRight className="h-3 w-3" />
@@ -197,7 +197,7 @@ const BlogBody = ({ posts }: BlogBodyProps) => {
                 <h2 className="goneva text-3xl text-[#018752]">
                   No blog posts available right now
                 </h2>
-                <p className="montserrat mx-auto mt-4 max-w-2xl text-sm leading-6 text-stone-600">
+                <p className="dm-sans mx-auto mt-4 max-w-2xl text-sm leading-6 text-stone-600">
                   We could not find any published posts from the WordPress feed yet.
                   Please check back soon.
                 </p>

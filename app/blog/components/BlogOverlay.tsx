@@ -11,7 +11,7 @@ const BlogOverlay = () => {
             <h2 className="goneva text-3xl leading-tight text-[#f7f1d7] sm:text-4xl lg:text-5xl">
               Ready to Publish Your Book?
             </h2>
-            <p className="montserrat mt-5 max-w-3xl text-sm leading-6 text-[#dcebdc] sm:text-base sm:leading-7">
+            <p className="dm-sans mt-5 max-w-3xl text-sm leading-6 text-[#dcebdc] sm:text-base sm:leading-7">
               Lorem ipsum dolor sit amet consectetur. Amet et tellus diam ut.
               Duis vitae morbi amet non a tellus gravida egestas amet. Non
               varius rhoncus ipsum.
@@ -19,7 +19,7 @@ const BlogOverlay = () => {
 
             <Link
               href="/contact"
-              className="montserrat mt-8 inline-flex min-h-12 items-center justify-center gap-3 rounded-md bg-[#FDD118] px-6 text-base font-semibold text-[#018752] transition hover:bg-[#ffd23c] sm:px-7"
+              className="dm-sans mt-8 inline-flex min-h-12 items-center justify-center gap-3 rounded-md bg-[#FDD118] px-6 text-base font-semibold text-[#018752] transition hover:bg-[#ffd23c] sm:px-7"
             >
               Get started today
               <FaArrowRight className="h-4 w-4 shrink-0" />

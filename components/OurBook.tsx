@@ -100,7 +100,7 @@ const OurBook = () => {
     <AOSProvider>
 
       <section className="relative overflow-hidden px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
-          <p className="text-center montserrat font-semibold italic text-2xl">
+          <p className="text-center dm-sans font-semibold italic text-2xl">
             Our Work
           </p>
           <h2 className="text-center text-[#018752] goneva font-medium mt-5 text-5xl">Illustrations That Bring Stories To Life</h2>
@@ -145,7 +145,7 @@ const OurBook = () => {
         <div className="mt-12 flex justify-center">
           <Link
             href="/our-books"
-            className="rounded-md montserrat bg-[#FDD118] px-6 py-3 text-sm text-[#018752] font-semibold transition hover:opacity-90"
+            className="rounded-md dm-sans bg-[#FDD118] px-6 py-3 text-sm text-[#018752] font-semibold transition hover:opacity-90"
           >
             View All <FaArrowRight className="ml-2 inline-block" />
           </Link>

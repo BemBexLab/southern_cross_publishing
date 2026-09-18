@@ -95,7 +95,7 @@ const Section3 = () => {
       <div className="relative z-10 mx-auto w-full max-w-[1600px] px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-12 text-center sm:mb-14 lg:mb-16">
-          <p className="montserrat mb-3 text-xl italic text-[#FDD118] sm:mb-4 sm:text-2xl">
+          <p className="dm-sans mb-3 text-xl italic text-[#FDD118] sm:mb-4 sm:text-2xl">
             Pricing & Packages
           </p>
           <h2 className="goneva py-2 text-4xl font-medium text-[#F7F1D7] sm:text-5xl lg:text-6xl">
@@ -118,12 +118,12 @@ const Section3 = () => {
                 <h4 className="goneva text-4xl text-[#018752] sm:text-5xl">
                   {plan.title}
                 </h4>
-                <p className="montserrat my-6 text-base text-[#1F1F1F] sm:my-8 sm:text-lg">
+                <p className="dm-sans my-6 text-base text-[#1F1F1F] sm:my-8 sm:text-lg">
                   {plan.description}
                 </p>
                 <a
                   href="/contact"
-                  className="montserrat inline-flex min-h-11 items-center gap-2 rounded-lg bg-[#428a5a] px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#356e48] sm:px-6 sm:text-base"
+                  className="dm-sans inline-flex min-h-11 items-center gap-2 rounded-lg bg-[#428a5a] px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#356e48] sm:px-6 sm:text-base"
                 >
                   Custom Quote <FaArrowRight size={12} />
                 </a>
@@ -131,7 +131,7 @@ const Section3 = () => {
 
               {/* Right Column (Features) */}
               <div className="lg:w-2/3">
-                <p className="montserrat mb-4 text-lg font-bold text-[#018752] sm:mt-2 sm:text-xl">
+                <p className="dm-sans mb-4 text-lg font-bold text-[#018752] sm:mt-2 sm:text-xl">
                   Included:
                 </p>
                 <div className="grid gap-x-8 gap-y-4 md:grid-cols-2">

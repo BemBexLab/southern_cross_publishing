@@ -49,7 +49,7 @@ const Section6 = () => {
       <div className="container mx-auto max-w-[1600px] px-2 lg:px-20">
         {/* Header */}
         <div className="text-center mb-20">
-          <h3 className="text-black italic font-semibold text-2xl montserrat mb-3">
+          <h3 className="text-black italic font-semibold text-2xl dm-sans mb-3">
             What We Publish
           </h3>
           <h2 className="text-[#018752] text-3xl md:text-5xl font-serif mb-6">

@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
-.montserrat {
-  font-family: var(--font-montserrat);
-}
-
 .goneva {
   font-family: var(--font-goneva);
+}
+
+.dm-sans {
+  font-family: "DM Sans", sans-serif;
 }

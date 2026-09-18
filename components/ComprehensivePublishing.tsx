@@ -127,7 +127,7 @@ const ComprehensivePublishing = () => {
           </div>
         </div>
 
-        <div className="montserrat mx-auto mb-6 max-w-[1600px] space-y-4 text-center text-[1rem] leading-[1.7] text-[#232323] sm:mb-8 sm:text-[1.05rem] md:text-[1.1rem] lg:space-y-5 lg:text-[1.18rem]">
+        <div className="dm-sans mx-auto mb-6 max-w-[1600px] space-y-4 text-center text-[1rem] leading-[1.7] text-[#232323] sm:mb-8 sm:text-[1.05rem] md:text-[1.1rem] lg:space-y-5 lg:text-[1.18rem]">
           <p>
             We know that the moment you decide to write a book, something
             shifts; suddenly, the idea that once felt private has now become
@@ -152,7 +152,7 @@ const ComprehensivePublishing = () => {
           </p>
         </div>
 
-        <h3 className="montserrat mx-auto w-full max-w-[1500px] px-2 pb-2 text-center text-[1.05rem] font-semibold italic leading-[1.45] text-[#222] sm:px-6 sm:text-[1.2rem] md:text-[1.45rem] lg:text-[1.7rem]">
+        <h3 className="dm-sans mx-auto w-full max-w-[1500px] px-2 pb-2 text-center text-[1.05rem] font-semibold italic leading-[1.45] text-[#222] sm:px-6 sm:text-[1.2rem] md:text-[1.45rem] lg:text-[1.7rem]">
           Your words were always worth reading. We are just here to make sure
           the right people find them.
         </h3>

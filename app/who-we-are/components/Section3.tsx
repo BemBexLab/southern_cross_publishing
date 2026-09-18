@@ -59,11 +59,11 @@ function CountUpStat({
 
   return (
     <div className="rounded-3xl bg-[#1F1F1F1A] p-14 text-center">
-      <span className="montserrat block text-5xl font-black text-[#018752]">
+      <span className="dm-sans block text-5xl font-black text-[#018752]">
         {count}
         {suffix}
       </span>
-      <span className="montserrat mt-3 block text-sm font-semibold uppercase tracking-wide text-[#1F1F1F]">
+      <span className="dm-sans mt-3 block text-sm font-semibold uppercase tracking-wide text-[#1F1F1F]">
         {label}
       </span>
     </div>
@@ -92,7 +92,7 @@ export default function Section3() {
         <div className="flex flex-col">
           <h2 className="goneva mb-2 text-6xl text-[#018752]">Our Mission</h2>
 
-          <p className="montserrat mb-6 max-w-4xl text-lg leading-relaxed text-[#1F1F1F]">
+          <p className="dm-sans mb-6 max-w-4xl text-lg leading-relaxed text-[#1F1F1F]">
             To give every author, regardless of experience or background,
             access to the professional publishing process that their story
             deserves, from first word to final reader.

@@ -44,7 +44,7 @@ const WhyChooseUs = () => {
           {/* Right Side: Text Content */}
           <div className="w-full py-10">
             <div className="mb-2">
-              <h3 className="text-black montserrat font-semibold italic text-2xl mb-3">
+              <h3 className="text-black dm-sans font-semibold italic text-2xl mb-3">
                 Why Choose Us
               </h3>
               <h2 className="text-[#018752] text-xl md:text-xl lg:text-4xl goneva leading-[1.1]">
@@ -52,7 +52,7 @@ const WhyChooseUs = () => {
               </h2>
             </div>
 
-            <div className="space-y-1 montserrat text-[#1F1F1F] text-md">
+            <div className="space-y-1 dm-sans text-[#1F1F1F] text-md">
               <p>
                 <b>One team from start to finish: </b> You are never handed off to a
                 different company at each stage. The same team that evaluates

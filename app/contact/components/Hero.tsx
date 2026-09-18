@@ -16,7 +16,7 @@ const Hero = () => {
             Contact Crux Publishing House
           </h1>
 
-          <p className="montserrat mx-auto mt-6 max-w-xl text-base leading-[1.35] text-[#5d5d55] sm:mt-7 sm:text-lg md:text-xl xl:mx-0 xl:mt-8 xl:leading-[1.2]">
+          <p className="dm-sans mx-auto mt-6 max-w-xl text-base leading-[1.35] text-[#5d5d55] sm:mt-7 sm:text-lg md:text-xl xl:mx-0 xl:mt-8 xl:leading-[1.2]">
             Tell us where you are with your book, we&apos;ll take it from there.
             No pressure, no obligations. Just an honest conversation about how
             we can help.

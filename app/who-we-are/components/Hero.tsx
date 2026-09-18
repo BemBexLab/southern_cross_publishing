@@ -95,7 +95,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                         {title}
                     </h1>
 
-                    <div className="montserrat space-y-6 text-md sm:text-lg text-gray-100 leading-tight sm:leading-relaxed max-w-4xl font-light mb-5 mt-2 sm:mt-8">
+                    <div className="dm-sans space-y-6 text-md sm:text-lg text-gray-100 leading-tight sm:leading-relaxed max-w-4xl font-light mb-5 mt-2 sm:mt-8">
                         <p>{description}</p>
                     </div>
 

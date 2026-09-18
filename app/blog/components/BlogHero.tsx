@@ -16,7 +16,7 @@ const BlogHero = () => {
           <h1 className="goneva text-4xl leading-none text-[#018752] sm:text-5xl lg:text-6xl">
             Our Blog
           </h1>
-          <p className="montserrat mx-auto mt-2 max-w-3xl text-base leading-relaxed text-black sm:mt-3 sm:text-lg sm:leading-snug">
+          <p className="dm-sans mx-auto mt-2 max-w-3xl text-base leading-relaxed text-black sm:mt-3 sm:text-lg sm:leading-snug">
             Insights, tips, and resources for aspiring and established authors.
             Discover the latest in publishing, marketing, and storytelling.
           </p>
@@ -46,7 +46,7 @@ const BlogHero = () => {
             </div>
 
             <div className="px-5 pt-4 text-[#f7f1d7] sm:px-6 md:px-8 xl:col-start-1 xl:row-start-2 xl:px-10 xl:pt-4">
-              <div className="montserrat max-w-3xl space-y-2 text-sm leading-relaxed text-[#f1ead2] sm:text-[15px] md:space-y-3 md:text-base xl:pr-4">
+              <div className="dm-sans max-w-3xl space-y-2 text-sm leading-relaxed text-[#f1ead2] sm:text-[15px] md:space-y-3 md:text-base xl:pr-4">
                 {descriptionParagraphs.map((paragraph) => (
                   <p key={paragraph}>{paragraph}</p>
                 ))}
@@ -56,7 +56,7 @@ const BlogHero = () => {
             <div className="px-5 pb-6 pt-5 sm:px-6 sm:pb-7 md:px-8 md:pb-8 xl:col-start-1 xl:row-start-3 xl:px-10 xl:pt-5">
               <Link
                 href="/blog"
-                className="montserrat inline-flex min-h-10 w-full items-center justify-center gap-2 rounded bg-[#FDD118] px-4 text-sm font-bold text-[#018752] transition hover:bg-[#ffd23c] sm:w-fit sm:px-5"
+                className="dm-sans inline-flex min-h-10 w-full items-center justify-center gap-2 rounded bg-[#FDD118] px-4 text-sm font-bold text-[#018752] transition hover:bg-[#ffd23c] sm:w-fit sm:px-5"
               >
                 Read More
                 <FaArrowRight className="h-3.5 w-3.5 shrink-0" />

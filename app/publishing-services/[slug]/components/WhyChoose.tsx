@@ -30,7 +30,7 @@ const WhyChoose = ({ section }: WhyChooseProps) => {
             {section.title}
           </h2>
 
-          <p className="montserrat text-lg leading-relaxed text-[#505050]">
+          <p className="dm-sans text-lg leading-relaxed text-[#505050]">
             {section.description}
           </p>
 
@@ -38,7 +38,7 @@ const WhyChoose = ({ section }: WhyChooseProps) => {
             {section.items.map((item, itemIndex) => (
               <li
                 key={`why-choose-${itemIndex}`}
-                className="montserrat flex items-start gap-3 text-base leading-relaxed text-[#505050] sm:text-lg"
+                className="dm-sans flex items-start gap-3 text-base leading-relaxed text-[#505050] sm:text-lg"
               >
                 <FaCircleCheck className="mt-1 shrink-0 text-base text-[#0a8d58]" />
                 <span>{item}</span>
@@ -48,7 +48,7 @@ const WhyChoose = ({ section }: WhyChooseProps) => {
 
           <a
             href={section.ctaHref}
-            className="montserrat mt-9 inline-flex min-h-12 items-center justify-center gap-3 rounded-md bg-[#ffd01f] px-6 py-3 text-base text-[#018752] transition hover:bg-[#ffd73a] sm:px-7"
+            className="dm-sans mt-9 inline-flex min-h-12 items-center justify-center gap-3 rounded-md bg-[#ffd01f] px-6 py-3 text-base text-[#018752] transition hover:bg-[#ffd73a] sm:px-7"
           >
             <FiPhoneCall className="text-2xl" />
             <span className="font-black">{section.ctaText}</span>

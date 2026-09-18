@@ -20,7 +20,7 @@ const Section2 = () => {
     <section className="flex flex-col items-center bg-[#EAE5CC] px-6 pt-10 pb-20 md:px-12 lg:px-24">
       <div className="mb-12 text-center">
         <h2 className="mb-6 font-serif text-3xl text-[#018752] md:text-5xl">Our Books</h2>
-        <p className="montserrat text-lg leading-relaxed text-black">
+        <p className="dm-sans text-lg leading-relaxed text-black">
           Every cover you see here started as an idea in someone's head. Some came to us as rough
           notes, others as half finished manuscripts, and a few as nothing more than a conversation
           about what the author wanted to say. What you are looking at now is what happens when the

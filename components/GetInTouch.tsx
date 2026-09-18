@@ -38,7 +38,7 @@ const ContactItem = ({
       <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[8px] bg-[#FDD118] text-[#078c52] sm:h-12 sm:w-12">
         {icon}
       </div>
-      <p className="montserrat min-w-0 pt-1 text-sm font-medium leading-[1.5] break-words text-[#f6ecd1] sm:text-[1.02rem]">
+      <p className="dm-sans min-w-0 pt-1 text-sm font-medium leading-[1.5] break-words text-[#f6ecd1] sm:text-[1.02rem]">
         {text}
       </p>
     </div>
@@ -151,11 +151,11 @@ const GetInTouch = ({
             {title}
           </h2>
 
-          <p className="montserrat my-3 text-[1rem] font-medium italic leading-tight text-[#FDD118] sm:my-2 sm:text-[1.16rem] md:text-[1.32rem] lg:text-[1.55rem] xl:text-[1.7rem]">
+          <p className="dm-sans my-3 text-[1rem] font-medium italic leading-tight text-[#FDD118] sm:my-2 sm:text-[1.16rem] md:text-[1.32rem] lg:text-[1.55rem] xl:text-[1.7rem]">
             {subtitle}
           </p>
 
-          <div className="montserrat w-full space-y-3 text-[0.96rem] leading-[1.65] text-[#e8eddc] sm:text-[1rem] md:text-[1.04rem] lg:text-[1.06rem]">
+          <div className="dm-sans w-full space-y-3 text-[0.96rem] leading-[1.65] text-[#e8eddc] sm:text-[1rem] md:text-[1.04rem] lg:text-[1.06rem]">
             {paragraphs.map((paragraph, index) => (
               <p key={`${index}-${paragraph.slice(0, 24)}`}>{paragraph}</p>
             ))}
@@ -182,7 +182,7 @@ const GetInTouch = ({
         </div>
 
         <div className="w-full rounded-[18px] bg-[linear-gradient(135deg,rgba(223,236,214,0.72),rgba(179,212,190,0.82))] p-5 shadow-[0_22px_65px_rgba(4,76,47,0.18)] backdrop-blur-[4px] sm:p-7 md:p-8 lg:px-8 lg:py-8 xl:px-9">
-          <h3 className="montserrat text-[1.55rem] font-semibold leading-[1.08] tracking-[-0.03em] text-[#078c52] sm:text-[1.95rem] md:text-[2.15rem] lg:text-[2.45rem]">
+          <h3 className="dm-sans text-[1.55rem] font-semibold leading-[1.08] tracking-[-0.03em] text-[#078c52] sm:text-[1.95rem] md:text-[2.15rem] lg:text-[2.45rem]">
             {formHeadline}
           </h3>
 
@@ -198,7 +198,7 @@ const GetInTouch = ({
                 onChange={(event) => updateField("firstName", event.target.value)}
                 autoComplete="given-name"
                 required
-                className="montserrat h-12 w-full rounded-[17px] border-none bg-[#f6efd7] px-4 text-[0.96rem] text-[#4e5e52] placeholder:text-[#9aa299] focus:outline-none sm:h-[52px] sm:px-5 sm:text-[1rem] lg:px-6"
+                className="dm-sans h-12 w-full rounded-[17px] border-none bg-[#f6efd7] px-4 text-[0.96rem] text-[#4e5e52] placeholder:text-[#9aa299] focus:outline-none sm:h-[52px] sm:px-5 sm:text-[1rem] lg:px-6"
               />
               <input
                 type="text"
@@ -207,7 +207,7 @@ const GetInTouch = ({
                 onChange={(event) => updateField("lastName", event.target.value)}
                 autoComplete="family-name"
                 required
-                className="montserrat h-12 w-full rounded-[17px] border-none bg-[#f6efd7] px-4 text-[0.96rem] text-[#4e5e52] placeholder:text-[#9aa299] focus:outline-none sm:h-[52px] sm:px-5 sm:text-[1rem] lg:px-6"
+                className="dm-sans h-12 w-full rounded-[17px] border-none bg-[#f6efd7] px-4 text-[0.96rem] text-[#4e5e52] placeholder:text-[#9aa299] focus:outline-none sm:h-[52px] sm:px-5 sm:text-[1rem] lg:px-6"
               />
             </div>
 
@@ -219,7 +219,7 @@ const GetInTouch = ({
                 onChange={(event) => updateField("email", event.target.value)}
                 autoComplete="email"
                 required
-                className="montserrat h-12 w-full rounded-[17px] border-none bg-[#f6efd7] px-4 text-[0.96rem] text-[#4e5e52] placeholder:text-[#9aa299] focus:outline-none sm:h-[52px] sm:px-5 sm:text-[1rem] lg:px-6"
+                className="dm-sans h-12 w-full rounded-[17px] border-none bg-[#f6efd7] px-4 text-[0.96rem] text-[#4e5e52] placeholder:text-[#9aa299] focus:outline-none sm:h-[52px] sm:px-5 sm:text-[1rem] lg:px-6"
               />
               <input
                 type="tel"
@@ -228,7 +228,7 @@ const GetInTouch = ({
                 onChange={(event) => updateField("phone", event.target.value)}
                 autoComplete="tel"
                 required
-                className="montserrat h-12 w-full rounded-[17px] border-none bg-[#f6efd7] px-4 text-[0.96rem] text-[#4e5e52] placeholder:text-[#9aa299] focus:outline-none sm:h-[52px] sm:px-5 sm:text-[1rem] lg:px-6"
+                className="dm-sans h-12 w-full rounded-[17px] border-none bg-[#f6efd7] px-4 text-[0.96rem] text-[#4e5e52] placeholder:text-[#9aa299] focus:outline-none sm:h-[52px] sm:px-5 sm:text-[1rem] lg:px-6"
               />
             </div>
 
@@ -238,14 +238,14 @@ const GetInTouch = ({
               value={formState.message}
               onChange={(event) => updateField("message", event.target.value)}
               required
-              className="montserrat min-h-[140px] w-full resize-none rounded-[17px] border-none bg-[#f6efd7] px-4 py-4 text-[0.96rem] text-[#4e5e52] placeholder:text-[#9aa299] focus:outline-none sm:min-h-[150px] sm:px-5 sm:py-5 sm:text-[1rem] lg:px-6"
+              className="dm-sans min-h-[140px] w-full resize-none rounded-[17px] border-none bg-[#f6efd7] px-4 py-4 text-[0.96rem] text-[#4e5e52] placeholder:text-[#9aa299] focus:outline-none sm:min-h-[150px] sm:px-5 sm:py-5 sm:text-[1rem] lg:px-6"
             />
 
             <label className="flex items-start gap-3 text-[#526356]">
               <span className="mt-[2px] flex h-[24px] w-[24px] shrink-0 items-center justify-center rounded-[7px] bg-[#078c52] text-[#f6efd7] sm:h-[26px] sm:w-[26px]">
                 <FaCheck className="h-4 w-4" />
               </span>
-              <span className="montserrat max-w-[510px] text-[0.8rem] leading-[1.45] sm:text-[0.9rem] md:text-[0.94rem]">
+              <span className="dm-sans max-w-[510px] text-[0.8rem] leading-[1.45] sm:text-[0.9rem] md:text-[0.94rem]">
                 By submitting this form, you agree to be contacted via phone or email regarding your publishing inquiry. We respect your privacy and will never share your details with third parties.
               </span>
             </label>
@@ -253,7 +253,7 @@ const GetInTouch = ({
             <button
               type="submit"
               disabled={isSubmitting}
-              className="montserrat inline-flex h-12 w-full items-center justify-center rounded-[8px] bg-[#078c52] px-6 text-[1rem] font-medium text-[#f6efd7] transition hover:opacity-95 sm:w-auto sm:min-w-[190px] sm:text-[1.15rem] lg:h-[50px] lg:text-[1.3rem]"
+              className="dm-sans inline-flex h-12 w-full items-center justify-center rounded-[8px] bg-[#078c52] px-6 text-[1rem] font-medium text-[#f6efd7] transition hover:opacity-95 sm:w-auto sm:min-w-[190px] sm:text-[1.15rem] lg:h-[50px] lg:text-[1.3rem]"
             >
               {isSubmitting ? "Sending..." : ctaText ?? "Let's Build Your Book"}
             </button>
@@ -261,7 +261,7 @@ const GetInTouch = ({
             {submitStatus ? (
               <p
                 aria-live="polite"
-                className={`montserrat text-sm ${
+                className={`dm-sans text-sm ${
                   submitStatus.type === "success"
                     ? "text-[#0c6a3f]"
                     : "text-[#a12a2a]"

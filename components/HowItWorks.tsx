@@ -87,10 +87,10 @@ const StepCardBlock = ({
     className={`relative flex h-[320px] w-[242px] flex-col items-center rounded-[18px] bg-[#0a9654] px-5 pb-5 pt-8 text-center text-[#f7f1d7] shadow-none ${className}`}
   >
     <div className="absolute left-1/2 top-3 h-7 w-7 -translate-x-1/2 rounded-full border-[4px] border-[#f3c423] bg-[#f7f1d7]" />
-    <h3 className="montserrat mt-4 text-[0.96rem] font-bold leading-[1.08] text-[#f3c423]">
+    <h3 className="dm-sans mt-4 text-[0.96rem] font-bold leading-[1.08] text-[#f3c423]">
       {step.id}. {step.title}
     </h3>
-    <p className="montserrat mt-4 text-[0.8rem] leading-[1.1] text-[#f7f1d7]">
+    <p className="dm-sans mt-4 text-[0.8rem] leading-[1.1] text-[#f7f1d7]">
       {step.body}
     </p>
   </article>
@@ -103,7 +103,7 @@ const HowItWorks = () => {
   return (
     <section className="overflow-x-hidden bg-[#EBE5CC] px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
       <div className="mx-auto max-w-[1320px]">
-        <p className="montserrat pb-4 text-center text-lg font-semibold italic sm:text-lg md:text-xl lg:text-2xl">
+        <p className="dm-sans pb-4 text-center text-lg font-semibold italic sm:text-lg md:text-xl lg:text-2xl">
           How It Works
         </p>
         <h2 className="goneva mx-auto max-w-[17ch] text-center text-[2.2rem] leading-[1.02] text-[#018752] sm:max-w-[18ch] sm:text-[2.75rem] md:max-w-[20ch] md:text-[3rem] lg:max-w-[27ch] lg:text-[3.2rem]">

@@ -136,13 +136,13 @@ const Testimonials = () => {
     <section className="bg-[#f7f0d7] px-4 pb-14 pt-16 sm:px-6 sm:pb-16 sm:pt-20 lg:px-8 lg:pb-20 lg:pt-24">
       <div className="mx-auto max-w-[1480px]">
         <div className="mx-auto max-w-[1040px] text-center">
-          <p className="montserrat text-[1.35rem] font-semibold italic text-[#2d2d2d] sm:text-[1.55rem]">
+          <p className="dm-sans text-[1.35rem] font-semibold italic text-[#2d2d2d] sm:text-[1.55rem]">
             What our authors say
           </p>
           <h2 className="goneva mt-3 text-[2rem] leading-none text-[#078c52] sm:text-[2.55rem] lg:text-[3rem]">
             Real stories from real Australian authors
           </h2>
-          <p className="montserrat mx-auto mt-4 max-w-[880px] text-[0.95rem] leading-[1.25] text-[#4e4b43] sm:text-[1.02rem]">
+          <p className="dm-sans mx-auto mt-4 max-w-[880px] text-[0.95rem] leading-[1.25] text-[#4e4b43] sm:text-[1.02rem]">
           </p>
         </div>
 
@@ -166,15 +166,15 @@ const Testimonials = () => {
               >
                 <StarRow />
 
-                <p className="montserrat mt-8 max-w-[320px] text-[0.86rem] leading-[1.45] text-[#7b7a78] sm:max-w-[340px] sm:text-[0.92rem]">
+                <p className="dm-sans mt-8 max-w-[320px] text-[0.86rem] leading-[1.45] text-[#7b7a78] sm:max-w-[340px] sm:text-[0.92rem]">
                   {testimonial.body}
                 </p>
 
                 <div className="mt-auto pt-8">
-                  <h3 className="montserrat text-[0.95rem] font-bold text-[#111111]">
+                  <h3 className="dm-sans text-[0.95rem] font-bold text-[#111111]">
                     {testimonial.name}
                   </h3>
-                  <p className="montserrat mt-[2px] text-[0.62rem] text-[#7d7a74]">
+                  <p className="dm-sans mt-[2px] text-[0.62rem] text-[#7d7a74]">
                     {testimonial.location}
                   </p>
                 </div>

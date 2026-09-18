@@ -20,7 +20,7 @@ const LookingForSelfPublishing = () => {
           />
         </div>
 
-        <div className="montserrat mt-8 w-full max-w-none space-y-4 text-[1rem] leading-[1.35] text-[#2e2d28] sm:text-[1.02rem] sm:leading-[1.4] md:text-[1.05rem] md:leading-[1.45]">
+        <div className="dm-sans mt-8 w-full max-w-none space-y-4 text-[1rem] leading-[1.35] text-[#2e2d28] sm:text-[1.02rem] sm:leading-[1.4] md:text-[1.05rem] md:leading-[1.45]">
           <p>
             Crux Publishing House was created around one simple belief: that good stories shouldn't stay locked inside the person who lived them. We've walked alongside hundreds of authors across Australia and around the world, helping them move from scattered notes and rough drafts to polished, professionally published books that genuinely connect with readers. Not because those authors were extraordinary. Because they showed up, and we did the rest.
           </p>
@@ -53,7 +53,7 @@ const LookingForSelfPublishing = () => {
             Looking for a Self Publishing Company in Australia That Actually Delivers?
           </h2>
 
-          <div className="montserrat mt-7 w-full max-w-none space-y-4 text-[1.05rem] leading-[1.18] text-[#2e2d28]">
+          <div className="dm-sans mt-7 w-full max-w-none space-y-4 text-[1.05rem] leading-[1.18] text-[#2e2d28]">
             <p>
             Crux Publishing House was created around one simple belief: that good stories shouldn't stay locked inside the person who lived them. We've walked alongside hundreds of authors across Australia and around the world, helping them move from scattered notes and rough drafts to polished, professionally published books that genuinely connect with readers. Not because those authors were extraordinary. Because they showed up, and we did the rest.
           </p>

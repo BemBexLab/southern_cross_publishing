@@ -74,7 +74,7 @@ const Footer = () => {
             </Link>
 
             <p
-              className="montserrat mt-7 w-full max-w-[650px] text-base leading-[1.2] sm:text-lg sm:leading-[1.16]"
+              className="dm-sans mt-7 w-full max-w-[650px] text-base leading-[1.2] sm:text-lg sm:leading-[1.16]"
               style={{ color: "#a8a196" }}
             >
               Australia's reliable self-publishing partner. We help Australians
@@ -85,7 +85,7 @@ const Footer = () => {
           </div>
 
           <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:ml-auto lg:grid-cols-2 lg:gap-x-[34px] lg:gap-y-10 xl:grid-cols-3 xl:gap-y-0">
-            <nav className="montserrat min-w-0">
+            <nav className="dm-sans min-w-0">
               <h3
                 className="text-[1.12rem] font-medium"
                 style={{ color: "#d6af21" }}
@@ -108,7 +108,7 @@ const Footer = () => {
               </div>
             </nav>
 
-            <nav className="montserrat min-w-0">
+            <nav className="dm-sans min-w-0">
               <h3
                 className="text-[1.12rem] font-medium"
                 style={{ color: "#d6af21" }}
@@ -131,7 +131,7 @@ const Footer = () => {
               </div>
             </nav>
 
-            <nav className="montserrat min-w-0 sm:col-span-2 lg:col-span-2 xl:col-span-1">
+            <nav className="dm-sans min-w-0 sm:col-span-2 lg:col-span-2 xl:col-span-1">
               <h3
                 className="text-[1.12rem] font-medium"
                 style={{ color: "#d6af21" }}
@@ -168,7 +168,7 @@ const Footer = () => {
         />
 
         <div
-          className="montserrat mt-8 flex flex-col gap-4 text-[0.97rem] sm:gap-5 lg:flex-row lg:items-center lg:justify-between"
+          className="dm-sans mt-8 flex flex-col gap-4 text-[0.97rem] sm:gap-5 lg:flex-row lg:items-center lg:justify-between"
           style={{ color: "#a8a196" }}
         >
           <p>Copyright © 2026. Crux Publishing House. All rights reserved.</p>

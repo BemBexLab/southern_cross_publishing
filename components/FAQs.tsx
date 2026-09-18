@@ -113,7 +113,7 @@ const FAQs = ({
           </span>
 
           <span
-            className={`montserrat block text-[1.06rem] font-semibold leading-[1.2] tracking-[-0.01em] sm:text-[1.1rem] ${
+            className={`dm-sans block text-[1.06rem] font-semibold leading-[1.2] tracking-[-0.01em] sm:text-[1.1rem] ${
               isOpen ? "text-[#018752]" : "text-[#242424]"
             }`}
           >
@@ -122,7 +122,7 @@ const FAQs = ({
         </button>
 
         {isOpen ? (
-          <p className="montserrat ml-[43px] mt-4 pr-1 text-[0.88rem] leading-[1.55] text-[#242424] sm:text-[0.91rem]">
+          <p className="dm-sans ml-[43px] mt-4 pr-1 text-[0.88rem] leading-[1.55] text-[#242424] sm:text-[0.91rem]">
             {item.answer}
           </p>
         ) : null}
@@ -134,7 +134,7 @@ const FAQs = ({
     <section className="bg-[#f7f1d7] px-4 pb-20 pt-14 sm:px-6 sm:pb-24 sm:pt-16 lg:px-8 lg:pb-28 lg:pt-20">
       <div className="mx-auto max-w-[1560px]">
         <div className="text-center">
-          <p className="montserrat text-xl font-semibold italic text-[#2d2d2d] sm:text-2xl">
+          <p className="dm-sans text-xl font-semibold italic text-[#2d2d2d] sm:text-2xl">
             {eyebrow}
           </p>
           <h2 className="goneva mt-3 text-[2rem] leading-none text-[#0d9b68] sm:text-[2.35rem] lg:text-[2.65rem]">

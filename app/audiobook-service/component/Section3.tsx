@@ -21,7 +21,7 @@ const Section3 = () => {
           {/* Right Side: Text Content */}
           <div className="w-full lg:flex-[1.05]">
             <div className="mb-8">
-              <h3 className="text-black italic font-semibold montserrat text-xl lg:text-2xl mb-4">
+              <h3 className="text-black italic font-semibold dm-sans text-xl lg:text-2xl mb-4">
                 Why It Matters
               </h3>
               <h2 className="text-[#FDD118] text-xl md:text-2xl lg:text-5xl goneva leading-[1.15] mb-8">
@@ -29,7 +29,7 @@ const Section3 = () => {
               </h2>
             </div>
 
-            <div className="space-y-6 text-white/90 montserrat text-lg md:text-lg leading-relaxed font-light">
+            <div className="space-y-6 text-white/90 dm-sans text-lg md:text-lg leading-relaxed font-light">
               <p>
                 The global audiobook market is growing rapidly, and Australian listeners are 
                 part of that shift. Platforms like Audible, Apple Books, Spotify, and Google Play 

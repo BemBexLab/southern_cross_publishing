@@ -92,7 +92,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="absolute inset-x-0 top-0 z-50 w-full bg-transparent px-3 montserrat sm:px-6 lg:px-8">
+    <nav className="absolute inset-x-0 top-0 z-50 w-full bg-transparent px-3 dm-sans sm:px-6 lg:px-8">
       <div className="w-full">
         <div className="flex h-18 w-full items-center justify-between gap-3 sm:h-22 lg:h-28">
           <Link href="/" className="flex min-w-0 flex-shrink items-center">

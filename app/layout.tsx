@@ -21,11 +21,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const montserrat = localFont({
-  src: "../public/fonts/Montserrat/static/Montserrat-Regular.ttf",
-  variable: "--font-montserrat",
-});
-
 const goneva = localFont({
   src: "../public/fonts/goneva-font/GonevaRegular-ovd1z.ttf",
   variable: "--font-goneva",
@@ -64,8 +59,20 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} ${goneva.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${goneva.variable} h-full antialiased`}
     >
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        />
+      </head>
       <body className="min-h-full flex flex-col">
         <NavBar />
         {children}

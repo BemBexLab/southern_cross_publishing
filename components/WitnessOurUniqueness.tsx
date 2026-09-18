@@ -69,13 +69,13 @@ export const ServiceCard: React.FC<WitnessServiceCard> = ({ iconSrc, title, desc
         {renderServiceIcon(iconSrc)}
       </div>
 
-      <h3 className={`mb-5 text-lg montserrat font-bold leading-snug transition-colors duration-300 ${isDark ? 'text-[#e8e4d9] group-hover:text-[#e8e4d9]' : 'text-[#1e2620] group-hover:text-[#e8e4d9]'}`}>
+      <h3 className={`mb-5 text-lg dm-sans font-bold leading-snug transition-colors duration-300 ${isDark ? 'text-[#e8e4d9] group-hover:text-[#e8e4d9]' : 'text-[#1e2620] group-hover:text-[#e8e4d9]'}`}>
         {title}
       </h3>
 
       {description ? (
         <p
-          className={`mx-auto max-w-full montserrat text-sm leading-relaxed transition-colors duration-300 ${
+          className={`mx-auto max-w-full dm-sans text-sm leading-relaxed transition-colors duration-300 ${
             hasLongDescription
               ? 'max-h-[9.75rem] overflow-y-auto pr-2 [scrollbar-color:rgba(7,140,82,0.7)_transparent] [scrollbar-width:thin] [&::-webkit-scrollbar]:w-[4px] [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-[#078c52]/70 [&::-webkit-scrollbar-track]:bg-transparent'
               : ''
@@ -159,7 +159,7 @@ const WitnessOurUniqueness: React.FC<WitnessOurUniquenessProps> = ({
   return (
     <section className={sectionClassName}>
       <div className={containerClassName}>
-        <p className='text-2xl italic montserrat font-semibold text-center mb-4'>{eyebrow}</p>
+        <p className='text-2xl italic dm-sans font-semibold text-center mb-4'>{eyebrow}</p>
         <h2 className='text-5xl goneva text-center text-[#018752]'>
           {title}
         </h2>

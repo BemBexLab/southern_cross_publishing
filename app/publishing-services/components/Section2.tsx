@@ -27,7 +27,7 @@ const Section2 = () => {
               Professional Book Publishing Services in Australia
             </h2>
             
-            <div className="montserrat py-5 text-[15px] font-normal leading-7 text-[#1F1F1F] sm:text-base md:py-6 md:text-lg md:leading-8">
+            <div className="dm-sans py-5 text-[15px] font-normal leading-7 text-[#1F1F1F] sm:text-base md:py-6 md:text-lg md:leading-8">
               <p>
                 If you have been searching for reliable book publishing services in Australia, Crux Publishing House brings everything your book needs under one roof. Whether you are a first time author figuring out how to publish a book, or an experienced writer who needs professional ghostwriting, developmental editing, proofreading, custom book cover design, or worldwide distribution, our team manages every stage of the publishing process so your book reaches the right readers, on the right platforms, at the right time.
               </p>

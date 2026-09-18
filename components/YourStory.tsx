@@ -26,7 +26,7 @@ const YourStory = () => {
             into a reality too, along with 1000 authors
           </h2>
 
-          <div className="montserrat mt-8 max-w-[760px] space-y-4 text-[1rem] leading-[1.55] text-white/92 sm:text-[1.05rem] sm:leading-[1.6] md:text-[1.08rem] md:leading-[1.65] lg:mt-10 lg:text-[1.1rem] lg:leading-[1.7]">
+          <div className="dm-sans mt-8 max-w-[760px] space-y-4 text-[1rem] leading-[1.55] text-white/92 sm:text-[1.05rem] sm:leading-[1.6] md:text-[1.08rem] md:leading-[1.65] lg:mt-10 lg:text-[1.1rem] lg:leading-[1.7]">
             {storyParagraphs.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
