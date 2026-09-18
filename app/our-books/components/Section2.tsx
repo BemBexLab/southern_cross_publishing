@@ -61,6 +61,9 @@ const Section2 = () => {
                 alt={book.title}
                 fill
                 className="rounded-sm object-cover"
+                sizes="(max-width: 640px) 200px, (max-width: 1024px) 200px, 200px"
+                loading="eager"
+                unoptimized
               />
             </div>
             <p className="max-w-[200px] text-center text-sm font-semibold text-[#1A3C34] md:text-base">

@@ -18,48 +18,37 @@ export interface WitnessOurUniquenessProps {
 
 const renderServiceIcon = (iconSrc: WitnessServiceCard['iconSrc']) => {
   if (typeof iconSrc === 'string') {
-    return iconSrc
+    return <span className="text-3xl sm:text-[40px] leading-none">{iconSrc}</span>
   }
-
-  if (!React.isValidElement(iconSrc)) {
-    return iconSrc
-  }
-
-  if (typeof iconSrc.type === 'string' && iconSrc.type === 'svg') {
-    return (
-      <div className='[&_path]:fill-current'>
-        {iconSrc}
-      </div>
-    )
-  }
-
-  const iconElement = iconSrc as React.ReactElement<{ className?: string }>
-
-  return React.cloneElement(iconElement, {
-    className: [iconElement.props.className, 'h-10 w-10 shrink-0'].filter(Boolean).join(' '),
-  })
+  // For React elements (including Fragments containing SVGs), 
+  // the parent container's [&_svg] classes will cleanly handle sizing and styling.
+  return iconSrc
 }
 
 export const ServiceCard: React.FC<WitnessServiceCard> = ({ iconSrc, title, description, variant }) => {
   const isDark = variant === 'dark'
-  const hasLongDescription = Boolean(description && description.length > 387)
+  // Lowered threshold slightly to ensure mobile screens get the scrollable area before text gets too dense
+  const hasLongDescription = Boolean(description && description.length > 300)
 
   return (
     <div
       className={`
         group flex flex-col items-center rounded-2xl border border-[#d0cec4]
-        bg-transparent p-8 text-center text-[#2c2c2c]
+        bg-transparent p-6 text-center text-[#2c2c2c]
         transition-all duration-300 hover:-translate-y-1 hover:bg-[#1e2620] hover:text-[#e8e4d9]
+        sm:p-8
       `}
     >
       <div
         className={`
-          mb-8 flex h-20 w-20 items-center justify-center rounded-xl text-[40px] leading-none text-white
+          mb-6 sm:mb-8 flex h-16 w-16 sm:h-20 sm:w-20 items-center justify-center rounded-xl text-3xl sm:text-[40px] leading-none text-white
           transition-colors duration-300
           group-hover:text-black
           [&_svg]:block
-          [&_svg]:h-10
-          [&_svg]:w-10
+          [&_svg]:!h-8
+          [&_svg]:!w-8
+          sm:[&_svg]:!h-10
+          sm:[&_svg]:!w-10
           [&_svg]:shrink-0
           [&_svg]:fill-current
           [&_svg]:stroke-current
@@ -69,15 +58,15 @@ export const ServiceCard: React.FC<WitnessServiceCard> = ({ iconSrc, title, desc
         {renderServiceIcon(iconSrc)}
       </div>
 
-      <h3 className={`mb-5 text-lg dm-sans font-bold leading-snug transition-colors duration-300 ${isDark ? 'text-[#e8e4d9] group-hover:text-[#e8e4d9]' : 'text-[#1e2620] group-hover:text-[#e8e4d9]'}`}>
+      <h3 className={`mb-4 sm:mb-5 text-base sm:text-lg dm-sans font-bold leading-snug transition-colors duration-300 ${isDark ? 'text-[#e8e4d9] group-hover:text-[#e8e4d9]' : 'text-[#1e2620] group-hover:text-[#e8e4d9]'}`}>
         {title}
       </h3>
 
       {description ? (
         <p
-          className={`mx-auto max-w-full dm-sans text-sm leading-relaxed transition-colors duration-300 ${
+          className={`mx-auto max-w-full dm-sans text-sm sm:text-base leading-relaxed transition-colors duration-300 ${
             hasLongDescription
-              ? 'max-h-[9.75rem] overflow-y-auto pr-2 [scrollbar-color:rgba(7,140,82,0.7)_transparent] [scrollbar-width:thin] [&::-webkit-scrollbar]:w-[4px] [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-[#078c52]/70 [&::-webkit-scrollbar-track]:bg-transparent'
+              ? 'max-h-[10rem] sm:max-h-[12rem] overflow-y-auto pr-2 [scrollbar-color:rgba(7,140,82,0.7)_transparent] [scrollbar-width:thin] [&::-webkit-scrollbar]:w-[4px] [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-[#078c52]/70 [&::-webkit-scrollbar-track]:bg-transparent'
               : ''
           } ${isDark ? 'text-[#b5b09f] group-hover:text-[#b5b09f]' : 'text-[#4a4a42] group-hover:text-[#b5b09f]'}`}
         >
@@ -152,15 +141,15 @@ const WitnessOurUniqueness: React.FC<WitnessOurUniquenessProps> = ({
   eyebrow,
   title,
   services,
-  sectionClassName = 'relative z-0 bg-[#EBE5CC] px-4 py-10 sm:px-6 sm:py-14 lg:-mt-[220px] lg:px-8 lg:pb-20 lg:pt-[280px]',
-  containerClassName = 'mx-auto max-w-[1460px]',
-  gridClassName = 'mt-10 grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-10',
+  sectionClassName = 'relative z-0 bg-[#EBE5CC] px-4 py-12 sm:px-6 sm:py-16 lg:-mt-[220px] lg:px-8 lg:pb-20 lg:pt-[280px]',
+  containerClassName = 'mx-auto max-w-[1460px] w-full',
+  gridClassName = 'mt-8 sm:mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10',
 }) => {
   return (
     <section className={sectionClassName}>
       <div className={containerClassName}>
-        <p className='text-2xl italic dm-sans font-semibold text-center mb-4'>{eyebrow}</p>
-        <h2 className='text-5xl goneva text-center text-[#018752]'>
+        <p className='text-lg sm:text-xl md:text-2xl italic dm-sans font-semibold text-center mb-4 px-2 sm:px-4'>{eyebrow}</p>
+        <h2 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl goneva text-center text-[#018752] px-2 sm:px-4'>
           {title}
         </h2>
         <div className={gridClassName}>

@@ -34,11 +34,11 @@ const socials = [
     href: "https://www.facebook.com/",
     icon: <FaFacebookF className="h-[14px] w-[14px]" />,
   },
-  {
-    label: "Twitter",
-    href: "https://x.com/",
-    icon: <FaTwitter className="h-[14px] w-[14px]" />,
-  },
+  // {
+  //   label: "Twitter",
+  //   href: "https://x.com/",
+  //   icon: <FaTwitter className="h-[14px] w-[14px]" />,
+  // },
   {
     label: "Instagram",
     href: "https://www.instagram.com/",

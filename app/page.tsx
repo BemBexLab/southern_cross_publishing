@@ -115,9 +115,7 @@ export default function Home() {
       <MotionSection delay={0.03}>
         <YourStory />
       </MotionSection>
-      <MotionSection delay={0.04}>
-        <OurBook />
-      </MotionSection>
+      <OurBook />
       <MotionSection delay={0.04}>
         <AtSouthernCross
           eyebrow="At Crux Publishing House, we do it right"
