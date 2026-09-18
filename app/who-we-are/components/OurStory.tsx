@@ -18,7 +18,7 @@ type OurStoryProps = {
 };
 
 export const defaultOurStoryParagraphs = [
-  "Southern Cross Publishing was born from a simple but deeply held belief: every person with a story worth telling deserves access to professional publishing.",
+  "Crux Publishing House was born from a simple but deeply held belief: every person with a story worth telling deserves access to professional publishing.",
   "We're proudly Australian. We understand the Australian reader, the Australian market, and what it takes to make a book succeed locally and globally. But we've always had our eyes on the wider world, because great stories don't stop at borders. Our work spans ghostwriting, professional book editing, cover design, ISBN registration, Amazon A+ content optimisation, global distribution across 40+ platforms, and full audiobook production.",
 ];
 

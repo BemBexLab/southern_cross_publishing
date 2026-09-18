@@ -22,7 +22,7 @@ const LookingForSelfPublishing = () => {
 
         <div className="montserrat mt-8 w-full max-w-none space-y-4 text-[1rem] leading-[1.35] text-[#2e2d28] sm:text-[1.02rem] sm:leading-[1.4] md:text-[1.05rem] md:leading-[1.45]">
           <p>
-            Southern Cross Publishing was created around one simple belief: that good stories shouldn't stay locked inside the person who lived them. We've walked alongside hundreds of authors across Australia and around the world, helping them move from scattered notes and rough drafts to polished, professionally published books that genuinely connect with readers. Not because those authors were extraordinary. Because they showed up, and we did the rest.
+            Crux Publishing House was created around one simple belief: that good stories shouldn't stay locked inside the person who lived them. We've walked alongside hundreds of authors across Australia and around the world, helping them move from scattered notes and rough drafts to polished, professionally published books that genuinely connect with readers. Not because those authors were extraordinary. Because they showed up, and we did the rest.
           </p>
           <p>
             What we offer isn't just a service. It's a partnership. From the moment you reach out, you have a dedicated team in your corner, people who care about your book almost as much as you do. We take care of the manufacturing, the design, formatting, distribution, and marketing, so your only job is to trust the process and stay excited about what you're creating.
@@ -31,7 +31,7 @@ const LookingForSelfPublishing = () => {
             The authors who publish are no different from the ones who don't, except that they made the call. If your story has been waiting long enough, this is the sign you were looking for.
           </p>
           <p>
-            Reach out to Southern Cross Publishing, and let's get your book written, built, and out into the world.
+            Reach out to Crux Publishing House, and let's get your book written, built, and out into the world.
           </p>
         </div>
       </div>
@@ -55,7 +55,7 @@ const LookingForSelfPublishing = () => {
 
           <div className="montserrat mt-7 w-full max-w-none space-y-4 text-[1.05rem] leading-[1.18] text-[#2e2d28]">
             <p>
-            Southern Cross Publishing was created around one simple belief: that good stories shouldn't stay locked inside the person who lived them. We've walked alongside hundreds of authors across Australia and around the world, helping them move from scattered notes and rough drafts to polished, professionally published books that genuinely connect with readers. Not because those authors were extraordinary. Because they showed up, and we did the rest.
+            Crux Publishing House was created around one simple belief: that good stories shouldn't stay locked inside the person who lived them. We've walked alongside hundreds of authors across Australia and around the world, helping them move from scattered notes and rough drafts to polished, professionally published books that genuinely connect with readers. Not because those authors were extraordinary. Because they showed up, and we did the rest.
           </p>
           <p>
             What we offer isn't just a service. It's a partnership. From the moment you reach out, you have a dedicated team in your corner, people who care about your book almost as much as you do. We take care of the manufacturing, the design, formatting, distribution, and marketing, so your only job is to trust the process and stay excited about what you're creating.
@@ -64,7 +64,7 @@ const LookingForSelfPublishing = () => {
             The authors who publish are no different from the ones who don't, except that they made the call. If your story has been waiting long enough, this is the sign you were looking for.
           </p>
           <p>
-            Reach out to Southern Cross Publishing, and let's get your book written, built, and out into the world.
+            Reach out to Crux Publishing House, and let's get your book written, built, and out into the world.
           </p>
           </div>
         </div>

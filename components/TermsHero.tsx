@@ -16,7 +16,7 @@ export default function TermsHero({
         <div className="items-center">
           <div className="max-w-3xl">
             <span className="montserrat inline-flex items-center rounded-full border border-[#018752]/15 bg-white/85 px-4 py-2 text-[0.72rem] font-bold uppercase tracking-[0.22em] text-[#018752] shadow-[0_10px_30px_rgba(1,135,82,0.08)]">
-              Southern Cross Publishing
+              Crux Publishing House
             </span>
 
             <h1 className="goneva mt-6 text-4xl leading-[0.95] text-white sm:text-5xl lg:text-7xl">

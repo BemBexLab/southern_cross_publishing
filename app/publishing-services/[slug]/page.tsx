@@ -34,7 +34,7 @@ export async function generateMetadata(
       title,
       description: pageData.seoDescription,
       url: `/publishing-services/${pageData.slug}`,
-      siteName: "Southern Cross Publishing",
+      siteName: "Crux Publishing House",
       locale: "en_AU",
       type: "website",
     },

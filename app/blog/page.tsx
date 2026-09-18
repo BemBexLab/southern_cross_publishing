@@ -13,7 +13,7 @@ export const revalidate = 300;
 export const metadata: Metadata = createPageMetadata({
   title: "Publishing Blog",
   description:
-    "Read publishing advice, author guidance, and book marketing insights from Southern Cross Publishing.",
+    "Read publishing advice, author guidance, and book marketing insights from Crux Publishing House.",
   path: "/blog",
 });
 

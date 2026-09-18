@@ -62,14 +62,14 @@ const Footer = () => {
           <div className="w-full">
             <Link href="/">
               <div
-                aria-label="Southern Cross Publishing"
+                aria-label="Crux Publishing House"
                 className="h-[72px] w-full max-w-[745px] bg-left bg-no-repeat sm:h-[84px] lg:h-[100px]"
                 style={{
                   backgroundImage: "url('/navbar/Logos options-08 2.svg')",
                   backgroundSize: "contain",
                 }}
               >
-                <span className="sr-only">Southern Cross Publishing</span>
+                <span className="sr-only">Crux Publishing House</span>
               </div>
             </Link>
 
@@ -171,7 +171,7 @@ const Footer = () => {
           className="montserrat mt-8 flex flex-col gap-4 text-[0.97rem] sm:gap-5 lg:flex-row lg:items-center lg:justify-between"
           style={{ color: "#a8a196" }}
         >
-          <p>Copyright © 2026. Southern Cross Publishing. All rights reserved.</p>
+          <p>Copyright © 2026. Crux Publishing House. All rights reserved.</p>
 
           <div
             className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-6 lg:justify-end lg:text-right"

@@ -28,7 +28,7 @@ export const defaultFaqItems: FAQItem[] = [
   {
     question: "Do I keep ownership of my book after you publish it?",
     answer:
-      "Completely. You retain 100% ownership of your manuscript, your cover design, and all rights to your work. Publishing with Southern Cross Publishing is a service, not a rights agreement. Every royalty your book earns belongs to you, and every creative decision stays yours from start to finish.",
+      "Completely. You retain 100% ownership of your manuscript, your cover design, and all rights to your work. Publishing with Crux Publishing House is a service, not a rights agreement. Every royalty your book earns belongs to you, and every creative decision stays yours from start to finish.",
   },
   {
     question:

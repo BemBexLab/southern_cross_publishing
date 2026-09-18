@@ -135,7 +135,7 @@ const ComprehensivePublishing = () => {
             one, and it, of course, deserves to be protected.
           </p>
           <p>
-            At Southern Cross Publishing, we have created our complete process
+            At Crux Publishing House, we have created our complete process
             around keeping that feeling alive, from your very first
             conversation with us to the day your book lands in a reader&apos;s
             hands.

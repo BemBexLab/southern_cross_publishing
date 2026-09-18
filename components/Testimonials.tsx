@@ -7,12 +7,12 @@ const testimonials = [
   {
     name: "Margaret Ronald",
     location: "Chicago",
-    body: "I came to Southern Cross with nothing but a Word document full of an incomplete manuscript. They made a published book from a half-finished book, which I am genuinely proud of. The editing team was thorough without stripping away my voice, which meant everything to me.",
+    body: "I came to Crux Publishing House with nothing but a Word document full of an incomplete manuscript. They made a published book from a half-finished book, which I am genuinely proud of. The editing team was thorough without stripping away my voice, which meant everything to me.",
   },
   {
     name: "James Tucker",
     location: "New York",
-    body: "The Southern Cross Publishing team handled all the technicalities of my book from cover design to Amazon listing. My book is now on 40 platforms, and I didn't have to figure any of it out myself. If you are serious about publishing, this is the team you want.",
+    body: "The Crux Publishing House team handled all the technicalities of my book from cover design to Amazon listing. My book is now on 40 platforms, and I didn't have to figure any of it out myself. If you are serious about publishing, this is the team you want.",
   },
   {
     name: "Sandra Chandler",

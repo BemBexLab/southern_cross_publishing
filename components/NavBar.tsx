@@ -50,8 +50,8 @@ export default function Navbar() {
     pathname === "/contact" ||
     isBlogRoute;
   const logoSrc = useDarkNavLinks
-    ? "/image (2).png"
-    : "/image (1).png";
+    ? "/image (1).png"
+    : "/image (2).png";
   const menuToggleTone = useDarkNavLinks ? "bg-black" : "bg-white";
   const desktopLinkTone = useDarkNavLinks
     ? "text-black/75 hover:text-black"
@@ -99,7 +99,7 @@ export default function Navbar() {
             <div className="relative mt-1 h-10 w-28 min-w-[7rem] sm:h-12 sm:w-40 md:h-14 md:w-44 lg:h-16 lg:w-56 xl:h-[75px] xl:w-[290px]">
             <Image
               src={logoSrc}
-              alt="Southern Cross Publishing Logo"
+              alt="Crux Publishing House Logo"
               fill
               className="object-contain object-left"
               priority

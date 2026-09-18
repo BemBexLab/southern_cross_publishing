@@ -2,7 +2,7 @@ import React from "react";
 
 const storyParagraphs = [
   "Publishing your first book should feel like a milestone, not a maze. We know that the moment you decide to write, something shifts. Suddenly, the idea that once felt private becomes something you want the world to see. That excitement is real, and it deserves to be protected.",
-  "At Southern Cross Publishing, weve created our complete process around keeping that feeling alive, from your very first conversation with us to the day your book lands in a reader's hands.",
+  "At Crux Publishing House, weve created our complete process around keeping that feeling alive, from your very first conversation with us to the day your book lands in a reader's hands.",
   "We do a lot more than just publishing books; we make them with care. Our network of experienced writers, editors, illustrators, and publishing specialists works closely with every author we take on, because no two stories are the same and no two authors need the same kind of support.",
   "No matter if you come to us with a finished draft or a single sentence of an idea, we meet you exactly where you are and walk the rest of the road with you.",
   "Your words were always worth reading. We are just here to make sure the right people find them.",

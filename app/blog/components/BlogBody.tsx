@@ -151,7 +151,7 @@ const BlogBody = ({ posts }: BlogBodyProps) => {
                       ) : (
                         <div className="flex h-full w-full items-center justify-center bg-[radial-gradient(circle_at_top,#e7f8cc,transparent_60%),linear-gradient(135deg,#e6efc5,#d8d0a4)] p-6 text-center">
                           <p className="goneva text-2xl leading-tight text-[#018752]">
-                            Southern Cross Publishing Blog
+                            Crux Publishing House Blog
                           </p>
                         </div>
                       )}

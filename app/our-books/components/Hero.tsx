@@ -180,7 +180,7 @@ const Hero = () => {
             Our self publishing services cover ghostwriting, professional book editing and proofreading,
             custom book cover design, interior formatting, ISBN registration, Amazon A+ content optimisation,
             global distribution across 40+ platforms, and complete audiobook production.
-            Now, let Southern Cross take the hassle out of publishing
+            Now, let Crux Publishing House take the hassle out of publishing
           </p>
         </div>
       </section>

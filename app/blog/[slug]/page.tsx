@@ -23,7 +23,7 @@ export async function generateMetadata(
 
   if (!post) {
     return {
-      title: "Blog Post Not Found | Southern Cross Publishing",
+      title: "Blog Post Not Found | Crux Publishing House",
     };
   }
 
@@ -106,7 +106,7 @@ const page = async (props: PageProps<"/blog/[slug]">) => {
                   <div className="flex min-h-[280px] items-center justify-center bg-[radial-gradient(circle_at_top,#f2f6b5,transparent_58%),linear-gradient(135deg,#fff4d4,#efe4b8)] px-8 py-10 text-center">
                     <div>
                       <p className="montserrat text-xs font-semibold uppercase tracking-[0.24em] text-[#99831a]">
-                        Southern Cross Publishing
+                        Crux Publishing House
                       </p>
                       <p className="goneva mt-4 text-3xl leading-tight text-[#018752]">
                         Practical publishing guidance for authors building better books

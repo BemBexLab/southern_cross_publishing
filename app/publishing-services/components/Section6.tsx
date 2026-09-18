@@ -57,8 +57,8 @@ const Section6 = () => {
           </h2>
           <p className="text-[#1F1F1F] text-lg max-w-5xl mx-auto">
             Publishing a book involves far more steps than most people expect.
-            Below is a clear breakdown of every service Southern Cross
-            Publishing provides, so you know exactly what you are getting and
+            Below is a clear breakdown of every service Crux Publishing House
+            provides, so you know exactly what you are getting and
             what happens at each stage of your journey.
           </p>
         </div>

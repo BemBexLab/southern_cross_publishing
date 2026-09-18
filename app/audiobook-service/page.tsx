@@ -29,7 +29,7 @@ export default function Home() {
       <HeroSection
         bgImage="/audiobook-service/Service Section Hero Image 2 1.webp"
         title="Professional Audiobook Production Services in Australia"
-        description="Human narration, background scoring, and expert audio editing, everything your audiobook needs to compete on Audible, Apple Books, Spotify and beyond Audiobooks are one of the fastest growing formats in publishing today. Readers are listening on commutes, during workouts, before bed, and if your book is not available in audio, you are leaving a significant audience behind. Southern Cross Publishing handles the complete audiobook production process, from matching you with the right narrator to delivering a fully mastered, platform-ready audio file. You focus on your story. We handle everything that makes it listenable."
+        description="Human narration, background scoring, and expert audio editing, everything your audiobook needs to compete on Audible, Apple Books, Spotify and beyond Audiobooks are one of the fastest growing formats in publishing today. Readers are listening on commutes, during workouts, before bed, and if your book is not available in audio, you are leaving a significant audience behind. Crux Publishing House handles the complete audiobook production process, from matching you with the right narrator to delivering a fully mastered, platform-ready audio file. You focus on your story. We handle everything that makes it listenable."
         ctaText=" Get a Free Audiobook Quote"
         ctaHref="/contact"
       />
@@ -47,7 +47,7 @@ export default function Home() {
             title:
               "Professional Audiobook Narration: The Right Voice for Your Book",
             description:
-              "The narrator is the most important decision in audiobook production. The wrong voice — even a technically skilled one, can make a listener switch off within minutes. The right voice pulls them through every chapter without them noticing time passing. At Southern Cross Publishing, we match you with a professional narrator whose tone, pace, gender, and accent genuinely suit your genre and the emotional register of your book. Before full production begins, you receive sample readings from shortlisted narrators so you can hear how your words sound in their voice. You choose. We then manage the full recording process, chapter by chapter, with your manuscript as the guide — so every line is captured cleanly and consistently. We work with narrators experienced across every major genre, fiction, non-fiction, memoirs, biographies, self help, children's books, business guides, and health and wellness. Whether your book needs a warm conversational tone or a dramatic storytelling voice, we find the right match before a single word is recorded.",
+              "The narrator is the most important decision in audiobook production. The wrong voice — even a technically skilled one, can make a listener switch off within minutes. The right voice pulls them through every chapter without them noticing time passing. At Crux Publishing House, we match you with a professional narrator whose tone, pace, gender, and accent genuinely suit your genre and the emotional register of your book. Before full production begins, you receive sample readings from shortlisted narrators so you can hear how your words sound in their voice. You choose. We then manage the full recording process, chapter by chapter, with your manuscript as the guide — so every line is captured cleanly and consistently. We work with narrators experienced across every major genre, fiction, non-fiction, memoirs, biographies, self help, children's books, business guides, and health and wellness. Whether your book needs a warm conversational tone or a dramatic storytelling voice, we find the right match before a single word is recorded.",
             iconSrc: <FaMicrophone />,
             variant: "light",
           },
@@ -241,8 +241,8 @@ export default function Home() {
         title="Let us know if anything needed. Searching of any guidance from an expert?"
         subtitle="Have a conversation"
         paragraphs={[
-          "You have taken a step towards the journey of success in self-publishing but still have a lot to ask? And searching for an expert's guidance who can help you in bring your ideas, and voice to reality, but haven't found anyone, then you are at the right place. Southern Cross Publishing is for you.",
-          "Southern Cross Publishing provide a free discussion opportunity where you can clear your doubts, share your story ideas or concepts, and get the exploration trip to examine our services clearly and can find out how we can provide you with the best by turning your words into book form. So, let's take a step and join us today.",
+          "You have taken a step towards the journey of success in self-publishing but still have a lot to ask? And searching for an expert's guidance who can help you in bring your ideas, and voice to reality, but haven't found anyone, then you are at the right place. Crux Publishing House is for you.",
+          "Crux Publishing House provide a free discussion opportunity where you can clear your doubts, share your story ideas or concepts, and get the exploration trip to examine our services clearly and can find out how we can provide you with the best by turning your words into book form. So, let's take a step and join us today.",
         ]}
       />
       </MotionSection>

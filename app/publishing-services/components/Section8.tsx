@@ -12,7 +12,7 @@ const WhyChooseUs = () => {
     },
     {
       title: "You keep 100% of your rights and royalties",
-      desc: "Publishing with Southern Cross is a service agreement, not a rights agreement. Your manuscript, your cover, your content, and every royalty your book earns belong entirely to you, from the first draft to the final sale.",
+      desc: "Publishing with Crux Publishing House is a service agreement, not a rights agreement. Your manuscript, your cover, your content, and every royalty your book earns belong entirely to you, from the first draft to the final sale.",
     },
     {
       title: "Realistic timelines, honest communication",
@@ -48,7 +48,7 @@ const WhyChooseUs = () => {
                 Why Choose Us
               </h3>
               <h2 className="text-[#018752] text-xl md:text-xl lg:text-4xl goneva leading-[1.1]">
-                Why Australian Authors Choose Southern Cross Publishing Over Every Other Option
+                Why Australian Authors Choose Crux Publishing House Over Every Other Option
               </h2>
             </div>
 
@@ -68,7 +68,7 @@ const WhyChooseUs = () => {
               </p>
               <p>
                 <b>You keep 100% of your rights and royalties: </b> Publishing with
-                Southern Cross is a service agreement, not a rights agreement.
+                Crux Publishing House is a service agreement, not a rights agreement.
                 Your manuscript, your cover, your content, and every royalty
                 your book earns belong entirely to you, from the first draft to
                 the final sale.

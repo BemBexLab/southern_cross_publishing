@@ -32,7 +32,7 @@ const HomeHero = () => {
                 <Image
                   src="/home/Hero Image 1.webp"
                   fill
-                  alt="Illustration for Southern Cross Publishing"
+                  alt="Illustration for Crux Publishing House"
                   className="object-contain object-center drop-shadow-[0_20px_50px_rgba(0,0,0,0.35)]"
                   sizes="(max-width: 639px) 85vw, (max-width: 1023px) 60vw"
                   priority
@@ -45,7 +45,7 @@ const HomeHero = () => {
                 Australia's trusted self publishing company: ghostwriting, editing, design, distribution and marketing, all in one place
               </p>
               <p>
-                At Southern Cross Publishing, we assist you from writing to the final printed page. Are you holding a half finished manuscript, a voice note full of ideas, or a story you've carried for years? We are here to shape it into something the world will remember.
+                At Crux Publishing House, we assist you from writing to the final printed page. Are you holding a half finished manuscript, a voice note full of ideas, or a story you've carried for years? We are here to shape it into something the world will remember.
               </p>
               <p>
                 We are an Australian based company, and work with authors across every genre, every background, and every stage of the writing journey.
@@ -76,7 +76,7 @@ const HomeHero = () => {
               <Image
                 src="/home/Hero Image 1.webp"
                 fill
-                alt="Illustration for Southern Cross Publishing"
+                alt="Illustration for Crux Publishing House"
                 className="object-contain object-center drop-shadow-[0_20px_50px_rgba(0,0,0,0.35)]"
                 sizes="(max-width: 1279px) 45vw, (max-width: 1535px) 500px, 620px"
                 priority

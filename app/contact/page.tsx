@@ -5,9 +5,9 @@ import GetInTouch from "@/components/GetInTouch";
 import { createPageMetadata } from "../seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Contact Southern Cross Publishing",
+  title: "Contact Crux Publishing House",
   description:
-    "Contact Southern Cross Publishing to discuss your manuscript, publishing goals, audiobook production, or a free consultation with our team.",
+    "Contact Crux Publishing House to discuss your manuscript, publishing goals, audiobook production, or a free consultation with our team.",
   path: "/contact",
 });
 

@@ -74,8 +74,8 @@ const TermsContent = () => {
               Acceptance of Terms
             </h2>
             <p className="text-base leading-relaxed text-gray-500 sm:text-lg">
-              By accessing or using the services provided by Southern Cross
-              Publishing, you agree to be bound by these Terms and Conditions.
+              By accessing or using the services provided by Crux Publishing House,
+              you agree to be bound by these Terms and Conditions.
               If you do not agree with any part of these terms, you should not
               use our services.
             </p>
@@ -86,7 +86,7 @@ const TermsContent = () => {
               Scope of Services
             </h2>
             <p className="text-base leading-relaxed text-gray-500 sm:text-lg">
-              Southern Cross Publishing provides professional services related
+              Crux Publishing House provides professional services related
               to content creation, editing, publishing, and marketing. The
               exact scope of services is defined in individual agreements or
               proposals agreed upon between the Company and the client.
@@ -99,7 +99,7 @@ const TermsContent = () => {
             </h2>
             <p className="text-base leading-relaxed text-gray-500 sm:text-lg">
               All content created or provided by the client remains the
-              intellectual property of the client. Southern Cross Publishing
+              intellectual property of the client. Crux Publishing House
               does not claim ownership or royalties unless explicitly agreed
               upon in writing. We act solely as a service provider, assisting
               in the development, refinement, and distribution of your work.
@@ -144,7 +144,7 @@ const TermsContent = () => {
             <p className="text-base leading-relaxed text-gray-500 sm:text-lg">
               Clients are responsible for ensuring that all materials provided
               are accurate, lawful, and do not infringe upon any third-party
-              rights. Southern Cross Publishing shall not be held liable for
+              rights. Crux Publishing House shall not be held liable for
               any issues arising from content provided by the client.
             </p>
           </section>
@@ -155,7 +155,7 @@ const TermsContent = () => {
             </h2>
             <div className="space-y-4 text-base leading-relaxed text-gray-500 sm:text-lg">
               <p>
-                Southern Cross Publishing shall not be held responsible for any
+              Crux Publishing House shall not be held responsible for any
                 indirect, incidental, or consequential damages arising from the
                 use of our services. This includes, but is not limited to, loss
                 of profits, business opportunities, or market performance of
@@ -198,7 +198,7 @@ const TermsContent = () => {
               Modifications to Terms
             </h2>
             <p className="text-base leading-relaxed text-gray-500 sm:text-lg">
-              Southern Cross Publishing reserves the right to update these
+              Crux Publishing House reserves the right to update these
               Terms and Conditions at any time. Continued use of our services
               after any modifications constitutes acceptance of the updated
               terms.
@@ -227,7 +227,7 @@ const TermsContent = () => {
 
             <div className="mb-6 space-y-1 text-base text-gray-500 sm:text-lg">
               <p className="font-medium text-[#3E3E3E]">
-                <Link href="/" className="hover:underline">Southern Cross Publishing</Link>
+                <Link href="/" className="hover:underline">Crux Publishing House</Link>
               </p>
             </div>
 
@@ -250,7 +250,7 @@ const TermsContent = () => {
                 </div>
                 <span className="text-base text-gray-500 sm:text-lg">
                   <Link href="/" className="hover:underline">
-                    Southern Cross Publishing
+                    Crux Publishing House
                   </Link>
                 </span>
               </div> */}

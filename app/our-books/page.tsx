@@ -12,7 +12,7 @@ import { createPageMetadata } from "../seo";
 export const metadata: Metadata = createPageMetadata({
   title: "Our Books",
   description:
-    "Explore books published with Southern Cross Publishing, including author projects across fiction, non-fiction, memoirs, and more.",
+    "Explore books published with Crux Publishing House, including author projects across fiction, non-fiction, memoirs, and more.",
   path: "/our-books",
 });
 
@@ -44,7 +44,7 @@ export default function Home() {
       <MotionSection delay={0.04}>
         <ExpertNonFiction
           eyebrow="Expert Non-Fiction Book Writing Services"
-          title="Let Southern Cross take the hassle out of publishing, so you can focus on your story"
+          title="Let Crux Publishing House take the hassle out of publishing, so you can focus on your story"
           description="You wrote it. You lived it. Now, let us handle everything that comes after that. From the first edit to the final listing on Amazon, our team quietly takes care of the process while you stay focused on what matters: your words."
           ctaText="Get Your Free Publishing Quote Today"
           ctaHref="/contact"

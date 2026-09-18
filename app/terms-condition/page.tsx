@@ -7,7 +7,7 @@ import { createPageMetadata } from "../seo";
 export const metadata: Metadata = createPageMetadata({
   title: "Terms and Conditions",
   description:
-    "Review the Southern Cross Publishing terms and conditions for using our website and publishing services.",
+    "Review the Crux Publishing House terms and conditions for using our website and publishing services.",
   path: "/terms-condition",
 });
 

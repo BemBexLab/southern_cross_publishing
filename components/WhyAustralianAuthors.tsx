@@ -39,7 +39,7 @@ const authorReasons = [
   {
     title: "Over 1,000 Published Authors, and Counting",
     description:
-      "Over 1,000 authors have published through Southern Cross. The reason they come to us, and the reason they send their friends to us, is because the experience is as good as the result.",
+      "Over 1,000 authors have published through Crux Publishing House. The reason they come to us, and the reason they send their friends to us, is because the experience is as good as the result.",
     iconSrc: "/who-we-are/book_5765621 1.svg",
     iconAlt: "icon",
   },
@@ -51,7 +51,7 @@ const WhyAustralianAuthors = () => {
       <div className="mx-auto flex max-w-8xl flex-col items-center text-center">
         <div className="mx-auto w-full max-w-8xl text-center">
           <h2 className="goneva text-[1.9rem] leading-[1.08] text-[#FDD118] sm:text-[2.4rem] lg:text-[3.05rem]">
-            Why Australian Authors Choose Southern Cross Publishing for Their Book
+            Why Australian Authors Choose Crux Publishing House for Their Book
           </h2>
           {/* <p className="montserrat mx-auto mt-5 w-full text-lg italic leading-[1.55] text-[#d8e8d6]">
             Whether you have a completed manuscript, a rough draft, or just an

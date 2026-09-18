@@ -76,7 +76,7 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
         <>
           Professional eBook Writing Services for Australian Authors &
           Businesses. From your first idea to a fully formatted, globally
-          distributed eBook: Southern Cross Publishing handles every word,
+          distributed eBook: Crux Publishing House handles every word,
           every page, every platform. <br /> Whether you have a fully written
           manuscript sitting in a drawer or nothing more than a rough idea
           scribbled on a notepad, our professional eBook writing services
@@ -137,7 +137,7 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
         {
           title: "Genres We Cover",
           description:
-            "Matched With Writers Who Know Your Genre. When you work with Southern Cross Publishing, you are matched with people who actually understand your type of book.",
+            "Matched With Writers Who Know Your Genre. When you work with Crux Publishing House, you are matched with people who actually understand your type of book.",
           items: [
             "Fiction",
             "Non-Fiction",
@@ -181,7 +181,7 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
       illustrationSrc: "/ebook-services/Frame.svg",
       title: "Why Australian Authors Choose Us for eBook Writing",
       description:
-        "What makes Southern Cross Publishing different is that we are genuinely invested in your success, not just getting a file delivered. Here is what that looks like in practice:",
+        "What makes Crux Publishing House different is that we are genuinely invested in your success, not just getting a file delivered. Here is what that looks like in practice:",
       items: [
         <>Australian Owned & Written</>,
         <>Your Voice, Your Tone, Your Style, Always</>,
@@ -196,7 +196,7 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
       subtitle: "Start with a simple conversation",
       paragraphs: [
         "If you have a manuscript sitting in a drawer, a concept you have been thinking about for years, or a draft that just needs a professional finish, this is where it starts. We offer a free, no-obligation consultation to talk through your project honestly: what it involves, how long it takes, and what it will cost. No pressure, no jargon.",
-        "Southern Cross Publishing has helped authors across Australia turn years of knowledge and experience into published books. We would love to do the same for you.",
+        "Crux Publishing House has helped authors across Australia turn years of knowledge and experience into published books. We would love to do the same for you.",
       ],
       formHeadline: "Send Us a Message",
       ctaText: "Let's Build Your Book",
@@ -222,7 +222,7 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
             "It depends on the length and complexity of your eBook, but as a rough guide, most projects run between six to twelve weeks from the initial consultation through to final distribution. Shorter eBooks or those where the client has a clear brief ready tend to move faster. We give you a realistic timeline upfront during your free consultation, no false promises, but an honest schedule with clear milestones so you always know where things stand.",
         },
         {
-          question: "Who owns the eBook once it's finished, me or Southern Cross?",
+          question: "Who owns the eBook once it's finished, me or Crux Publishing House?",
           answer:
             "Ofcourse you own it completely. Full intellectual property rights are transferred to you once the project completion. We retain nothing, no royalties, no licensing arrangements, no ongoing claims. It's your work, your name, your asset. This applies to the written content, the cover design, and everything else we produce for you as part of the project. You are free to publish, update, or use it however you like, its upto you.",
         },
@@ -305,7 +305,7 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
     },
     whyChoose: {
       illustrationSrc: "/ebook-services/Frame.svg",
-      title: "Why Australian Authors Choose Southern Cross Publishing",
+      title: "Why Australian Authors Choose Crux Publishing House",
       description:
         "There is no shortage of overseas publishing services. What they cannot offer is a team that understands the Australian market, the Australian reader, and what it actually takes to build a reputation here. We have worked with tradies, doctors, retired executives, first time authors, and business founders, and the thing they all say afterwards is that they wish they had started sooner.",
       items: [
@@ -324,7 +324,7 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
       subtitle: "Start with a simple conversation",
       paragraphs: [
         "If you have a manuscript sitting in a drawer, a concept you have been thinking about for years, or a draft that just needs a professional finish, this is where it starts. We offer a free initial consultation session to talk through your project honestly: what it involves, how long it takes, and what it will cost.",
-        "Southern Cross Publishing has helped authors across Australia turn years of knowledge and experience into published books. We would love to do the same for you.",
+        "Crux Publishing House has helped authors across Australia turn years of knowledge and experience into published books. We would love to do the same for you.",
       ],
       formHeadline: "Send Us a Message",
       ctaText: "Let's Build Your Book",
@@ -340,7 +340,7 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
             "Yes, Kindle compatibility is something we test specifically. We produce EPUB, MOBI, and KPF files depending on the platform requirements. Every file is checked on actual devices (Kindle Paperwhite, iPad, and desktop reader) before delivery. We also make sure your table of contents is correctly linked, your chapter breaks are clean, and your images display properly across screen sizes.",
         },
         {
-          question: "How is Southern Cross different from a generic online formatting service?",
+          question: "How is Crux Publishing House different from a generic online formatting service?",
           answer:
             "We treat your project as a publishing job, which means we also look at your cover, your metadata, your distribution setup, and how discoverable your book will actually be. We are an Australian team working with Australian authors, and we stay involved until your book is live and listed properly.",
         },
@@ -368,7 +368,7 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
       description: (
         <>
           <b>Professional Children's Book Writing, Illustration & Publishing:</b><br />
-          Publishing a children's book is not the same as publishing any other book. The fine thing we have to see carefully is that the words and pictures have to work together. The age range matters. The page count, the trim size, the illustration style, every decision affects whether a child picks it up and whether a parent buys it.<br />At Southern Cross Publishing Australia, our team has done this before, and we will walk you through it properly from the very first conversation.
+          Publishing a children's book is not the same as publishing any other book. The fine thing we have to see carefully is that the words and pictures have to work together. The age range matters. The page count, the trim size, the illustration style, every decision affects whether a child picks it up and whether a parent buys it.<br />At Crux Publishing House Australia, our team has done this before, and we will walk you through it properly from the very first conversation.
         </>
       ),
       ctaText: "Request a call",
@@ -428,7 +428,7 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
     },
     whyChoose: {
       illustrationSrc: "/ebook-services/Frame.svg",
-      title: "Why Australian Authors Trust Southern Cross Publishing With Their Children's Books",
+      title: "Why Australian Authors Trust Crux Publishing House With Their Children's Books",
       description:
         <>Children's books are personal. Most of our clients approach us with a story that means something to them, a character their own child loves, a lesson they want to pass on, or a memory they do not want to lose. That is not a small thing, and we do not treat it like one. <br /> We have worked with grandparents, primary school teachers, speech pathologists, parents of children with additional needs, and first-time authors who had never published anything before. What everyone of them had in common was a story worth telling,  and a need for people who actually knew how to tell it properly on the page.</>,
       items: [
@@ -492,7 +492,7 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
         <>
           Most self published books sell fewer than 100 copies, not because they weren't good enough, but because readers never found them. The publishing market in Australia and globally is noisier than it's ever been. Without a clear marketing strategy, even a brilliant book gets buried. That's where we come in.
           <br />
-          At Southern Cross Publishing, our book marketing team makes sure the right readers find your work, wherever they are searching.
+          At Crux Publishing House, our book marketing team makes sure the right readers find your work, wherever they are searching.
         </>
       ),
       ctaText: "Get Your Free Marketing Quote",
@@ -577,7 +577,7 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
     },
     whyChoose: {
       illustrationSrc: "/ebook-services/Frame.svg",
-      title: "Why Southern Cross Publishing",
+      title: "Why Crux Publishing House",
       description:
         <><b>What Makes Our Approach Different</b></>,
       items: [

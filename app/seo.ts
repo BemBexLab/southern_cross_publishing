@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 
 export const siteUrl =
   process.env.SITE_URL || "https://www.southerncrosspublishing.com";
-export const siteName = "Southern Cross Publishing";
+export const siteName = "Crux Publishing House";
 export const defaultDescription =
-  "Southern Cross Publishing helps authors across Australia with book writing, editing, design, audiobook production, publishing, and global distribution.";
+  "Crux Publishing House helps authors across Australia with book writing, editing, design, audiobook production, publishing, and global distribution.";
 
 type CreatePageMetadataInput = {
   title: string;

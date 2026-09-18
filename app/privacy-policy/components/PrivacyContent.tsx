@@ -132,7 +132,7 @@ const PrivacyContent = () => {
             </h2>
             <div className="space-y-4 text-base leading-relaxed text-gray-500 sm:text-lg">
               <p>
-                Southern Cross Publishing does not sell or rent your personal
+                Crux Publishing House does not sell or rent your personal
                 information to third parties. However, we may share your
                 information with trusted partners and service providers who
                 assist in operating our business. These may include payment
@@ -200,7 +200,7 @@ const PrivacyContent = () => {
             </h2>
             <p className="text-base leading-relaxed text-gray-500 sm:text-lg">
               Our website may contain links to external websites or services
-              that are not operated by us. Southern Cross Publishing is not
+              that are not operated by us. Crux Publishing House is not
               responsible for the privacy practices or content of such
               third-party platforms, and we encourage users to review their
               respective policies.
@@ -244,7 +244,7 @@ const PrivacyContent = () => {
 
             <div className="mb-6 space-y-1 text-base text-gray-500 sm:text-lg">
               <p className="font-medium text-[#3E3E3E]">
-                <Link href="/" className="hover:underline">Southern Cross Publishing</Link>
+                <Link href="/" className="hover:underline">Crux Publishing House</Link>
               </p>
             </div>
 
@@ -267,7 +267,7 @@ const PrivacyContent = () => {
                 </div>
                 <span className="text-base text-gray-500 sm:text-lg">
                   <Link href="/" className="hover:underline">
-                    Southern Cross Publishing
+                    Crux Publishing House
                   </Link>
                 </span>
               </div> */}

@@ -23,7 +23,7 @@ import { createPageMetadata } from "./seo";
 export const metadata: Metadata = createPageMetadata({
   title: "Book Publishing Services in Australia",
   description:
-    "Southern Cross Publishing offers book writing, editing, design, publishing, marketing, and distribution services for Australian authors.",
+    "Crux Publishing House offers book writing, editing, design, publishing, marketing, and distribution services for Australian authors.",
   path: "/",
 });
 
@@ -50,7 +50,7 @@ export default function Home() {
               </p>
 
               <h2 className="goneva mt-4 max-w-full text-[2rem] leading-[0.96] text-[#f7f1d7] sm:text-[2.45rem] md:mt-5 md:text-[2.95rem] lg:max-w-full lg:text-[3.1rem]">
-                Let Southern Cross take the hassle out of publishing, so you can focus on your story
+                Let Crux Publishing House take the hassle out of publishing, so you can focus on your story
               </h2>
 
               <div className="relative mt-6 flex min-h-[220px] items-end justify-center lg:hidden">
@@ -120,7 +120,7 @@ export default function Home() {
       </MotionSection>
       <MotionSection delay={0.04}>
         <AtSouthernCross
-          eyebrow="At Southern Cross, we do it right"
+          eyebrow="At Crux Publishing House, we do it right"
           title="Everything Your Book Needs, Handled by People Who Know Books"
           cards={defaultAtSouthernCrossCards}
         />

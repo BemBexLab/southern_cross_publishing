@@ -84,7 +84,7 @@ export async function POST(request: Request) {
     const phoneLine = phone ? `Phone: ${phone}\n` : "";
 
     await transporter.sendMail({
-      from: `"Southern Cross Publishing Contact Form" <${contactFromEmail}>`,
+      from: `"Crux Publishing House Contact Form" <${contactFromEmail}>`,
       to: contactToEmail,
       replyTo: email,
       subject,

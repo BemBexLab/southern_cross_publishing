@@ -25,7 +25,7 @@ import { createPageMetadata } from "../seo";
 export const metadata: Metadata = createPageMetadata({
   title: "Publishing Services",
   description:
-    "Explore Southern Cross Publishing services including ghostwriting, editing, cover design, formatting, distribution, and book marketing.",
+    "Explore Crux Publishing House services including ghostwriting, editing, cover design, formatting, distribution, and book marketing.",
   path: "/publishing-services",
 });
 
@@ -36,7 +36,7 @@ export default function Home() {
         <HeroSection
           bgImage="/publishing-services/Rectangle.webp"
           title="Complete Book Publishing Services in Australia"
-          description="From manuscript evaluation to global distribution, everything your book needs, handled by one dedicated team. Southern Cross Publishing brings together every skill your book needs under one roof, from the very first editorial pass to the day your book goes live on 40+ global platforms. No matter if you have a finished manuscript ready to publish or you are still working out what you want to say, our publishing specialists step in at exactly the right stage and carry the process forward with you. Our dedicated team treats your book like it matters, because it does."
+          description="From manuscript evaluation to global distribution, everything your book needs, handled by one dedicated team. Crux Publishing House brings together every skill your book needs under one roof, from the very first editorial pass to the day your book goes live on 40+ global platforms. No matter if you have a finished manuscript ready to publish or you are still working out what you want to say, our publishing specialists step in at exactly the right stage and carry the process forward with you. Our dedicated team treats your book like it matters, because it does."
           ctaText="Book a Free Consultation"
           ctaHref="/contact"
         />
@@ -69,7 +69,7 @@ export default function Home() {
           },
           {
             title: "40+ Platforms and Full Post-Launch Support",
-            description: "Southern Cross Publishing distributes your work across 40-plus global platforms, Amazon, Apple Books, Kobo, Barnes & Noble, and beyond, and then stays with you after launch day with marketing support, author branding, and growth strategy.",
+            description: "Crux Publishing House distributes your work across 40-plus global platforms, Amazon, Apple Books, Kobo, Barnes & Noble, and beyond, and then stays with you after launch day with marketing support, author branding, and growth strategy.",
             variant: "light",
             iconSrc: <FaGlobe />
           }
@@ -94,7 +94,7 @@ export default function Home() {
         <Section8 />
       </MotionSection>
       <MotionSection delay={0.05}>
-        <AtSouthernCross eyebrow="What We Publish" title="We Work Across Every Genre: Fiction, Non-Fiction, Memoirs, Children's Books and More" description="When you work with Southern Cross Publishing, you are matched with people who actually understand your type of book, not generalists applying the same approach to every manuscript." cards={[
+        <AtSouthernCross eyebrow="What We Publish" title="We Work Across Every Genre: Fiction, Non-Fiction, Memoirs, Children's Books and More" description="When you work with Crux Publishing House, you are matched with people who actually understand your type of book, not generalists applying the same approach to every manuscript." cards={[
           {
             title: "Fiction",
             description: "From literary novels to thrillers, romance, fantasy, science fiction, and historical fiction, our fiction team understands what makes a story work at the structural level and how to make it hit harder on every page.",

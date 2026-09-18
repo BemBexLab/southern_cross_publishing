@@ -23,7 +23,7 @@ const Section5 = () => {
 
             <div className="space-y-6 text-[15px] font-normal leading-relaxed text-[#1F1F1F] sm:text-lg sm:leading-8">
               <p>
-                Southern Cross Publishing is a complete self publishing company
+                Crux Publishing House is a complete self publishing company
                 that helps authors turn their ideas into professionally
                 published books. Our services cover writing, editing, design,
                 publishing, and marketing, and we handle the entire process for
@@ -62,7 +62,7 @@ const Section5 = () => {
 
             <div className="mb-10 space-y-6 text-[15px] font-normal leading-relaxed text-[#1F1F1F] md:text-lg">
               <p>
-                Southern Cross Publishing is a complete self publishing company
+                Crux Publishing House is a complete self publishing company
                 that helps authors turn their ideas into professionally
                 published books. Our services cover writing, editing, design,
                 publishing, and marketing, and we handle the entire process for

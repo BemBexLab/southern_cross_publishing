@@ -32,8 +32,8 @@ const Section5 = () => {
           <div className="space-y-4 text-[#1F1F1F] text-lg leading-relaxed max-w-4xl">
             <p>
               A great audiobook needs to be where your listeners are, and today, 
-              listeners are spread across multiple platforms. Southern Cross 
-              Publishing distributes your finished audiobook to every major platform, 
+              listeners are spread across multiple platforms. Crux Publishing House
+              distributes your finished audiobook to every major platform,
               so you are not locked into one storefront and your book is available to 
               the widest possible audience from the moment it goes live.
             </p>
