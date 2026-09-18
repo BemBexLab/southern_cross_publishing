@@ -4,7 +4,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { FaArrowRight, FaChevronDown } from "react-icons/fa";
+import {
+  FaArrowRight,
+  FaChevronDown,
+  FaTimes,
+  FaBars,
+  FaPhoneAlt,
+  FaEnvelope,
+} from "react-icons/fa";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -38,113 +45,134 @@ const navLinks = [
 ];
 
 export default function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [drawerOpen, setDrawerOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
-  const isPublishingServicesRoute =
-    pathname.startsWith("/publishing-services/");
+
+  const isPublishingServicesRoute = pathname.startsWith("/publishing-services/");
   const isBlogRoute = pathname === "/blog" || pathname.startsWith("/blog/");
   const useDarkNavLinks =
     pathname === "/our-books" ||
     isPublishingServicesRoute ||
     pathname === "/contact" ||
     isBlogRoute;
-  const logoSrc = useDarkNavLinks
-    ? "/image (1).png"
-    : "/image (2).png";
-  const menuToggleTone = useDarkNavLinks ? "bg-black" : "bg-white";
+
+  const logoSrc = useDarkNavLinks ? "/image (1).png" : "/image (2).png";
+
+  // Theme tokens
+  const navBg = useDarkNavLinks
+    ? scrolled
+      ? "bg-white/85 shadow-[0_4px_20px_rgba(0,0,0,0.06)]"
+      : "bg-white/65"
+    : scrolled
+      ? "bg-black/35 shadow-[0_4px_20px_rgba(0,0,0,0.15)]"
+      : "bg-black/20";
+  const navBorder = useDarkNavLinks ? "border-black/10" : "border-white/15";
   const desktopLinkTone = useDarkNavLinks
     ? "text-black/75 hover:text-black"
-    : "text-white/80 hover:text-white";
-  const mobileLinkTone = useDarkNavLinks
-    ? "text-black/75 hover:bg-white/55 hover:text-black"
-    : "text-white/85 hover:bg-white/10 hover:text-white";
-  const mobilePanelTone = useDarkNavLinks
-    ? "border-black/10 bg-white/55"
-    : "border-white/20 bg-black/45";
-  const navBackgroundTone = useDarkNavLinks ? "bg-white/65" : "bg-black/20";
+    : "text-white/85 hover:text-white";
+  const underlineTone = useDarkNavLinks ? "bg-black" : "bg-white";
+  const activeDesktopTone = useDarkNavLinks ? "text-black" : "text-[#FDD118]";
 
+  // Scroll detection for subtle background shift
   useEffect(() => {
-    setMenuOpen(false);
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // Close drawer on route change
+  useEffect(() => {
+    setDrawerOpen(false);
     setServicesOpen(false);
   }, [pathname]);
 
+  // Body scroll lock when drawer is open
   useEffect(() => {
-    document.body.style.overflow = menuOpen ? "hidden" : "";
-
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = drawerOpen ? "hidden" : "";
     return () => {
-      document.body.style.overflow = "";
+      document.body.style.overflow = previousOverflow;
     };
-  }, [menuOpen]);
+  }, [drawerOpen]);
 
+  // Close drawer on large screens
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1280) {
-        setMenuOpen(false);
+        setDrawerOpen(false);
         setServicesOpen(false);
       }
     };
-
     window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
+  // Close drawer on Escape key
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setDrawerOpen(false);
     };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
   }, []);
 
   return (
-    <nav
-      className={`fixed inset-x-0 top-0 z-50 w-full rounded-b-5xl border-b backdrop-blur-xl dm-sans px-3 sm:px-6 lg:px-8 ${
-        useDarkNavLinks ? "border-black/10" : "border-white/15"
-      } ${navBackgroundTone}`}
-    >
-      <div className="w-full">
-        <div className="flex h-18 w-full items-center justify-between gap-3 sm:h-22 lg:h-28">
-          <Link href="/" className="flex min-w-0 flex-shrink items-center">
-            <div className="relative mt-1 h-10 w-28 min-w-[7rem] sm:h-12 sm:w-40 md:h-14 md:w-44 lg:h-16 lg:w-56 xl:h-[75px] xl:w-[290px]">
-            <Image
-              src={logoSrc}
-              alt="Crux Publishing House Logo"
-              fill
-              className="object-contain object-left"
-              priority
-            />
+    <>
+      <nav
+        className={`fixed inset-x-0 top-0 z-50 w-full border-b backdrop-blur-xl transition-all duration-300 ${navBg} ${navBorder}`}
+      >
+        <div className="mx-auto flex h-16 w-full max-w-[1600px] items-center justify-between gap-4 px-4 sm:h-18 sm:px-6 lg:h-20 lg:px-8">
+          {/* Logo */}
+          <Link
+            href="/"
+            className="flex flex-shrink-0 items-center"
+            aria-label="Crux Publishing House - Home"
+          >
+            <div className="relative h-10 w-28 sm:h-11 sm:w-36 md:h-12 md:w-40 lg:h-14 lg:w-48 xl:h-[60px] xl:w-[220px]">
+              <Image
+                src={logoSrc}
+                alt="Crux Publishing House Logo"
+                fill
+                className="object-contain object-left"
+                priority
+              />
             </div>
           </Link>
 
-          <ul className="hidden xl:flex items-center gap-4 2xl:gap-8">
+          {/* Desktop Navigation */}
+          <ul className="hidden items-center gap-1 xl:flex 2xl:gap-2">
             {navLinks.map((link) => {
               const hasChildren = Boolean(link.children?.length);
               const isActive =
                 pathname === link.href ||
                 (link.href !== "/" && pathname.startsWith(`${link.href}/`)) ||
                 link.children?.some((child) => child.href === pathname);
+
               return (
                 <li key={link.href} className="group relative">
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-1.5">
                     <Link
                       href={link.href}
-                      className={`relative py-2 text-[13px] font-light tracking-wide whitespace-nowrap transition-colors duration-200 2xl:text-base ${
-                        isActive
-                          ? useDarkNavLinks
-                            ? "text-black"
-                            : "text-[#FDD118]"
-                          : desktopLinkTone
+                      className={`relative whitespace-nowrap px-3 py-2 text-[13px] font-medium tracking-wide transition-colors duration-200 2xl:text-[15px] ${
+                        isActive ? activeDesktopTone : desktopLinkTone
                       }`}
                     >
                       {link.label}
                       <span
                         aria-hidden="true"
-                        className={`absolute bottom-0 left-0 h-[1.5px] transition-all duration-300 ease-out ${
-                          isActive ? "w-full" : "w-0 group-hover:w-full"
-                        } ${useDarkNavLinks ? "bg-black" : "bg-white"}`}
+                        className={`absolute bottom-0.5 left-3 right-3 h-[2px] rounded-full transition-all duration-300 ease-out ${
+                          isActive ? "w-[calc(100%-1.5rem)]" : "w-0 group-hover:w-[calc(100%-1.5rem)]"
+                        } ${underlineTone}`}
                       />
                     </Link>
 
                     {hasChildren && (
                       <FaChevronDown
-                        className={`mt-0.5 text-[10px] transition-transform duration-200 group-hover:rotate-180 ${
-                          useDarkNavLinks ? "text-black/75" : "text-white/80"
+                        className={`text-[9px] transition-transform duration-300 group-hover:rotate-180 ${
+                          useDarkNavLinks ? "text-black/60" : "text-white/70"
                         }`}
                         aria-hidden="true"
                       />
@@ -152,17 +180,17 @@ export default function Navbar() {
                   </div>
 
                   {hasChildren && (
-                    <div className="pointer-events-none absolute left-0 top-full z-30 pt-3 opacity-0 transition-all duration-200 group-hover:pointer-events-auto group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:opacity-100">
-                      <div className="min-w-[240px] rounded-2xl border border-black/10 bg-white/95 p-2 shadow-[0_18px_45px_rgba(0,0,0,0.18)] backdrop-blur-md">
+                    <div className="pointer-events-none absolute left-1/2 top-full z-40 -translate-x-1/2 pt-4 opacity-0 transition-all duration-300 group-hover:pointer-events-auto group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:opacity-100">
+                      <div className="min-w-[260px] overflow-hidden rounded-2xl border border-black/10 bg-white/95 p-2 shadow-[0_20px_50px_rgba(0,0,0,0.18)] backdrop-blur-xl">
                         {link.children?.map((child) => {
                           const isChildActive = pathname === child.href;
                           return (
                             <Link
                               key={child.href}
                               href={child.href}
-                              className={`block rounded-xl px-4 py-3 text-sm transition-colors duration-200 ${
+                              className={`block rounded-xl px-4 py-3 text-sm font-medium transition-all duration-200 ${
                                 isChildActive
-                                  ? "bg-[#f5c842]/20 text-[#1a5c35]"
+                                  ? "bg-[#f5c842]/25 text-[#1a5c35]"
                                   : "text-black/75 hover:bg-black/5 hover:text-black"
                               }`}
                             >
@@ -178,173 +206,210 @@ export default function Navbar() {
             })}
           </ul>
 
+          {/* Right side actions */}
           <div className="flex items-center gap-2 sm:gap-3">
+            {/* Desktop CTA */}
             <Link
               href="/contact"
-              className="hidden flex-shrink-0 items-center gap-2 whitespace-nowrap rounded-[10px] bg-[#f5c842] px-4 py-3 text-sm font-bold text-[#1a5c35] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#ffd44f] hover:shadow-[0_6px_20px_rgba(0,0,0,0.2)] xl:flex 2xl:px-6 2xl:py-3.5 2xl:text-base"
+              className="hidden items-center gap-2 whitespace-nowrap rounded-full bg-[#f5c842] px-5 py-2.5 text-sm font-bold text-[#1a5c35] shadow-[0_4px_14px_rgba(245,200,66,0.35)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#ffd44f] hover:shadow-[0_8px_22px_rgba(245,200,66,0.45)] xl:inline-flex 2xl:px-6 2xl:py-3 2xl:text-base"
             >
               Request a Quote
-              <FaArrowRight />
+              <FaArrowRight className="text-xs" />
             </Link>
 
+            {/* Mobile hamburger */}
             <button
               type="button"
-              onClick={() => setMenuOpen((open) => !open)}
-              className={`flex flex-shrink-0 flex-col justify-center gap-[5px] rounded-full border p-2.5 transition-colors xl:hidden ${
+              onClick={() => setDrawerOpen(true)}
+              className={`flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full border transition-all duration-200 active:scale-95 xl:hidden ${
                 useDarkNavLinks
-                  ? "border-black/10 bg-white/40"
-                  : "border-white/20 bg-black/15"
+                  ? "border-black/10 bg-white/60 text-black hover:bg-white"
+                  : "border-white/25 bg-black/20 text-white hover:bg-black/30"
               }`}
-              aria-label="Toggle menu"
-              aria-controls="mobile-navigation"
-              aria-expanded={menuOpen}
+              aria-label="Open menu"
+              aria-expanded={drawerOpen}
+              aria-controls="mobile-drawer"
             >
-              <span
-                className={`block h-0.5 w-6 origin-center transition-all duration-300 ${menuToggleTone} ${
-                  menuOpen ? "translate-y-[7px] rotate-45" : ""
-                }`}
-              />
-              <span
-                className={`block h-0.5 w-6 transition-opacity duration-300 ${menuToggleTone} ${
-                  menuOpen ? "opacity-0" : ""
-                }`}
-              />
-              <span
-                className={`block h-0.5 w-6 origin-center transition-all duration-300 ${menuToggleTone} ${
-                  menuOpen ? "-translate-y-[7px] -rotate-45" : ""
-                }`}
-              />
+              <FaBars className="text-base" />
             </button>
           </div>
         </div>
+      </nav>
 
-        <div
-          id="mobile-navigation"
-          className={`overflow-hidden transition-all duration-300 ease-in-out xl:hidden ${
-            menuOpen ? "max-h-[calc(100vh-4rem)] opacity-100" : "max-h-0 opacity-0"
-          }`}
-        >
-          <div
-            className={`mt-2 max-h-[calc(100vh-6rem)] overflow-y-auto rounded-[22px] border pb-5 pt-3 shadow-[0_20px_50px_rgba(0,0,0,0.16)] backdrop-blur-xl ${mobilePanelTone}`}
+      {/* Drawer Backdrop */}
+      <div
+        className={`fixed inset-0 z-[60] bg-black/50 backdrop-blur-sm transition-opacity duration-300 xl:hidden ${
+          drawerOpen ? "opacity-100" : "pointer-events-none opacity-0"
+        }`}
+        onClick={() => setDrawerOpen(false)}
+        aria-hidden="true"
+      />
+
+      {/* Right Drawer */}
+      <aside
+        id="mobile-drawer"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Mobile navigation"
+        className={`fixed right-0 top-0 z-[70] flex h-full w-[86%] max-w-[380px] flex-col bg-white shadow-[-20px_0_60px_rgba(0,0,0,0.2)] transition-transform duration-300 ease-out xl:hidden ${
+          drawerOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        {/* Drawer Header */}
+        <div className="flex items-center justify-between border-b border-black/10 px-5 py-4">
+          <Link href="/" onClick={() => setDrawerOpen(false)} className="flex items-center">
+            <div className="relative h-9 w-24">
+              <Image
+                src="/image (1).png"
+                alt="Crux Publishing House"
+                fill
+                className="object-contain object-left"
+                priority
+              />
+            </div>
+          </Link>
+          <button
+            type="button"
+            onClick={() => setDrawerOpen(false)}
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-black/5 text-black transition-colors hover:bg-black/10"
+            aria-label="Close menu"
           >
-            <ul className="flex flex-col gap-1">
-              {navLinks.map((link) => {
-                const hasChildren = Boolean(link.children?.length);
-                const isActive =
-                  pathname === link.href ||
-                  (link.href !== "/" && pathname.startsWith(`${link.href}/`)) ||
-                  link.children?.some((child) => child.href === pathname);
-                return (
-                  <li key={link.href}>
-                    {hasChildren ? (
-                      <div className="overflow-hidden rounded-md">
-                        <div className="flex items-center">
-                          <Link
-                            href={link.href}
-                            onClick={() => setMenuOpen(false)}
-                            className={`relative flex-1 rounded-md px-4 py-3 text-sm font-light transition-all sm:text-base ${mobileLinkTone} ${
-                              isActive
-                                ? useDarkNavLinks
-                                  ? "text-black after:absolute after:bottom-1 after:left-4 after:right-4 after:h-[1.5px] after:bg-black"
-                                  : "text-[#f5c842] after:absolute after:bottom-1 after:left-4 after:right-4 after:h-[1.5px] after:bg-[#f5c842]"
-                                : ""
-                            }`}
-                          >
-                            {link.label}
-                          </Link>
+            <FaTimes className="text-sm" />
+          </button>
+        </div>
 
-                          <button
-                            type="button"
-                            onClick={() => setServicesOpen((open) => !open)}
-                            className={`mr-2 flex h-10 w-10 items-center justify-center rounded-full transition-colors ${
-                              useDarkNavLinks
-                                ? "text-black/75 hover:bg-white/55"
-                                : "text-white/85 hover:bg-white/10"
-                            }`}
-                            aria-label="Toggle Publishing Services submenu"
-                            aria-expanded={servicesOpen}
-                            aria-controls="publishing-services-submenu"
-                          >
-                            <FaChevronDown
-                              className={`text-xs transition-transform duration-200 ${
-                                servicesOpen ? "rotate-180" : ""
-                              }`}
-                            />
-                          </button>
-                        </div>
+        {/* Drawer Body */}
+        <div className="flex-1 overflow-y-auto px-4 py-4">
+          <ul className="flex flex-col gap-1">
+            {navLinks.map((link) => {
+              const hasChildren = Boolean(link.children?.length);
+              const isActive =
+                pathname === link.href ||
+                (link.href !== "/" && pathname.startsWith(`${link.href}/`)) ||
+                link.children?.some((child) => child.href === pathname);
 
-                        <div
-                          id="publishing-services-submenu"
-                          className={`grid transition-all duration-300 ease-in-out ${
-                            servicesOpen
-                              ? "grid-rows-[1fr] opacity-100"
-                              : "grid-rows-[0fr] opacity-0"
+              return (
+                <li key={link.href}>
+                  {hasChildren ? (
+                    <div className="overflow-hidden rounded-xl">
+                      <div className="flex items-center">
+                        <Link
+                          href={link.href}
+                          onClick={() => setDrawerOpen(false)}
+                          className={`relative flex-1 rounded-xl px-4 py-3.5 text-[15px] font-medium transition-colors ${
+                            isActive
+                              ? "text-black"
+                              : "text-black/70 hover:bg-black/5 hover:text-black"
                           }`}
                         >
-                          <div className="overflow-hidden">
-                            <div className="space-y-1 px-4 pb-2">
-                              {link.children?.map((child) => {
-                                const isChildActive = pathname === child.href;
-                                return (
-                                  <Link
-                                    key={child.href}
-                                    href={child.href}
-                                    onClick={() => setMenuOpen(false)}
-                                    className={`block rounded-md px-4 py-2.5 text-sm transition-all ${
-                                      useDarkNavLinks
-                                        ? "hover:bg-white/55 hover:text-black"
-                                        : "hover:bg-white/10 hover:text-white"
-                                    } ${
-                                      isChildActive
-                                        ? useDarkNavLinks
-                                          ? "text-black"
-                                          : "text-[#f5c842]"
-                                        : useDarkNavLinks
-                                          ? "text-black/70"
-                                          : "text-white/75"
+                          {link.label}
+                          {isActive && (
+                            <span className="absolute bottom-1.5 left-4 right-4 h-[2px] rounded-full bg-[#f5c842]" />
+                          )}
+                        </Link>
+                        <button
+                          type="button"
+                          onClick={() => setServicesOpen((o) => !o)}
+                          className={`flex h-10 w-10 items-center justify-center rounded-full text-black/70 transition-all ${
+                            servicesOpen ? "bg-[#f5c842]/20 text-[#1a5c35]" : "hover:bg-black/5"
+                          }`}
+                          aria-label="Toggle Publishing Services submenu"
+                          aria-expanded={servicesOpen}
+                          aria-controls="drawer-services-submenu"
+                        >
+                          <FaChevronDown
+                            className={`text-xs transition-transform duration-300 ${
+                              servicesOpen ? "rotate-180" : ""
+                            }`}
+                          />
+                        </button>
+                      </div>
+
+                      <div
+                        id="drawer-services-submenu"
+                        className={`grid transition-all duration-300 ease-in-out ${
+                          servicesOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                        }`}
+                      >
+                        <div className="overflow-hidden">
+                          <div className="space-y-0.5 py-1 pl-4 pr-2">
+                            {link.children?.map((child) => {
+                              const isChildActive = pathname === child.href;
+                              return (
+                                <Link
+                                  key={child.href}
+                                  href={child.href}
+                                  onClick={() => setDrawerOpen(false)}
+                                  className={`flex items-center gap-2 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors ${
+                                    isChildActive
+                                      ? "bg-[#f5c842]/20 text-[#1a5c35]"
+                                      : "text-black/65 hover:bg-black/5 hover:text-black"
+                                  }`}
+                                >
+                                  <span
+                                    className={`h-1.5 w-1.5 rounded-full ${
+                                      isChildActive ? "bg-[#1a5c35]" : "bg-black/30"
                                     }`}
-                                  >
-                                    {child.label}
-                                  </Link>
-                                );
-                              })}
-                            </div>
+                                  />
+                                  {child.label}
+                                </Link>
+                              );
+                            })}
                           </div>
                         </div>
                       </div>
-                    ) : (
-                      <Link
-                        href={link.href}
-                        onClick={() => setMenuOpen(false)}
-                        className={`relative block rounded-md px-4 py-3 text-sm font-light transition-all sm:text-base ${mobileLinkTone} ${
-                          isActive
-                            ? useDarkNavLinks
-                              ? "text-black after:absolute after:bottom-1 after:left-4 after:right-4 after:h-[1.5px] after:bg-black"
-                              : "text-[#f5c842] after:absolute after:bottom-1 after:left-4 after:right-4 after:h-[1.5px] after:bg-[#f5c842]"
-                            : ""
-                        }`}
-                      >
-                        {link.label}
-                      </Link>
-                    )}
-                  </li>
-                );
-              })}
-            </ul>
+                    </div>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      onClick={() => setDrawerOpen(false)}
+                      className={`relative block rounded-xl px-4 py-3.5 text-[15px] font-medium transition-colors ${
+                        isActive
+                          ? "text-black"
+                          : "text-black/70 hover:bg-black/5 hover:text-black"
+                      }`}
+                    >
+                      {link.label}
+                      {isActive && (
+                        <span className="absolute bottom-1.5 left-4 right-4 h-[2px] rounded-full bg-[#f5c842]" />
+                      )}
+                    </Link>
+                  )}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
 
-            <div className="mt-4 px-4">
-              <Link
-                href="/contact"
-                onClick={() => setMenuOpen(false)}
-                className="flex items-center justify-center gap-2 rounded-[10px] bg-[#FDD118] px-6 py-3 text-sm font-bold text-[#1a5c35] transition-all hover:bg-[#ffd44f] sm:text-base"
-              >
-                Request a Quote
-                <FaArrowRight />
-              </Link>
-            </div>
+        {/* Drawer Footer */}
+        <div className="border-t border-black/10 px-5 py-5">
+          <Link
+            href="/contact"
+            onClick={() => setDrawerOpen(false)}
+            className="flex w-full items-center justify-center gap-2 rounded-full bg-[#f5c842] px-6 py-3.5 text-sm font-bold text-[#1a5c35] shadow-[0_6px_18px_rgba(245,200,66,0.4)] transition-all hover:bg-[#ffd44f] active:scale-[0.98]"
+          >
+            Request a Quote
+            <FaArrowRight className="text-xs" />
+          </Link>
+
+          <div className="mt-4 flex flex-col gap-2 text-xs text-black/60">
+            <a
+              href="tel:+1234567890"
+              className="flex items-center gap-2 rounded-lg px-2 py-1.5 transition-colors hover:bg-black/5 hover:text-black"
+            >
+              <FaPhoneAlt className="text-[10px]" />
+              +1 (234) 567-890
+            </a>
+            <a
+              href="mailto:hello@cruxpublishing.com"
+              className="flex items-center gap-2 rounded-lg px-2 py-1.5 transition-colors hover:bg-black/5 hover:text-black"
+            >
+              <FaEnvelope className="text-[10px]" />
+              hello@cruxpublishing.com
+            </a>
           </div>
         </div>
-      </div>
-    </nav>
+      </aside>
+    </>
   );
 }

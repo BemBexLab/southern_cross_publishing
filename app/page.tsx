@@ -23,7 +23,7 @@ import { createPageMetadata } from "./seo";
 export const metadata: Metadata = createPageMetadata({
   title: "Crux Publishing: Book Publishing Services Australia",
   description:
-    "Crux Publishing offers professional book publishing services in Australia. Hire our expert team for online publishing, editing, formatting & distribution.",
+    "Crux Publishing offers Book publishing services, self-publishing support, and complete book publishing solutions to publish their books worldwide.",
   path: "/",
 });
 
