@@ -50,8 +50,8 @@ export default function Navbar() {
     pathname === "/contact" ||
     isBlogRoute;
   const logoSrc = useDarkNavLinks
-    ? "/navbar/Frame 1000001530 (1).svg"
-    : "/navbar/Frame 1000001530.svg";
+    ? "/image (2).png"
+    : "/image (1).png";
   const menuToggleTone = useDarkNavLinks ? "bg-black" : "bg-white";
   const desktopLinkTone = useDarkNavLinks
     ? "text-black/75 hover:text-black"
