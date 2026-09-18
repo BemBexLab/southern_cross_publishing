@@ -65,21 +65,21 @@ export interface PublishingServicePageData {
 }
 
 export const publishingServicePages: Record<string, PublishingServicePageData> = {
-  "e-book-writing-service": {
+  "book-writing-service": {
     slug: "book-writing-service",
     seoTitle: "Book Writing Services Australia",
     seoDescription:
-      "Professional eBook writing, ghostwriting, editing, formatting, and distribution services for Australian authors and businesses.",
+      "Professional Book writing, ghostwriting, editing, formatting, and distribution services for Australian authors and businesses.",
     hero: {
       title: "Book Writing Services Australia",
       description: (
         <>
           Professional Book Writing Services for Australian Authors &
           Businesses. From your first idea to a fully formatted, globally
-          distributed eBook: Crux Publishing House handles every word,
+          distributed Book: Crux Publishing House handles every word,
           every page, every platform. <br /> Whether you have a fully written
           manuscript sitting in a drawer or nothing more than a rough idea
-          scribbled on a notepad, our professional eBook writing services
+          scribbled on a notepad, our professional Book writing services
           write content that meets you exactly where you are.
         </>
       ),
@@ -87,15 +87,15 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
       ctaHref: "/contact",
     },
     bookConsultation: {
-      eyebrow: "Complete eBook Writing & Production",
+      eyebrow: "Complete Book Writing & Production",
       title: "Everything You Need, Manuscript to Professional Book",
       description:
         "Our professional team take care of every step: writing, editing, design, formatting, and global distribution, so you can focus on what's most important your story and expertise.",
       cards: [
         {
-          title: "eBook Writing & Ghostwriting",
+          title: "Book Writing & Ghostwriting",
           description:
-            "Our professional ghostwriters work closely with you to understand your voice, expertise, and message, then develop it into a compelling, professionally structured eBook from scratch.",
+            "Our professional ghostwriters work closely with you to understand your voice, expertise, and message, then develop it into a compelling, professionally structured Book from scratch.",
           items: [
             "100% original, from-scratch writing",
             "Voice matching so it reads like you",
@@ -104,7 +104,7 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
         },
         {
           title: "Original, High-Quality Writing",
-          description: "Every eBook is written from scratch, ensuring:",
+          description: "Every Book is written from scratch, ensuring:",
           items: [
             "100% original content",
             "No plagiarism",
@@ -116,7 +116,7 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
           title: "Services We Handle For You",
           items: [
             "Editing & Proofreading",
-            "eBook Cover Design",
+            "Book Cover Design",
             "EPUB / MOBI Formatting",
             "ISBN Registration",
             "Global Distribution (40+ platforms)",
@@ -179,7 +179,7 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
     },
     whyChoose: {
       illustrationSrc: "/ebook-services/Frame.svg",
-      title: "Why Australian Authors Choose Us for eBook Writing",
+      title: "Why Australian Authors Choose Us for Book Writing",
       description:
         "What makes Crux Publishing House different is that we are genuinely invested in your success, not just getting a file delivered. Here is what that looks like in practice:",
       items: [
@@ -212,24 +212,24 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
             "No, its not like that. Most of our clients approach us with an just an idea, a topic they know well, or a story they want to tell their book on, and that's genuinely enough. Our ghostwriters do the remaining part. After a detailed conversation, in which we understand your knowledge, your audience, and the tone you want, and then we do the heavy technical work. We send you every chapter or draft. You will review and give feedback along the way, as we proceed after your approval.",
         },
         {
-          question: "Will the eBook actually sound like me, or will it feel generic?",
+          question: "Will the Book actually sound like me, or will it feel generic?",
           answer:
             "This is something we take seriously. Before writing your book, we do assess content created by you the manuscript. We also get to know your idea and tone during our communication, and sometimes even your social media or existing writing. Our ghostwriters are experienced at adapting their style to match yours. By the time it's done, it should feel completely natural coming from you.",
         },
         {
           question: "How long does the whole process take from start to published?",
           answer:
-            "It depends on the length and complexity of your eBook, but as a rough guide, most projects run between six to twelve weeks from the initial consultation through to final distribution. Shorter eBooks or those where the client has a clear brief ready tend to move faster. We give you a realistic timeline upfront during your free consultation, no false promises, but an honest schedule with clear milestones so you always know where things stand.",
+            "It depends on the length and complexity of your Book, but as a rough guide, most projects run between six to twelve weeks from the initial consultation through to final distribution. Shorter Books or those where the client has a clear brief ready tend to move faster. We give you a realistic timeline upfront during your free consultation, no false promises, but an honest schedule with clear milestones so you always know where things stand.",
         },
         {
-          question: "Who owns the eBook once it's finished, me or Crux Publishing House?",
+          question: "Who owns the Book once it's finished, me or Crux Publishing House?",
           answer:
             "Ofcourse you own it completely. Full intellectual property rights are transferred to you once the project completion. We retain nothing, no royalties, no licensing arrangements, no ongoing claims. It's your work, your name, your asset. This applies to the written content, the cover design, and everything else we produce for you as part of the project. You are free to publish, update, or use it however you like, its upto you.",
         },
         {
-          question: "Where exactly will my eBook be available for sale once it's distributed?",
+          question: "Where exactly will my Book be available for sale once it's distributed?",
           answer:
-            "We distribute to over 40 platforms globally, so your eBook will be available wherever readers are already buying. That includes Amazon Kindle, Apple Books, Google Play Books, Kobo, Barnes & Noble, and a wide range of smaller regional platforms. We also handle all the metadata and keyword optimisation so your book is actually easy to discover, not just listed, but findable by the right readers searching for your topic.",
+            "We distribute to over 40 platforms globally, so your Book will be available wherever readers are already buying. That includes Amazon Kindle, Apple Books, Google Play Books, Kobo, Barnes & Noble, and a wide range of smaller regional platforms. We also handle all the metadata and keyword optimisation so your book is actually easy to discover, not just listed, but findable by the right readers searching for your topic.",
         },
       ],
     },

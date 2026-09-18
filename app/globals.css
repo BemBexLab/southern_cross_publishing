@@ -11,3 +11,9 @@
 .dm-sans {
   font-family: "DM Sans", sans-serif;
 }
+
+/* Keep paragraph typography consistent across every page and component. */
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+}

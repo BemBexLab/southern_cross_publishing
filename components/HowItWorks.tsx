@@ -90,9 +90,11 @@ const StepCardBlock = ({
     <h3 className="dm-sans mt-4 text-[0.96rem] font-bold leading-[1.08] text-[#f3c423]">
       {step.id}. {step.title}
     </h3>
-    <p className="dm-sans mt-4 text-[0.8rem] leading-[1.1] text-[#f7f1d7]">
-      {step.body}
-    </p>
+    <div className="mt-4 max-h-[20vh] overflow-y-auto pr-2 [scrollbar-color:rgba(243,196,35,0.75)_transparent] [scrollbar-width:thin] [&::-webkit-scrollbar]:w-[4px] [&::-webkit-scrollbar-button]:hidden [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-[#f3c423]/75 [&::-webkit-scrollbar-track]:bg-transparent">
+      <p className="dm-sans mt-0 text-[0.8rem] leading-[1.1] text-[#f7f1d7]">
+        {step.body}
+      </p>
+    </div>
   </article>
 );
 
