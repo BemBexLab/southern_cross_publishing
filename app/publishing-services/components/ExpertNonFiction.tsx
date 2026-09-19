@@ -21,20 +21,39 @@ export interface ExpertNonFictionProps {
 
 const ExpertNonFiction: React.FC<ExpertNonFictionProps> = ({
   eyebrow = "Expert Non-Fiction Book Writing Services",
+
   title,
+
   description,
+
   ctaText = "Get a Quote",
+
   ctaHref = "/contact",
-  backgroundImage = "/publishing-services/aab22737c0c341637148fb92adb4cfc2ad672097.webp",
+
+  backgroundImage =
+    "/publishing-services/aab22737c0c341637148fb92adb4cfc2ad672097.webp",
+
   overlayClassName = "absolute inset-0 bg-black/80",
-  sectionClassName = "relative flex h-screen w-full items-center justify-center overflow-hidden py-20 lg:py-10",
-  containerClassName = "container relative z-10 mx-auto px-6 text-center",
-  titleClassName = "goneva text-3xl leading-[1.2] text-[#F7F1D7] md:text-3xl lg:text-5xl",
-  descriptionClassName = "mx-auto mb-8 max-w-7xl text-lg leading-relaxed text-[#F7F1D7] md:text-xl",
-  ctaClassName = "group flex items-center gap-3 rounded-md bg-[#FDD118] px-10 py-4 font-bold text-[#018752] shadow-lg transition-all hover:bg-[#eac030]",
+
+  sectionClassName =
+    "relative flex min-h-[100svh] w-full items-center justify-center overflow-hidden py-14 sm:py-16 md:py-20 lg:min-h-screen lg:py-24 xl:py-28",
+
+  containerClassName =
+    "relative z-10 mx-auto w-full max-w-[1600px] px-4 text-center sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16",
+
+  titleClassName =
+    "goneva mx-auto max-w-[1200px] text-[30px] leading-[1.15] text-[#F7F1D7] sm:text-4xl md:text-5xl lg:text-[52px] xl:text-6xl 2xl:text-[68px]",
+
+  descriptionClassName =
+    "dm-sans mx-auto mt-5 mb-7 max-w-[1200px] text-sm leading-6 text-[#F7F1D7]/90 sm:mt-6 sm:mb-8 sm:text-base sm:leading-7 md:text-lg md:leading-8 lg:text-xl lg:leading-9",
+
+  ctaClassName =
+    "group inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-md bg-[#FDD118] px-6 py-3 text-sm font-bold text-[#018752] shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#eac030] hover:shadow-xl sm:w-auto sm:gap-3 sm:px-8 sm:py-3.5 sm:text-base md:px-10 md:py-4",
+
   parallaxStrength = -0.12,
 }) => {
   const sectionRef = useRef<HTMLElement | null>(null);
+
   const [offsetY, setOffsetY] = useState(0);
 
   useEffect(() => {
@@ -43,34 +62,80 @@ const ExpertNonFiction: React.FC<ExpertNonFictionProps> = ({
     const updateParallax = () => {
       frame = 0;
 
-      if (!sectionRef.current) {
+      if (!sectionRef.current) return;
+
+      const reducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+
+      /*
+       * Disable parallax for reduced-motion users.
+       */
+      if (reducedMotion) {
+        setOffsetY(0);
         return;
       }
 
       const rect = sectionRef.current.getBoundingClientRect();
+
       const viewportHeight = window.innerHeight;
+      const viewportWidth = window.innerWidth;
+
       const sectionCenter = rect.top + rect.height / 2;
       const viewportCenter = viewportHeight / 2;
+
       const distanceFromCenter = sectionCenter - viewportCenter;
 
-      setOffsetY(distanceFromCenter * parallaxStrength);
+      /*
+       * Use less movement on phones/tablets.
+       */
+      let responsiveStrength = parallaxStrength;
+
+      if (viewportWidth < 640) {
+        responsiveStrength = parallaxStrength * 0.25;
+      } else if (viewportWidth < 1024) {
+        responsiveStrength = parallaxStrength * 0.55;
+      }
+
+      /*
+       * Prevent extreme background movement on
+       * very tall sections or small screens.
+       */
+      const calculatedOffset =
+        distanceFromCenter * responsiveStrength;
+
+      const maxOffset =
+        viewportWidth < 640
+          ? 35
+          : viewportWidth < 1024
+          ? 60
+          : 110;
+
+      const clampedOffset = Math.max(
+        -maxOffset,
+        Math.min(maxOffset, calculatedOffset)
+      );
+
+      setOffsetY(clampedOffset);
     };
 
     const onScroll = () => {
-      if (frame) {
-        return;
-      }
+      if (frame) return;
 
       frame = window.requestAnimationFrame(updateParallax);
     };
 
     updateParallax();
-    window.addEventListener('scroll', onScroll, { passive: true });
-    window.addEventListener('resize', onScroll);
+
+    window.addEventListener("scroll", onScroll, {
+      passive: true,
+    });
+
+    window.addEventListener("resize", onScroll);
 
     return () => {
-      window.removeEventListener('scroll', onScroll);
-      window.removeEventListener('resize', onScroll);
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
 
       if (frame) {
         window.cancelAnimationFrame(frame);
@@ -83,31 +148,87 @@ const ExpertNonFiction: React.FC<ExpertNonFictionProps> = ({
       ref={sectionRef}
       className={sectionClassName}
     >
+      {/* Background */}
       <div
-        className="absolute inset-0 z-0 scale-[1.12] will-change-transform"
-        style={{ transform: `translate3d(0, ${offsetY}px, 0) scale(1.12)` }}
+        className="
+          absolute
+          inset-0
+          z-0
+          scale-[1.08]
+          will-change-transform
+          sm:scale-[1.1]
+          lg:scale-[1.12]
+        "
+        style={{
+          transform: `translate3d(0, ${offsetY}px, 0) scale(1.12)`,
+        }}
       >
         <img
           src={backgroundImage}
-          alt="Writing background"
-          className="h-full w-full object-cover"
+          alt=""
+          aria-hidden="true"
+          className="h-full w-full object-cover object-center"
         />
+
         <div className={overlayClassName} />
       </div>
 
+      {/* Content */}
       <div className={containerClassName}>
-        <p className="mb-6 text-xl font-medium uppercase tracking-widest text-[#f5ce47] md:text-2xl">
+        {/* Eyebrow */}
+        <p
+          className="
+            dm-sans
+            mx-auto
+            mb-3
+            max-w-[900px]
+            text-xs
+            font-medium
+            uppercase
+            leading-5
+            tracking-[0.15em]
+            text-[#FDD118]
+            sm:mb-4
+            sm:text-sm
+            sm:tracking-[0.18em]
+            md:text-base
+            lg:mb-5
+            lg:text-lg
+            xl:text-xl
+          "
+        >
           {eyebrow}
         </p>
 
-        <h2 className={titleClassName}>{title}</h2>
+        {/* Title */}
+        <h2 className={titleClassName}>
+          {title}
+        </h2>
 
-        <p className={descriptionClassName}>{description}</p>
+        {/* Description */}
+        <p className={descriptionClassName}>
+          {description}
+        </p>
 
-        <div className="flex justify-center">
-          <a href={ctaHref} className={ctaClassName}>
-            <span className="text-lg">{ctaText}</span>
-            <FaArrowRight className="text-2xl transition-transform group-hover:translate-x-1" />
+        {/* CTA */}
+        <div className="mx-auto flex w-full max-w-[420px] justify-center sm:max-w-none">
+          <a
+            href={ctaHref}
+            className={ctaClassName}
+          >
+            <span>{ctaText}</span>
+
+            <FaArrowRight
+              className="
+                shrink-0
+                text-base
+                transition-transform
+                duration-300
+                group-hover:translate-x-1
+                sm:text-lg
+                md:text-xl
+              "
+            />
           </a>
         </div>
       </div>
