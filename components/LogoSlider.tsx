@@ -19,27 +19,29 @@ const repeatedLogos = [...logos, ...logos, ...logos, ...logos];
 
 export default function LogoSlider() {
   return (
-    <div className="w-full overflow-hidden bg-[#F7F1D7]">
-      <div className="relative flex h-28 items-center overflow-hidden px-3 sm:h-32 sm:px-4 md:h-36 md:px-6">
-        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-8 bg-gradient-to-r from-[#F7F1D7] to-transparent sm:w-14 md:w-20" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-8 bg-gradient-to-l from-[#F7F1D7] to-transparent sm:w-14 md:w-20" />
+    <section
+      aria-label="Client logos"
+      className="w-full overflow-hidden bg-[#F7F1D7]"
+    >
+      <div className="relative flex h-[clamp(5.5rem,18vw,9rem)] items-center overflow-hidden px-2 sm:px-4 lg:px-8">
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-6 bg-gradient-to-r from-[#F7F1D7] to-transparent sm:w-12 md:w-16 lg:w-24" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-6 bg-gradient-to-l from-[#F7F1D7] to-transparent sm:w-12 md:w-16 lg:w-24" />
 
         <div
-          className="flex w-max shrink-0 items-center gap-8 pr-8 will-change-transform sm:gap-10 sm:pr-10 md:gap-12 md:pr-12"
+          className="flex w-max shrink-0 items-center gap-[clamp(1.5rem,5vw,3rem)] pr-[clamp(1.5rem,5vw,3rem)] will-change-transform"
           style={{ animation: "logo-marquee 26s linear infinite" }}
         >
           {repeatedLogos.map((logo, index) => (
             <div
               key={`${logo.src}-${index}`}
-              className="relative h-[2.9rem] shrink-0 sm:h-[3.4rem] md:h-[4.2rem] lg:h-[4.6rem]"
-              style={{ aspectRatio: `${logo.width} / ${logo.height}` }}
+              className="relative h-[clamp(2.5rem,9vw,4.5rem)] w-[clamp(8rem,34vw,15rem)] shrink-0"
               aria-hidden={index >= logos.length}
             >
               <Image
                 src={logo}
                 alt={index < logos.length ? "Client logo" : ""}
                 fill
-                sizes="(max-width: 640px) 34vw, (max-width: 768px) 24vw, (max-width: 1024px) 18vw, 240px"
+                sizes="(max-width: 640px) 34vw, 240px"
                 className="object-contain"
               />
             </div>
@@ -55,8 +57,14 @@ export default function LogoSlider() {
           to {
             transform: translate3d(-25%, 0, 0);
           }
+
+          @media (prefers-reduced-motion: reduce) {
+            div {
+              animation-play-state: paused !important;
+            }
+          }
         }
       `}</style>
-    </div>
+    </section>
   );
 }

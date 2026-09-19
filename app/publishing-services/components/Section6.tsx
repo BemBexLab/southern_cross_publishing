@@ -45,17 +45,17 @@ const Section6 = () => {
   ];
 
   return (
-    <section className="bg-[#fdf8e1] py-16 lg:py-24 overflow-hidden">
-      <div className="container mx-auto max-w-[1600px] px-2 lg:px-20">
+    <section className="overflow-hidden bg-[#fdf8e1] py-12 sm:py-16 lg:py-24">
+      <div className="mx-auto w-full max-w-[1600px] px-4 sm:px-6 lg:px-12 xl:px-20">
         {/* Header */}
-        <div className="text-center mb-20">
-          <h3 className="text-black italic font-semibold text-2xl dm-sans mb-3">
+        <div className="mx-auto mb-12 max-w-5xl text-center sm:mb-16 lg:mb-20">
+          <h3 className="dm-sans mb-3 text-lg font-semibold italic text-black sm:text-xl lg:text-2xl">
             What We Publish
           </h3>
-          <h2 className="text-[#018752] text-3xl md:text-5xl font-serif mb-6">
+          <h2 className="mb-5 font-serif text-3xl leading-tight text-[#018752] sm:text-4xl md:text-5xl">
             Every Publishing Service Your Book Needs Explained
           </h2>
-          <p className="text-[#1F1F1F] text-lg max-w-5xl mx-auto">
+          <p className="mx-auto max-w-4xl text-base leading-relaxed text-[#1F1F1F] sm:text-lg">
             Publishing a book involves far more steps than most people expect.
             Below is a clear breakdown of every service Crux Publishing House
             provides, so you know exactly what you are getting and
@@ -64,31 +64,35 @@ const Section6 = () => {
         </div>
 
         {/* Process Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-2 lg:gap-y-8">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-0 md:grid-cols-2 lg:grid-cols-3 lg:gap-x-12 lg:gap-y-10">
           {steps.map((step, index) => (
-            <div key={index} className="relative flex flex-col group">
+            <div
+              key={index}
+              className="group relative min-w-0 pb-12 pl-14 sm:pb-14 sm:pl-16 lg:pb-0 lg:pl-0"
+            >
               {/* THE LINE LOGIC */}
               {/* Desktop Horizontal line */}
-              <div className="absolute left-[-100vw] right-[-100vw] top-5 hidden h-[2px] -translate-y-1/2 bg-[#2d7a44] z-0 lg:block" />
+              <div className="absolute left-[-100vw] right-[-100vw] top-5 z-0 hidden h-[2px] -translate-y-1/2 bg-[#2d7a44] lg:block" />
 
-              {/* Vertical line for mobile - positioned exactly at center of dot */}
-              <div className="absolute left-5 top-5 h-[calc(100%+6rem)] w-[2px] -translate-x-1/2 bg-[#2d7a44] z-0 last:hidden lg:hidden" />
+              {/* Keep the vertical timeline continuous on small and medium screens. */}
+              {index < steps.length - 1 && (
+                <div className="absolute bottom-0 left-5 top-5 z-0 w-[2px] -translate-x-1/2 bg-[#2d7a44] lg:hidden" />
+              )}
 
               {/* THE DOT */}
-              <div className="relative w-10 h-10 rounded-full border-6 border-[#2d7a44] bg-[#fdf8e1] z-10 mb-8 flex items-center justify-center shrink-0"></div>
+              <div className="absolute left-0 top-0 z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-[6px] border-[#2d7a44] bg-[#fdf8e1] lg:relative lg:left-auto lg:top-auto lg:mb-8" />
 
-              {/* CONTENT - Added pl-2 (on mobile) and lg:pl-0 to move text away from the vertical line */}
-              <div className="flex flex-col relative z-10 pl-6 lg:pl-0">
-                <span className="text-[#FDD118] text-4xl sm:text-6xl font-bold leading-none mb-3 select-none">
+              <div className="relative z-10 flex flex-col">
+                <span className="mb-3 select-none text-4xl font-bold leading-none text-[#FDD118] sm:text-5xl lg:text-6xl">
                   {step.num}
                 </span>
-                <span className="text-[#2d7a44] font-bold text-sm uppercase tracking-widest mb-4">
+                <span className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-[#2d7a44] sm:text-sm lg:mb-4">
                   Steps
                 </span>
-                <h4 className="text-black font-bold text-xl mb-4 leading-tight">
+                <h4 className="mb-3 text-lg font-bold leading-tight text-black sm:text-xl lg:mb-4">
                   {step.title}
                 </h4>
-                <p className="text-black text-lg leading-relaxed">
+                <p className="text-base leading-relaxed text-black sm:text-lg">
                   {step.desc}
                 </p>
               </div>

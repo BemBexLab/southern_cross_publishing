@@ -7,21 +7,23 @@ const Section5 = () => {
       <div className="container mx-auto">
         <div className="lg:hidden">
           <div className="flex flex-col">
-            <h2 className="mb-6 max-w-[22rem] text-3xl leading-[1.08] text-[#018752] sm:mb-8 sm:max-w-[34rem] sm:text-4xl">
-              Expert Self Publishing Services in Australia:{' '}
-              <br className="hidden sm:block" />
-              Complete Support
-            </h2>
+            <div className="px-4 sm:px-6">
+              <h2 className="mb-6 max-w-[22rem] text-3xl leading-[1.08] text-[#018752] sm:mb-8 sm:max-w-[34rem] sm:text-4xl">
+                Expert Self Publishing Services in Australia:{' '}
+                <br className="hidden sm:block" />
+                Complete Support
+              </h2>
+            </div>
 
-            <div className="relative mb-6 h-[190px] overflow-visible sm:mb-8 sm:h-[320px]">
+            <div className="relative left-1/2 mb-6 h-[clamp(11.875rem,40vw,20rem)] w-screen -translate-x-1/2 overflow-visible sm:mb-8">
               <img
                 src="/publishing-services/Book_Cover_Mockups_03 1.webp"
                 alt="Books displayed on a wooden shelf"
-                className="absolute bottom-0 right-[-0.75rem] h-full w-auto max-w-none object-contain sm:right-[-1.5rem]"
+                className="absolute bottom-0 right-0 h-full w-auto max-w-none object-contain object-right"
               />
             </div>
 
-            <div className="space-y-6 text-[15px] font-normal leading-relaxed text-[#1F1F1F] sm:text-lg sm:leading-8">
+            <div className="space-y-6 px-4 text-[15px] font-normal leading-relaxed text-[#1F1F1F] sm:px-6 sm:text-lg sm:leading-8">
               <p>
                 Crux Publishing House is a complete self publishing company
                 that helps authors turn their ideas into professionally
@@ -42,13 +44,15 @@ const Section5 = () => {
               </p>
             </div>
 
-            <a
-              href="/our-books"
-              className="group mt-8 inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-md bg-[#FDD118] px-6 py-4 font-bold text-[#018752] shadow-sm transition-all hover:bg-[#eac030] sm:mt-10 sm:w-auto sm:px-10"
-            >
-              <span className="text-base sm:text-lg">Browse the Collection</span>
-              <FaArrowRight className="text-xl transition-transform group-hover:translate-x-1 sm:text-2xl" />
-            </a>
+            <div className="px-4 sm:px-6">
+              <a
+                href="/our-books"
+                className="group mt-8 inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-md bg-[#FDD118] px-6 py-4 font-bold text-[#018752] shadow-sm transition-all hover:bg-[#eac030] sm:mt-10 sm:w-auto sm:px-10"
+              >
+                <span className="text-base sm:text-lg">Browse the Collection</span>
+                <FaArrowRight className="text-xl transition-transform group-hover:translate-x-1 sm:text-2xl" />
+              </a>
+            </div>
           </div>
         </div>
 
