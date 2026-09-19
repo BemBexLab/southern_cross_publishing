@@ -17,3 +17,13 @@ p {
   font-size: 1rem;
   line-height: 1.5;
 }
+
+/* Mobile and tablet content must never remain hidden if viewport animation
+   observers are delayed or unavailable. Desktop keeps the entrance animation. */
+@media (max-width: 1023px) {
+  .motion-section {
+    opacity: 1 !important;
+    filter: none !important;
+    transform: none !important;
+  }
+}

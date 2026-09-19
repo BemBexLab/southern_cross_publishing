@@ -23,6 +23,9 @@ export default function MotionSection({
   distance = 28,
 }: MotionSectionProps) {
   const prefersReducedMotion = useReducedMotion();
+  const motionClassName = ["motion-section", className]
+    .filter(Boolean)
+    .join(" ");
 
   const variants: Variants = prefersReducedMotion
     ? {
@@ -41,7 +44,7 @@ export default function MotionSection({
   return (
     <LazyMotion features={domAnimation}>
       <m.div
-        className={className}
+        className={motionClassName}
         variants={variants}
         initial="hidden"
         whileInView="visible"

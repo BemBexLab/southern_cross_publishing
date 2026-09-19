@@ -63,7 +63,7 @@ const ComprehensivePublishing = () => {
             {bookImages.map((book, index) => (
               <m.div
                 key={`${book.src}-slide`}
-                className="min-w-0 shrink-0 snap-center"
+                className="motion-section min-w-0 shrink-0 snap-center"
                 initial={{ opacity: 0, y: 24, scale: 0.94 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true, amount: 0.55 }}
@@ -93,7 +93,7 @@ const ComprehensivePublishing = () => {
             {bookImages.map((book, index) => (
               <m.div
                 key={book.src}
-                className={`absolute w-[260px] origin-bottom transform xl:w-[320px] 2xl:w-[370px] ${book.className}`}
+                className={`motion-section absolute w-[260px] origin-bottom transform xl:w-[320px] 2xl:w-[370px] ${book.className}`}
                 initial={
                   prefersReducedMotion
                     ? { opacity: 0 }
