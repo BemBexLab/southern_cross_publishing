@@ -395,18 +395,18 @@ export default function Navbar() {
 
           <div className="mt-4 flex flex-col gap-2 text-xs text-black/60">
             <a
-              href="tel:+1234567890"
+              href="tel:+61261906580"
               className="flex items-center gap-2 rounded-lg px-2 py-1.5 transition-colors hover:bg-black/5 hover:text-black"
             >
               <FaPhoneAlt className="text-[10px]" />
-              +1 (234) 567-890
+              (02) 6190 6580
             </a>
             <a
-              href="mailto:hello@cruxpublishing.com"
+              href="mailto:contact@cruxpublishinghouse.com.au"
               className="flex items-center gap-2 rounded-lg px-2 py-1.5 transition-colors hover:bg-black/5 hover:text-black"
             >
               <FaEnvelope className="text-[10px]" />
-              hello@cruxpublishing.com
+              contact@cruxpublishinghouse.com.au
             </a>
           </div>
         </div>
