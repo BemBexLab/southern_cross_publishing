@@ -13,13 +13,9 @@ import {
   stripHtml,
 } from "../wp";
 
-export const dynamicParams = false;
-
-export async function generateStaticParams() {
-  const posts = await fetchWpPosts();
-
-  return posts.map((post) => ({ slug: post.slug }));
-}
+export const dynamicParams = true;
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 export async function generateMetadata(
   props: PageProps<"/blog/[slug]">

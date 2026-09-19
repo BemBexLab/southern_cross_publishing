@@ -80,7 +80,7 @@ export const mapWpPostToSummary = (post: WpPost): BlogPostSummary => ({
 
 export async function fetchWpPosts(): Promise<WpPost[]> {
   const response = await fetch(`${WP_POSTS_API}?per_page=100&_embed`, {
-    cache: "force-cache",
+    cache: "no-store",
   });
 
   if (!response.ok) {
@@ -94,7 +94,7 @@ export async function fetchWpPost(slug: string): Promise<WpPost | null> {
   const response = await fetch(
     `${WP_POSTS_API}?slug=${encodeURIComponent(slug)}&_embed`,
     {
-      cache: "force-cache",
+      cache: "no-store",
     }
   );
 

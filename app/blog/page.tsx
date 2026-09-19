@@ -8,6 +8,10 @@ import MotionSection from "@/components/MotionSection";
 import { fetchWpPosts, mapWpPostToSummary } from "./wp";
 import { createPageMetadata } from "../seo";
 
+// WordPress content is fetched for each request.
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 export const metadata: Metadata = createPageMetadata({
   title: "Crux Publishing Blog: Book Publishing Insights",
   description:
