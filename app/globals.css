@@ -12,10 +12,12 @@
   font-family: "DM Sans", sans-serif;
 }
 
-/* Keep paragraph typography consistent across every page and component. */
-p {
-  font-size: 1rem;
-  line-height: 1.5;
+/* Keep default paragraph typography consistent without overriding utilities. */
+@layer base {
+  p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
 }
 
 /* Mobile and tablet content must never remain hidden if viewport animation

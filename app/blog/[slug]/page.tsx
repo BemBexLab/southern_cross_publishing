@@ -161,7 +161,7 @@ const page = async (props: PageProps<"/blog/[slug]">) => {
                   >
                     View all posts
                   </Link>
-                  <a
+                  {/* <a
                     href={post.link}
                     target="_blank"
                     rel="noreferrer"
@@ -169,7 +169,7 @@ const page = async (props: PageProps<"/blog/[slug]">) => {
                   >
                     Open source article
                     <FaArrowRight className="h-3.5 w-3.5" />
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>
