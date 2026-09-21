@@ -25,9 +25,7 @@ export default function Home() {
       <MotionSection delay={0.06} distance={18}>
         <LogoSlider />
       </MotionSection>
-      <MotionSection delay={0.04}>
-        <Section2 />
-      </MotionSection>
+      <Section2 />
       <MotionSection delay={0.04}>
         <Section3 />
       </MotionSection>

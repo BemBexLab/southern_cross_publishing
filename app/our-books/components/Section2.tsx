@@ -144,6 +144,20 @@ const Section2 = () => {
                   xl:max-w-[220px]
                 "
               >
+                <div
+                  aria-hidden="true"
+                  className="absolute inset-0 flex flex-col items-center justify-between bg-gradient-to-br from-[#078c52] via-[#05643f] to-[#16352b] px-4 py-5 text-center text-[#fff8de]"
+                >
+                  <span className="text-[8px] font-semibold tracking-[0.16em]">
+                    CRUX PUBLISHING
+                  </span>
+                  <span className="line-clamp-5 text-sm font-bold leading-tight">
+                    {book.title}
+                  </span>
+                  <span className="line-clamp-2 text-[10px] tracking-wide">
+                    {book.author}
+                  </span>
+                </div>
                 <Image
                   src={book.cover}
                   alt={book.title}
@@ -157,6 +171,9 @@ const Section2 = () => {
                     220px
                   "
                   unoptimized
+                  onError={(event) => {
+                    event.currentTarget.style.display = "none";
+                  }}
                 />
               </div>
 
