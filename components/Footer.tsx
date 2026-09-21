@@ -16,15 +16,15 @@ const quickLinks = [
 
 const services = [
   { label: "Book Publishing", href: "/publishing-services" },
-  { label: "Ebook Formatting", href: "/publishing-services/ebook-formatting" },
+  { label: "Book Formatting", href: "/publishing-services/book-formatting" },
   {
     label: "Children Book",
     href: "/publishing-services/childrenbook-publishing",
   },
   { label: "Book Marketing", href: "/publishing-services/book-marketing" },
   {
-    label: "E-Book Writing Service",
-    href: "/publishing-services/e-book-writing-service",
+    label: "Book Writing Service",
+    href: "/publishing-services/book-writing-service",
   },
 ];
 
