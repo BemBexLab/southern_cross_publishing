@@ -700,8 +700,10 @@ const OurBook = () => {
 
               {/* Book Info */}
               <div className="mt-5 w-full px-2">
-                {/* min-h ensures grid alignment stays perfect even if titles wrap to 1 vs 2 lines */}
-                <h3 className="line-clamp-2 min-h-[3.5rem] text-lg font-bold leading-tight text-gray-900 sm:min-h-[4rem] sm:text-xl">
+                <h3
+                  title={book.title}
+                  className="h-7 truncate text-lg font-bold leading-tight text-gray-900 sm:h-8 sm:text-xl"
+                >
                   {book.title}
                 </h3>
                 <span className="mt-2 block text-sm text-gray-600 sm:text-base">

@@ -101,16 +101,20 @@ const Section2 = () => {
             mb-10
             grid
             w-full
-            max-w-[1400px]
+            max-w-[1080px]
             grid-cols-2
-            gap-x-0
-            gap-y-8
+            gap-x-4
+            gap-y-6
             sm:mb-12
-            sm:gap-y-10
+            sm:gap-x-6
+            sm:gap-y-8
             md:grid-cols-3
-            md:gap-y-12
+            md:max-w-[760px]
+            md:gap-x-8
+            md:gap-y-10
             lg:mb-14
             lg:grid-cols-4
+            lg:max-w-[1080px]
             xl:mb-16
           "
         >
