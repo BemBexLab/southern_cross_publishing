@@ -10,7 +10,7 @@ const categories = [
   "All",
   "Fiction",
   "Non Fiction",
-  "Biography",
+  "Biography / Autobiography",
   "Children Book",
 ];
 
@@ -103,18 +103,15 @@ const Section2 = () => {
             w-full
             max-w-[1400px]
             grid-cols-2
-            gap-x-4
+            gap-x-0
             gap-y-8
             sm:mb-12
-            sm:gap-x-6
             sm:gap-y-10
             md:grid-cols-3
-            md:gap-x-8
             md:gap-y-12
             lg:mb-14
             lg:grid-cols-4
             xl:mb-16
-            xl:gap-x-10
           "
         >
           {filteredBooks.map((book, index) => (
@@ -178,7 +175,7 @@ const Section2 = () => {
               </div>
 
               {/* Book Title */}
-              <p className="dm-sans w-full max-w-[220px] text-xs font-semibold leading-5 text-[#1A3C34] sm:text-sm sm:leading-6 md:text-base">
+              <p className="dm-sans h-5 w-full max-w-[220px] truncate text-xs font-semibold leading-5 text-[#1A3C34] sm:h-6 sm:text-sm sm:leading-6 md:text-base">
                 {book.title}
               </p>
 

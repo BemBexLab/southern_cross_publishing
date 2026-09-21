@@ -32,7 +32,7 @@ const ContactItem = ({
   href?: string;
 }) => {
   const content = (
-    <div className="flex items-start gap-3 sm:gap-4">
+    <div className="flex items-center gap-3 sm:gap-4">
       <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#FDD118] text-[#078c52] sm:h-12 sm:w-12">
         {icon}
       </div>
@@ -145,7 +145,6 @@ const GetInTouch = ({
       }}
     >
       <div className="relative mx-auto grid w-full max-w-[1440px] gap-10 lg:grid-cols-[1fr_1.25fr] lg:items-start lg:gap-12 xl:gap-16">
-        
         {/* Left Column: Text & Contact Info */}
         <div className="w-full pt-2 text-[#f6ecd1] lg:pt-8">
           <h2 className="goneva w-full text-3xl font-medium leading-tight text-[#f6ecd1] sm:text-4xl md:text-5xl lg:text-[2.85rem] xl:text-5xl">
@@ -162,21 +161,21 @@ const GetInTouch = ({
             ))}
           </div>
 
-          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:mt-10">
+          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:mt-10 items-center">
             <ContactItem
               icon={<FiPhone className="h-5 w-5 sm:h-6 sm:w-6" />}
               text="(02) 6190 6580"
               href="tel:+61261906580"
             />
             <ContactItem
-              icon={<BiEnvelope className="h-5 w-5 sm:h-6 sm:w-6" />}
-              text="contact@cruxpublishinghouse.com.au"
-              href="mailto:contact@cruxpublishinghouse.com.au"
+              icon={<IoLocationOutline className="h-5 w-5 sm:h-6 sm:w-6" />}
+              text="368 Sussex St, Sydney NSW 2000"
             />
             <div className="sm:col-span-2">
               <ContactItem
-                icon={<IoLocationOutline className="h-5 w-5 sm:h-6 sm:w-6" />}
-                text="368 Sussex St, Sydney NSW 2000"
+                icon={<BiEnvelope className="h-5 w-5 sm:h-6 sm:w-6" />}
+                text="contact@cruxpublishinghouse.com.au"
+                href="mailto:contact@cruxpublishinghouse.com.au"
               />
             </div>
           </div>
@@ -197,7 +196,9 @@ const GetInTouch = ({
                 type="text"
                 placeholder="First Name"
                 value={formState.firstName}
-                onChange={(event) => updateField("firstName", event.target.value)}
+                onChange={(event) =>
+                  updateField("firstName", event.target.value)
+                }
                 autoComplete="given-name"
                 required
                 className="dm-sans h-12 w-full rounded-2xl border-none bg-[#f6efd7] px-4 text-sm text-[#4e5e52] placeholder:text-[#9aa299] focus:outline-none focus:ring-2 focus:ring-[#078c52]/30 sm:h-14 sm:px-5 sm:text-base"
@@ -206,7 +207,9 @@ const GetInTouch = ({
                 type="text"
                 placeholder="Last Name"
                 value={formState.lastName}
-                onChange={(event) => updateField("lastName", event.target.value)}
+                onChange={(event) =>
+                  updateField("lastName", event.target.value)
+                }
                 autoComplete="family-name"
                 required
                 className="dm-sans h-12 w-full rounded-2xl border-none bg-[#f6efd7] px-4 text-sm text-[#4e5e52] placeholder:text-[#9aa299] focus:outline-none focus:ring-2 focus:ring-[#078c52]/30 sm:h-14 sm:px-5 sm:text-base"
@@ -248,7 +251,9 @@ const GetInTouch = ({
                 <FaCheck className="h-3 w-3 sm:h-4 sm:w-4" />
               </span>
               <span className="dm-sans text-xs leading-relaxed sm:text-sm">
-                By submitting this form, you agree to be contacted via phone or email regarding your publishing inquiry. We respect your privacy and will never share your details with third parties.
+                By submitting this form, you agree to be contacted via phone or
+                email regarding your publishing inquiry. We respect your privacy
+                and will never share your details with third parties.
               </span>
             </label>
 
@@ -260,13 +265,25 @@ const GetInTouch = ({
               {isSubmitting ? (
                 <span className="flex items-center gap-2">
                   <svg className="h-5 w-5 animate-spin" viewBox="0 0 24 24">
-                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
-                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                    <circle
+                      className="opacity-25"
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                      fill="none"
+                    />
+                    <path
+                      className="opacity-75"
+                      fill="currentColor"
+                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                    />
                   </svg>
                   Sending...
                 </span>
               ) : (
-                ctaText ?? "Let's Build Your Book"
+                (ctaText ?? "Let's Build Your Book")
               )}
             </button>
 
