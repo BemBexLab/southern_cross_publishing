@@ -164,12 +164,12 @@ const GetInTouch = ({
           <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:mt-10 items-center">
             <ContactItem
               icon={<FiPhone className="h-5 w-5 sm:h-6 sm:w-6" />}
-              text="(0468) 285-539"
-              href="tel:+61468285539"
+              text="(02) 6190 6580"
+              href="tel:+61261906580"
             />
             <ContactItem
               icon={<IoLocationOutline className="h-5 w-5 sm:h-6 sm:w-6" />}
-              text="16A Fox Cl, Kariong NSW 2250, Australia"
+              text="368 Sussex St, Sydney NSW 2000"
             />
             <div className="sm:col-span-2">
               <ContactItem
