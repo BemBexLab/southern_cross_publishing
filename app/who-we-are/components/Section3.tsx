@@ -82,7 +82,7 @@ export default function Section3() {
       <div className="mx-auto grid max-w-8xl grid-cols-1 items-center gap-16 lg:grid-cols-2">
         <div className="relative aspect-[5/4] w-full overflow-hidden rounded-[2.5rem] shadow-sm">
           <Image
-            src="/who-we-are/Rectangle (1).webp"
+            src="/audiobook-service/Rectangle 4348.svg"
             alt="Audiobook mockups on landscape"
             fill
             className="object-cover"

@@ -169,7 +169,7 @@ const GetInTouch = ({
             />
             <ContactItem
               icon={<IoLocationOutline className="h-5 w-5 sm:h-6 sm:w-6" />}
-              text="368 Sussex St, Sydney NSW 2000"
+              text="368 Sussex St, Sydney, NSW, Australia, 2000"
             />
             <div className="sm:col-span-2">
               <ContactItem

@@ -13,7 +13,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Biography / Autobiography"],
-    link: "https://a.co/d/0eMh9NpH",
+    // link: "https://a.co/d/0eMh9NpH",
   },
   {
     title: "THE BURIED TRUTH",
@@ -22,7 +22,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Biography / Autobiography"],
-    link: "https://a.co/d/08rleSkd",
+    // link: "https://a.co/d/08rleSkd",
   },
   {
     title: "WHAT THE HELL IS WRONG WITH MY DOG?: YOU ARE WHAT'S WRONG!",
@@ -31,7 +31,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Non Fiction"],
-    link: "https://a.co/d/0iPTgRoJ",
+    // link: "https://a.co/d/0iPTgRoJ",
   },
   {
     title: "Talon: The Great Dragonfly",
@@ -40,7 +40,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Children Book"],
-    link: "https://a.co/d/02RD5Tsi",
+    // link: "https://a.co/d/02RD5Tsi",
   },
   {
     title: "THE VSO PLAYBOOK: Volume 1",
@@ -49,7 +49,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Non Fiction"],
-    link: "https://a.co/d/020nlti6",
+    // link: "https://a.co/d/020nlti6",
   },
   {
     title: "THE VSO PLAYBOOK: Volume 2",
@@ -58,7 +58,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Non Fiction"],
-    link: "https://a.co/d/05ws6l7C",
+    // link: "https://a.co/d/05ws6l7C",
   },
   {
     title: "THE VSO PLAYBOOK: Volume 3",
@@ -67,7 +67,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Non Fiction"],
-    link: "https://a.co/d/0jkmTgSl",
+    // link: "https://a.co/d/0jkmTgSl",
   },
   {
     title: "Returning to the Prayer of Jabez & God Answered: A Spiritual Journey Through Scripture",
@@ -76,7 +76,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Non Fiction"],
-    link: "https://a.co/d/0iNubjwn",
+    // link: "https://a.co/d/0iNubjwn",
   },
   {
     title: "The Messages of Faith and The Love of God: From Our Blessed Mother",
@@ -85,7 +85,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Non Fiction"],
-    link: "https://a.co/d/0cSyfyU1",
+    // link: "https://a.co/d/0cSyfyU1",
   },
  {
     title: "DON'T CUT the GRASS on Sunday",
@@ -94,7 +94,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Non Fiction"],
-    link: "https://a.co/d/0ee4hTIt",
+    // link: "https://a.co/d/0ee4hTIt",
   },
   {
     title: "HIP HOP HERMENEUTICS: A TOOL TO HELP THE BLACK CHURCH RECAPTURE AFRICAN AMERICAN YOUTH",
@@ -103,7 +103,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Non Fiction"],
-    link: "https://a.co/d/0gR8fCxy",
+    // link: "https://a.co/d/0gR8fCxy",
   },
   {
     title: "A LIFERAFT for The SUDDENLY SINGLE PARENT",
@@ -112,7 +112,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Biography / Autobiography"],
-    link: "https://a.co/d/0hPrYFXh",
+    // link: "https://a.co/d/0hPrYFXh",
   },
   {
     title: "On Lightness and Being: Becoming Human: Learning to See",
@@ -121,7 +121,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Non Fiction"],
-    link: "https://a.co/d/0eVNdG2M",
+    // link: "https://a.co/d/0eVNdG2M",
   },
   {
     title: "On Lightness and Being: Love, Loss, and Letting Go",
@@ -130,7 +130,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Non Fiction"],
-    link: "https://a.co/d/01p7ZBw8",
+    // link: "https://a.co/d/01p7ZBw8",
   },
   {
     title: "On Lightness and Being: Becoming Whole: Healing, Wisdom, and Peace",
@@ -139,7 +139,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Non Fiction"],
-    link: "https://a.co/d/01eDTdbD",
+    // link: "https://a.co/d/01eDTdbD",
   },
   {
     title: "The Bee's Colony, The Rise of the New Queen",
@@ -148,7 +148,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Children Book"],
-    link: "https://a.co/d/03dFgTaS",
+    // link: "https://a.co/d/03dFgTaS",
   },
   {
     title: "Tales of the Hippie Dippie Gardener",
@@ -157,7 +157,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Fiction"],
-    link: "https://a.co/d/01RL87Q4",
+    // link: "https://a.co/d/01RL87Q4",
   },
   {
     title: "God Carried Me: A Testament to Faith Through Life's Storms",
@@ -166,7 +166,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Biography / Autobiography"],
-    link: "https://a.co/d/084ustJB",
+    // link: "https://a.co/d/084ustJB",
   },
   {
     title: "THE LABYRINTH",
@@ -175,7 +175,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Non Fiction"],
-    link: "https://a.co/d/0fpe2YQe",
+    // link: "https://a.co/d/0fpe2YQe",
   },
   {
     title: "THE TIME CAPSULE MYSTERY",
@@ -184,7 +184,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Children Book"],
-    link: "https://a.co/d/0eaNfhXz",
+    // link: "https://a.co/d/0eaNfhXz",
   },
   {
     title: "LAFLAPS: Living A Fruitful Life After Prison System",
@@ -193,7 +193,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Biography / Autobiography"], 
-    link: "https://a.co/d/0gZbtRPp",
+    // link: "https://a.co/d/0gZbtRPp",
   },
   {
     title: "THROUGH THE EYE OF THE STORM",
@@ -202,7 +202,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Biography / Autobiography"],
-    link: "https://a.co/d/0ciIvs0L",
+    // link: "https://a.co/d/0ciIvs0L",
   },
   {
     title: "FRESH PATHS UNFOLDING",
@@ -211,7 +211,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Fiction"],
-    link: "https://a.co/d/0h3gl6A6",
+    // link: "https://a.co/d/0h3gl6A6",
   },
   {
     title: "Forged in the Mountains: A Family's Resilience",
@@ -220,7 +220,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Biography / Autobiography"],
-    link: "https://a.co/d/02fR7S9m",
+    // link: "https://a.co/d/02fR7S9m",
   },
   {
     title: "Discovering the Root Causes of Cancer: A Journey of Self-Discovery",
@@ -229,7 +229,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Biography / Autobiography"],
-    link: "https://a.co/d/0eB0OwID",
+    // link: "https://a.co/d/0eB0OwID",
   },
   {
     title: "Dreams from my Grandfather: An International Inheritance",
@@ -238,7 +238,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Biography / Autobiography"],
-    link: "https://a.co/d/0ie4oXLR",
+    // link: "https://a.co/d/0ie4oXLR",
   },
   {
     title: "THE BOOK OF UNFOLDING INTEGRATION",
@@ -247,7 +247,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Non Fiction"],
-    link: "https://a.co/d/01TnBqeA",
+    // link: "https://a.co/d/01TnBqeA",
   },
   {
     title: "BROKEN DREAMS: A Journey Through the Trials and Tribulations of the Texas Gulf Coast",
@@ -256,7 +256,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Fiction"],
-    link: "https://a.co/d/07omlcAE",
+    // link: "https://a.co/d/07omlcAE",
   },
   {
     title: "The Bounce Back: A Journey of Survival, Identity, and Resilience",
@@ -265,7 +265,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Biography / Autobiography"],
-    link: "https://a.co/d/077L9M4Y",
+    // link: "https://a.co/d/077L9M4Y",
   },
   {
     title: "IT WAS NOT YOUR FAULT: BREAKING THE SILENCE ON MALE SEXUAL ABUSE AND FINDING HEALING THROUGH FAITH",
@@ -274,7 +274,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Non Fiction"],
-    link: "https://a.co/d/00INdTu4",
+    // link: "https://a.co/d/00INdTu4",
   },
   {
     title: "The Adventure Of Scott And Lenny: Learn How To Fly",
@@ -283,7 +283,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Children Book"],
-    link: "https://a.co/d/04i1QzPC",
+    // link: "https://a.co/d/04i1QzPC",
   },
   {
     title: "Proverbial Spirits : Spiritual messages A medium told me to find the Philosopher's stone. I did just that.",
@@ -292,7 +292,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Biography / Autobiography"],
-    link: "https://a.co/d/0eTrzJDj",
+    // link: "https://a.co/d/0eTrzJDj",
   },
   {
     title: "Leading With Purpose: A Leadership Framework For Non-Native School Leaders Serving in Predominately Native Schools",
@@ -301,7 +301,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Non Fiction"],
-    link: "https://a.co/d/02Ghlu41",
+    // link: "https://a.co/d/02Ghlu41",
   },
   {
     title: "JETHRO & KASHU & FRIENDS PLANT A FOREST",
@@ -310,7 +310,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Children Book"],
-    link: "https://a.co/d/0dowUcE8",
+    // link: "https://a.co/d/0dowUcE8",
   },
   {
     title: "Kael and the Whale with the Polka-Dot Tail",
@@ -319,7 +319,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Children Book"],
-    link: "https://a.co/d/0aj4vVbz",
+    // link: "https://a.co/d/0aj4vVbz",
   },
   {
     title: "THE ARCHIVE OF A. D. BRADLEY",
@@ -328,7 +328,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Biography / Autobiography"],
-    link: "https://a.co/d/0iMWfNUy",
+    // link: "https://a.co/d/0iMWfNUy",
   },
   {
     title: "Mr. Mogley Muck The House Mouse",
@@ -337,7 +337,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Children Book"],
-    link: "https://a.co/d/0aF4lnuo",
+    // link: "https://a.co/d/0aF4lnuo",
   },
   {
     title: "IMPULSE: A Story About Loss, Love, and Life Lessons",
@@ -346,7 +346,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Children Book"],
-    link: "https://a.co/d/0d9v0ECL",
+    // link: "https://a.co/d/0d9v0ECL",
   },
   {
     title: "THE MAN OF LIGHT AND THE MAN OF DARK",
@@ -355,7 +355,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Non Fiction"],
-    link: "https://a.co/d/014CkQCA",
+    // link: "https://a.co/d/014CkQCA",
   },
   {
     title: "Faith Over Feelings: Discovering Purpose in Your Hardest Places",
@@ -364,7 +364,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Biography / Autobiography"],
-    link: "https://a.co/d/0iz5TW4E",
+    // link: "https://a.co/d/0iz5TW4E",
   },
   {
     title: "STILL I RISE: The Life of Rachel",
@@ -373,7 +373,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Biography / Autobiography"],
-    link: "https://a.co/d/09xqIhbN",
+    // link: "https://a.co/d/09xqIhbN",
   },
   {
     title: "BEFORE ONE GOD: The Ancient Gods Behind the Biblical Tradition",
@@ -382,7 +382,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Non Fiction"],
-    link: "https://a.co/d/04YBpyNT",
+    // link: "https://a.co/d/04YBpyNT",
   },
   {
     title: "RHYME WITH REASON",
@@ -391,7 +391,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Non Fiction"],
-    link: "https://a.co/d/0bVw3K7a",
+    // link: "https://a.co/d/0bVw3K7a",
   },
   {
     title: "The Adventures of Jenny: Not What We Expected",
@@ -400,7 +400,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Children Book"],
-    link: "https://a.co/d/025Z9puW",
+    // link: "https://a.co/d/025Z9puW",
   },
   {
     title: "ASHES OF THE OBSIDIAN SHORE",
@@ -409,7 +409,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Fiction"],
-    link: "https://a.co/d/06XrCqUG",
+    // link: "https://a.co/d/06XrCqUG",
   },
   {
     title: "SCORCHING WINGS OF AN EMPTY NESTER: An empty nester adventure that I wasn't ready for",
@@ -418,7 +418,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Non Fiction"],
-    link: "https://a.co/d/0jdoebVy",
+    // link: "https://a.co/d/0jdoebVy",
   },
   {
     title: "The Keeper of Tears: A Tale of Lost Rain, Brave Hearts, and the Power of Tears",
@@ -427,7 +427,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Children Book"],
-    link: "https://a.co/d/098t5Wdp",
+    // link: "https://a.co/d/098t5Wdp",
   },
   {
     title: "Drawn 2 Danger: A Memoir of Duty, Danger, and Discovery",
@@ -436,7 +436,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Fiction"],
-    link: "https://a.co/d/01Bs2kl9",
+    // link: "https://a.co/d/01Bs2kl9",
   },
   {
     title: "THE PUBLICAN",
@@ -445,7 +445,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Fiction"],
-    link: "https://a.co/d/01SaWxIa",
+    // link: "https://a.co/d/01SaWxIa",
   },
   {
     title: "OLD LORE & BONES: Poems, Ballads & Adventures of the Sea",
@@ -454,7 +454,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Biography / Autobiography"],
-    link: "https://a.co/d/0hEL6zyk",
+    // link: "https://a.co/d/0hEL6zyk",
   },
   {
     title: "The Table: Conversations Across Time",
@@ -463,7 +463,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Non Fiction"],
-    link: "https://a.co/d/0hvI02XW",
+    // link: "https://a.co/d/0hvI02XW",
   },
   {
     title: "Healing Your Heart: Understanding the Root Causes of Breast Cancer",
@@ -472,7 +472,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Non Fiction"],
-    link: "https://a.co/d/0iPpg8TL",
+    // link: "https://a.co/d/0iPpg8TL",
   },
   {
     title: "JAMIE, HATTIE & JACKIE and the Otherworldly Friends",
@@ -481,7 +481,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Children Book"],
-    link: "https://a.co/d/08g4V2iB",
+    // link: "https://a.co/d/08g4V2iB",
   },
   {
     title: "A View from the Palace",
@@ -490,7 +490,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Fiction"],
-    link: "https://a.co/d/05xtglqn",
+    // link: "https://a.co/d/05xtglqn",
   },
   {
     title: "CROWNED in SILENCE",
@@ -499,7 +499,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Fiction"],
-    link: "https://a.co/d/02a32XsM",
+    // link: "https://a.co/d/02a32XsM",
   },
   {
     title: "DECEIVED WOMAN",
@@ -508,7 +508,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Non Fiction"],
-    link: "https://a.co/d/00S0v12I",
+    // link: "https://a.co/d/00S0v12I",
   },
   {
     title: "MUJER ENGAÑADA (Spanish Edition)",
@@ -517,7 +517,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Non Fiction"],
-    link: "https://a.co/d/02b8lhUI",
+    // link: "https://a.co/d/02b8lhUI",
   },
   {
     title: "Can I Survive Widowhood: The struggle With Grief, Shock, and Reestablishing a New Life",
@@ -526,7 +526,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Biography / Autobiography"],
-    link: "https://a.co/d/00AOB2Hr",
+    // link: "https://a.co/d/00AOB2Hr",
   },
   {
     title: "LAFLAPS: THE BON VOYAGE",
@@ -535,7 +535,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Biography / Autobiography"],
-    link: "https://a.co/d/01vp7Adj",
+    // link: "https://a.co/d/01vp7Adj",
   },
   {
     title: "Preston",
@@ -544,7 +544,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Non Fiction"],
-    link: "https://a.co/d/0eR3izAk",
+    // link: "https://a.co/d/0eR3izAk",
   },
   {
     title: "The Little Butterfly Girl: Revised Tenth Anniversary Edition",
@@ -553,7 +553,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Biography / Autobiography"],
-    link: "https://a.co/d/0j3UkTFL",
+    // link: "https://a.co/d/0j3UkTFL",
   },
 
   
@@ -564,7 +564,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Children Book"],
-    link: "https://a.co/d/0h1r5jAM",
+    // link: "https://a.co/d/0h1r5jAM",
   },
   {
     title: "MY BUG BOOK",
@@ -573,7 +573,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Children Book"],
-    link: "https://a.co/d/09kbk7rw",
+    // link: "https://a.co/d/09kbk7rw",
   },
   {
     title: "IF I HAD A COW",
@@ -582,7 +582,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Children Book"],
-    link: "https://a.co/d/05OKpCCe",
+    // link: "https://a.co/d/05OKpCCe",
   },
   {
     title: "A SNOWY DAY",
@@ -591,7 +591,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Children Book"],
-    link: "https://a.co/d/07RInouK",
+    // link: "https://a.co/d/07RInouK",
   },
   {
     title: "THE STORMY NIGHT",
@@ -600,7 +600,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Children Book"],
-    link: "https://a.co/d/01HxUOni",
+    // link: "https://a.co/d/01HxUOni",
   },
   {
     title: "Monkey Feet",
@@ -609,7 +609,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Children Book"],
-    link: "https://a.co/d/03HzI9Bp",
+    // link: "https://a.co/d/03HzI9Bp",
   },
   {
     title: "El Color del Renacer: Memorias de Fe, Tierra y Renacimiento (Spanish Edition)",
@@ -618,7 +618,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Biography / Autobiography"],
-    link: "https://a.co/d/080ryfQM",
+    // link: "https://a.co/d/080ryfQM",
   },
   {
     title: "THE COLOR OF REBIRTH: Memoirs of Faith, Land, and Renewal",
@@ -627,7 +627,7 @@ export const BOOKS = [
     date: "6-July-2023",
     genre: "Novel",
     tags: ["Biography / Autobiography"],
-    link: "https://a.co/d/0427EwRh",
+    // link: "https://a.co/d/0427EwRh",
   },
 ];
 
@@ -654,9 +654,7 @@ const OurBook = () => {
       <section className="w-full px-4 pb-12 sm:px-6 sm:pb-16 lg:px-8 lg:pb-20">
         <div className="mx-auto grid w-full max-w-[1280px] grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3 xl:grid-cols-4 xl:gap-10">
           {visibleBooks.map((book, idx) => (
-            <Link
-              href={book.link}
-              target="_blank"
+            <div
               rel="noopener noreferrer"
               key={`${book.title}-${idx}`}
               className="group flex w-full max-w-[300px] flex-col items-center text-center mx-auto"
@@ -689,13 +687,6 @@ const OurBook = () => {
                     event.currentTarget.style.display = "none";
                   }}
                 />
-
-                {/* Hover Overlay */}
-                <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 backdrop-blur-[2px] transition-opacity duration-300 group-hover:opacity-100">
-                  <span className="rounded-full border border-white/60 bg-white/20 px-5 py-2 text-xs font-semibold tracking-wider text-white shadow-lg backdrop-blur-md transition-transform duration-300 group-hover:scale-105 sm:px-6 sm:py-2.5 sm:text-sm">
-                    VIEW BOOK
-                  </span>
-                </div>
               </div>
 
               {/* Book Info */}
@@ -710,7 +701,7 @@ const OurBook = () => {
                   {book.author}
                 </span>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
 

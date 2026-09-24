@@ -177,6 +177,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
               goneva
               text-base
               leading-tight
+              tracking-[2.3]
               text-[#F7F1D7]
               sm:text-lg
               md:text-xl

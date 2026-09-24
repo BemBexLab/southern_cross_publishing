@@ -28,7 +28,7 @@ const services = [
 const socials = [
   {
     label: "Facebook",
-    href: "https://www.facebook.com/",
+    href: "https://www.facebook.com/CruxPublishingHouse/",
     icon: <FaFacebookF className="h-[14px] w-[14px]" />,
   },
   // {
@@ -38,7 +38,7 @@ const socials = [
   // },
   {
     label: "Instagram",
-    href: "https://www.instagram.com/",
+    href: "https://www.instagram.com/cruxpublishinghouse/",
     icon: <FaInstagram className="h-[14px] w-[14px]" />,
   },
 ];

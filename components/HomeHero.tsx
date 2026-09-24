@@ -2,11 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
+import heroImage from "@/public/home/Hero Image 1 (1).svg";
 
 const HomeHero = () => {
   return (
     <section
-      className="relative h-full w-full overflow-hidden bg-cover bg-center bg-no-repeat text-white"
+      className="relative w-full overflow-hidden bg-cover bg-center bg-no-repeat text-white"
       style={{
         backgroundImage: 'url("/home/Mask group.webp")',
         backgroundColor: "#018752",
@@ -15,26 +16,25 @@ const HomeHero = () => {
       {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/10 to-black/45" />
 
-      {/* Outer wrapper — matches original mx-15 and vertical padding */}
-      <div className="relative flex flex-col justify-center px-5 pb-8 pt-24 sm:px-8 sm:pb-10 sm:pt-28 md:px-12 md:pb-12 lg:mx-15 lg:px-0 lg:pb-8 lg:pt-28">
-
+      {/* Outer wrapper */}
+      <div className="relative flex flex-col justify-center px-5 pb-10 pt-20 sm:px-8 sm:pb-12 sm:pt-24 md:px-12 lg:px-16 lg:pb-16 lg:pt-32 xl:px-20 2xl:px-24">
         {/* Two-column grid on lg+, single column below */}
-        <div className="grid w-full items-center gap-8 sm:gap-10 lg:grid-cols-2 lg:gap-10 xl:gap-14 2xl:gap-16">
-
+        <div className="mx-auto grid w-full max-w-7xl items-center gap-8 sm:gap-10 lg:items-stretch lg:grid-cols-2 lg:gap-12 xl:gap-16">
           {/* ── Left column: heading + body + buttons ── */}
           <div className="flex flex-col gap-4 text-center sm:gap-5 lg:text-left">
-            <h1 className="goneva text-[3rem] leading-[1.02] sm:text-5xl md:text-[4.4rem] lg:text-5xl xl:text-6xl 2xl:text-7xl">
+            <h1 className="goneva text-[2.25rem] leading-[1.05] sm:text-5xl md:text-6xl lg:text-[3.25rem] xl:text-[3.75rem] 2xl:text-7xl">
               Professional Book Publishing Services in Australia
             </h1>
 
-            <div className="mx-auto w-full max-w-[250px] sm:max-w-[340px] md:max-w-[420px] lg:hidden">
-              <div className="relative h-[220px] w-full sm:h-[300px] md:h-[420px]">
+            {/* Mobile / Tablet inline image (visible below lg) */}
+            <div className="mx-auto w-full max-w-xs sm:max-w-sm md:max-w-md lg:hidden">
+              <div className="relative aspect-[4/3] w-full">
                 <Image
-                  src="/home/Hero Image 1.webp"
+                  src={heroImage}
                   fill
                   alt="Illustration for Crux Publishing House"
                   className="object-contain object-center drop-shadow-[0_20px_50px_rgba(0,0,0,0.35)]"
-                  sizes="(max-width: 639px) 85vw, (max-width: 1023px) 60vw"
+                  sizes="(max-width: 639px) 85vw, (max-width: 1023px) 50vw"
                   priority
                 />
               </div>
@@ -45,7 +45,7 @@ const HomeHero = () => {
                 Australia's trusted self publishing company: ghostwriting, editing, design, distribution and marketing, all in one place
               </p>
               <p>
-                At Crux  Publishing, we assist you with book publishing services from writing to the final printed page. Are you holding a half-finished manuscript, a voice note full of ideas, or a story you've carried for years? We are here to shape it into something the world will remember.
+                At Crux Publishing, we assist you with book publishing services from writing to the final printed page. Are you holding a half-finished manuscript, a voice note full of ideas, or a story you've carried for years? We are here to shape it into something the world will remember.
               </p>
               <p>
                 We are an Australia-based book publishing company and work with authors across every genre, every background, and every stage of the writing journey.
@@ -70,20 +70,17 @@ const HomeHero = () => {
             </div>
           </div>
 
-          {/* ── Right column: book image ── */}
-          <div className="hidden lg:mx-0 lg:block lg:w-full lg:max-w-none">
-            <div className="relative lg:h-[750px] xl:h-[720px] 2xl:h-[800px]">
-              <Image
-                src="/home/Hero Image 1.webp"
-                fill
-                alt="Illustration for Crux Publishing House"
-                className="object-contain object-center drop-shadow-[0_20px_50px_rgba(0,0,0,0.35)]"
-                sizes="(max-width: 1279px) 45vw, (max-width: 1535px) 500px, 620px"
-                priority
-              />
-            </div>
+          {/* ── Right column: book image (visible lg+) ── */}
+          <div className="relative hidden min-h-0 w-full lg:block lg:h-full lg:self-stretch">
+            <Image
+              src={heroImage}
+              fill
+              alt="Illustration for Crux Publishing House"
+              className="object-contain object-center drop-shadow-[0_20px_50px_rgba(0,0,0,0.35)] lg:object-cover"
+              sizes="(min-width: 1280px) 620px, (min-width: 1024px) 45vw"
+              priority
+            />
           </div>
-
         </div>
       </div>
     </section>

@@ -16,6 +16,9 @@ const categories = [
 
 const Section2 = () => {
   const [activeTab, setActiveTab] = useState("All");
+  const [coverOrientations, setCoverOrientations] = useState<
+    Record<string, "portrait" | "landscape">
+  >({});
 
   const filteredBooks =
     activeTab === "All"
@@ -119,51 +122,30 @@ const Section2 = () => {
           "
         >
           {filteredBooks.map((book, index) => (
-            <Link
+            <div
               key={`${book.title}-${index}`}
-              href={book.link}
-              className="group flex min-w-0 flex-col items-center text-center"
+              className="group flex h-full min-w-0 flex-col items-center text-center"
             >
               {/* Book Cover */}
               <div
-                className="
-                  relative
-                  mb-4
-                  aspect-[2/3]
-                  w-full
-                  max-w-[150px]
-                  overflow-hidden
-                  rounded-sm
-                  transition-all
-                  duration-300
-                  group-hover:-translate-y-1
-                  group-hover:shadow-xl
-                  sm:mb-5
-                  sm:max-w-[180px]
-                  md:max-w-[190px]
-                  lg:max-w-[200px]
-                  xl:max-w-[220px]
-                "
+                className={`
+                  relative mt-auto mb-4 w-full max-w-[150px] overflow-hidden rounded-sm
+                  bg-[#f7f1d7] transition-all duration-300
+                  group-hover:-translate-y-1 group-hover:shadow-xl
+                  sm:mb-5 sm:max-w-[180px] md:max-w-[190px]
+                  lg:max-w-[200px] xl:max-w-[220px]
+                  ${
+                    coverOrientations[book.cover] === "landscape"
+                      ? "aspect-[4/3]"
+                      : "aspect-[2/3]"
+                  }
+                `}
               >
-                <div
-                  aria-hidden="true"
-                  className="absolute inset-0 flex flex-col items-center justify-between bg-gradient-to-br from-[#078c52] via-[#05643f] to-[#16352b] px-4 py-5 text-center text-[#fff8de]"
-                >
-                  <span className="text-[8px] font-semibold tracking-[0.16em]">
-                    CRUX PUBLISHING
-                  </span>
-                  <span className="line-clamp-5 text-sm font-bold leading-tight">
-                    {book.title}
-                  </span>
-                  <span className="line-clamp-2 text-[10px] tracking-wide">
-                    {book.author}
-                  </span>
-                </div>
                 <Image
                   src={book.cover}
                   alt={book.title}
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="object-fill"
                   sizes="
                     (max-width: 639px) 150px,
                     (max-width: 767px) 180px,
@@ -172,6 +154,19 @@ const Section2 = () => {
                     220px
                   "
                   unoptimized
+                  onLoad={(event) => {
+                    const orientation =
+                      event.currentTarget.naturalWidth >
+                      event.currentTarget.naturalHeight
+                        ? "landscape"
+                        : "portrait";
+
+                    setCoverOrientations((current) =>
+                      current[book.cover] === orientation
+                        ? current
+                        : { ...current, [book.cover]: orientation },
+                    );
+                  }}
                   onError={(event) => {
                     event.currentTarget.style.display = "none";
                   }}
@@ -187,7 +182,7 @@ const Section2 = () => {
               <p className="dm-sans mt-1 w-full max-w-[220px] text-[11px] leading-4 text-[#1A3C34]/70 sm:text-xs md:text-sm">
                 {book.author}
               </p>
-            </Link>
+            </div>
           ))}
         </div>
 
