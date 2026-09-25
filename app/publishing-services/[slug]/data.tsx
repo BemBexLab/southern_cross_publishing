@@ -5,6 +5,8 @@ export interface HeroSectionData {
   description: ReactNode;
   ctaText: string;
   ctaHref: string;
+  imageSrc?: string;
+  imageAlt?: string;
 }
 
 export interface ConsultationCard {
@@ -85,6 +87,8 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
       ),
       ctaText: "Get a Free Quote Today",
       ctaHref: "/contact",
+      imageSrc: "/publishing-services/Group.svg",
+      imageAlt: "E-book writing service illustration",
     },
     bookConsultation: {
       eyebrow: "Complete Book Writing & Production",
@@ -250,6 +254,8 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
       ),
       ctaText: "Request a call",
       ctaHref: "/contact",
+      imageSrc: "/publishing-services/Book Formatting 1 (1).svg",
+      imageAlt: "E-book writing service illustration",
     },
     bookConsultation: {
       eyebrow: "What we handle for you",
@@ -373,6 +379,8 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
       ),
       ctaText: "Request a call",
       ctaHref: "/contact",
+      imageSrc: "/publishing-services/image 2.svg",
+      imageAlt: "E-book writing service illustration",
     },
     bookConsultation: {
       eyebrow: "What we handle for you",
@@ -497,6 +505,8 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
       ),
       ctaText: "Get Your Free Marketing Quote",
       ctaHref: "/contact",
+      imageSrc: "/publishing-services/Group (1).svg",
+      imageAlt: "E-book writing service illustration",
     },
     bookConsultation: {
       eyebrow: "What We Do For Your Book",

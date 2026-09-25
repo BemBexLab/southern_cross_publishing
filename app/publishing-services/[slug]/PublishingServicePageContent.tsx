@@ -24,6 +24,8 @@ const PublishingServicePageContent = ({
           description={hero.description}
           ctaText={hero.ctaText}
           ctaHref={hero.ctaHref}
+          imageSrc={hero.imageSrc}
+          imageAlt={hero.imageAlt}
         />
       </MotionSection>
       <MotionSection delay={0.06}>
