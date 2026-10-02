@@ -10,7 +10,7 @@ import {
 
 const bookImages = [
   {
-    src: "/home/Rectangle 7.webp",
+    src: "/home/Rectangle 4341.svg",
     alt: "The Man of Light book cover",
     fanOffsetX: 180,
     fanOffsetY: 56,
@@ -19,7 +19,7 @@ const bookImages = [
       "left-[4px] top-[150px] z-10 -rotate-[22deg] sm:left-[38px] sm:top-[150px] md:left-[92px] md:top-[96px] md:-rotate-[18deg] lg:left-[70px] lg:top-[115px] lg:-rotate-[19deg]",
   },
   {
-    src: "/home/Rectangle 8.webp",
+    src: "/home/Rectangle 4342.svg",
     alt: "Faith Over Feelings book cover",
     fanOffsetX: 82,
     fanOffsetY: 26,
@@ -28,7 +28,7 @@ const bookImages = [
       "left-[82px] top-[88px] z-20 -rotate-[6deg] sm:left-[146px] sm:top-[56px] md:left-[255px] md:top-[14px] md:-rotate-[5deg] lg:left-[315px] lg:top-[22px] lg:-rotate-[6deg]",
   },
   {
-    src: "/home/Rectangle 9.webp",
+    src: "/home/Rectangle 4343.svg",
     alt: "Still I Rise book cover",
     fanOffsetX: -82,
     fanOffsetY: 26,
@@ -37,7 +37,7 @@ const bookImages = [
       "left-[164px] top-[78px] z-30 rotate-[7deg] sm:left-[250px] sm:top-[50px] md:left-[430px] md:top-[20px] md:rotate-[6deg] lg:left-[560px] lg:top-[28px] lg:rotate-[7deg]",
   },
   {
-    src: "/home/Rectangle 10.webp",
+    src: "/home/Rectangle 4344.svg",
     alt: "The Book of Veolding Integration cover",
     fanOffsetX: -180,
     fanOffsetY: 56,

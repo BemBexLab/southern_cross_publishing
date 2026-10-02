@@ -1,144 +1,96 @@
 "use client";
 
-import React, { useEffect, useState } from 'react';
-import Image from 'next/image';
-import {
-  LazyMotion,
-  domAnimation,
-  m,
-  useReducedMotion,
-} from "motion/react";
+import Image from "next/image";
+import { LazyMotion, domAnimation, m, useReducedMotion } from "motion/react";
 
 const Hero = () => {
   const prefersReducedMotion = useReducedMotion();
   const books = [
     {
-      src: "/our-books/book1.webp", // Replace with your actual file path
-      rotate: "-rotate-[15deg]",
-      translateY: "translate-y-8",
-      zIndex: "z-10",
-      fanOffsetX: 140,
-      fanOffsetY: 32,
-      fanDelay: 0.04,
+      src: "/home/Rectangle 4341.svg",
+      alt: "The Man of Light book cover",
+      fanOffsetX: 180,
+      fanOffsetY: 56,
+      fanDelay: 0.05,
+      className:
+        "left-[4px] top-[150px] z-10 -rotate-[22deg] sm:left-[38px] sm:top-[150px] md:left-[92px] md:top-[96px] md:-rotate-[18deg] lg:left-[70px] lg:top-[115px] lg:-rotate-[19deg]",
     },
     {
-      src: "/our-books/book2.webp",
-      rotate: "-rotate-[6deg]",
-      translateY: "translate-y-2",
-      zIndex: "z-20",
-      fanOffsetX: 64,
-      fanOffsetY: 10,
-      fanDelay: 0.11,
+      src: "/home/Rectangle 4342.svg",
+      alt: "Faith Over Feelings book cover",
+      fanOffsetX: 82,
+      fanOffsetY: 26,
+      fanDelay: 0.12,
+      className:
+        "left-[82px] top-[88px] z-20 -rotate-[6deg] sm:left-[146px] sm:top-[56px] md:left-[255px] md:top-[14px] md:-rotate-[5deg] lg:left-[315px] lg:top-[22px] lg:-rotate-[6deg]",
     },
     {
-      src: "/our-books/book3.webp",
-      rotate: "rotate-[2deg]",
-      translateY: "translate-y-0",
-      zIndex: "z-30",
-      fanOffsetX: -48,
-      fanOffsetY: 8,
-      fanDelay: 0.18,
+      src: "/home/Rectangle 4343.svg",
+      alt: "Still I Rise book cover",
+      fanOffsetX: -82,
+      fanOffsetY: 26,
+      fanDelay: 0.2,
+      className:
+        "left-[164px] top-[78px] z-30 rotate-[7deg] sm:left-[250px] sm:top-[50px] md:left-[430px] md:top-[20px] md:rotate-[6deg] lg:left-[560px] lg:top-[28px] lg:rotate-[7deg]",
     },
     {
-      src: "/our-books/book4.webp",
-      rotate: "rotate-[12deg]",
-      translateY: "translate-y-8",
-      zIndex: "z-40",
-      fanOffsetX: -132,
-      fanOffsetY: 32,
-      fanDelay: 0.25,
+      src: "/home/Rectangle 4344.svg",
+      alt: "The Book of Veolding Integration cover",
+      fanOffsetX: -180,
+      fanOffsetY: 56,
+      fanDelay: 0.28,
+      className:
+        "left-[230px] top-[144px] z-10 rotate-[22deg] sm:left-[350px] sm:top-[146px] md:left-[576px] md:top-[90px] md:rotate-[18deg] lg:left-[810px] lg:top-[110px] lg:rotate-[20deg]",
     },
-  ];
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = window.setInterval(() => {
-      setActiveIndex((current) => (current + 1) % books.length);
-    }, 3200);
-
-    return () => {
-      window.clearInterval(interval);
-    };
-  }, [books.length]);
-
+  ] as const;
   return (
     <LazyMotion features={domAnimation}>
       <section className="relative flex flex-col items-center overflow-hidden bg-[#F7F1D7] px-4 pb-4 pt-24 sm:px-6 sm:pb-4 sm:pt-26 lg:px-8 lg:pb-4 lg:pt-20">
         <BackgroundStars />
 
-        <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center">
+        <div className="relative z-10 mx-auto flex w-full max-w-full flex-col items-center">
           <h2 className="goneva mt-4 max-w-5xl text-center text-[2rem] leading-tight text-[#018752] sm:mt-6 sm:text-4xl md:text-5xl lg:mt-10 lg:text-6xl">
-            Publish Your Book in Australia With a <br className="hidden md:block" />
+            Publish Your Book in Australia With a{" "}
+            <br className="hidden md:block" />
             Team That Handles the Complete Process
           </h2>
 
           <div className="mt-10 w-full lg:hidden">
-            <div className="relative mx-auto h-[320px] max-w-sm overflow-hidden sm:h-[380px] sm:max-w-xl">
-              {books.map((book, index) => {
-                const isActive = index === activeIndex;
-                const isPrevious = index === (activeIndex - 1 + books.length) % books.length;
-                const isNext = index === (activeIndex + 1) % books.length;
-
-                return (
-                  <m.div
-                    key={`mobile-${index}`}
-                    initial={
-                      prefersReducedMotion
-                        ? { opacity: 0 }
-                        : { opacity: 0, y: 24, scale: 0.9 }
-                    }
-                    animate={{
-                      opacity: isActive ? 1 : isPrevious || isNext ? 0.7 : 0,
-                      scale: isActive ? 1 : isPrevious || isNext ? 0.9 : 0.75,
-                      x: isActive ? "-50%" : isPrevious ? "-95%" : isNext ? "-5%" : "-50%",
-                      y: "-50%",
-                    }}
-                    transition={{
-                      duration: prefersReducedMotion ? 0.2 : 0.55,
-                      delay: prefersReducedMotion ? 0 : index * 0.08,
-                      ease: [0.22, 1, 0.36, 1],
-                    }}
-                    className={`absolute left-1/2 top-1/2 w-[190px] rounded-sm shadow-2xl sm:w-[220px] ${
-                      isActive
-                        ? "z-30"
-                        : isPrevious || isNext
-                          ? "z-20"
-                          : "z-10"
-                    }`}
-                  >
-                    <div className="relative h-[260px] w-full sm:h-[320px]">
-                      <Image
-                        src={book.src}
-                        alt={`Book cover ${index + 1}`}
-                        fill
-                        className="rounded-sm object-cover"
-                      />
-                    </div>
-                  </m.div>
-                );
-              })}
-            </div>
-
-            <div className="mt-6 flex justify-center gap-2">
-              {books.map((_, index) => (
-                <button
-                  key={`dot-${index}`}
-                  type="button"
-                  aria-label={`Show book ${index + 1}`}
-                  onClick={() => setActiveIndex(index)}
-                  className={`h-2.5 rounded-full transition-all ${
-                    activeIndex === index ? "w-8 bg-[#018752]" : "w-2.5 bg-[#018752]/30"
-                  }`}
-                />
+            <div className="flex snap-x snap-mandatory gap-4 overflow-x-auto px-1 pb-6 sm:gap-5 sm:px-2">
+              {books.map((book, index) => (
+                <m.div
+                  key={`${book.src}-slide`}
+                  className="motion-section min-w-0 shrink-0 snap-center"
+                  initial={{ opacity: 0, y: 24, scale: 0.94 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  viewport={{ once: true, amount: 0.55 }}
+                  transition={{
+                    duration: prefersReducedMotion ? 0.2 : 0.5,
+                    delay: prefersReducedMotion ? 0 : index * 0.08,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
+                >
+                  <Image
+                    src={book.src}
+                    width={520}
+                    height={780}
+                    alt={book.alt}
+                    priority={index === 0}
+                    quality={100}
+                    sizes="(min-width: 640px) 280px, 78vw"
+                    className="h-auto w-[78vw] max-w-[240px] rounded-[18px] object-contain sm:w-[260px] sm:max-w-[260px] md:w-[280px] md:max-w-[280px]"
+                  />
+                </m.div>
               ))}
             </div>
           </div>
 
-          <div className="mb-16 hidden w-full items-center justify-center px-4 lg:flex lg:h-[520px] xl:h-[560px]">
-            <div className="flex -space-x-12 xl:-space-x-20">
+          <div className="mx-auto mb-16 hidden w-full overflow-x-clip lg:block">
+            <div className="relative mx-auto h-[560px] w-full max-w-[1280px] xl:h-[680px] 2xl:h-[760px]">
               {books.map((book, index) => (
                 <m.div
                   key={index}
+                  className={`absolute w-[260px] origin-bottom transform xl:w-[320px] 2xl:w-[370px] ${book.className}`}
                   initial={
                     prefersReducedMotion
                       ? { opacity: 0 }
@@ -147,29 +99,25 @@ const Hero = () => {
                           x: book.fanOffsetX,
                           y: book.fanOffsetY,
                           scale: 0.82,
-                          rotate: 0,
                         }
                   }
-                  whileInView={{
-                    opacity: 1,
-                    x: 0,
-                    y: 0,
-                    scale: 1,
-                    rotate: 0,
-                  }}
-                  viewport={{ once: true, amount: 0.55 }}
+                  whileInView={{ opacity: 1, x: 0, y: 0, scale: 1 }}
+                  viewport={{ once: true, amount: 0.35 }}
                   transition={{
                     duration: prefersReducedMotion ? 0.24 : 0.85,
                     delay: prefersReducedMotion ? 0 : book.fanDelay,
                     ease: [0.22, 1, 0.36, 1],
                   }}
-                  className={`relative h-[360px] w-[240px] shadow-2xl transition-transform duration-300 hover:scale-105 xl:h-[420px] xl:w-[290px] ${book.rotate} ${book.translateY} ${book.zIndex}`}
                 >
                   <Image
                     src={book.src}
-                    alt={`Book cover ${index + 1}`}
-                    fill
-                    className="rounded-sm object-cover"
+                    width={520}
+                    height={780}
+                    alt={book.alt}
+                    priority={index < 2}
+                    quality={100}
+                    sizes="(min-width: 1536px) 370px, (min-width: 1280px) 320px, 260px"
+                    className="h-auto w-full rounded-[20px]"
                   />
                 </m.div>
               ))}
@@ -177,10 +125,12 @@ const Hero = () => {
           </div>
 
           <p className="max-w-6xl text-center text-base leading-relaxed text-[#1A3C34] opacity-90 sm:text-lg md:text-xl">
-            Our self publishing services cover ghostwriting, professional book editing and proofreading,
-            custom book cover design, interior formatting, ISBN registration, Amazon A+ content optimisation,
-            global distribution across 40+ platforms, and complete audiobook production.
-            Now, let Crux Publishing House take the hassle out of publishing
+            Our self publishing services cover ghostwriting, professional book
+            editing and proofreading, custom book cover design, interior
+            formatting, ISBN registration, Amazon A+ content optimisation,
+            global distribution across 40+ platforms, and complete audiobook
+            production. Now, let Crux Publishing House take the hassle out of
+            publishing
           </p>
         </div>
       </section>
@@ -205,10 +155,7 @@ const BackgroundStars = () => (
 );
 
 const Star = ({ className }: { className?: string }) => (
-  <svg 
-    viewBox="0 0 24 24" 
-    className={`absolute fill-[#1A3C34] ${className}`}
-  >
+  <svg viewBox="0 0 24 24" className={`absolute fill-[#1A3C34] ${className}`}>
     <path d="M12 0l2.5 8.5h8.5l-7 5.5 2.5 8.5-6.5-5-6.5 5 2.5-8.5-7-5.5h8.5z" />
   </svg>
 );

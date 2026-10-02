@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
-import heroImage from "@/public/home/Hero Image 1 (1).svg";
+import heroImage from "@/public/Hero Image 1.webp";
 
 const HomeHero = () => {
   return (

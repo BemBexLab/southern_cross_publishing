@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 import { FaArrowRight } from 'react-icons/fa6';
 
@@ -16,10 +17,12 @@ const Section5 = () => {
             </div>
 
             <div className="relative left-1/2 mb-6 h-[clamp(11.875rem,40vw,20rem)] w-screen -translate-x-1/2 overflow-visible sm:mb-8">
-              <img
-                src="/publishing-services/Book_Cover_Mockups_03 1.webp"
+              <Image
+                src="/publishing-services/image 4.webp"
                 alt="Books displayed on a wooden shelf"
                 className="absolute bottom-0 right-0 h-full w-auto max-w-none object-contain object-right"
+                width={500}
+                height={300}
               />
             </div>
 
@@ -98,7 +101,7 @@ const Section5 = () => {
 
       <div className="pointer-events-none absolute inset-y-0 right-0 hidden lg:flex lg:w-[48vw] lg:max-w-[860px] lg:items-center lg:justify-end">
         <img
-          src="/publishing-services/Book_Cover_Mockups_03 1.webp"
+          src="/publishing-services/image 4.webp"
           alt="Books displayed on a wooden shelf"
           className="block h-auto w-full object-contain object-right"
         />

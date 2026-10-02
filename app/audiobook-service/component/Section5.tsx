@@ -12,7 +12,7 @@ const Section5 = () => {
         <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
           {/* Replace with your actual composite image of the books and landscape */}
           <Image
-            src="/audiobook-service/Rectangle 4348.svg" 
+            src="/publishing-services/Rectangle 4348.svg" 
             alt="Audiobook mockups shown over a landscape"
             fill
             className="object-cover rounded-3xl"
