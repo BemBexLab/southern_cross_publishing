@@ -58,7 +58,7 @@ const Footer = () => {
       style={{ backgroundColor: "#252525" }}
     >
       <div className="w-full">
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,490px)_minmax(0,1fr)] lg:gap-[48px]">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,500px)_minmax(0,1fr)] lg:gap-[48px]">
           <div className="w-full">
             <Link href="/">
               <div
@@ -74,7 +74,7 @@ const Footer = () => {
             </Link>
 
             <p
-              className="dm-sans mt-7 w-full max-w-[650px] text-base leading-[1.2] sm:text-lg sm:leading-[1.16]"
+              className="dm-sans mt-7 w-full max-w-[750px] text-base leading-[1.2] sm:text-lg sm:leading-[1.16]"
               style={{ color: "#a8a196" }}
             >
               Australia's reliable self-publishing partner. We help Australians
