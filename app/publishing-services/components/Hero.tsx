@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { FiPhoneCall } from "react-icons/fi";
 
 interface HeroSectionProps {
@@ -21,7 +21,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
     onCtaClick,
 }) => {
     const sectionRef = useRef<HTMLElement | null>(null);
-    const [offsetY, setOffsetY] = useState(0);
+    const backgroundRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
         let frame = 0;
@@ -39,7 +39,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             const viewportCenter = viewportHeight / 2;
             const distanceFromCenter = sectionCenter - viewportCenter;
 
-            setOffsetY(distanceFromCenter * -0.12);
+            if (backgroundRef.current) {
+                backgroundRef.current.style.transform = `translate3d(0, ${distanceFromCenter * -0.12}px, 0) scale(1.12)`;
+            }
         };
 
         const onScroll = () => {
@@ -75,8 +77,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         >
             {/* Background Image */}
             <div
+                ref={backgroundRef}
                 className="absolute inset-0 z-0 scale-[1.12] will-change-transform"
-                style={{ transform: `translate3d(0, ${offsetY}px, 0) scale(1.12)` }}
+                style={{ transform: "translate3d(0, 0, 0) scale(1.12)" }}
             >
                 <img
                     src={bgImage}

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { FaArrowRight } from "react-icons/fa6";
 
 export interface ExpertNonFictionProps {
@@ -53,8 +53,7 @@ const ExpertNonFiction: React.FC<ExpertNonFictionProps> = ({
   parallaxStrength = -0.12,
 }) => {
   const sectionRef = useRef<HTMLElement | null>(null);
-
-  const [offsetY, setOffsetY] = useState(0);
+  const backgroundRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     let frame = 0;
@@ -72,7 +71,9 @@ const ExpertNonFiction: React.FC<ExpertNonFictionProps> = ({
        * Disable parallax for reduced-motion users.
        */
       if (reducedMotion) {
-        setOffsetY(0);
+        if (backgroundRef.current) {
+          backgroundRef.current.style.transform = "translate3d(0, 0, 0) scale(1.12)";
+        }
         return;
       }
 
@@ -116,7 +117,9 @@ const ExpertNonFiction: React.FC<ExpertNonFictionProps> = ({
         Math.min(maxOffset, calculatedOffset)
       );
 
-      setOffsetY(clampedOffset);
+      if (backgroundRef.current) {
+        backgroundRef.current.style.transform = `translate3d(0, ${clampedOffset}px, 0) scale(1.12)`;
+      }
     };
 
     const onScroll = () => {
@@ -150,6 +153,7 @@ const ExpertNonFiction: React.FC<ExpertNonFictionProps> = ({
     >
       {/* Background */}
       <div
+        ref={backgroundRef}
         className="
           absolute
           inset-0
@@ -159,9 +163,7 @@ const ExpertNonFiction: React.FC<ExpertNonFictionProps> = ({
           sm:scale-[1.1]
           lg:scale-[1.12]
         "
-        style={{
-          transform: `translate3d(0, ${offsetY}px, 0) scale(1.12)`,
-        }}
+        style={{ transform: "translate3d(0, 0, 0) scale(1.12)" }}
       >
         <img
           src={backgroundImage}

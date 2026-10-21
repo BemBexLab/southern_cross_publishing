@@ -9,7 +9,7 @@
 }
 
 .dm-sans {
-  font-family: "DM Sans", sans-serif;
+  font-family: var(--font-dm-sans), sans-serif;
 }
 
 /* Keep default paragraph typography consistent without overriding utilities. */

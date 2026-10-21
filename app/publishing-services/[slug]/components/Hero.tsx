@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import { FiPhoneCall } from "react-icons/fi";
 
@@ -24,7 +24,7 @@ const Hero: React.FC<HeroProps> = ({
   imageAlt = "E-book writing service illustration",
 }) => {
   const sectionRef = useRef<HTMLElement | null>(null);
-  const [offsetY, setOffsetY] = useState(0);
+  const backgroundRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     let frame = 0;
@@ -42,7 +42,9 @@ const Hero: React.FC<HeroProps> = ({
       const viewportCenter = viewportHeight / 2;
       const distanceFromCenter = sectionCenter - viewportCenter;
 
-      setOffsetY(distanceFromCenter * -0.12);
+      if (backgroundRef.current) {
+        backgroundRef.current.style.transform = `translate3d(0, ${distanceFromCenter * -0.12}px, 0) scale(1.12)`;
+      }
     };
 
     const onScroll = () => {
@@ -76,8 +78,9 @@ const Hero: React.FC<HeroProps> = ({
       className="relative flex min-h-screen w-full items-center overflow-hidden"
     >
       <div
+        ref={backgroundRef}
         className="absolute inset-0 z-0 scale-[1.12] will-change-transform"
-        style={{ transform: `translate3d(0, ${offsetY}px, 0) scale(1.12)` }}
+        style={{ transform: "translate3d(0, 0, 0) scale(1.12)" }}
       >
         <img
           src="/ebook-services/Mask group.webp"

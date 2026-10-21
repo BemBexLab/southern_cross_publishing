@@ -122,7 +122,7 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`fixed inset-x-0 top-0 z-50 w-full border-b backdrop-blur-xl transition-all duration-300 ${navBg} ${navBorder}`}
+        className={`fixed inset-x-0 top-0 z-50 w-full border-b transition-colors duration-200 ${navBg} ${navBorder}`}
       >
         <div className="mx-auto flex h-16 w-full max-w-[1600px] items-center justify-between gap-4 px-4 sm:h-18 sm:px-6 lg:h-20 lg:px-8">
           {/* Logo (Bigger) */}
