@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 
-export const siteUrl =
-  process.env.SITE_URL || "https://www.cruxpublishinghouse.com.au/";
+export const siteUrl = "https://www.cruxpublishinghouse.com.au/";
 export const siteName = "Crux Publishing House";
 export const defaultDescription =
   "Crux Publishing House helps authors across Australia with book writing, editing, design, audiobook production, publishing, and global distribution.";
