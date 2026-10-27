@@ -10,9 +10,9 @@ import ExpertNonFiction from "../publishing-services/components/ExpertNonFiction
 import { createPageMetadata } from "../seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Crux Publishing: Explore Our Published Books",
+  title: "Our Books | Crux Publishing House",
   description:
-    "Explore books published by Crux Publishing across different genres. Discover inspiring stories, engaging reads, and professionally published books.",
+    "Explore books published by Crux Publishing House, discover inspiring stories, and find your next great read across a range of genres.",
   path: "/our-books",
 });
 

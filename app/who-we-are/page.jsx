@@ -1,15 +1,15 @@
 /** @type {import("next").Metadata} */
 export const metadata = {
-  title: "Crux Publishing: Professional Book Publishing Team",
+  title: { absolute: "Who We Are | Crux Publishing House" },
   description:
-    "Learn about Crux Publishing, a professional book publishing company helping authors publish their stories through expert self-publishing services.",
+    "Crux Publishing House, your trusted partner for bringing stories to life with expert guidance and personalised support. Contact us today!",
   alternates: {
     canonical: "/who-we-are",
   },
   openGraph: {
-    title: "Crux Publishing: Professional Book Publishing Team",
+    title: "Who We Are | Crux Publishing House",
     description:
-      "Learn about Crux Publishing, a professional book publishing company helping authors publish their stories through expert self-publishing services.",
+      "Crux Publishing House, your trusted partner for bringing stories to life with expert guidance and personalised support. Contact us today!",
     url: "/who-we-are",
       siteName: "Crux Publishing House",
     locale: "en_AU",
@@ -17,9 +17,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Who We Are",
+    title: "Who We Are | Crux Publishing House",
     description:
-      "Learn about Crux Publishing House, our values, and how our Australian publishing team supports authors from idea to published book.",
+      "Crux Publishing House, your trusted partner for bringing stories to life with expert guidance and personalised support. Contact us today!",
   },
 };
 

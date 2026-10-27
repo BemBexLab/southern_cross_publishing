@@ -13,9 +13,9 @@ export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Crux Publishing Blog: Book Publishing Insights",
+  title: "Our Blogs | Crux Publishing House",
   description:
-    "Read the Crux Publishing blog for expert tips on book writing, publishing, marketing, self-publishing, editing, and building a successful author journey.",
+    "Explore the Crux Publishing House blog for helpful writing tips, publishing insights, book marketing advice, and resources for aspiring and established authors.",
   path: "/blog",
 });
 

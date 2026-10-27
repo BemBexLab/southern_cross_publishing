@@ -23,9 +23,9 @@ import ExpertNonFiction from "./components/ExpertNonFiction";
 import { createPageMetadata } from "../seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Crux Publishing: Book Publishing Services",
+  title: "Book Publishing Services Australia | Crux Publishing House",
   description:
-    "Crux Publishing offers Book publishing services, self-publishing support, and complete book publishing solutions to help authors publish their books worldwide.",
+    "Crux Publishing House offers complete book publishing services in Australia. Call (02) 6190 6580 or email contact@cruxpublishinghouse.com.au today!",
   path: "/publishing-services",
 });
 

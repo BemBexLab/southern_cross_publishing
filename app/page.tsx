@@ -21,9 +21,9 @@ import { FaArrowRight } from "react-icons/fa";
 import { createPageMetadata } from "./seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Crux Publishing: Book Publishing Services Australia",
+  title: "Australian Book Publishers | Crux Publishing House",
   description:
-    "Crux Publishing offers Book publishing services, self-publishing support, and complete book publishing solutions to publish their books worldwide.",
+    "Crux Publishing House offers Complete book publishing services in Australia, from writing and editing to book design, printing, and distribution.",
   path: "/",
 });
 

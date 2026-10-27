@@ -5,9 +5,9 @@ import GetInTouch from "@/components/GetInTouch";
 import { createPageMetadata } from "../seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Contact Crux Publishing House",
+  title: "Contact Us | Crux Publishing House",
   description:
-    "Contact Crux Publishing House to discuss your manuscript, publishing goals, audiobook production, or a free consultation with our team.",
+    "Contact Crux Publishing House at (02) 6190 6580 or contact@cruxpublishinghouse.com.au. Visit us to discuss your publishing needs today!",
   path: "/contact",
 });
 

@@ -25,7 +25,7 @@ export async function generateMetadata(
   const title = pageData.seoTitle ?? pageData.hero.title;
 
   return {
-    title,
+    title: { absolute: title },
     description: pageData.seoDescription,
     alternates: {
       canonical: `/publishing-services/${pageData.slug}`,

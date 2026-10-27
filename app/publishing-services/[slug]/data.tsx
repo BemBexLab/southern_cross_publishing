@@ -69,9 +69,9 @@ export interface PublishingServicePageData {
 export const publishingServicePages: Record<string, PublishingServicePageData> = {
   "book-writing-service": {
     slug: "book-writing-service",
-    seoTitle: "Crux Publishing: Book writing services",
+    seoTitle: "Book Writing & Editing Services Australia | Crux Publishing House",
     seoDescription:
-      "Crux Publishing provides professional book writing services, including ghostwriting. Hire experienced book writers today.",
+      "Crux Publishing House offers book writing, editing, and complete publishing services in Australia to bring your story to life. Contact us today!",
     hero: {
       title: "Book Writing Services Australia",
       description: (
@@ -241,9 +241,9 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
 
   "book-formatting": {
     slug: "book-formatting",
-    seoTitle: "Crux Publishing: Book Formatting Services",
+    seoTitle: "Book Formatting Services Australia | Crux Publishing House",
     seoDescription:
-      "Crux Publishing provides professional book formatting services for Books and print books, ensuring your manuscript meets industry standards for publishing.",
+      "Crux Publishing House offers book formatting services in Australia, plus complete publishing solutions. Call (02) 6190 6580 or email contact@cruxpublishinghouse.com.au today!",
     hero: {
       title: "Book Formatting Services Australia",
       description: (
@@ -366,9 +366,9 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
 
   "childrenbook-publishing": {
     slug: "childrenbook-publishing",
-    seoTitle: "Crux Publishing: Children’s Book Publishing Services",
+    seoTitle: "Children's Book Publishing Services Australia | Crux Publishing House",
     seoDescription:
-      "Crux Publishing offers children’s book publishing services, helping authors create, design, and publish engaging books with professional illustrations and formatting.",
+      "Crux Publishing House offers children's book publishing services in Australia, from writing and editing to formatting and printing. Call (02) 6190 6580 or email contact@cruxpublishinghouse.com.au.",
      hero: {
       title: "Children's Book Publishing Services Australia",
       description: (
@@ -491,9 +491,9 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
 
   "book-marketing": {
     slug: "book-marketing",
-    seoTitle: "Crux Publishing: Book Marketing Services",
+    seoTitle: "Book Marketing Services Australia | Crux Publishing House",
     seoDescription:
-      "Crux Publishing provides book marketing services to help authors increase visibility, reach readers, and promote their books through strategic marketing solutions.",
+      "Crux Publishing House offers book marketing services in Australia, helping authors promote their books and reach more readers. Call (02) 6190 6580 or email contact@cruxpublishinghouse.com.au today!",
      hero: {
       title: "Your Book Is Written; Now Let's Make Sure People Find It.",
       description: (

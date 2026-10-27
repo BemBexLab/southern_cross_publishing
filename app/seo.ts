@@ -18,7 +18,7 @@ export function createPageMetadata({
   path,
 }: CreatePageMetadataInput): Metadata {
   return {
-    title,
+    title: { absolute: title },
     description,
     alternates: {
       canonical: path,
