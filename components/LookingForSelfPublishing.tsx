@@ -11,7 +11,7 @@ const LookingForSelfPublishing = () => {
 
         <div className="relative mt-8 flex justify-center">
           <Image
-            src="/home/Illustration for Web-02-01 1.svg"
+            src="/home/Illustration for Web-02-01 1.webp"
             alt="Illustration of a writer with books, a pencil, and an open book"
             width={520}
             height={500}
@@ -39,7 +39,7 @@ const LookingForSelfPublishing = () => {
       <div className="mx-auto hidden max-w-[1520px] items-center gap-10 md:gap-12 lg:grid lg:items-stretch lg:grid-cols-[0.82fr_1.18fr] lg:gap-16">
         <div className="relative flex justify-center lg:justify-start lg:self-stretch">
           <Image
-            src="/home/Illustration for Web-02-01 1.svg"
+            src="/home/Illustration for Web-02-01 1.webp"
             alt="Illustration of a writer with books, a pencil, and an open book"
             width={520}
             height={500}

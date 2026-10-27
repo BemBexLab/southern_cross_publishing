@@ -87,7 +87,7 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
       ),
       ctaText: "Get a Free Quote Today",
       ctaHref: "/contact",
-      imageSrc: "/publishing-services/Group.svg",
+      imageSrc: "/publishing-services/Group-from-svg.webp",
       imageAlt: "E-book writing service illustration",
     },
     bookConsultation: {
@@ -182,7 +182,7 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
       ctaHref: "/contact",
     },
     whyChoose: {
-      illustrationSrc: "/ebook-services/Frame.svg",
+      illustrationSrc: "/ebook-services/Frame.webp",
       title: "Why Australian Authors Choose Us for Book Writing",
       description:
         "What makes Crux Publishing House different is that we are genuinely invested in your success, not just getting a file delivered. Here is what that looks like in practice:",
@@ -254,7 +254,7 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
       ),
       ctaText: "Request a call",
       ctaHref: "/contact",
-      imageSrc: "/publishing-services/Book Formatting 1 (1).svg",
+      imageSrc: "/publishing-services/Book Formatting 1 (1).webp",
       imageAlt: "E-book writing service illustration",
     },
     bookConsultation: {
@@ -310,7 +310,7 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
       ctaHref: "/contact",
     },
     whyChoose: {
-      illustrationSrc: "/ebook-services/Frame.svg",
+      illustrationSrc: "/ebook-services/Frame.webp",
       title: "Why Australian Authors Choose Crux Publishing House",
       description:
         "There is no shortage of overseas publishing services. What they cannot offer is a team that understands the Australian market, the Australian reader, and what it actually takes to build a reputation here. We have worked with tradies, doctors, retired executives, first time authors, and business founders, and the thing they all say afterwards is that they wish they had started sooner.",
@@ -379,7 +379,7 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
       ),
       ctaText: "Request a call",
       ctaHref: "/contact",
-      imageSrc: "/publishing-services/image 2.svg",
+      imageSrc: "/publishing-services/image 2.webp",
       imageAlt: "E-book writing service illustration",
     },
     bookConsultation: {
@@ -435,7 +435,7 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
       ctaHref: "/contact",
     },
     whyChoose: {
-      illustrationSrc: "/ebook-services/Frame.svg",
+      illustrationSrc: "/ebook-services/Frame.webp",
       title: "Why Australian Authors Trust Crux Publishing House With Their Children's Books",
       description:
         <>Children's books are personal. Most of our clients approach us with a story that means something to them, a character their own child loves, a lesson they want to pass on, or a memory they do not want to lose. That is not a small thing, and we do not treat it like one. <br /> We have worked with grandparents, primary school teachers, speech pathologists, parents of children with additional needs, and first-time authors who had never published anything before. What everyone of them had in common was a story worth telling,  and a need for people who actually knew how to tell it properly on the page.</>,
@@ -505,7 +505,7 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
       ),
       ctaText: "Get Your Free Marketing Quote",
       ctaHref: "/contact",
-      imageSrc: "/publishing-services/Group (1).svg",
+      imageSrc: "/publishing-services/Group-1-from-svg.webp",
       imageAlt: "E-book writing service illustration",
     },
     bookConsultation: {
@@ -586,7 +586,7 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
       ctaHref: "/contact",
     },
     whyChoose: {
-      illustrationSrc: "/ebook-services/Frame.svg",
+      illustrationSrc: "/ebook-services/Frame.webp",
       title: "Why Crux Publishing House",
       description:
         <><b>What Makes Our Approach Different</b></>,

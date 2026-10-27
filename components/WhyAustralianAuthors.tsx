@@ -5,42 +5,42 @@ const authorReasons = [
     title: "We Work With Authors at Every Stage: Idea, Draft, or Finished Manuscript",
     description:
       "Whether you have a completed manuscript, a rough draft, or just an idea, we can work with it. You don't need to have it all figured out before coming to us. That's exactly what we're here for.",
-    iconSrc: "/who-we-are/contract_5617923 1.svg",
+    iconSrc: "/who-we-are/contract_5617923 1.webp",
     iconAlt: "icon",
   },
   {
     title: "Complete Self-Publishing Services Under One Roof: Writing to Global Distribution",
     description:
       `Writing, editing, design, publishing, marketing, audiobooks, distribution, all handled by one team that knows each other and works together. No gaps. No, "that's not our department." One partner for everything.`,
-    iconSrc: "/who-we-are/leadership_12773480 1.svg",
+    iconSrc: "/who-we-are/leadership_12773480 1.webp",
     iconAlt: "icon",
   },
   {
     title: "You Keep 100% of Your Rights",
     description:
       "Your book is yours. We help you publish it, we don't own it. You retain full intellectual property, full royalty rights, and full control over what happens to your work. Always.",
-    iconSrc: "/who-we-are/book_5765621 1.svg",
+    iconSrc: "/who-we-are/book_5765621 1.webp",
     iconAlt: "icon",
   },
   {
     title: "Affordable Without Cutting Corners",
     description:
       "Publishing professionally doesn't have to cost a fortune. We've built our packages to be genuinely affordable while maintaining the quality standard every author deserves. The two aren't mutually exclusive.",
-    iconSrc: "/who-we-are/contract_5617923 1.svg",
+    iconSrc: "/who-we-are/contract_5617923 1.webp",
     iconAlt: "icon",
   },
   {
     title: "Marketing Is Built In, Not an Afterthought",
     description:
       "Most publishers stop at publication. We don't. Our marketing team helps your book reach the readers it deserves, from Amazon optimisation to social media campaigns that actually work.",
-    iconSrc: "/who-we-are/leadership_12773480 1.svg",
+    iconSrc: "/who-we-are/leadership_12773480 1.webp",
     iconAlt: "icon",
   },
   {
     title: "Over 1,000 Published Authors, and Counting",
     description:
       "Over 1,000 authors have published through Crux . The reason they come to us, and the reason they send their friends to us, is because the experience is as good as the result.",
-    iconSrc: "/who-we-are/book_5765621 1.svg",
+    iconSrc: "/who-we-are/book_5765621 1.webp",
     iconAlt: "icon",
   },
 ];

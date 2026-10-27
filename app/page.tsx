@@ -55,7 +55,7 @@ export default function Home() {
 
               <div className="relative mt-6 flex min-h-[220px] items-end justify-center lg:hidden">
                 <Image
-                  src="/home/Illustration for Web-01 1.svg"
+                  src="/home/Illustration for Web-01 1.webp"
                   alt="Person reading in a chair"
                   width={430}
                   height={360}
@@ -79,7 +79,7 @@ export default function Home() {
 
             <div className="relative hidden min-h-[100%] items-center justify-center px-4 pb-0 pt-0 lg:flex">
               <Image
-                src="/home/Illustration for Web-01 1.svg"
+                src="/home/Illustration for Web-01 1.webp"
                 alt="Person reading in a chair"
                 width={430}
                 height={360}

@@ -35,7 +35,7 @@ const BlogHero = () => {
             <div className="border-y border-white/10 xl:col-start-2 xl:row-span-3 xl:row-start-1 xl:border-l xl:border-y-0 xl:border-white/10 xl:flex xl:items-stretch xl:justify-end">
               <div className="relative mx-auto aspect-[1.2/1] w-full max-w-[420px] px-5 py-3 sm:max-w-[520px] sm:px-6 md:aspect-[1.45/1] md:max-w-[620px] md:px-8 xl:m-0 xl:flex xl:h-full xl:w-auto xl:max-w-none xl:flex-1 xl:items-end xl:justify-end xl:px-0 xl:py-0">
                 <Image
-                  src="/blog/Group 1000001755.svg"
+                  src="/blog/Group 1000001755.webp"
                   alt="Book editing illustration"
                   width={400}
                   height={260}

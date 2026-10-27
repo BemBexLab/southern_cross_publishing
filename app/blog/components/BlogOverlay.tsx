@@ -27,7 +27,7 @@ const BlogOverlay = () => {
           <div className="relative mx-auto w-full max-w-sm sm:max-w-md lg:max-w-lg">
             <div className="relative aspect-[1.05/0.82] w-full lg:min-h-[320px]">
               <Image
-                src="/blog/Illustration for Web-01 1.svg"
+                src="/blog/Illustration for Web-01 1.webp"
                 alt="Illustration of a person reading while sitting in a chair"
                 fill
                 sizes="(max-width: 639px) 88vw, (max-width: 1023px) 70vw, 32vw"

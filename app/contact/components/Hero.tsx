@@ -1,4 +1,4 @@
-const heroImageSrc = "/contact/Contact Us_Mesa de trabajo 1 1.svg";
+const heroImageSrc = "/contact/Contact Us_Mesa de trabajo 1 1.webp";
 
 const Hero = () => {
   return (

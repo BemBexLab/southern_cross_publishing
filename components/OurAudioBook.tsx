@@ -37,7 +37,7 @@ const OurAudioBook = () => {
           <div className="relative mx-auto flex w-full max-w-xl justify-center sm:max-w-2xl md:max-w-3xl lg:mx-0 lg:max-w-4xl lg:justify-end">
             <div className="relative aspect-[1.03/0.96] w-full max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-3xl lg:translate-x-2 xl:max-w-4xl">
               <Image
-                src="/audiobook-service/Frame%201000001662.svg"
+                src="/audiobook-service/Frame%201000001662.webp"
                 alt="Illustration of an audiobook author working at a desk"
                 fill
                 sizes="(max-width: 1024px) 92vw, 48vw"
