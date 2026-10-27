@@ -174,8 +174,8 @@ const GetInTouch = ({
             <div className="sm:col-span-2">
               <ContactItem
                 icon={<BiEnvelope className="h-5 w-5 sm:h-6 sm:w-6" />}
-                text="contact@cruxpublishinghouse.com.au"
-                href="mailto:contact@cruxpublishinghouse.com.au"
+                text="info@cruxpublishinghouse.com.au"
+                href="mailto:info@cruxpublishinghouse.com.au"
               />
             </div>
           </div>

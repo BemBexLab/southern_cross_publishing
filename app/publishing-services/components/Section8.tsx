@@ -1,4 +1,4 @@
-import React from "react";
+import Image from "next/image";
 
 const WhyChooseUs = () => {
   const benefits = [
@@ -33,9 +33,13 @@ const WhyChooseUs = () => {
           <div className="w-full flex justify-center lg:justify-start">
             <div className="relative w-full max-w-[500px]">
               {/* lg:pt-2 helps align the top of the hand with the first line of text */}
-              <img
+              <Image
                 src="/publishing-services/Stand (1).webp"
                 alt="Flashlight highlighting a green book"
+                width={531}
+                height={637}
+                sizes="(max-width: 1023px) 92vw, 40vw"
+                quality={75}
                 className="w-full h-auto object-contain"
               />
             </div>

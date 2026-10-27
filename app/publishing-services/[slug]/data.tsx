@@ -243,7 +243,7 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
     slug: "book-formatting",
     seoTitle: "Book Formatting Services Australia | Crux Publishing House",
     seoDescription:
-      "Crux Publishing House offers book formatting services in Australia, plus complete publishing solutions. Call (02) 6190 6580 or email contact@cruxpublishinghouse.com.au today!",
+      "Crux Publishing House offers book formatting services in Australia, plus complete publishing solutions. Call (02) 6190 6580 or email info@cruxpublishinghouse.com.au today!",
     hero: {
       title: "Book Formatting Services Australia",
       description: (
@@ -368,7 +368,7 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
     slug: "childrenbook-publishing",
     seoTitle: "Children's Book Publishing Services Australia | Crux Publishing House",
     seoDescription:
-      "Crux Publishing House offers children's book publishing services in Australia, from writing and editing to formatting and printing. Call (02) 6190 6580 or email contact@cruxpublishinghouse.com.au.",
+      "Crux Publishing House offers children's book publishing services in Australia, from writing and editing to formatting and printing. Call (02) 6190 6580 or email info@cruxpublishinghouse.com.au.",
      hero: {
       title: "Children's Book Publishing Services Australia",
       description: (
@@ -493,7 +493,7 @@ export const publishingServicePages: Record<string, PublishingServicePageData> =
     slug: "book-marketing",
     seoTitle: "Book Marketing Services Australia | Crux Publishing House",
     seoDescription:
-      "Crux Publishing House offers book marketing services in Australia, helping authors promote their books and reach more readers. Call (02) 6190 6580 or email contact@cruxpublishinghouse.com.au today!",
+      "Crux Publishing House offers book marketing services in Australia, helping authors promote their books and reach more readers. Call (02) 6190 6580 or email info@cruxpublishinghouse.com.au today!",
      hero: {
       title: "Your Book Is Written; Now Let's Make Sure People Find It.",
       description: (

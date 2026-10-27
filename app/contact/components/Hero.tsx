@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const heroImageSrc = "/contact/Contact Us_Mesa de trabajo 1 1.webp";
 
 const Hero = () => {
@@ -28,9 +30,13 @@ const Hero = () => {
 
           <div className="relative z-10 w-full translate-y-1 sm:translate-y-2 md:translate-y-3 xl:translate-y-8">
             {heroImageSrc ? (
-              <img
+              <Image
                 src={heroImageSrc}
                 alt=""
+                width={743}
+                height={508}
+                sizes="(max-width: 1279px) 90vw, 55vw"
+                loading="eager"
                 className="mx-auto h-auto w-full max-w-md object-contain object-bottom sm:max-w-lg md:max-w-xl xl:max-w-4xl"
               />
             ) : (

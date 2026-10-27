@@ -1,4 +1,4 @@
-import React from 'react';
+import Image from 'next/image';
 import { FaArrowRight } from 'react-icons/fa6';
 
 const Section2 = () => {
@@ -14,9 +14,13 @@ const Section2 = () => {
           
           {/* Left Side: Illustration Container */}
           <div className="flex w-full items-center justify-center lg:flex-[0.9]">
-            <img 
+            <Image
               src="/publishing-services/Group.webp" 
               alt="Person working at desk illustration"
+              width={557}
+              height={602}
+              sizes="(max-width: 1023px) 92vw, 40vw"
+              quality={75}
               className="h-auto w-full max-w-[340px] object-contain sm:max-w-[420px] md:max-w-[520px] lg:max-w-[620px]"
             />
           </div>

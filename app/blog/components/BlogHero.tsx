@@ -39,7 +39,7 @@ const BlogHero = () => {
                   alt="Book editing illustration"
                   width={400}
                   height={260}
-                  priority
+                  preload
                   className="h-full w-auto object-contain object-bottom"
                 />
               </div>

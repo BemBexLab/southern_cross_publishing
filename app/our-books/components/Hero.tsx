@@ -75,8 +75,8 @@ const Hero = () => {
                     width={520}
                     height={780}
                     alt={book.alt}
-                    priority={index === 0}
-                    quality={100}
+                    preload={index === 0}
+                    quality={75}
                     sizes="(min-width: 640px) 280px, 78vw"
                     className="h-auto w-[78vw] max-w-[240px] rounded-[18px] object-contain sm:w-[260px] sm:max-w-[260px] md:w-[280px] md:max-w-[280px]"
                   />
@@ -114,8 +114,8 @@ const Hero = () => {
                     width={520}
                     height={780}
                     alt={book.alt}
-                    priority={index < 2}
-                    quality={100}
+                    preload={index === 0}
+                    quality={75}
                     sizes="(min-width: 1536px) 370px, (min-width: 1280px) 320px, 260px"
                     className="h-auto w-full rounded-[20px]"
                   />

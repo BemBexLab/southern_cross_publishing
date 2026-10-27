@@ -1,4 +1,4 @@
-import React from "react";
+import Image from "next/image";
 
 const Section3 = () => {
   return (
@@ -10,9 +10,13 @@ const Section3 = () => {
           {/* Left Side - Audiobook Illustration */}
           <div className="flex w-full items-center justify-center lg:w-1/2 lg:flex-[1.05]">
             <div className="relative w-full max-w-[320px] sm:max-w-[420px] md:max-w-[520px] lg:max-w-[580px] xl:max-w-[650px] 2xl:max-w-[700px]">
-              <img
+              <Image
                 src="/publishing-services/Audiobook mockup 1.webp"
                 alt="3D Audiobook player with earphones"
+                width={573}
+                height={552}
+                sizes="(max-width: 1023px) 92vw, 48vw"
+                quality={75}
                 className="
                   h-auto
                   w-full

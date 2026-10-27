@@ -319,8 +319,8 @@ const OurBook = () => {
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                   sizes="(max-width: 640px) 85vw, (max-width: 1024px) 45vw, (max-width: 1280px) 25vw, 300px"
-                  loading="eager"
-                  unoptimized
+                  loading="lazy"
+                  quality={70}
                   onError={(event) => {
                     event.currentTarget.style.display = "none";
                   }}

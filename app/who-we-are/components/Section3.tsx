@@ -85,6 +85,7 @@ export default function Section3() {
             src="/who-we-are/Rectangle 4348 (1).webp"
             alt="Audiobook mockups on landscape"
             fill
+            sizes="(max-width: 1023px) 100vw, 50vw"
             className="object-cover"
           />
         </div>

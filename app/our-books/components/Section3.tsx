@@ -63,6 +63,7 @@ const Section3 = () => {
                   src={partner.image}
                   alt={partner.name}
                   fill
+                  sizes="(max-width: 1023px) 100vw, 25vw"
                   className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
                 />
               </div>

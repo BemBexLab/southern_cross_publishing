@@ -83,12 +83,6 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Close drawer on route change
-  useEffect(() => {
-    setDrawerOpen(false);
-    setServicesOpen(false);
-  }, [pathname]);
-
   // Body scroll lock when drawer is open
   useEffect(() => {
     const previousOverflow = document.body.style.overflow;
@@ -136,8 +130,8 @@ export default function Navbar() {
                 src={logoSrc}
                 alt="Crux Publishing House Logo"
                 fill
+                sizes="(max-width: 639px) 9rem, (max-width: 1023px) 13rem, 300px"
                 className="object-contain object-left"
-                priority
               />
             </div>
           </Link>
@@ -264,8 +258,8 @@ export default function Navbar() {
                 src="/image (1).png"
                 alt="Crux Publishing House"
                 fill
+                sizes="9rem"
                 className="object-contain object-left"
-                priority
               />
             </div>
           </Link>
@@ -402,11 +396,11 @@ export default function Navbar() {
               (02) 6190 6580
             </a>
             <a
-              href="mailto:contact@cruxpublishinghouse.com.au"
+              href="mailto:info@cruxpublishinghouse.com.au"
               className="flex items-center gap-2 rounded-lg px-2 py-1.5 transition-colors hover:bg-black/5 hover:text-black"
             >
               <FaEnvelope className="text-[10px]" />
-              contact@cruxpublishinghouse.com.au
+              info@cruxpublishinghouse.com.au
             </a>
           </div>
         </div>

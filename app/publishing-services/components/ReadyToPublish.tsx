@@ -1,4 +1,6 @@
 import React from "react";
+import Image from "next/image";
+import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa6";
 
 type ReadyToPublishProps = {
@@ -75,17 +77,21 @@ const ReadyToPublish = ({
 
             <p className={descriptionClassName}>{description}</p>
 
-            <a href={ctaHref} className={ctaButtonClassName}>
+            <Link href={ctaHref} className={ctaButtonClassName}>
               <span>{ctaText}</span>
               {ctaIcon}
-            </a>
+            </Link>
           </div>
 
           <div className={illustrationOuterClassName}>
             <div className={illustrationInnerClassName}>
-              <img
+              <Image
                 src={illustrationSrc}
                 alt={illustrationAlt}
+                width={738}
+                height={437}
+                sizes="(max-width: 1023px) 92vw, 45vw"
+                quality={75}
                 className={illustrationClassName}
               />
             </div>

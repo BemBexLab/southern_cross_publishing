@@ -1,6 +1,6 @@
-"use client";
-
-import React, { useEffect, useRef } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import type { FC } from "react";
 import { FaArrowRight } from "react-icons/fa6";
 
 export interface ExpertNonFictionProps {
@@ -16,10 +16,9 @@ export interface ExpertNonFictionProps {
   titleClassName?: string;
   descriptionClassName?: string;
   ctaClassName?: string;
-  parallaxStrength?: number;
 }
 
-const ExpertNonFiction: React.FC<ExpertNonFictionProps> = ({
+const ExpertNonFiction: FC<ExpertNonFictionProps> = ({
   eyebrow = "Expert Non-Fiction Book Writing Services",
 
   title,
@@ -50,126 +49,27 @@ const ExpertNonFiction: React.FC<ExpertNonFictionProps> = ({
   ctaClassName =
     "group inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-md bg-[#FDD118] px-6 py-3 text-sm font-bold text-[#018752] shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#eac030] hover:shadow-xl sm:w-auto sm:gap-3 sm:px-8 sm:py-3.5 sm:text-base md:px-10 md:py-4",
 
-  parallaxStrength = -0.12,
 }) => {
-  const sectionRef = useRef<HTMLElement | null>(null);
-  const backgroundRef = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    let frame = 0;
-
-    const updateParallax = () => {
-      frame = 0;
-
-      if (!sectionRef.current) return;
-
-      const reducedMotion = window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-      ).matches;
-
-      /*
-       * Disable parallax for reduced-motion users.
-       */
-      if (reducedMotion) {
-        if (backgroundRef.current) {
-          backgroundRef.current.style.transform = "translate3d(0, 0, 0) scale(1.12)";
-        }
-        return;
-      }
-
-      const rect = sectionRef.current.getBoundingClientRect();
-
-      const viewportHeight = window.innerHeight;
-      const viewportWidth = window.innerWidth;
-
-      const sectionCenter = rect.top + rect.height / 2;
-      const viewportCenter = viewportHeight / 2;
-
-      const distanceFromCenter = sectionCenter - viewportCenter;
-
-      /*
-       * Use less movement on phones/tablets.
-       */
-      let responsiveStrength = parallaxStrength;
-
-      if (viewportWidth < 640) {
-        responsiveStrength = parallaxStrength * 0.25;
-      } else if (viewportWidth < 1024) {
-        responsiveStrength = parallaxStrength * 0.55;
-      }
-
-      /*
-       * Prevent extreme background movement on
-       * very tall sections or small screens.
-       */
-      const calculatedOffset =
-        distanceFromCenter * responsiveStrength;
-
-      const maxOffset =
-        viewportWidth < 640
-          ? 35
-          : viewportWidth < 1024
-          ? 60
-          : 110;
-
-      const clampedOffset = Math.max(
-        -maxOffset,
-        Math.min(maxOffset, calculatedOffset)
-      );
-
-      if (backgroundRef.current) {
-        backgroundRef.current.style.transform = `translate3d(0, ${clampedOffset}px, 0) scale(1.12)`;
-      }
-    };
-
-    const onScroll = () => {
-      if (frame) return;
-
-      frame = window.requestAnimationFrame(updateParallax);
-    };
-
-    updateParallax();
-
-    window.addEventListener("scroll", onScroll, {
-      passive: true,
-    });
-
-    window.addEventListener("resize", onScroll);
-
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onScroll);
-
-      if (frame) {
-        window.cancelAnimationFrame(frame);
-      }
-    };
-  }, [parallaxStrength]);
-
   return (
-    <section
-      ref={sectionRef}
-      className={sectionClassName}
-    >
+    <section className={sectionClassName}>
       {/* Background */}
       <div
-        ref={backgroundRef}
         className="
           absolute
           inset-0
           z-0
           scale-[1.08]
-          will-change-transform
           sm:scale-[1.1]
           lg:scale-[1.12]
         "
-        style={{ transform: "translate3d(0, 0, 0) scale(1.12)" }}
       >
-        <img
+        <Image
           src={backgroundImage}
           alt=""
           aria-hidden="true"
-          className="h-full w-full object-cover object-center"
+          fill
+          sizes="100vw"
+          className="object-cover object-center"
         />
 
         <div className={overlayClassName} />
@@ -214,7 +114,7 @@ const ExpertNonFiction: React.FC<ExpertNonFictionProps> = ({
 
         {/* CTA */}
         <div className="mx-auto flex w-full max-w-[420px] justify-center sm:max-w-none">
-          <a
+          <Link
             href={ctaHref}
             className={ctaClassName}
           >
@@ -231,7 +131,7 @@ const ExpertNonFiction: React.FC<ExpertNonFictionProps> = ({
                 md:text-xl
               "
             />
-          </a>
+          </Link>
         </div>
       </div>
     </section>

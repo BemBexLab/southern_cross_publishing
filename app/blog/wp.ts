@@ -1,4 +1,5 @@
 import "server-only";
+import { unstable_cache } from "next/cache";
 
 const WP_POSTS_API =
   process.env.WP_POSTS_API ||
@@ -78,31 +79,44 @@ export const mapWpPostToSummary = (post: WpPost): BlogPostSummary => ({
   readTime: estimateReadTime(post.content.rendered),
 });
 
-export async function fetchWpPosts(): Promise<WpPost[]> {
-  const response = await fetch(`${WP_POSTS_API}?per_page=100&_embed`, {
-    cache: "no-store",
-  });
+const getCachedWpPosts = unstable_cache(
+  async (): Promise<WpPost[]> => {
+    const response = await fetch(`${WP_POSTS_API}?per_page=100&_embed`, {
+      cache: "no-store",
+    });
 
-  if (!response.ok) {
-    throw new Error("Failed to fetch WordPress posts");
-  }
+    if (!response.ok) {
+      throw new Error("Failed to fetch WordPress posts");
+    }
 
-  return (await response.json()) as WpPost[];
+    return (await response.json()) as WpPost[];
+  },
+  ["wordpress-posts"],
+  { revalidate: 300, tags: ["wordpress-posts"] },
+);
+
+const getCachedWpPost = unstable_cache(
+  async (slug: string): Promise<WpPost | null> => {
+    const response = await fetch(
+      `${WP_POSTS_API}?slug=${encodeURIComponent(slug)}&_embed`,
+      { cache: "no-store" },
+    );
+
+    if (!response.ok) {
+      throw new Error(`Failed to fetch WordPress post for slug "${slug}"`);
+    }
+
+    const posts = (await response.json()) as WpPost[];
+    return posts[0] ?? null;
+  },
+  ["wordpress-post"],
+  { revalidate: 300, tags: ["wordpress-posts"] },
+);
+
+export function fetchWpPosts(): Promise<WpPost[]> {
+  return getCachedWpPosts();
 }
 
-export async function fetchWpPost(slug: string): Promise<WpPost | null> {
-  const response = await fetch(
-    `${WP_POSTS_API}?slug=${encodeURIComponent(slug)}&_embed`,
-    {
-      cache: "no-store",
-    }
-  );
-
-  if (!response.ok) {
-    throw new Error(`Failed to fetch WordPress post for slug "${slug}"`);
-  }
-
-  const posts = (await response.json()) as WpPost[];
-
-  return posts[0] ?? null;
+export function fetchWpPost(slug: string): Promise<WpPost | null> {
+  return getCachedWpPost(slug);
 }

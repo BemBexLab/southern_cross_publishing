@@ -7,17 +7,22 @@ import heroImage from "@/public/Hero Image 1.webp";
 const HomeHero = () => {
   return (
     <section
-      className="relative w-full overflow-hidden bg-cover bg-center bg-no-repeat text-white"
-      style={{
-        backgroundImage: 'url("/home/Mask group.webp")',
-        backgroundColor: "#018752",
-      }}
+      className="relative w-full overflow-hidden bg-[#018752] text-white"
     >
+      <Image
+        src="/home/Mask group.webp"
+        alt=""
+        fill
+        sizes="100vw"
+        loading="eager"
+        className="object-cover"
+      />
+
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/10 to-black/45" />
+      <div className="absolute inset-0 z-[1] bg-gradient-to-b from-black/35 via-black/10 to-black/45" />
 
       {/* Outer wrapper */}
-      <div className="relative flex flex-col justify-center px-5 pb-10 pt-20 sm:px-8 sm:pb-12 sm:pt-24 md:px-12 lg:px-16 lg:pb-16 lg:pt-32 xl:px-20 2xl:px-24">
+      <div className="relative z-10 flex flex-col justify-center px-5 pb-10 pt-20 sm:px-8 sm:pb-12 sm:pt-24 md:px-12 lg:px-16 lg:pb-16 lg:pt-32 xl:px-20 2xl:px-24">
         {/* Two-column grid on lg+, single column below */}
         <div className="mx-auto grid w-full max-w-7xl items-center gap-8 sm:gap-10 lg:items-stretch lg:grid-cols-2 lg:gap-12 xl:gap-16">
           {/* ── Left column: heading + body + buttons ── */}
@@ -35,7 +40,7 @@ const HomeHero = () => {
                   alt="Illustration for Crux Publishing House"
                   className="object-contain object-center drop-shadow-[0_20px_50px_rgba(0,0,0,0.35)]"
                   sizes="(max-width: 639px) 85vw, (max-width: 1023px) 50vw"
-                  priority
+                  preload
                 />
               </div>
             </div>
@@ -78,7 +83,6 @@ const HomeHero = () => {
               alt="Illustration for Crux Publishing House"
               className="object-contain object-center drop-shadow-[0_20px_50px_rgba(0,0,0,0.35)] lg:object-cover"
               sizes="(min-width: 1280px) 620px, (min-width: 1024px) 45vw"
-              priority
             />
           </div>
         </div>

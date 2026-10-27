@@ -240,7 +240,7 @@ const TermsContent = () => {
                   href="mailto:info@southerncrosspublishing.com.au"
                   className="break-all text-base text-gray-500 hover:underline sm:text-lg"
                 >
-                  contact@cruxpublishinghouse.com.au
+                  info@cruxpublishinghouse.com.au
                 </a>
               </div>
 

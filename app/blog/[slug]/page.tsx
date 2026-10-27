@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { FaArrowLeft, FaArrowRight, FaRegCalendar } from "react-icons/fa6";
@@ -15,7 +16,6 @@ import {
 
 export const dynamicParams = true;
 export const dynamic = "force-dynamic";
-export const revalidate = 0;
 
 export async function generateMetadata(
   props: PageProps<"/blog/[slug]">
@@ -99,9 +99,13 @@ const page = async (props: PageProps<"/blog/[slug]">) => {
 
               <div className="mt-8 overflow-hidden rounded-[10px] border border-[#e5dbc1] bg-[#fff9e9] shadow-[0_10px_24px_rgba(80,64,24,0.06)]">
                 {featuredImage?.source_url ? (
-                  <img
+                  <Image
                     src={featuredImage.source_url}
                     alt={featuredImage.alt_text || title}
+                    width={1200}
+                    height={630}
+                    sizes="(max-width: 1023px) 100vw, 760px"
+                    quality={75}
                     className="h-auto w-full object-cover"
                   />
                 ) : (

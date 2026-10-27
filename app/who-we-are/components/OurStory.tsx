@@ -45,8 +45,9 @@ const OurStory = ({
             src={imageSrc}
             alt={imageAlt}
             fill
+            sizes="(max-width: 1023px) 100vw, 50vw"
             className={imageClassName}
-            priority={imagePriority}
+            preload={imagePriority}
           />
         </div>
 

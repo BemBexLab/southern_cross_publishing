@@ -100,10 +100,13 @@ const Section5 = () => {
       </div>
 
       <div className="pointer-events-none absolute inset-y-0 right-0 hidden lg:flex lg:w-[48vw] lg:max-w-[860px] lg:items-center lg:justify-end">
-        <img
+        <Image
           src="/publishing-services/image 4.webp"
           alt="Books displayed on a wooden shelf"
-          className="block h-auto w-full object-contain object-right"
+          fill
+          sizes="48vw"
+          quality={75}
+          className="object-contain object-right"
         />
       </div>
     </section>

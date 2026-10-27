@@ -1,24 +1,40 @@
 import type { Metadata } from "next";
-import { DM_Sans, Geist, Geist_Mono } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import { defaultDescription, siteName, siteUrl } from "./seo";
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${siteUrl}#organization`,
+      name: siteName,
+      url: siteUrl,
+      logo: new URL("/image (1).png", siteUrl).toString(),
+      areaServed: "Australia",
+      sameAs: [
+        "https://www.facebook.com/CruxPublishingHouse/",
+        "https://www.instagram.com/cruxpublishinghouse/",
+      ],
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}#website`,
+      name: siteName,
+      url: siteUrl,
+      publisher: { "@id": `${siteUrl}#organization` },
+      inLanguage: "en-AU",
+    },
+  ],
+};
+
 // Public pages are static by default. Runtime routes can override this at
 // their own segment, such as the blog pages that read live WordPress data.
 export const dynamic = "error";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
@@ -66,8 +82,14 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${dmSans.variable} ${goneva.variable} h-full antialiased`}
+      className={`${dmSans.variable} ${goneva.variable} h-full antialiased`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </head>
       <body className="min-h-full flex flex-col">
         <NavBar />
         {children}

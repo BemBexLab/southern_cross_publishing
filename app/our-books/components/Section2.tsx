@@ -153,7 +153,7 @@ const Section2 = () => {
                     (max-width: 1279px) 200px,
                     220px
                   "
-                  unoptimized
+                  quality={70}
                   onLoad={(event) => {
                     const orientation =
                       event.currentTarget.naturalWidth >

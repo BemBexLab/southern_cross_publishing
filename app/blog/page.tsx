@@ -8,9 +8,9 @@ import MotionSection from "@/components/MotionSection";
 import { fetchWpPosts, mapWpPostToSummary } from "./wp";
 import { createPageMetadata } from "../seo";
 
-// WordPress content is fetched for each request.
+// Blog content is rendered on request, while the WordPress response is cached
+// server-side for five minutes in `app/blog/wp.ts`.
 export const dynamic = "force-dynamic";
-export const revalidate = 0;
 
 export const metadata: Metadata = createPageMetadata({
   title: "Our Blogs | Crux Publishing House",

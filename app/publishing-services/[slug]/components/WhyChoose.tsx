@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { FaCircleCheck } from "react-icons/fa6";
 import { FiPhoneCall } from "react-icons/fi";
 import type { WhyChooseSectionData } from "../data";
@@ -13,9 +14,12 @@ const WhyChoose = ({ section }: WhyChooseProps) => {
         <div className="relative mx-auto w-full max-w-xl self-stretch lg:h-full lg:max-w-none">
           <div className="relative aspect-[1.18/0.94] w-full overflow-hidden lg:h-full lg:min-h-full lg:aspect-auto">
             {section.illustrationSrc ? (
-              <img
+              <Image
                 src={section.illustrationSrc}
                 alt=""
+                fill
+                sizes="(max-width: 1023px) 100vw, 50vw"
+                quality={75}
                 className="absolute bottom-0 inset-0 h-full w-full object-fit object-center scale-[0.99] lg:object-center"
               />
             ) : (
