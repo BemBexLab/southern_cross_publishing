@@ -3,6 +3,7 @@
 import React from "react";
 import { usePathname } from "next/navigation";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import { IoLocationOutline } from "react-icons/io5";
 import Link from "next/link";
 
 const quickLinks = [
@@ -138,8 +139,18 @@ const Footer = () => {
               >
                 Follow Us
               </h3>
+              <address
+                className="dm-sans mt-4 flex items-start gap-2 not-italic text-[0.98rem] leading-relaxed"
+                style={{ color: "#eee5d3" }}
+              >
+                <IoLocationOutline
+                  className="mt-0.5 h-5 w-5 shrink-0"
+                  aria-hidden="true"
+                />
+                368 Sussex St, Sydney, NSW, Australia, 2000
+              </address>
               <div
-                className="mt-4 flex flex-col gap-[16px] text-[0.98rem]"
+                className="mt-5 flex flex-col gap-[16px] text-[0.98rem]"
                 style={{ color: "#eee5d3" }}
               >
                 {socials.map((link) => (
