@@ -81,7 +81,7 @@ const HomeHero = () => {
               src={heroImage}
               fill
               alt="Illustration for Crux Publishing House"
-              className="object-contain object-center drop-shadow-[0_20px_50px_rgba(0,0,0,0.35)] lg:object-cover"
+              className="object-contain object-center drop-shadow-[0_20px_50px_rgba(0,0,0,0.35)]"
               sizes="(min-width: 1280px) 620px, (min-width: 1024px) 45vw"
             />
           </div>

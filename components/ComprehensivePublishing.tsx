@@ -90,40 +90,42 @@ const ComprehensivePublishing = () => {
 
         <div className="mx-auto hidden w-full overflow-x-clip lg:block">
           <div className="relative mx-auto h-[560px] w-full max-w-[1280px] xl:h-[680px] 2xl:h-[760px]">
-            {bookImages.map((book, index) => (
-              <m.div
-                key={book.src}
-                className={`motion-section absolute w-[260px] origin-bottom transform xl:w-[320px] 2xl:w-[370px] ${book.className}`}
-                initial={
-                  prefersReducedMotion
-                    ? { opacity: 0 }
-                    : {
-                        opacity: 0,
-                        x: book.fanOffsetX,
-                        y: book.fanOffsetY,
-                        scale: 0.82,
-                      }
-                }
-                whileInView={{ opacity: 1, x: 0, y: 0, scale: 1 }}
-                viewport={{ once: true, amount: 0.35 }}
-                transition={{
-                  duration: prefersReducedMotion ? 0.24 : 0.85,
-                  delay: prefersReducedMotion ? 0 : book.fanDelay,
-                  ease: [0.22, 1, 0.36, 1],
-                }}
-              >
-                <Image
-                  src={book.src}
-                  width={520}
-                  height={780}
-                  alt={book.alt}
-                  preload={index === 0}
-                  quality={75}
-                  sizes="(min-width: 1536px) 370px, (min-width: 1280px) 320px, 260px"
-                  className="h-auto w-full rounded-[20px]"
-                />
-              </m.div>
-            ))}
+            <div className="absolute left-1/2 top-0 h-full w-[1140px] -translate-x-1/2 xl:w-[1200px] 2xl:w-[1250px]">
+              {bookImages.map((book, index) => (
+                <m.div
+                  key={book.src}
+                  className={`motion-section absolute w-[260px] origin-bottom transform xl:w-[320px] 2xl:w-[370px] ${book.className}`}
+                  initial={
+                    prefersReducedMotion
+                      ? { opacity: 0 }
+                      : {
+                          opacity: 0,
+                          x: book.fanOffsetX,
+                          y: book.fanOffsetY,
+                          scale: 0.82,
+                        }
+                  }
+                  whileInView={{ opacity: 1, x: 0, y: 0, scale: 1 }}
+                  viewport={{ once: true, amount: 0.35 }}
+                  transition={{
+                    duration: prefersReducedMotion ? 0.24 : 0.85,
+                    delay: prefersReducedMotion ? 0 : book.fanDelay,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
+                >
+                  <Image
+                    src={book.src}
+                    width={520}
+                    height={780}
+                    alt={book.alt}
+                    preload={index === 0}
+                    quality={75}
+                    sizes="(min-width: 1536px) 370px, (min-width: 1280px) 320px, 260px"
+                    className="h-auto w-full rounded-[20px]"
+                  />
+                </m.div>
+              ))}
+            </div>
           </div>
         </div>
 
