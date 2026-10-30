@@ -13,6 +13,7 @@ import {
   formatPostDate,
   stripHtml,
 } from "../wp";
+import { siteName } from "../../seo";
 
 export const dynamicParams = true;
 export const dynamic = "force-dynamic";
@@ -25,16 +26,18 @@ export async function generateMetadata(
 
   if (!post) {
     return {
-      title: "Blog Post Not Found | Crux Publishing House",
+      title: { absolute: `Blog Post Not Found | ${siteName}` },
     };
   }
 
-  const title = decodeHtml(post.title.rendered);
+  const title = `${decodeHtml(post.title.rendered)} | ${siteName}`;
   const description = stripHtml(post.excerpt.rendered);
   const image = post._embedded?.["wp:featuredmedia"]?.[0]?.source_url;
 
   return {
-    title,
+    // Use an absolute title because the root layout also has a title template.
+    // This prevents the site name from being appended twice on blog pages.
+    title: { absolute: title },
     description,
     alternates: {
       canonical: `/blog/${post.slug}`,
