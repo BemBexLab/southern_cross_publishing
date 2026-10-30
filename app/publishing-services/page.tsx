@@ -23,7 +23,7 @@ import ExpertNonFiction from "./components/ExpertNonFiction";
 import { createPageMetadata } from "../seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Book Publishing Services Australia | Crux Publishing House",
+  title: "Complete Book Publishing Services in Australia | Crux Publishing House",
   description:
     "Crux Publishing House offers complete book publishing services in Australia. Call (02) 6190 6580 or email info@cruxpublishinghouse.com.au today!",
   path: "/publishing-services",
