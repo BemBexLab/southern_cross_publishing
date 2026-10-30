@@ -12,7 +12,7 @@ const BlogOverlay = () => {
               Ready to Publish Your Book?
             </h2>
             <p className="dm-sans mt-5 max-w-3xl text-sm leading-6 text-[#dcebdc] sm:text-base sm:leading-7">
-              At Crux Publishing House, we assist you with book publishing services from writing to the final printed page. Are you holding a half-finished manuscript, a voice note full of ideas, or a story you've carried for years? We are here to shape it into something the world will remember.
+              At Crux Publishing, we assist you with book publishing services from writing to the final printed page. Are you holding a half-finished manuscript, a voice note full of ideas, or a story you've carried for years? We are here to shape it into something the world will remember.
             </p>
 
             <Link

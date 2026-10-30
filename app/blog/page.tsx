@@ -13,7 +13,7 @@ import { createPageMetadata } from "../seo";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Our Blog | Crux Publishing House",
+  title: "Our Blogs | Crux Publishing House",
   description:
     "Explore the Crux Publishing House blog for helpful writing tips, publishing insights, book marketing advice, and resources for aspiring and established authors.",
   path: "/blog",
