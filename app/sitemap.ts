@@ -137,13 +137,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...routes.map(({ path, lastModified }) => ({
       url: new URL(path, siteUrl).toString(),
       lastModified,
-      changeFrequency: path === "/blog" ? ("weekly" as const) : ("monthly" as const),
+      changeFrequency: path === "/blog" ? ("weekly" as const) : ("daily" as const),
       priority: path === "/" ? 1 : 0.9,
     })),
     ...blogPosts.map((post) => ({
       url: new URL(`/blog/${post.slug}`, siteUrl).toString(),
       lastModified: post.modified,
-      changeFrequency: "monthly" as const,
+      changeFrequency: "daily" as const,
       priority: 0.9,
     })),
   ];
