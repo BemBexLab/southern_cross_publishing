@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
-import heroImage from "@/public/Hero Image 1.webp";
+import heroImage from "@/public/home/f6b60766d89eb0f1deb01b8d61f2c86099b46c03.webp";
 
 const HomeHero = () => {
   return (
@@ -38,6 +38,7 @@ const HomeHero = () => {
                   src={heroImage}
                   fill
                   alt="Illustration for Crux Publishing House"
+                  unoptimized
                   className="object-contain object-center drop-shadow-[0_20px_50px_rgba(0,0,0,0.35)]"
                   sizes="(max-width: 639px) 85vw, (max-width: 1023px) 50vw"
                   preload
@@ -81,6 +82,7 @@ const HomeHero = () => {
               src={heroImage}
               fill
               alt="Illustration for Crux Publishing House"
+              unoptimized
               className="object-contain object-center drop-shadow-[0_20px_50px_rgba(0,0,0,0.35)]"
               sizes="(min-width: 1280px) 620px, (min-width: 1024px) 45vw"
             />
