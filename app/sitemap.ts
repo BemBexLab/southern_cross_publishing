@@ -4,76 +4,110 @@ import { publishingServiceSlugs } from "./publishing-services/[slug]/data";
 import { fetchWpPosts } from "./blog/wp";
 import { siteUrl } from "./seo";
 
-function getRouteLastModified(
-  sourcePath: string,
-  fallbackLastModified: string,
-): string {
+let attemptedFullGitHistory = false;
+
+function readGitDate(args: string[]): string | undefined {
   try {
-    const lastModified = execFileSync(
-      "git",
-      ["log", "-1", "--format=%cI", "--", sourcePath],
-      { cwd: process.cwd(), encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] },
-    ).trim();
-
-    if (lastModified) return lastModified;
+    return (
+      execFileSync("git", args, {
+        cwd: process.cwd(),
+        encoding: "utf8",
+        stdio: ["ignore", "pipe", "ignore"],
+      }).trim() || undefined
+    );
   } catch {
-    // Fall back for builds where Git history is unavailable.
+    return undefined;
   }
-
-  return fallbackLastModified;
 }
 
-// Fallbacks preserve existing dates when a Vercel shallow clone omits older
-// route history. A new commit touching the route supplies its current date.
+function getRouteLastModified(sourcePaths: string[]): string {
+  const routeDate = () =>
+    readGitDate(["log", "-1", "--format=%cI", "--", ...sourcePaths]);
+
+  let lastModified = routeDate();
+
+  // Vercel shallow-clones only recent commits. Fetch full history if needed so
+  // an unchanged route can retain its own date instead of using the deploy date.
+  if (!lastModified && !attemptedFullGitHistory) {
+    attemptedFullGitHistory = true;
+
+    if (readGitDate(["rev-parse", "--is-shallow-repository"]) === "true") {
+      try {
+        execFileSync("git", ["fetch", "--unshallow", "--no-tags"], {
+          cwd: process.cwd(),
+          stdio: "ignore",
+        });
+      } catch {
+        // Use the deployment commit date below if the remote cannot be fetched.
+      }
+    }
+
+    lastModified = routeDate();
+  }
+
+  return (
+    lastModified ??
+    readGitDate(["log", "-1", "--format=%cI"]) ??
+    new Date().toISOString()
+  );
+}
+
 const staticRoutes = [
   {
     path: "/",
-    sourcePath: "app/page.tsx",
-    lastModified: "2026-10-30T23:45:43+05:00",
+    sourcePaths: [
+      "app/page.tsx",
+      "components/AtSouthernCross.tsx",
+      "components/ComprehensivePublishing.tsx",
+      "components/FAQs.tsx",
+      "components/GetInTouch.tsx",
+      "components/HomeHero.tsx",
+      "components/HowItWorks.tsx",
+      "components/LogoSlider.tsx",
+      "components/LookingForSelfPublishing.tsx",
+      "components/MotionSection.tsx",
+      "components/OurBook.tsx",
+      "components/Testimonials.tsx",
+      "components/WitnessOurUniqueness.tsx",
+      "components/YourStory.tsx",
+    ],
   },
   {
     path: "/publishing-services",
-    sourcePath: "app/publishing-services/page.tsx",
-    lastModified: "2026-10-30T23:45:43+05:00",
+    sourcePaths: [
+      "app/publishing-services/page.tsx",
+      "app/publishing-services/components",
+    ],
   },
   {
     path: "/audiobook-service",
-    sourcePath: "app/audiobook-service",
-    lastModified: "2026-10-30T23:45:43+05:00",
+    sourcePaths: ["app/audiobook-service"],
   },
   {
     path: "/our-books",
-    sourcePath: "app/our-books",
-    lastModified: "2026-10-28T04:52:09+05:00",
+    sourcePaths: ["app/our-books"],
   },
   {
     path: "/who-we-are",
-    sourcePath: "app/who-we-are",
-    lastModified: "2026-10-30T23:45:43+05:00",
+    sourcePaths: ["app/who-we-are"],
   },
   {
     path: "/blog",
-    sourcePath: "app/blog/page.tsx",
-    lastModified: "2026-10-30T23:45:43+05:00",
+    sourcePaths: ["app/blog/page.tsx", "app/blog/components"],
   },
   {
     path: "/contact",
-    sourcePath: "app/contact",
-    lastModified: "2026-10-28T04:52:09+05:00",
+    sourcePaths: ["app/contact"],
   },
   {
     path: "/privacy-policy",
-    sourcePath: "app/privacy-policy",
-    lastModified: "2026-10-28T04:52:09+05:00",
+    sourcePaths: ["app/privacy-policy"],
   },
   {
     path: "/terms-condition",
-    sourcePath: "app/terms-condition",
-    lastModified: "2026-10-28T04:52:09+05:00",
+    sourcePaths: ["app/terms-condition"],
   },
 ];
-
-const publishingServiceLastModified = "2026-10-28T23:27:50+05:00";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   let blogPosts: Awaited<ReturnType<typeof fetchWpPosts>> = [];
@@ -84,15 +118,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // Keep the sitemap available if the WordPress API is temporarily down.
   }
 
-  const publishingServiceLastModifiedForRoutes = getRouteLastModified(
+  const publishingServiceLastModifiedForRoutes = getRouteLastModified([
     "app/publishing-services/[slug]",
-    publishingServiceLastModified,
-  );
+  ]);
 
   const routes = [
-    ...staticRoutes.map(({ path, sourcePath, lastModified }) => ({
+    ...staticRoutes.map(({ path, sourcePaths }) => ({
       path,
-      lastModified: getRouteLastModified(sourcePath, lastModified),
+      lastModified: getRouteLastModified(sourcePaths),
     })),
     ...publishingServiceSlugs.map((slug) => ({
       path: `/publishing-services/${slug}`,
