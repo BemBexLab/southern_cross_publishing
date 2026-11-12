@@ -2,16 +2,14 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { FaArrowLeft, FaArrowRight, FaRegCalendar } from "react-icons/fa6";
+import { FaArrowLeft, FaRegCalendar } from "react-icons/fa6";
 import { LuClock3 } from "react-icons/lu";
-import BlogFooter from "../components/BlogFooter";
+import LocalBlogContent from "../components/LocalBlogContent";
+import { getBlogPost } from "../posts";
 import {
   decodeHtml,
-  estimateReadTime,
-  fetchWpPost,
   fetchWpPosts,
   formatPostDate,
-  stripHtml,
 } from "../wp";
 import { siteName } from "../../seo";
 
@@ -22,7 +20,7 @@ export async function generateMetadata(
   props: PageProps<"/blog/[slug]">
 ): Promise<Metadata> {
   const { slug } = await props.params;
-  const post = await fetchWpPost(slug);
+  const post = await getBlogPost(slug);
 
   if (!post) {
     return {
@@ -30,9 +28,9 @@ export async function generateMetadata(
     };
   }
 
-  const title = `${decodeHtml(post.title.rendered)} | ${siteName}`;
-  const description = stripHtml(post.excerpt.rendered);
-  const image = post._embedded?.["wp:featuredmedia"]?.[0]?.source_url;
+  const title = `${post.title} | ${siteName}`;
+  const description = post.excerpt;
+  const image = post.image?.url;
 
   return {
     // Use an absolute title because the root layout also has a title template.
@@ -60,19 +58,23 @@ export async function generateMetadata(
 
 const page = async (props: PageProps<"/blog/[slug]">) => {
   const { slug } = await props.params;
-  const post = await fetchWpPost(slug);
+  const post = await getBlogPost(slug);
 
   if (!post) {
     notFound();
   }
 
-  const title = decodeHtml(post.title.rendered);
-  const excerpt = stripHtml(post.excerpt.rendered);
+  const { title, excerpt, readTime } = post;
   const publishedDate = formatPostDate(post.date);
-  const readTime = estimateReadTime(post.content.rendered);
-  const featuredImage = post._embedded?.["wp:featuredmedia"]?.[0];
-  const recentPosts = (await fetchWpPosts())
-    .filter((recentPost) => recentPost.id !== post.id)
+  const featuredImage = post.image;
+  const wpPosts = await fetchWpPosts().catch((error: unknown) => {
+    // Local articles can still render if the optional WordPress sidebar is unavailable.
+    if (post.content.source === "wordpress") throw error;
+    console.error("Unable to load recent WordPress posts:", error);
+    return [];
+  });
+  const recentPosts = wpPosts
+    .filter((recentPost) => recentPost.slug !== post.slug)
     .slice(0, 3)
     .map((recentPost) => ({
       slug: recentPost.slug,
@@ -101,12 +103,12 @@ const page = async (props: PageProps<"/blog/[slug]">) => {
               </header>
 
               <div className="mt-8 overflow-hidden rounded-[10px] border border-[#e5dbc1] bg-[#fff9e9] shadow-[0_10px_24px_rgba(80,64,24,0.06)]">
-                {featuredImage?.source_url ? (
+                {featuredImage?.url ? (
                   <Image
-                    src={featuredImage.source_url}
-                    alt={featuredImage.alt_text || title}
-                    width={1200}
-                    height={630}
+                    src={featuredImage.url}
+                    alt={featuredImage.alt}
+                    width={featuredImage.width ?? 1200}
+                    height={featuredImage.height ?? 630}
                     sizes="(max-width: 1023px) 100vw, 760px"
                     quality={75}
                     className="h-auto w-full object-cover"
@@ -146,9 +148,17 @@ const page = async (props: PageProps<"/blog/[slug]">) => {
 
               <div className="mt-8 rounded-[10px] bg-transparent">
                 <div
-                  className="wp-blog-content dm-sans max-w-none text-[0.96rem] leading-[1.72] text-[#443f36] [&_a]:text-[#018752] [&_a]:underline [&_a]:underline-offset-4 [&_blockquote]:my-6 [&_blockquote]:rounded-[10px] [&_blockquote]:border-l-4 [&_blockquote]:border-[#d5c16d] [&_blockquote]:bg-[#f1e7c6] [&_blockquote]:px-5 [&_blockquote]:py-4 [&_blockquote]:italic [&_em]:italic [&_h1]:mt-8 [&_h1]:text-[2rem] [&_h1]:leading-tight [&_h1]:text-[#1f6c45] [&_h2]:mt-8 [&_h2]:text-[1.7rem] [&_h2]:font-semibold [&_h2]:leading-tight [&_h2]:text-[#3f3b2f] [&_h3]:mt-7 [&_h3]:text-[1.15rem] [&_h3]:font-semibold [&_h3]:leading-snug [&_h3]:text-[#3f3b2f] [&_hr]:my-8 [&_hr]:border-[#ded1ac] [&_img]:my-6 [&_img]:rounded-[10px] [&_li]:leading-[1.7] [&_ol]:my-4 [&_ol]:list-decimal [&_ol]:pl-6 [&_p]:mb-4 [&_strong]:font-semibold [&_strong]:text-[#3f3b2f] [&_table]:my-6 [&_table]:w-full [&_table]:border-collapse [&_table]:overflow-hidden [&_table]:rounded-[8px] [&_tbody_tr]:border-b [&_tbody_tr]:border-[#e6dcc1] [&_td]:px-3 [&_td]:py-3 [&_td]:align-top [&_th]:bg-[#e7ddb6] [&_th]:px-3 [&_th]:py-3 [&_th]:text-left [&_th]:text-[#3f3b2f] [&_tr:nth-child(even)]:bg-[#fbf5df] [&_ul]:my-4 [&_ul]:list-disc [&_ul]:pl-6"
-                  dangerouslySetInnerHTML={{ __html: post.content.rendered }}
-                />
+                  className="wp-blog-content dm-sans max-w-none text-[0.96rem] leading-[1.72] text-[#443f36] [&_a]:text-[#018752] [&_a]:underline [&_a]:underline-offset-4 [&_blockquote]:my-6 [&_blockquote]:rounded-[10px] [&_blockquote]:border-l-4 [&_blockquote]:border-[#d5c16d] [&_blockquote]:bg-[#f1e7c6] [&_blockquote]:px-5 [&_blockquote]:py-4 [&_blockquote]:italic [&_em]:italic [&_h1]:mt-8 [&_h1]:text-[2rem] [&_h1]:leading-tight [&_h1]:text-[#1f6c45] [&_h2]:mt-8 [&_h2]:text-[1.7rem] [&_h2]:font-semibold [&_h2]:leading-tight [&_h2]:text-[#3f3b2f] [&_h3]:mt-7 [&_h3]:text-[1.15rem] [&_h3]:font-semibold [&_h3]:leading-snug [&_h3]:text-[#3f3b2f] [&_h4]:mt-6 [&_h4]:text-base [&_h4]:font-semibold [&_h5]:mt-5 [&_h5]:text-sm [&_h5]:font-semibold [&_h6]:mt-4 [&_h6]:text-sm [&_h6]:font-medium [&_hr]:my-8 [&_hr]:border-[#ded1ac] [&_img]:my-6 [&_img]:rounded-[10px] [&_li]:leading-[1.7] [&_ol]:my-4 [&_ol]:list-decimal [&_ol]:pl-6 [&_p]:mb-4 [&_strong]:font-semibold [&_strong]:text-[#3f3b2f] [&_table]:my-6 [&_table]:w-full [&_table]:border-collapse [&_table]:overflow-hidden [&_table]:rounded-[8px] [&_tbody_tr]:border-b [&_tbody_tr]:border-[#e6dcc1] [&_td]:px-3 [&_td]:py-3 [&_td]:align-top [&_th]:bg-[#e7ddb6] [&_th]:px-3 [&_th]:py-3 [&_th]:text-left [&_th]:text-[#3f3b2f] [&_tr:nth-child(even)]:bg-[#fbf5df] [&_ul]:my-4 [&_ul]:list-disc [&_ul]:pl-6"
+                  dangerouslySetInnerHTML={
+                    post.content.source === "wordpress"
+                      ? { __html: post.content.html }
+                      : undefined
+                  }
+                >
+                  {post.content.source === "local" ? (
+                    <LocalBlogContent blocks={post.content.blocks} />
+                  ) : null}
+                </div>
               </div>
 
               <div className="mt-10 flex flex-wrap items-center justify-between gap-4 rounded-[12px] bg-[#ebe0b9] px-5 py-4 text-[#2c2a25]">

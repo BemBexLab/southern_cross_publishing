@@ -6,6 +6,7 @@ import BlogOverlay from "./components/BlogOverlay";
 import BlogFooter from "./components/BlogFooter";
 import MotionSection from "@/components/MotionSection";
 import { fetchWpPosts, mapWpPostToSummary } from "./wp";
+import { getLocalBlogSummaries } from "./posts";
 import { createPageMetadata } from "../seo";
 
 // Blog content is rendered on request, while the WordPress response is cached
@@ -20,7 +21,14 @@ export const metadata: Metadata = createPageMetadata({
 });
 
 const page = async () => {
-  const posts = (await fetchWpPosts()).map(mapWpPostToSummary);
+  const localPosts = getLocalBlogSummaries();
+  const localSlugs = new Set(localPosts.map((post) => post.slug));
+  const wordpressPosts = (await fetchWpPosts())
+    .map(mapWpPostToSummary)
+    .filter((post) => !localSlugs.has(post.slug));
+  const posts = [...localPosts, ...wordpressPosts].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+  );
 
   return (
     <section className="bg-[#F7F1D7]">
