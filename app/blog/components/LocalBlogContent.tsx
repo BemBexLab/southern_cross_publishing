@@ -34,7 +34,10 @@ export default function LocalBlogContent({ blocks }: { blocks: BlogContentBlock[
             >
               <colgroup>
                 {Array.from({ length: block.columns }, (_, columnIndex) => (
-                  <col key={columnIndex} style={{ width: `${100 / block.columns}%` }} />
+                  <col
+                    key={columnIndex}
+                    style={{ width: `${block.columnWidths?.[columnIndex] ?? 100 / block.columns}%` }}
+                  />
                 ))}
               </colgroup>
               {block.caption ? (
@@ -45,7 +48,7 @@ export default function LocalBlogContent({ blocks }: { blocks: BlogContentBlock[
               <thead className="bg-[#018752] text-[#fff9e9]">
                 <tr>
                   {block.headers.map((header, headerIndex) => (
-                    <th key={headerIndex} scope="col" className="border-b-2 border-[#fdd118] px-5 py-3.5 text-sm font-semibold tracking-wide first:rounded-tl-sm last:rounded-tr-sm">
+                    <th key={headerIndex} scope="col" className="!bg-[#018752] !text-[#fff9e9] border-b-2 border-[#fdd118] px-5 py-3.5 text-sm font-semibold tracking-wide first:rounded-tl-sm last:rounded-tr-sm">
                       {header}
                     </th>
                   ))}

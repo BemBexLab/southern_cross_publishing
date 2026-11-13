@@ -18,6 +18,7 @@ export type BlogContentBlock =
   | {
       type: "table";
       columns: number;
+      columnWidths?: number[];
       caption?: string;
       headers: string[];
       rows: string[][];
@@ -202,6 +203,7 @@ export const BlogData: BlogPostData[] = [
       {
         type: "table",
         columns: 2,
+        columnWidths: [35, 65],
         caption: "Common publishing formats include:",
         headers: ["Book format", "Suitable for"],
         rows: [
@@ -514,7 +516,7 @@ export const BlogData: BlogPostData[] = [
       },
       {
         type: "table",
-        columns: 3,
+        columns: 2,
         headers: ["Publishing service", "Australian cost benchmark"],
         caption: "The individual expenses help authors prepare realistic publishing budgets.",
         rows: [
@@ -803,6 +805,988 @@ export const BlogData: BlogPostData[] = [
             answer: "Authors can recover production expenses through book sales, but results depend on demand, pricing, distribution fees and actual sales.",
           },
         ],
+      },
+    ],
+  },
+  {
+    slug: "best-10-self-publishing-companies-in-australia-2027-guide",
+    h1: "Best 10 Self-Publishing Companies in Australia (2027 Guide)",
+    excerpt: "Publishing a book is an exciting milestone for any writer, but finding the right publishing partner can be challenging. Whether you have written a novel, memoir, children's book, business guide, or academic manuscript, choosing the right self-publishing company can make a significant difference to your publishing experience.",
+    date: "2026-11-13",
+    image: {
+      url: "/blog/blog3/image1.png",
+      alt: "Best 10 Self-Publishing Companies in Australia (2027 Guide)",
+    },
+    content: [
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Fortunately, Australian authors have access to several professional self-publishing companies that offer services ranging from manuscript editing and book cover design to printing, eBook formatting, distribution, and marketing support."
+        ],
+      },
+      {
+        type: "heading",
+        level: "h2",
+        text: "But which company should you choose?",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "The best self-publishing company depends on your manuscript, budget, publishing goals, preferred level of assistance, and desired distribution channels. Some companies provide complete publishing assistance, while others specialise in printing, digital publishing, or helping authors manage the process independently.",
+          <>In this guide, we explore the <b>10 best self-publishing companies in Australia in 2027</b>, comparing their services, specialties, and suitability for different types of authors.</>,
+          "Whether you are a first-time writer or an experienced independent author, this list will help you find a publishing solution that suits your needs."
+        ],
+      },
+      {
+        type: "heading",
+        level: "h2",
+        text: "Quick Answer: What Are the Best Self-Publishing Companies in Australia?",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Some notable self-publishing companies and platforms available to Australian authors include:"
+        ],
+      },
+      {
+        type: "list",
+        listItems: [
+          <><b>Crux Publishing House Australia</b> - Full-service self-publishing and author guidance.</>,
+          <><b>Australian Self-Publishing Group</b> - Publishing assistance and marketing support.</>,
+          <><b>Green Hill Publishing</b> - Professional self-publishing services.</>,
+          <><b>Busybird Publishing</b> - Boutique publishing and self-publishing assistance.</>,
+          <><b>BookPOD</b> - Book production, printing, and publishing support.</>,
+          <><b>Author Services Australia</b> – Independent author services.</>,
+          <><b>Amazon Kindle Direct Publishing (KDP)</b> - Independent eBook and print-on-demand publishing.</>,
+          <><b>IngramSpark</b> - Global print-on-demand and book distribution.</>,
+          <><b>Lulu</b> - Print-on-demand and independent publishing.</>,
+          <><b>Blurb</b> - Specialised publishing for photography, art, and illustrated books.</>,
+        ],
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "These companies offer different publishing models, so authors should compare their services and contractual terms before making a decision."
+        ],
+      },
+      {
+        type: "heading",
+        level: "h2",
+        text: "Comparison Table: Top 10 Self-Publishing Companies in Australia",
+      },
+      {
+        type: "image",
+        image: {
+          url: "/blog/blog3/image3.png",
+          alt: "Book editing illustration",
+          width: 1200,
+          height: 630,
+        },
+      },
+      {
+        type: "table",
+        columns: 3,
+        headers: ["Company", "Main Speciality", "Best For"],
+        rows: [
+          ["Publish Central", "End-to-end publishing support", "Authors seeking professional assistance"],
+          ["Australian Self-Publishing Group", "Publishing and marketing support", "Authors seeking broader market exposure"],
+          ["Green Hill Publishing", "Professional self-publishing", "Independent authors"],
+          ["Busybird Publishing", "Boutique publishing services", "First-time and independent authors"],
+
+          ["BookPOD", "Book design and printing", "Authors producing physical books"],
+          ["Author Services Australia", "Editing and author services", "Authors wanting independent control"],
+          ["Amazon KDP", "eBooks and print-on-demand", "Digital-first authors"],
+          ["IngramSpark", "International distribution", "Authors targeting global book markets"],
+          ["Lulu", "Print-on-demand publishing", "Independent and creative authors"],
+          ["Blurb", "Premium illustrated book production", "Photographers, designers, and artists"],
+        ],
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          <><i><b>Note:</b> This is an editorial shortlist, not an independently verified ranking of company performance. Some providers are Australian-based service businesses, while others are international self-publishing platforms accessible to Australian authors.</i></>
+        ],
+      },
+      {
+        type: "heading",
+        level: "h2",
+        text: "1. Crux Publishing House",
+      },
+      {
+        type: "heading",
+        level: "h3",
+        text: "Best for: Authors looking for professional, end-to-end self-publishing assistance.",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Publish Central is an Australian self-publishing service provider that helps authors transform their manuscripts into professionally produced books. The company has been assisting independent authors since 2026 and offers a range of services designed to simplify the publishing process.",
+          "One of its key strengths is its flexible publishing approach. Authors can choose to manage parts of the publishing process themselves, receive professional guidance, or have the team coordinate the project from beginning to end.",
+          "Its services cover several important stages of book production, including manuscript editing, proofreading, cover design, interior formatting, printing, eBook production, and distribution.",
+          "Publish Central also offers publishing support for non-fiction authors, including entrepreneurs and business professionals who want to use a book to establish industry authority.",
+          <><b>Key Services:</b></>
+        ],
+      },
+      {
+        type: "list",
+        listItems: [
+          <>Professional manuscript editing.</>,
+          <>Book cover and interior design.</>,
+          <>Proofreading and typesetting.</>,
+          <>eBook formatting and production.</>,
+          <>Paperback printing and print-on-demand.</>,
+          <>Book distribution.</>,
+          <>Audiobook production assistance.</>,
+          <>Publishing consultation and project management.</>,
+        ],
+      },
+      {
+        type: "heading",
+        level: "h3",
+        text: "Why Consider Publish Central?",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Publish Central is worth considering if you want professional publishing expertise without managing every technical detail yourself. Its different service levels give authors flexibility depending on their experience and publishing requirements.",
+          <><b>Potential Consideration:</b> Full-service packages can require a substantial investment. Authors should request a customized quote and check exactly what is included.</>,
+          <><b>Official Website:</b> <a href="https://www.publishcentral.com.au/" className="hover:text-blue-500 hover:underline">publishcentral.com.au</a></>
+        ],
+      },
+      {
+        type: "heading",
+        level: "h2",
+        text: "2. Australian Self-Publishing Group",
+      },
+      {
+        type: "heading",
+        level: "h3",
+        text: "Best for: Authors seeking publishing, distribution, and marketing assistance.",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Australian Self-Publishing Group is an Australian publishing service provider that helps writers bring their books to market while retaining control over their intellectual property.",
+          "The company offers assistance across multiple stages of publishing, with a particular focus on connecting authors with booksellers, distributors, and promotional opportunities.",
+          "For writers who want their books to reach readers beyond a single online marketplace, distribution support can be an important consideration.",
+          "Its services include publishing assistance, book production, printing, distribution, and marketing-related support.",
+          <><b>Key Services:</b></>
+        ],
+      },
+      {
+        type: "list",
+        listItems: [
+          <>Self-publishing assistance.</>,
+          <>Book production and printing.</>,
+          <>Publishing consultation.</>,
+          <>Book marketing and promotion.</>,
+          <>Retail and distribution connections.</>,
+          <>eBook publishing support.</>,
+        ],
+      },
+      {
+        type: "heading",
+        level: "h3",
+        text: "Why Consider an Australian Self-Publishing Group?",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "It may be a suitable option for authors who want more assistance with the commercial side of publishing, particularly book distribution and promotional opportunities.",
+          <><b>Potential Consideration:</b> Ask for a detailed explanation of distribution arrangements, marketing deliverables, associated costs, and the exact retailers or channels included in your agreement.</>,
+          <><b>Official Website:</b> <a href="https://australianselfpublishinggroup.com/" className="hover:text-blue-500 hover:underline">australianselfpublishinggroup.com</a></>
+        ],
+      },
+      {
+        type: "heading",
+        level: "h2",
+        text: "3. Green Hill Publishing",
+      },
+      {
+        type: "heading",
+        level: "h3",
+        text: "Best for: Independent authors looking for professional self-publishing services.",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Green Hill Publishing is an Australian self-publishing company based in South Australia. It provides publishing support to independent authors who want to produce professionally presented books.",
+          "The company focuses on helping writers move from manuscript preparation to completed book production. Its approach is relevant to authors who want assistance with the technical and creative aspects of publishing.",
+          "Green Hill states that it has helped more than 1,500 Australian independent authors.",
+          "Its services and publishing options are worth exploring if you want to work with an Australian-based publishing provider.",
+          <><b>Key Services:</b></>
+        ],
+      },
+      {
+        type: "list",
+        listItems: [
+          <>Self-publishing assistance.</>,
+          <>Book production</>,
+          <>Publishing consultation.</>,
+          <>Professional book preparation.</>,
+          <>Support for independent authors.</>,
+          <>Corporate publication services.</>,
+        ],
+      },
+      {
+        type: "heading",
+        level: "h3",
+        text: "Why Consider Green Hill Publishing?",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Its Australian presence and focus on independent authors make it a company worth including in your publishing shortlist.",
+          <><b>Potential Consideration:</b> Before selecting a package, confirm the editing, design, printing, distribution, and post-publication services included in the quoted price.</>,
+          <><b>Official Website:</b> <a href="https://greenhillpublishing.com.au/" className="hover:text-blue-500 hover:underline">greenhillpublishing.com.au</a></>
+        ],
+      },
+      {
+        type: "heading",
+        level: "h2",
+        text: "4. Busybird Publishing",
+      },
+      {
+        type: "heading",
+        level: "h3",
+        text: "Best for: First-time authors and writers seeking boutique publishing support.",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Busybird Publishing is a boutique micropublisher based in Montmorency, Victoria. In addition to publishing selected titles of its own, the company provides fee-for-service self-publishing assistance.",
+          "The company has experience helping independent writers bring their stories to life and offers a more personalised publishing approach.",
+          "One notable aspect of Busybird's self-publishing model is that its website states authors retain their rights and royalties rather than surrendering them to the company.",
+          "This can be particularly important for writers who want to maintain ownership and control of their published work.",
+          <><b>Key Services:</b></>
+        ],
+      },
+      {
+        type: "list",
+        listItems: [
+          <>Self-publishing assistance.</>,
+          <>Book design and layout.</>,
+          <>Manuscript assessment and editing.</>,
+          <>Illustration and photography.</>,
+          <>eBook conversion.</>,
+          <>Publishing consultation.</>,
+          <>Custom publishing packages.</>
+        ],
+      },
+      {
+        type: "heading",
+        level: "h3",
+        text: "Why Consider Busybird Publishing?",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Busybird may appeal to authors who value personalised assistance and want to retain control over their book's rights and royalties.",
+          <><b>Potential Consideration:</b> Ask which services are included in your chosen package and whether distribution, marketing, and printing are charged separately.</>,
+          <><b>Official Website:</b> <a href="https://www.busybird.com.au/" className="hover:text-blue-500 hover:underline">busybird.com.au</a></>
+        ]
+      },
+      {
+        type: "heading",
+        level: "h2",
+        text: "5. BookPOD",
+      },
+      {
+        type: "heading",
+        level: "h3",
+        text: "Best for: Authors who need professional book printing and production.",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "BookPOD is an Australian book production and printing provider that supports self-published authors, independent publishers, and businesses.",
+          "For many writers, producing a high-quality physical book is just as important as publishing an eBook. BookPOD focuses on the practical aspects of turning a completed manuscript into a printed publication.",
+          "The company offers support for different book genres and formats, including fiction, family histories, business publications, picture books, and coffee-table books.",
+          "It also provides additional publishing-related services for authors who need help preparing their manuscripts for print.",
+          <><b>Key Services:</b></>
+        ]
+      },
+      {
+        type: "list",
+        listItems: [
+          <>Book printing.</>,
+          <>Cover design.</>,
+          <>Typesetting and formatting.</>,
+          <>Proofreading and copyediting.</>,
+          <>eBook conversion.</>,
+          <>ISBN and barcode arrangements.</>,
+          <>Short-run printing.</>,
+          <>Publishing support.</>
+        ],
+      },
+      {
+        type: "heading",
+        level: "h3",
+        text: "Why Consider BookPOD?",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "BookPOD is worth considering if your priority is producing physical books, especially when you want to print a smaller quantity rather than commit to a large print run.",
+          <><b>Potential Consideration:</b> Compare the printing specifications, minimum order quantities, shipping costs, and distribution arrangements before committing.</>,
+          <><b>Official Website:</b> <a href="https://www.bookpod.com.au/" className="hover:text-blue-500 hover:underline">bookpod.com.au</a></>
+        ]
+      },
+      {
+        type: "heading",
+        level: "h2",
+        text: "6. Author Services Australia",
+      },
+      {
+        type: "heading",
+        level: "h3",
+        text: "Best for: Authors who want to retain control while outsourcing individual publishing tasks.",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Author Services Australia offers specialised services for writers who want professional help with preparing their books for independent publication.",
+          "Unlike a conventional publishing house, its service model focuses on assisting authors with individual publishing requirements rather than taking over ownership of their work.",
+          "This can be particularly useful for writers who already have a publishing plan but need help with specific elements of the production process.",
+          "Its listed services include editing, proofreading-related support, cover design, manuscript evaluation, and formatting.",
+          <><b>Key Services:</b></>
+        ]
+      },
+      {
+        type: "list",
+        listItems: [
+          <>Manuscript assessment.</>,
+          <>Editing and proofreading.</>,
+          <>Book cover design.</>,
+          <>Formatting and typesetting.</>,
+          <>Beta reading.</>,
+          <>Independent publishing guidance.</>,
+        ],
+      },
+      {
+        type: "heading",
+        level: "h3",
+        text: "Why Consider Author Services Australia?",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "It is a relevant option for authors who want to maintain control over their publishing decisions and purchase professional services as required.",
+          <><b>Potential Consideration:</b> Confirm whether the provider can manage your complete project or whether you will need separate suppliers for printing, uploading, distribution, and marketing.</>,
+          <><b>Official Website:</b> <a href="https://authorservicesaustralia.com.au/" className="hover:text-blue-500">authorservicesaustralia.com.au</a></>
+        ]
+      },
+      {
+        type: "heading",
+        level: "h2",
+        text: "7. Amazon Kindle Direct Publishing (KDP)",
+      },
+      {
+        type: "heading",
+        level: "h3",
+        text: "Best for: Authors who want to publish eBooks and paperback books independently.",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Amazon Kindle Direct Publishing is one of the most widely recognised self-publishing platforms available to authors worldwide, including Australian writers.",
+          "Unlike a traditional publishing service provider, KDP allows authors to upload and manage their books independently.",
+          "The platform supports Kindle eBooks, paperbacks, and hardcover publications in eligible markets. Authors can also access Amazon's book marketplace and manage important publishing details themselves.",
+          "KDP is particularly attractive to writers who want to publish without paying an upfront platform publishing fee.",
+          "However, authors remain responsible for preparing their manuscripts, creating professional covers, formatting their books, and promoting their titles.",
+          <><b>Key Services and Features:</b></>
+        ]
+      },
+      {
+        type: "list",
+        listItems: [
+          <>Kindle eBook publishing.</>,
+          <>Paperback publishing.</>,
+          <>Hardcover publishing in eligible markets.</>,
+          <>Print-on-demand production.</>,
+          <>Amazon marketplace distribution.</>,
+          <>Author publishing dashboard.</>,
+          <>Royalty options subject to platform terms.</>
+        ],
+      },
+      {
+        type: "heading",
+        level: "h3",
+        text: "Why Consider Amazon KDP?",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "KDP is a strong option for authors who want a relatively accessible way to publish their books independently, particularly if their target readers already purchase books through Amazon.",
+          <><b>Potential Consideration:</b> Amazon distribution is not the same as comprehensive Australian bookstore distribution. Authors should also understand printing costs, royalty calculations, marketplace eligibility, and exclusivity conditions associated with optional programs.</>,
+          <><b>Official Website:</b> <a href="https://kdp.amazon.com/" className="hover:text-blue-500">kdp.amazon.com</a></>
+        ]
+      },
+      {
+        type: "heading",
+        level: "h2",
+        text: "8. IngramSpark",
+      },
+      {
+        type: "heading",
+        level: "h3",
+        text: "Best for: Authors interested in international print distribution.",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "IngramSpark is an international publishing and print-on-demand platform that helps independent authors and publishers make their books available through a broad distribution network.",
+          "For Australian writers who want to reach readers in international markets, distribution infrastructure can be an important part of their publishing strategy.",
+          "The platform supports print and digital publishing workflows, allowing authors to prepare their titles for distribution through participating retailers and other channels.",
+          "Unlike a full-service Australian publishing agency, IngramSpark primarily provides publishing technology and distribution infrastructure.",
+          "Authors generally need to arrange their own professional editing, cover design, and manuscript preparation.",
+          <><b>Key Services and Features:</b></>
+        ]
+      },
+      {
+        type: "list",
+        listItems: [
+          <>Print-on-demand book production.</>,
+          <>Paperback and hardcover publishing</>,
+          <>eBook distribution.</>,
+          <>International retail distribution.</>,
+          <>Publishing management tools.</>,
+          <>Book metadata management.</>,
+        ],
+      },
+      {
+        type: "heading",
+        level: "h3",
+        text: "Why Consider IngramSpark?",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "IngramSpark may be suitable for authors who already have professionally prepared books and want to explore wider distribution opportunities beyond a single retailer.",
+          <><b>Potential Consideration:</b> Review current setup charges, printing costs, wholesale discounts, returnability settings, distribution terms, and the availability of each channel in your target market.</>,
+          <><b>Official Website:</b> <a href="https://www.ingramspark.com/" className="hover:text-blue-500">ingramspark.com</a></>
+        ]
+      },
+      {
+        type: "heading",
+        level: "h2",
+        text: "9. Lulu",
+      },
+      {
+        type: "heading",
+        level: "h3",
+        text: "Best for: Independent authors and creators interested in print-on-demand publishing.",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Lulu is an international print-on-demand publishing platform that gives writers and creators tools to produce and distribute their own publications.",
+          <>It supports a range of book formats and creative projects, including novels, poetry collections, cookbooks, photography books, and children's publications.</>,
+          <>One of its main advantages is the flexibility of print-on-demand production. Instead of necessarily ordering a large quantity of printed books in advance, authors can use its production system to print copies as orders are received.</>,
+          "Lulu is a platform rather than a traditional publishing company, meaning authors are responsible for the content and preparation of their books.",
+          <><b>Key Services and Features:</b></>
+        ]
+      },
+      {
+        type: "list",
+        listItems: [
+          <>Print-on-demand publishing.</>,
+          <>Paperback and hardcover options.</>,
+          <>Custom book formats.</>,
+          <>Publishing tools.</>,
+          <>Online bookstore options.</>,
+          <>Distribution opportunities.</>,
+          <>Creative book production.</>
+        ],
+      },
+      {
+        type: "heading",
+        level: "h3",
+        text: "Why Consider Lulu?",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Lulu can be a practical option for independent creators who want flexibility in producing books without investing in large print runs.",
+          <><b>Potential Consideration:</b> Check shipping availability and costs to Australia, printing specifications, distribution eligibility, and retail pricing before choosing a publishing format.</>,
+          <><b>Official Website:</b> <a href="https://www.lulu.com/" className="hover:text-blue-500">lulu.com</a></>
+        ]
+      },
+      {
+        type: "heading",
+        level: "h2",
+        text: "10. Blurb",
+      },
+      {
+        type: "heading",
+        level: "h3",
+        text: "Best for: Photographers, artists, designers, and illustrated book creators.",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Blurb is an international self-publishing and book-production platform that specialises in visually appealing publications.",
+          <>Unlike platforms that primarily focus on standard text-based books, Blurb is particularly useful for projects where image quality, layout, and presentation are important.</>,
+          <>It offers tools and services for creating photography books, portfolios, art books, cookbooks, and other visually rich publications.</>,
+          "For Australian photographers, designers, and creative professionals, it can be an interesting publishing option.",
+          <><b>Key Services and Features:</b></>
+        ]
+      },
+      {
+        type: "list",
+        listItems: [
+          <>Photography book production.</>,
+          <>Art and portfolio books.</>,
+          <>Custom book layouts.</>,
+          <>Print-on-demand services.</>,
+          <>eBook options for eligible formats.</>,
+          <>Professional printing options.</>,
+          <>Design and publishing tools.</>
+        ],
+      },
+      {
+        type: "heading",
+        level: "h3",
+        text: "Why Consider Blurb?",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Blurb is worth exploring when your book depends heavily on photography, illustrations, visual storytelling, or premium presentation.",
+          <><b>Potential Consideration:</b> Compare international shipping costs, paper choices, print quality, and available distribution options before placing an order.</>,
+          <><b>Official Website:</b> <a href="https://www.blurb.com/" className="hover:text-blue-500">https://www.blurb.com/</a></>
+        ]
+      },
+      {
+        type: "heading",
+        level: "h2",
+        text: "How to Choose the Best Self-Publishing Company in Australia",
+      },
+      {
+        type: "image",
+        image: {
+          url: "/blog/blog3/image4.png",
+          alt: "Book editing illustration",
+          width: 1200,
+          height: 630,
+        },
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Selecting a publishing company is an important business decision. The right provider should understand your publishing objectives, budget, genre, and expectations.",
+          "Here are seven important factors to evaluate before signing an agreement.",
+        ]
+      },
+      {
+        type: "heading",
+        level: "h3",
+        text: "1. Understand the Publishing Model",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Not every publishing company operates in the same way.",
+          "Some businesses provide professional publishing services for a fee, while others offer publishing platforms that authors manage independently.",
+          "You should understand whether you are choosing:"
+        ]
+      },
+      {
+        type: "list",
+        listItems: [
+          <>Full-service self-publishing assistance.</>,
+          <>Independent publishing platforms.</>,
+          <>Print-on-demand services.</>,
+          <>Book production and printing companies.</>,
+          <>Hybrid or partnership publishing arrangements.</>,
+        ],
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Understanding these differences will help you avoid choosing a provider that does not meet your requirements."
+        ]
+      },
+      {
+        type: "heading",
+        level: "h3",
+        text: "2. Compare Publishing Costs",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Publishing costs can vary depending on the length of your manuscript, the editing required, book format, design complexity, print quantity, and distribution requirements.",
+          "Ask providers for itemised quotes rather than relying solely on advertised package prices.",
+          "Make sure you understand whether the following are included:"
+        ]
+      },
+      {
+        type: "list",
+        listItems: [
+          <>Manuscript editing.</>,
+          <>Proofreading.</>,
+          <>Cover design.</>,
+          <>Interior formatting.</>,
+          <>ISBN and barcode.</>,
+          <>Printing.</>,
+          <>eBook conversion.</>,
+          <>Distribution.</>,
+          <>Marketing and promotion.</>
+        ],
+      },
+      {
+        type: "heading",
+        level: "h3",
+        text: "3. Check Copyright and Royalty Ownership",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "One of the biggest advantages of independent publishing is the ability to retain control over your intellectual property.",
+          "Before signing an agreement, check:",
+        ]
+      },
+      {
+        type: "list",
+        listItems: [
+          <>Who owns the copyright?</>,
+          <>Who controls the publishing rights?</>,
+          <>Who receives the book royalties?</>,
+          <>Can you publish through other platforms?</>,
+          <>Can you change publishing providers?</>,
+          <>Are there any exclusivity clauses?</>,
+        ],
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Never assume that all self-publishing arrangements offer identical rights.",
+        ]
+      },
+      {
+        type: "heading",
+        level: "h3",
+        text: "4. Evaluate Editing and Design Quality",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Professional editing and book design can significantly improve the reader experience.",
+          "A publishing provider should be able to explain the difference between developmental editing, copyediting, proofreading, typesetting, and cover design.",
+          "Request samples of previously completed work where possible."
+        ]
+      },
+      {
+        type: "heading",
+        level: "h3",
+        text: "5. Review Distribution Opportunities",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Publishing a book and making it available to readers are two different things.",
+          "Some companies offer access to online retailers, while others provide additional distribution arrangements for bookstores and libraries.",
+          "Ask which retailers and distribution channels are actually included in the service.",
+          "Also remember that distribution availability does not guarantee bookstore placement or book sales."
+        ]
+      },
+      {
+        type: "heading",
+        level: "h3",
+        text: "6. Understand Marketing Responsibilities",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Many first-time authors assume that a publishing company will automatically promote their book after publication.",
+          "That is not always the case.",
+          "Ask whether your package includes:"
+        ]
+      },
+      {
+        type: "list",
+        listItems: [
+          <>Author website development.</>,
+          <>Social media promotion.</>,
+          <>Email marketing.</>,
+          <>Book launch support.</>,
+          <>Public relations.</>,
+          <>Advertising campaigns.</>,
+          <>Book review outreach.</>
+        ],
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Get specific deliverables in writing.",
+        ]
+      },
+      {
+        type: "heading",
+        level: "h3",
+        text: "7. Check Reviews and Publishing Agreements",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Before selecting a provider, investigate its reputation and request a copy of its standard agreement.",
+          "Compare several itemised quotations, speak to previous clients if possible, and seek independent advice if contractual terms are unclear.",
+          "The Australian Society of Authors specifically recommends careful due diligence when choosing publishing service providers."
+        ]
+      },
+      {
+        type: "heading",
+        level: "h2",
+        text: "Self-Publishing vs Traditional Publishing in Australia",
+      },
+      {
+        type: "image",
+        image: {
+          url: "/blog/blog3/image2.png",
+          alt: "Book editing illustration",
+          width: 1200,
+          height: 630,
+        },
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Understanding the difference between self-publishing and traditional publishing can help you make a more informed decision."
+        ]
+      },
+      {
+        type: "table",
+        columns: 3,
+        headers: ["Factor", "Self-Publishing", "Traditional Publishing"],
+        rows: [
+          ["Initial investment", "Usually author-funded", "Usually publisher-funded"],
+          ["Creative control", "Generally higher", "Subject to publisher agreement"],
+          ["Publishing timeline", "More flexible", "Often longer"],
+          ["Copyright", "Usually retained by author, subject to agreement", "Depends on contract"],
+
+          ["Editing and design", "Arranged by author or service provider", "Generally publisher-managed"],
+          ["Marketing", "Mostly author-led", "Publisher and author responsibilities vary"],
+          ["Royalties", "Depends on platform and service agreement", "Depends on publishing contract"],
+          ["Distribution", "Arranged independently", "Usually managed by publisher"],
+        ],
+      },
+      {
+        type: "heading",
+        level: "h3",
+        text: "Which Publishing Model Is Better?",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Self-publishing is often a better fit for writers who want greater creative control, flexible publishing timelines, and direct involvement in their book's commercial journey.",
+          "Traditional publishing may be more suitable for writers seeking a publisher-led editorial, production, and distribution process without funding the standard production costs themselves.",
+          "Neither model guarantees commercial success. The right decision depends on your goals, manuscript, and available resources."
+        ]
+      },
+      {
+        type: "heading",
+        level: "h2",
+        text: "How Much Does Self-Publishing Cost in Australia?",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "There is no single fixed price for self-publishing a book in Australia.",
+          "Your total investment depends on several factors, including manuscript length, editing requirements, book design, print quantity, and distribution arrangements.",
+          "For example, an author publishing a digital-only eBook independently may have a different cost structure from someone commissioning professional editing, custom cover design, and hundreds of printed copies.",
+          "The main expenses to consider include:"
+        ]
+      },
+      {
+        type: "table",
+        columns: 2,
+        headers: ["Publishing Expense", "What It Covers"],
+        rows: [
+          ["Editing", "Improving manuscript quality and readability"],
+          ["Proofreading", "Correcting final spelling and grammatical errors"],
+          ["Cover design", "Creating professional book artwork"],
+          ["Formatting", "Preparing the interior for print or digital reading"],
+
+          ["ISBN", "Identifying your book edition"],
+          ["Printing", "Producing physical book copies"],
+          ["Distribution", "Making the book available through sales channels"],
+          ["Marketing", "Reaching potential readers"],
+        ],
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "For an accurate budget, request itemised quotes from at least three providers and compare what each package actually includes.",
+        ]
+      },
+      {
+        type: "heading",
+        level: "h2",
+        text: "Step-by-Step Guide to Self-Publishing a Book in Australia",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "If you are publishing your first book, the following process can help you stay organised."
+        ]
+      },
+      {
+        type: "image",
+        image: {
+          url: "/blog/blog3/image5.png",
+          alt: "Book editing illustration",
+          width: 1200,
+          height: 630,
+        },
+      },
+      {
+        type: "heading",
+        level: "h3",
+        text: "Step 1: Complete Your Manuscript",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Finish writing your book and revise the content before sending it for professional assessment."
+        ]
+      },
+      {
+        type: "heading",
+        level: "h3",
+        text: "Step 2: Arrange Professional Editing",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Choose the appropriate editing service depending on the condition and purpose of your manuscript."
+        ]
+      },
+      {
+        type: "heading",
+        level: "h3",
+        text: "Step 3: Design Your Book Cover",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Create a professional cover that reflects your genre and appeals to your target audience."
+        ]
+      },
+      {
+        type: "heading",
+        level: "h3",
+        text: "Step 4: Format Your Manuscript",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Prepare your book for paperback, hardcover, or eBook publication."
+        ]
+      },
+      {
+        type: "heading",
+        level: "h3",
+        text: "Step 5: Understand ISBN Requirements",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Determine whether you need an ISBN for your publication and which organisation or service can assist with obtaining one. Different formats and editions may require separate identifiers."
+        ]
+      },
+      {
+        type: "heading",
+        level: "h3",
+        text: "Step 6: Select Your Publishing Platform",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Choose a suitable publishing service or platform based on your distribution goals, budget, and preferred level of control."
+        ]
+      },
+      {
+        type: "heading",
+        level: "h3",
+        text: "Step 7: Publish and Distribute Your Book",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Upload your manuscript, approve the final proof, confirm the metadata, and arrange the appropriate distribution channels."
+        ]
+      },
+      {
+        type: "heading",
+        level: "h3",
+        text: "Step 8: Promote Your Book",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Develop an author platform, build an audience, plan a book launch, and use relevant marketing channels to reach readers."
+        ]
+      },
+      {
+        type: "faqs",
+        heading: "Frequently Asked Questions About Self-Publishing Companies in Australia",
+        items: [
+          {
+            question: "What is the best self-publishing company in Australia?",
+            answer: "There is no single best self-publishing company for every author. Publish Central is worth considering for full-service publishing support, Australian Self-Publishing Group for publishing and marketing assistance, and BookPOD for book production and printing. The right choice depends on your manuscript, budget, and publishing goals.",
+          },
+          {
+            question: "How much does it cost to self-publish a book in Australia?",
+            answer: "The cost varies according to editing, proofreading, book design, formatting, printing, and distribution requirements. Independent digital publishing can have a lower upfront cost, while professionally managed print publishing can require a larger investment. Always request an itemised quote.",
+          },
+          {
+            question: "Can I self-publish a book in Australia without a publishing company?",
+            answer: "Yes. Australian authors can independently publish eBooks and print books through platforms such as Amazon KDP, IngramSpark, and Lulu. You can also hire individual editors, designers, and printers without purchasing a complete publishing package.",
+          },
+          {
+            question: "Do self-publishing companies in Australia take copyright?",
+            answer: "Not necessarily. Many author-service providers allow authors to retain their copyright, but the exact arrangement depends on the contract. Always review copyright, licensing, exclusivity, and royalty clauses before signing.",
+          },
+          {
+            question: "Can Australian self-published authors sell books internationally?",
+            answer: "Yes. Platforms such as Amazon KDP and IngramSpark provide opportunities to make eligible books available in international markets. However, availability, retailer participation, pricing, and distribution terms vary.",
+          },
+          {
+            question: "Is Amazon KDP available to Australian authors?",
+            answer: "Yes. Australian authors can use Kindle Direct Publishing to publish eligible Kindle eBooks and print books. The platform provides access to Amazon marketplaces, subject to its publishing requirements and terms.",
+          },
+          {
+            question: "Do self-publishing companies provide book marketing?",
+            answer: "Some providers offer marketing and promotional services, while others focus primarily on editing, design, production, and distribution. Always confirm which promotional activities are included in your package.",
+          },
+          {
+            question: "Is self-publishing better than traditional publishing?",
+            answer: "Self-publishing offers greater control over many publishing decisions, while traditional publishing generally provides a publisher-managed production process. The best option depends on your publishing objectives, financial resources, and preferred level of involvement.",
+          },
+          {
+            question: "Do I need an ISBN to self-publish in Australia?",
+            answer: "ISBN requirements depend on the book format, edition, distribution arrangements, and retailer requirements. Authors publishing print books or distributing books through different channels should investigate the relevant ISBN requirements before publication.",
+          },
+          {
+            question: "How do I avoid unreliable self-publishing companies?",
+            answer: "Research the provider's experience, request an itemised quote, review its publishing agreement, check independent author feedback, and understand exactly what you are purchasing. The Australian Society of Authors recommends conducting due diligence before engaging a publishing service provider.",
+          },
+        ],
+      },
+      {
+        type: "heading",
+        level: "h2",
+        text: "Final Thoughts: Which Self-Publishing Company Should You Choose?",
+      },
+      {
+        type: "paragraphs",
+        paragraphs: [
+          "Finding the right self-publishing company in Australia is about more than comparing company names. It is about finding a publishing partner or platform that understands your creative vision, publishing requirements, and commercial goals.",
+          "If you want professional, end-to-end publishing assistance, explore companies such as Publish Central, Australian Self-Publishing Group, and Green Hill Publishing.",
+          "If you prefer a boutique publishing experience, Busybird Publishing is worth considering. For physical book production, BookPOD offers specialised services. Meanwhile, authors who prefer independent digital publishing can explore Amazon KDP, IngramSpark, Lulu, and Blurb.",
+          "Before making your final decision, compare pricing, service inclusions, distribution options, copyright ownership, and contractual terms.",
+          <><b>Ultimately, the best self-publishing company is the one that helps you publish a professional-quality book while keeping your publishing goals, rights, and budget in mind.</b></>
+        ]
       },
     ],
   },
