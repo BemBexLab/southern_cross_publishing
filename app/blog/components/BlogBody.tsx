@@ -145,6 +145,7 @@ const BlogBody = ({ posts }: BlogBodyProps) => {
                           src={post.image}
                           alt={post.imageAlt || post.title}
                           fill
+                          unoptimized
                           sizes="(max-width: 1023px) 100vw, (max-width: 1279px) 256px, 288px"
                           className="object-cover object-center"
                         />

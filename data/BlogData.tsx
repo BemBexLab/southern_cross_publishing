@@ -1798,7 +1798,7 @@ export const BlogData: BlogPostData[] = [
     date: "2026-11-14",
     image: {
       url: "/blog/blog4/image7.png",
-      alt: "Best 10 Self-Publishing Companies in Australia (2027 Guide)",
+      alt: "Traditional Publishing vs Self-Publishing: Which Is Better for Authors in Australia?",
     },
     content: [
       {

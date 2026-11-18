@@ -102,6 +102,7 @@ const page = async (props: PageProps<"/blog/[slug]">) => {
                     width={featuredImage.width ?? 1200}
                     height={featuredImage.height ?? 630}
                     sizes="(max-width: 1023px) 100vw, 760px"
+                    unoptimized
                     quality={75}
                     className="h-auto w-full object-cover"
                   />
