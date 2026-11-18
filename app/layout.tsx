@@ -48,11 +48,11 @@ const goneva = localFont({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: {
-    default: siteName,
-    template: `%s | ${siteName}`,
-  },
-  description: defaultDescription,
+  // title: {
+  //   default: siteName,
+  //   template: `%s | ${siteName}`,
+  // },
+  // description: defaultDescription,
   verification: {
     google: "1KJar89U8Bjcq3tJ4C9VoAFIFbcmDiG762qR946QYHQ",
   },
