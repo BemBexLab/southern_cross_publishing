@@ -28,6 +28,7 @@ const Hero = ({
       <div className="absolute inset-0 z-0 scale-[1.12] transform-gpu">
         <Image
           src="/ebook-services/Mask group.webp"
+          unoptimized
           alt=""
           fill
           sizes="100vw"
@@ -52,6 +53,7 @@ const Hero = ({
                 <div className="relative aspect-[1.02/0.88] w-full">
                   <Image
                     src={imageSrc}
+                    unoptimized
                     alt={imageAlt}
                     fill
                     sizes="(min-width: 640px) 80vw, 100vw"
@@ -77,6 +79,7 @@ const Hero = ({
               <div className="relative aspect-[1.02/0.88] w-full">
                 <Image
                   src={imageSrc}
+                  unoptimized
                   alt={imageAlt}
                   fill
                   sizes="(min-width: 1280px) 42vw, (min-width: 1024px) 45vw"
