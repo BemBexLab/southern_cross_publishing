@@ -7,6 +7,7 @@ import {
   formatPostDate,
   stripHtml,
   type BlogPostSummary,
+  type WpPost,
 } from "./wp";
 
 function getLocalPostWordCount(post: BlogPostData): number {
@@ -38,6 +39,28 @@ export function getLocalBlogSummaries(): BlogPostSummary[] {
     imageAlt: post.image?.alt,
     readTime: post.readTime ?? Math.max(1, Math.ceil(getLocalPostWordCount(post) / 200)),
   }));
+}
+
+export function getRecentBlogPosts(wpPosts: WpPost[], currentSlug: string) {
+  const localPosts = BlogData.map((post) => ({
+    slug: post.slug,
+    title: post.h1,
+    date: post.date,
+  }));
+  const localSlugs = new Set(localPosts.map((post) => post.slug));
+  const wordpressPosts = wpPosts
+    .filter((post) => !localSlugs.has(post.slug))
+    .map((post) => ({
+      slug: post.slug,
+      title: decodeHtml(post.title.rendered),
+      date: post.date,
+    }));
+
+  return [...localPosts, ...wordpressPosts]
+    .filter((post) => post.slug !== currentSlug)
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .slice(0, 3)
+    .map((post) => ({ ...post, date: formatPostDate(post.date) }));
 }
 
 type BlogPost = {

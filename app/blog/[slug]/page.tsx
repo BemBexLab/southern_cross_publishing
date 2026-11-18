@@ -5,9 +5,8 @@ import { notFound } from "next/navigation";
 import { FaArrowLeft, FaRegCalendar } from "react-icons/fa6";
 import { LuClock3 } from "react-icons/lu";
 import LocalBlogContent from "../components/LocalBlogContent";
-import { getBlogPost } from "../posts";
+import { getBlogPost, getRecentBlogPosts } from "../posts";
 import {
-  decodeHtml,
   fetchWpPosts,
   formatPostDate,
 } from "../wp";
@@ -73,14 +72,7 @@ const page = async (props: PageProps<"/blog/[slug]">) => {
     console.error("Unable to load recent WordPress posts:", error);
     return [];
   });
-  const recentPosts = wpPosts
-    .filter((recentPost) => recentPost.slug !== post.slug)
-    .slice(0, 3)
-    .map((recentPost) => ({
-      slug: recentPost.slug,
-      title: decodeHtml(recentPost.title.rendered),
-      date: formatPostDate(recentPost.date),
-    }));
+  const recentPosts = getRecentBlogPosts(wpPosts, post.slug);
 
   return (
     <section className="bg-[#f6eed0] pt-28 sm:pt-32 lg:pt-36">

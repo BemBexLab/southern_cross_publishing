@@ -43,7 +43,7 @@ const BlogBody = ({ posts }: BlogBodyProps) => {
     currentPage * POSTS_PER_PAGE,
     currentPage * POSTS_PER_PAGE + POSTS_PER_PAGE
   );
-  const recentPosts = posts.slice(0, 2);
+  const recentPosts = posts.slice(0, 3);
 
   return (
     <section className="bg-[#F7F1D7] px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8 lg:py-14">
